@@ -118,6 +118,14 @@ class ControlReducerTest {
         r.beginUnlock(); now=2000; r.unlock(); r.disconnect(); r.acknowledgeUnlock(true)
         assertTrue(r.state.killed); stop(r)
     }
+    @Test fun L13_earlyUnlockReleaseAndExplicitCancellationCannotUnlockLater() {
+        val r=online();r.kill();r.handle(ControlEvent.BeginUnlock)
+        now=999;r.handle(ControlEvent.EndUnlock);now=1000
+        assertFalse(r.unlock());r.acknowledgeUnlock(true);assertTrue(r.state.killed)
+        r.handle(ControlEvent.BeginUnlock);now=2000;assertTrue(r.unlock())
+        r.handle(ControlEvent.CancelUnlock);r.acknowledgeUnlock(true)
+        assertTrue(r.state.killed);assertFalse(r.state.unlockPending);stop(r)
+    }
     @Test fun L14_reconnectNeverRestoresOldPointersOrUnlocksKill() {
         val r=online(); forward(r); r.disconnect(); r.connectAcknowledged()
         r.moveJoystick(0,0f,1f); r.tick(); stop(r)

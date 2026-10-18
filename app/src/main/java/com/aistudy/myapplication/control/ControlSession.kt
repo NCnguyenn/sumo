@@ -51,7 +51,9 @@ class ControlSession(val reducer:ControlReducer,private val transport:RobotTrans
         revision++
         if(phase!=SessionPhase.OFFLINE || !safeToProceed()){stop();reconnect=true;return}
         try {
-            if(!permission()){message="Offline · cần cấp quyền mạng nội bộ";return}
+            val s=reducer.settings
+            log("connecting endpoint=${s.host}:${s.port} interval=${s.sendIntervalMs}ms limit=${s.limitPercent}% input=${s.inputMode} weapon=${s.weaponMode} turn=${s.turnDurationMs}ms calibration=${s.calibration}")
+            if(!permission()){message="Offline · cần cấp quyền mạng nội bộ";log("closed confirmed=false requested=0/0 reason=$message");return}
             reducer.disconnect();tracker=ReplyTracker(reducer.settings.host,reducer.settings.port)
             hello=nonce();tracker.begin(hello,clock());connectDeadline=clock()+1000;seq=0;sessionSid=null;sent.clear();dirty=false;applied=null
             transport.open(reducer.settings.host,reducer.settings.port)
@@ -68,7 +70,7 @@ class ControlSession(val reducer:ControlReducer,private val transport:RobotTrans
         log("event $value")
         if(value==ControlEvent.Cancel){stop();return}
         if((pendingConfig!=null || uncertainConfig) && value !is ControlEvent.Release && value !is ControlEvent.Limiter &&
-            value!=ControlEvent.Kill && value!=ControlEvent.EndUnlock)return
+            value!=ControlEvent.Kill && value!=ControlEvent.EndUnlock && value!=ControlEvent.CancelUnlock)return
         val urgent=reducer.handle(value);dirty=true
         if(urgent && phase==SessionPhase.ONLINE) {
             try{
@@ -127,7 +129,14 @@ class ControlSession(val reducer:ControlReducer,private val transport:RobotTrans
                 val packet=transport.receive() ?: break
                 revision++
                 log("receive host=${packet.host}:${packet.port} hex=${packet.bytes.hex()}")
-                val reply=tracker.accept(packet.bytes,packet.host,packet.port,clock()) ?: continue
+                val reply=tracker.accept(packet.bytes,packet.host,packet.port,clock())
+                if(reply==null){log("discard reason=${tracker.lastRejection}");continue}
+                when(reply) {
+                    is RobotReply.Ack->log("ack seq=${reply.seq} result=${reply.result} pwm=${reply.state.pwm.left}/${reply.state.pwm.right} rtt=${tracker.lastRttMs}")
+                    is RobotReply.Offer->log("offer sid=${reply.sid} caps=${reply.capabilities}")
+                    is RobotReply.ConfigAck->log("config-ack seq=${reply.seq} result=${reply.result}")
+                    else->Unit
+                }
                 when(reply) {
                     is RobotReply.Offer->if(phase==SessionPhase.CONNECTING){sessionSid=reply.sid;confirm()}
                     is RobotReply.ConfigAck->{
@@ -172,7 +181,7 @@ class ControlSession(val reducer:ControlReducer,private val transport:RobotTrans
         transport.close();reducer.disconnect();tracker=ReplyTracker(reducer.settings.host,reducer.settings.port)
         phase=SessionPhase.OFFLINE;message=reason;applied=null;dirty=false;sent.clear();sessionSid=null
         if(confirmed)safeAfter=clock()
-        log("closed confirmed=$confirmed reason=$reason")
+        log("closed confirmed=$confirmed requested=${reducer.state.pwm.left}/${reducer.state.pwm.right} reason=$reason")
     }
     private fun fail(reason:String){
         val sid=sessionSid

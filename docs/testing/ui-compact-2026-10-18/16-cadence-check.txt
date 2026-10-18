@@ -1,0 +1,41 @@
+[
+  {
+    "configured_ms": 20,
+    "n": 1289,
+    "minimum": 20.5338,
+    "p50": 21.7608,
+    "p95": 22.9804,
+    "p99": 23.755,
+    "maximum": 26.9885,
+    "below_20": 0,
+    "above_50": 0,
+    "upper_limit_ms": 50,
+    "above_limit": 0
+  },
+  {
+    "configured_ms": 30,
+    "n": 1337,
+    "minimum": 21.8816,
+    "p50": 30.0086,
+    "p95": 31.2356,
+    "p99": 31.69,
+    "maximum": 34.3807,
+    "below_20": 0,
+    "above_50": 0,
+    "upper_limit_ms": 50,
+    "above_limit": 0
+  },
+  {
+    "configured_ms": 50,
+    "n": 1282,
+    "minimum": 43.702,
+    "p50": 49.9868,
+    "p95": 51.401,
+    "p99": 52.1457,
+    "maximum": 53.4177,
+    "below_20": 0,
+    "above_50": 634,
+    "upper_limit_ms": 60,
+    "above_limit": 0
+  }
+]

@@ -1,0 +1,91 @@
+SumoPhase5: {"event":"begin","elapsed_ms":1443,"cycles":0,"reconnects":0,"kills":0,"worker":1,"trace":1,"sockets":14,"socket_fds":["socket:[138136]","socket:[142284]","socket:[139117]","socket:[139118]","socket:[138137]","socket:[140671]","socket:[140085]","socket:[140086]","socket:[140674]","socket:[140675]","socket:[142283]","socket:[142285]","socket:[144673]","socket:[138144]"],"threads":32,"heap_bytes":10822736}
+ 18271.622   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+ 18271.637   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+ 18271.653   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+ 18271.670   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+ 18271.687   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+ 18271.703   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+ 18271.719   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+ 18271.737   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+ 18271.748 23886 24671 I SumoSession: wire t0_ns=-1 t1_ns=18271748133100 t2_ns=18271748373200 cause=periodic hex=48313a663962353761623734626564346264640a enqueued_ns=0 dequeued_ns=0 work_ns=18271747956900 prepare_start_ns=18271748051100 prepare_end_ns=18271748106900 pre_send_cpu_ns=0 send_cpu_ns=0 deadline_ns=0 wait_start_ns=18271744463500 wake_ns=18271747956900 requested_wait_ns=2000000 prev_work_ns=52500 prev_trace_submit_ns=0 trace_pending=0
+ 18271.750 23886 24671 I SumoSession: 18271749 send hello hex=48313a663962353761623734626564346264640a
+ 18271.753   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+ 18271.769   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+ 18271.786   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+ 18271.803   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+ 18271.806 23886 24671 I SumoSession: 18271806 event Press(id=1, button=FORWARD)
+ 18271.820   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+ 18271.837   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+ 18271.870   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+ 18271.887   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+ 18271.909   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+ 18271.937   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+ 18271.953   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+ 18271.955 23886 24671 I SumoSession: 18271954 receive host=10.0.2.2:8888 hex=48313a663962353761623734626564346264642c613463666432653633306231376531642c330a
+ 18271.955 23886 24671 I SumoSession: 18271955 offer sid=a4cfd2e630b17e1d caps=3
+...LAST OBSERVATIONS...
+ 18277.490  1150  1150 D BaseDepthController: shouldBlurWorkspace: false targetState: Normal currentStableState: Normal mCurrentBlur: 0 mLauncher.getDepthBlurTargets(): [com.android.launcher3.Workspace{1f6bf22 V.ED..... ........ 0,0-1080,2400 #7f0a0498 app:id/workspace}, com.android.launcher3.Hotseat{a97edb3 V.ED..... ........ 0,1905-1080,2400 #7f0a01f8 app:id/hotseat}]
+ 18277.496 20910 20910 I HidDeviceService: unregisterAppUid(): uid=10231
+ 18277.497 20910 20910 W HidDeviceService: unregisterAppUid(): caller UID doesn't match user UID
+ 18277.502   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+ 18277.502   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+ 18277.502   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+ 18277.502   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+ 18277.502   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+ 18277.502   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+ 18277.514   701  2078 W ActivityTaskManager: setRunningRemoteTransition: no process for null
+ 18277.515   985  1054 V WindowManagerShell:  animated by com.android.wm.shell.transition.RemoteTransitionHandler@76e5afc
+ 18277.519   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+ 18277.519   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+ 18277.519   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+ 18277.519   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+ 18277.519   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+ 18277.519   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+ 18277.520   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+ 18277.520   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+ 18277.524  1150  1150 D LauncherStateManager: StateManager.cancelAnimation: animation ongoing: true, partial trace:
+ 18277.524  1150  1150 D LauncherStateManager: 	at com.android.launcher3.statemanager.StateManager.reapplyState(go/retraceme 815e0705c72483a13850a92e13311adc3be202157d5e2ccabeb5d99cd4ed4ca4:39)
+ 18277.524  1150  1150 D LauncherStateManager: 	at com.android.launcher3.QuickstepTransitionManager.createWallpaperOpenAnimations(go/retraceme 815e0705c72483a13850a92e13311adc3be202157d5e2ccabeb5d99cd4ed4ca4:168)
+ 18277.524  1150  1150 D LauncherStateManager: 	at com.android.launcher3.QuickstepTransitionManager$WallpaperOpenLauncherAnimationRunner.onAnimationStart(go/retraceme 815e0705c72483a13850a92e13311adc3be202157d5e2ccabeb5d99cd4ed4ca4:135)
+ 18277.525  1150  1150 D ScalingWorkspaceRevealAnim: onAnimationCancel
+ 18277.525  1150  1150 D ScalingWorkspaceRevealAnim: onAnimationEnd, workspace and hotseat are visible
+ 18277.526  1150  1150 V BaseDepthController: Applying blur: 79 to Surface(name=VRI-com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#3208)/@0xfd744ed applyImmediately: false
+ 18277.526  1150  1150 D BaseDepthController: shouldBlurWorkspace: false targetState: Normal currentStableState: Normal mCurrentBlur: 79 mLauncher.getDepthBlurTargets(): [com.android.launcher3.Workspace{1f6bf22 V.ED..... ......ID 0,0-1080,2400 #7f0a0498 app:id/workspace}, com.android.launcher3.Hotseat{a97edb3 V.ED..... ......ID 0,1905-1080,2400 #7f0a01f8 app:id/hotseat}]
+ 18277.526  1150  1150 D AllAppsTransitionController: shouldProtectHeader: false skipScrim: false state: Normal stateManager.getState(): Normal
+ 18277.526  1150  1150 V BaseDepthController: Applying blur: 0 to Surface(name=VRI-com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#3208)/@0xfd744ed applyImmediately: false
+ 18277.527  1150  1150 D BaseDepthController: shouldBlurWorkspace: false targetState: Normal currentStableState: Normal mCurrentBlur: 0 mLauncher.getDepthBlurTargets(): [com.android.launcher3.Workspace{1f6bf22 V.ED..... ......ID 0,0-1080,2400 #7f0a0498 app:id/workspace}, com.android.launcher3.Hotseat{a97edb3 V.ED..... ......ID 0,1905-1080,2400 #7f0a01f8 app:id/hotseat}]
+ 18277.528  1150  1150 D KeyboardInsetsHandler: setState, toState:Normal StateManager(mLastStableState:Normal, mCurrentStableState:Normal, mState:Normal, mRestState:null, isInTransition:false)
+ 18277.529  1150  1150 D KeyboardInsetsHandler: removePendingImeController: pendingImeController=null
+ 18277.529  1150  1150 D KeyboardStateManager: hideKeyboard
+ 18277.530  1150  1150 D KeyboardStateManager: isImeShown: false
+ 18277.530  1150  1150 D BaseActivity: Launcher flags updated: [state_started|state_resumed|state_deferred_resumed|state_user_active] -[state_transition_active]
+ 18277.531  1150  1150 D LauncherStateManager: StateManager.onStateTransitionEnd: state: Normal
+ 18277.532  1150  1150 D RecentsView: reset - mEnableDrawingLiveTile: false, mRecentsAnimationController: null
+ 18277.533  1150  1150 D ActivityAllAppsContainerView: rebindAdapters: force: false
+ 18277.533  1150  1150 D ActivityAllAppsContainerView: rebindAdapters: Not needed.
+ 18277.533  1150  1150 D ConnectorProvider: Connector disabled by gantry flag.
+ 18277.534  1150  1150 D ConnectorProvider: Connector disabled by gantry flag.
+ 18277.535  1150  1150 D LauncherStateManager: StateManager.cancelAnimation: animation ongoing: false, partial trace:
+ 18277.535  1150  1150 D LauncherStateManager: 	at com.android.launcher3.statemanager.StateManager.setCurrentAnimation(go/retraceme 815e0705c72483a13850a92e13311adc3be202157d5e2ccabeb5d99cd4ed4ca4:59)
+ 18277.535  1150  1150 D LauncherStateManager: 	at com.android.launcher3.QuickstepTransitionManager.createWallpaperOpenAnimations(go/retraceme 815e0705c72483a13850a92e13311adc3be202157d5e2ccabeb5d99cd4ed4ca4:757)
+ 18277.535  1150  1150 D LauncherStateManager: 	at com.android.launcher3.QuickstepTransitionManager$WallpaperOpenLauncherAnimationRunner.onAnimationStart(go/retraceme 815e0705c72483a13850a92e13311adc3be202157d5e2ccabeb5d99cd4ed4ca4:135)
+ 18277.535  1150  1150 D LauncherStateManager: StateManager.createAtomicAnimation: fromState: Normal, toState: Normal, partial trace:
+ 18277.535  1150  1150 D LauncherStateManager: 	at com.android.quickstep.util.WorkspaceRevealAnim.prepareToAnimate(go/retraceme 815e0705c72483a13850a92e13311adc3be202157d5e2ccabeb5d99cd4ed4ca4:19)
+ 18277.535  1150  1150 D LauncherStateManager: 	at com.android.quickstep.util.WorkspaceRevealAnim.<init>(go/retraceme 815e0705c72483a13850a92e13311adc3be202157d5e2ccabeb5d99cd4ed4ca4:10)
+ 18277.535  1150  1150 D LauncherStateManager: 	at com.android.launcher3.QuickstepTransitionManager.createWallpaperOpenAnimations(go/retraceme 815e0705c72483a13850a92e13311adc3be202157d5e2ccabeb5d99cd4ed4ca4:798)
+ 18277.535  1150  1150 D AllAppsTransitionController: shouldProtectHeader: false skipScrim: true state: Normal stateManager.getState(): Normal
+ 18277.535  1150  1150 D KeyboardInsetsHandler: removePendingImeController: pendingImeController=null
+ 18277.537  1150  1150 D b/311077782: LauncherAnimationRunner.setAnimation
+ 18277.550 23886 23886 D LifecycleMonitor: Lifecycle status change: com.aistudy.myapplication.MainActivity@bc48cf9 in: STOPPED
+ 18277.550 23886 23886 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=com.aistudy.myapplication.MainActivity@bc48cf9
+ 18277.553 23886 24671 I SumoSession: 18277553 event Release(id=1)
+ 18277.553 23886 24671 I SumoSession: 18277553 event Cancel
+ 18277.554 23886 24671 I SumoSession: 18277554 closed confirmed=false requested=0/0 reason=Offline · phiên đã đóng
+ 18277.556 23886 23886 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): null
+ 18277.556 23886 23886 D LifecycleMonitor: Lifecycle status change: com.aistudy.myapplication.MainActivity@bc48cf9 in: DESTROYED
+ 18277.556 23886 23886 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+ 18277.558 23886 24671 I SumoSession: 18277558 closed confirmed=false requested=0/0 reason=Offline · phiên đã đóng
+ 18277.564 23886 24661 W y.myapplication: No such thread for suspend: 0x75cfbe72f328:sumo-control
+ 18277.565 23886 24661 W y.myapplication: No such thread for suspend: 0x75cfbe72f328:sumo-trace
+ 18277.566 23886 23886 D ViewRootImpl: Skipping stats log for color mode
+ 18277.567 23886 24661 I 

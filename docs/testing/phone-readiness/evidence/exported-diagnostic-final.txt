@@ -1,0 +1,14 @@
+SUMO diagnostic
+App 1.0 (1) · API 37
+App 1.0 (1) · API 37
+Endpoint=10.0.2.2:8888 · SUMO-SIM/1-draft1
+Interval=30ms · limit=60% · input=D_PAD · weapon=HOLD
+Calibration=DriveCalibration(sensitivity=1.0, deadZone=0.0, leftGain=1.0, rightGain=1.0, turnPercent=100) · turn=200ms
+App yêu cầu PWM 0 / 0
+TX=0 RX=0 Loại=0
+TX cuối PWM 0 / 0; ACK cuối PWM chưa có
+Nguồn lỗi: Chưa xác định; không có cảnh báo
+ACK không chứng minh động cơ thực sự quay.
+18:43:24.101	App	closed confirmed=false requested=0/0 reason=Offline · phiên đã đóng
+18:43:24.428	App	event Cancel
+18:43:24.429	App	closed confirmed=false requested=0/0 reason=Offline · phiên đã đóng

@@ -1,0 +1,15 @@
+{
+  "source_files": 59,
+  "source_mismatches": {},
+  "apk_sha256": {
+    "docs/testing/ui-compact-2026-10-18/apk/sumo-ui-compact-debug.apk": "c8f88cbcb3dd5fb2abdcd1bb7eb0608b2d2c1b27b9bd3ffa7b7d9aafbfcd9f55",
+    "app/build/outputs/apk/debug/app-debug.apk": "c8f88cbcb3dd5fb2abdcd1bb7eb0608b2d2c1b27b9bd3ffa7b7d9aafbfcd9f55",
+    "app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk": "322474ac21279fdaa52bfeda7bfdc25bbc9b4bb6ac040456c7e2e060730a5c4a"
+  },
+  "devices": "List of devices attached\r\nemulator-5554          device product:sdk_gphone16k_x86_64 model:sdk_gphone16k_x86_64 device:emu64xa16k transport_id:2\r\n\r\n",
+  "wm_size": "Physical size: 1080x2400\r\n",
+  "wm_density": "Physical density: 420\r\n",
+  "font_scale": "1.0\r\n",
+  "api": "37",
+  "abi": "x86_64,arm64-v8a"
+}

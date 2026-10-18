@@ -1,6 +1,8 @@
 package com.aistudy.myapplication
 
 import android.content.Intent
+import android.content.ClipData
+import android.content.ClipboardManager
 import android.content.pm.ActivityInfo
 import android.content.pm.PackageManager
 import android.os.Bundle
@@ -9,6 +11,7 @@ import android.provider.Settings
 import android.net.Uri
 import android.view.HapticFeedbackConstants
 import android.view.WindowManager
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.result.contract.ActivityResultContracts
@@ -23,7 +26,10 @@ import com.aistudy.myapplication.settings.*
 import com.aistudy.myapplication.ui.*
 import com.aistudy.myapplication.ui.theme.MyApplicationTheme
 import com.aistudy.myapplication.updates.*
+import com.aistudy.myapplication.diagnostics.*
 import java.util.concurrent.Executors
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.isActive
 
 class MainActivity:ComponentActivity() {
     private val reducer=ControlReducer()
@@ -32,6 +38,22 @@ class MainActivity:ComponentActivity() {
     private var connection by mutableStateOf("Offline · chưa kết nối receiver bản thử")
     private var settingsOpen by mutableStateOf(false)
     private var updateOpen by mutableStateOf(false)
+    private var diagnosticsOpen by mutableStateOf(false)
+    @Volatile private var diagnosticLog:DiagnosticLog?=null
+    private var diagnosticSummary by mutableStateOf(DiagnosticSummary())
+    private var diagnosticSnapshot by mutableStateOf(DiagnosticSnapshot())
+    private var diagnosticNow by mutableLongStateOf(System.nanoTime()/1_000_000L)
+    private var pendingExport:String?=null
+    private val exportLog=registerForActivityResult(ActivityResultContracts.CreateDocument("text/plain")){uri->
+        val report=pendingExport;pendingExport=null
+        if(uri!=null && report==null)problem="Nhật ký chờ xuất không còn; hãy mở Chẩn đoán và xuất lại. Chưa ghi dữ liệu vào file."
+        if(uri!=null && report!=null)storageIo.execute {
+            try {
+                requireNotNull(contentResolver.openOutputStream(uri)).bufferedWriter(Charsets.UTF_8).use{it.write(report)}
+                runOnUiThread{if(!isDestroyed)Toast.makeText(this,"Đã xuất nhật ký",Toast.LENGTH_SHORT).show()}
+            }catch(e:Exception){runOnUiThread{if(!isDestroyed)problem="Không xuất được nhật ký: ${e.message}"}}
+        }
+    }
     private var problem by mutableStateOf<String?>(null)
     private var loadFailed=false
     private var persistedKill=false
@@ -41,7 +63,10 @@ class MainActivity:ComponentActivity() {
     private var runtime:ControlRuntime?=null
     private var receiver by mutableStateOf<ControlState?>(null)
     private val lanPermission=registerForActivityResult(ActivityResultContracts.RequestPermission()){granted->
-        if(granted){wantsConnect=true;maybeConnect()}else connection="Offline · quyền mạng nội bộ bị từ chối; nhấn Kết nối lại để thử lại"
+        if(granted){wantsConnect=true;maybeConnect()}else {
+            connection="Offline · quyền mạng nội bộ bị từ chối; nhấn Kết nối lại để thử lại"
+            storageIo.execute{diagnosticLog?.record("${System.nanoTime()/1_000_000L} closed confirmed=false reason=Thiếu quyền mạng nội bộ trên điện thoại")}
+        }
     }
     private val storageIo=Executors.newSingleThreadExecutor()
     private lateinit var store:ControllerSettingsStore
@@ -49,6 +74,7 @@ class MainActivity:ComponentActivity() {
     private var updateStatus by mutableStateOf(UpdateStatus())
     override fun onCreate(savedInstanceState:Bundle?) {
         super.onCreate(savedInstanceState)
+        pendingExport=savedInstanceState?.getString("sumo.pendingExport")
         persistedKill=getSharedPreferences("sumo_safety",MODE_PRIVATE).getBoolean("kill",false)
         if(persistedKill){reducer.kill();control=reducer.state}
         requestedOrientation=ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE
@@ -60,6 +86,7 @@ class MainActivity:ComponentActivity() {
         store=ControllerSettingsStore(this);updater=AppUpdateManager(this){updateStatus=it}
         InstallResultReceiver.result.value=getSharedPreferences("sumo_install_result",MODE_PRIVATE).getString("message","").orEmpty()
         storageIo.execute {
+            diagnosticLog=DiagnosticLog(java.io.File(filesDir,"diagnostics"),appInfo="App ${updater.versionLabel()} · API ${Build.VERSION.SDK_INT}")
             val loaded=store.load()
             runOnUiThread {if(!isDestroyed)loaded.fold({
                 saved=it;reducer.applySettings(it.controller);control=reducer.state
@@ -68,16 +95,30 @@ class MainActivity:ComponentActivity() {
                     persistKill(value.control.killed)
                     if(linkWasOnline!=value.control.connected){linkWasOnline=value.control.connected;window.decorView.performHapticFeedback(HapticFeedbackConstants.CONFIRM);android.util.Log.i("SumoSession","haptic connected=$linkWasOnline")}
                     if(value.control.connected)window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON) else window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
-                }}},{android.util.Log.i("SumoSession",it)})
+                }}},{android.util.Log.i("SumoSession",it);diagnosticLog?.record(it)})
                 this.loaded=true
             },
                 {loadFailed=true;problem="Không nạp được cấu hình; dữ liệu gốc vẫn giữ. Điều khiển bị khóa: ${it.message}"})}
         }
         setContent {
             MyApplicationTheme {
-                ControllerScreen(control,saved.controller,connection,::event,::connect,
+                val version=remember{updater.versionLabel()}
+                val metadata="App $version · API ${Build.VERSION.SDK_INT} · ${saved.controller.host}:${saved.controller.port} · ${saved.controller.sendIntervalMs} ms"
+                LaunchedEffect(Unit) {while(isActive) {
+                    diagnosticLog?.let{diagnosticSummary=it.summary();if(diagnosticsOpen)diagnosticSnapshot=it.snapshot()}
+                    diagnosticNow=System.nanoTime()/1_000_000L
+                    delay(250)
+                }}
+                if(diagnosticsOpen)DiagnosticsScreen(diagnosticSnapshot,diagnosticLog?.previousFailure(),metadata,diagnosticNow,"${control.pwm.left} / ${control.pwm.right}",
+                    {diagnosticsOpen=false},{history->
+                        val clipboard=getSystemService(ClipboardManager::class.java)
+                        clipboard.setPrimaryClip(ClipData.newPlainText("Sumo diagnostic",diagnosticReport(history)))
+                        Toast.makeText(this,"Đã sao chép nhật ký",Toast.LENGTH_SHORT).show()
+                    },{history->pendingExport=diagnosticReport(history);exportLog.launch("sumo-diagnostic-${System.currentTimeMillis()}.txt")})
+                else ControllerScreen(control,saved.controller,connection,::event,::connect,
                     {stopControl{if(!loadFailed)settingsOpen=true else problem="Cấu hình lỗi; không ghi đè bản gốc"}},
-                    {stopControl{updateOpen=true}},::persistLimiter,receiver)
+                    {stopControl{updateOpen=true}},::persistLimiter,receiver,diagnosticSummary,diagnosticNow,
+                    {stopControl{diagnosticsOpen=true}})
                 if(settingsOpen)SettingsDialog(saved,::saveSettings,{settingsOpen=false})
                 if(updateOpen)AppUpdateDialog(updater.versionLabel(),saved.updateFeed,updateStatus,InstallResultReceiver.result.value,
                     {updater.check(saved.updateFeed)},{updater.download(saved.updateFeed)},{
@@ -95,6 +136,12 @@ class MainActivity:ComponentActivity() {
                     confirmButton={TextButton(onClick={problem=null}){Text("Đóng")}})}
             }
         }
+    }
+    private fun diagnosticReport(history:Boolean):String {
+        val s=saved.controller
+        val metadata="App ${updater.versionLabel()} · API ${Build.VERSION.SDK_INT}\nEndpoint=${s.host}:${s.port} · SUMO-SIM/1-draft1\n"+
+            "Interval=${s.sendIntervalMs}ms · limit=${s.limitPercent}% · input=${s.inputMode} · weapon=${s.weaponMode}\nCalibration=${s.calibration} · turn=${s.turnDurationMs}ms\nApp yêu cầu PWM ${control.pwm.left} / ${control.pwm.right}"
+        return if(history)diagnosticLog?.previousFailure().orEmpty() else diagnosticLog?.report(metadata) ?: "Chưa có nhật ký"
     }
     private fun event(value:ControlEvent) {
         val callbackAt=System.nanoTime()
@@ -132,6 +179,7 @@ class MainActivity:ComponentActivity() {
         val value=saved
         storageIo.execute{try{store.save(value)}catch(e:Exception){runOnUiThread{problem="Chưa lưu limiter: ${e.message}"}}}
     }
+    override fun onSaveInstanceState(outState:Bundle){outState.putString("sumo.pendingExport",pendingExport);super.onSaveInstanceState(outState)}
     override fun onPause(){stopControl();super.onPause()}
     override fun onWindowFocusChanged(hasFocus:Boolean){super.onWindowFocusChanged(hasFocus);if(!hasFocus)stopControl() else maybeConnect()}
     internal fun flushControlTrace()=runtime?.flushTrace()==true

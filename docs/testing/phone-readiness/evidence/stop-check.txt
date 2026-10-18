@@ -1,0 +1,39 @@
+{
+  "source": "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\docs\\testing\\phase-5\\evidence\\37-phone-readiness-soak\\logcat-StopLatencyTest-CadenceTest.txt",
+  "samples": 500,
+  "t1_minus_t0_ms": {
+    "n": 500,
+    "p50": 0.5952,
+    "p95": 2.0271,
+    "p99": 4.3279,
+    "maximum": 25.1894
+  },
+  "t2_minus_t0_ms": {
+    "n": 500,
+    "p50": 1.0354,
+    "p95": 2.7579,
+    "p99": 10.7673,
+    "maximum": 25.3868
+  },
+  "before_over_10": 5,
+  "return_over_10": 6,
+  "periodic30_adjacent_without_intervening_event": {
+    "n": 1512,
+    "p50": 26.1522,
+    "p95": 30.9656,
+    "p99": 32.3543,
+    "maximum": 43.7562
+  },
+  "periodic_outside_20_50": 0,
+  "periodic_sample_note": "Incidental STOP500 intervals; separate CadenceTest/check_android_cadence.py requires >=1000 intervals at each of 20/30/50 ms"
+}
+Traceback (most recent call last):
+  File "C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\tools\check_android_timing.py", line 44, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\tools\check_android_timing.py", line 40, in main
+    assert not summary['before_over_10'] and not summary['return_over_10'],'G0 STOP <=10 ms failed; retain every slow sample'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: G0 STOP <=10 ms failed; retain every slow sample
+
+EXIT_CODE: 1

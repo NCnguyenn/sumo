@@ -1,0 +1,78 @@
+{
+  "apk_path": "docs/testing/phone-readiness/apk/sumo-phone-ui-test-debug.apk",
+  "apk_sha256": "b31ac740afa3515c8cc5a2a344061e170c63a5972ca4beef2058c3ac7c5c736f",
+  "test_apk_sha256": "7c3ccdffe6a20202219c4ee529b3369ec75b0d340d858ce34b27eb6b48b3de48",
+  "build_exit": 0,
+  "lint": {
+    "errors": 0,
+    "warnings": 17
+  },
+  "unit": {
+    "full_cohort": {
+      "total": 118,
+      "passed": 117,
+      "failed": 1,
+      "binary": "early UI candidate; pure control source unchanged at that point"
+    },
+    "related_after_unlock": {
+      "total": 66,
+      "passed": 66,
+      "failed": 0,
+      "overlaps_prior": true
+    },
+    "full_final_not_run": true
+  },
+  "android_final": {
+    "unique": 36,
+    "passed": 34,
+    "failed": 2,
+    "cohorts": [
+      40,
+      41
+    ],
+    "interrupted40": true,
+    "do_not_add_prior_batches": true
+  },
+  "network_faults": {
+    "scenarios": 8,
+    "passed": 8,
+    "same_final_binary": true
+  },
+  "unlock_live": {
+    "release_before_ack": true,
+    "send_u_uptime_s": 441.249,
+    "release_uptime_s": 441.302,
+    "ack_uptime_s": 441.463,
+    "final_pwm": [
+      0,
+      0
+    ],
+    "final_kill": false
+  },
+  "timing": {
+    "binary": "c377cd1155aedf0fa65df714a5540504b56bad5643a35fece3274460d5667b1c",
+    "stop_failures_after": 6,
+    "stop_samples": 500,
+    "stop_max_after_ms": 25.3868,
+    "cadence_passed_approved_limits": true,
+    "final_binary_not_measured": true,
+    "old_failures_open": true
+  },
+  "soak": {
+    "attempts": 1,
+    "completed_30minutes": false,
+    "status": "FAIL_INCOMPLETE",
+    "binary": "c377cd1155aedf0fa65df714a5540504b56bad5643a35fece3274460d5667b1c",
+    "final_hash_no_soak": true
+  },
+  "readiness": {
+    "phone_ui": "CONDITIONAL_DEBUG_OFFLINE_ONLY",
+    "physical_udp": "UNVERIFIED",
+    "in_app_update": "BLOCKED_END_TO_END",
+    "vehicle_release": "BLOCKED"
+  },
+  "api36": false,
+  "physical_phone_touched": false,
+  "upload_release": false,
+  "key_changed": false
+}

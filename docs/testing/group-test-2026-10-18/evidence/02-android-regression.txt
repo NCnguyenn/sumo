@@ -1,0 +1,2 @@
+{"tests": 10, "failures": 0, "skipped": 0, "successful": 10, "exit_code": 0, "elapsed_seconds": 70.75797119999879}
+EXIT_CODE: 0

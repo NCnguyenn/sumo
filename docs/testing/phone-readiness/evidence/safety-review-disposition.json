@@ -1,0 +1,30 @@
+{
+  "control_product_source_changed": true,
+  "reviewed": [
+    "ControlEvent.kt",
+    "ControlReducer.kt",
+    "ControlRuntime.kt",
+    "ControlSession.kt",
+    "ReplyTracker.kt",
+    "DiagnosticLog.kt",
+    "MainActivity.kt"
+  ],
+  "decisions": [
+    {
+      "issue": "Old ACK displayed after close",
+      "decision": "By design required by user; explicit ACK cũ/age/current request0, not live motor state. New connection clears DiagnosticSummary.",
+      "source": "ControllerScreen.kt stale label/fallback; DiagnosticLog.kt:33"
+    },
+    {
+      "issue": "closed requested0/0 after disconnect",
+      "decision": "Current requested safe output must be0/0; successful last TX and ACK are separate retained fields. Do not log old motion as current request.",
+      "source": "ControlSession.kt:179-198; DiagnosticLog.kt:95-99; diagnosticMetadataExistsEvenWhenOpenFailsAndStopIntentIsExplicit"
+    },
+    {
+      "issue": "EndUnlock cancels already-sent U before its ACK",
+      "decision": "Confirmed with failing deterministic session regression, then fixed: EndUnlock ends hold only; CancelUnlock retains cancellation for extra finger/leave. 66 related unit tests passed and real UDP smoke proved U at441.249s, finger-up441.302s, ACK441.463s then unlockedPWM0/0. No old pointer revival.",
+      "source": "unlock-red.xml; unit-xml-unlock-green/; unlock-live-summary.json; G0 BIEN_BAN_DUYET.md:129"
+    }
+  ],
+  "limitations": "No hardware claim. No deterministic explanation of idle-poll unit timeout; kept FAIL. Review is not a runtime result."
+}

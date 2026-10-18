@@ -1,0 +1,100 @@
+ACTIVITY MANAGER PROCESS EXIT INFO (dumpsys activity exit-info)
+Last Timestamp of Persistence Into Persistent Storage: 2026-10-18 18:14:07.410
+  package: com.aistudy.myapplication
+    Historical Process Exit for uid=10230
+        ApplicationExitInfo #0:
+          timestamp=2026-10-18 18:43:44.136 pid=8990 realUid=10230 packageUid=10230 definingUid=10230 user=0
+          process=com.aistudy.myapplication reason=10 (USER REQUESTED) subreason=21 (FORCE STOP) status=0
+          importance=100 pss=0.00 rss=0.00 state=empty trace=null
+          description=stop com.aistudy.myapplication due to from pid 9860
+          anrInfo=null
+        ApplicationExitInfo #1:
+          timestamp=2026-10-18 18:42:07.159 pid=8427 realUid=10230 packageUid=10230 definingUid=10230 user=0
+          process=com.aistudy.myapplication reason=10 (USER REQUESTED) subreason=21 (FORCE STOP) status=0
+          importance=100 pss=0.00 rss=0.00 state=empty trace=null
+          description=stop com.aistudy.myapplication due to from pid 8933
+          anrInfo=null
+        ApplicationExitInfo #2:
+          timestamp=2026-10-18 18:41:20.134 pid=7318 realUid=10230 packageUid=10230 definingUid=10230 user=0
+          process=com.aistudy.myapplication reason=10 (USER REQUESTED) subreason=21 (FORCE STOP) status=0
+          importance=100 pss=0.00 rss=0.00 state=empty trace=null
+          description=stop com.aistudy.myapplication due to from pid 8413
+          anrInfo=null
+        ApplicationExitInfo #3:
+          timestamp=2026-10-18 18:38:52.187 pid=7257 realUid=10230 packageUid=10230 definingUid=10230 user=0
+          process=com.aistudy.myapplication reason=10 (USER REQUESTED) subreason=21 (FORCE STOP) status=0
+          importance=125 pss=0.00 rss=0.00 state=empty trace=null
+          description=stop com.aistudy.myapplication due to finished inst
+          anrInfo=null
+        ApplicationExitInfo #4:
+          timestamp=2026-10-18 18:38:46.140 pid=7185 realUid=10230 packageUid=10230 definingUid=10230 user=0
+          process=com.aistudy.myapplication reason=10 (USER REQUESTED) subreason=21 (FORCE STOP) status=0
+          importance=125 pss=0.00 rss=0.00 state=empty trace=null
+          description=stop com.aistudy.myapplication due to finished inst
+          anrInfo=null
+        ApplicationExitInfo #5:
+          timestamp=2026-10-18 18:38:38.994 pid=7116 realUid=10230 packageUid=10230 definingUid=10230 user=0
+          process=com.aistudy.myapplication reason=10 (USER REQUESTED) subreason=21 (FORCE STOP) status=0
+          importance=125 pss=0.00 rss=0.00 state=empty trace=null
+          description=stop com.aistudy.myapplication due to finished inst
+          anrInfo=null
+        ApplicationExitInfo #6:
+          timestamp=2026-10-18 18:38:31.537 pid=7051 realUid=10230 packageUid=10230 definingUid=10230 user=0
+          process=com.aistudy.myapplication reason=10 (USER REQUESTED) subreason=21 (FORCE STOP) status=0
+          importance=125 pss=0.00 rss=0.00 state=empty trace=null
+          description=stop com.aistudy.myapplication due to finished inst
+          anrInfo=null
+        ApplicationExitInfo #7:
+          timestamp=2026-10-18 18:38:24.330 pid=6898 realUid=10230 packageUid=10230 definingUid=10230 user=0
+          process=com.aistudy.myapplication reason=10 (USER REQUESTED) subreason=21 (FORCE STOP) status=0
+          importance=125 pss=0.00 rss=0.00 state=empty trace=null
+          description=stop com.aistudy.myapplication due to finished inst
+          anrInfo=null
+        ApplicationExitInfo #8:
+          timestamp=2026-10-18 18:38:14.082 pid=6715 realUid=10230 packageUid=10230 definingUid=10230 user=0
+          process=com.aistudy.myapplication reason=10 (USER REQUESTED) subreason=21 (FORCE STOP) status=0
+          importance=125 pss=0.00 rss=0.00 state=empty trace=null
+          description=stop com.aistudy.myapplication due to finished inst
+          anrInfo=null
+        ApplicationExitInfo #9:
+          timestamp=2026-10-18 18:38:02.433 pid=6552 realUid=10230 packageUid=10230 definingUid=10230 user=0
+          process=com.aistudy.myapplication reason=10 (USER REQUESTED) subreason=21 (FORCE STOP) status=0
+          importance=125 pss=0.00 rss=0.00 state=empty trace=null
+          description=stop com.aistudy.myapplication due to finished inst
+          anrInfo=null
+        ApplicationExitInfo #10:
+          timestamp=2026-10-18 18:37:55.365 pid=6466 realUid=10230 packageUid=10230 definingUid=10230 user=0
+          process=com.aistudy.myapplication reason=10 (USER REQUESTED) subreason=21 (FORCE STOP) status=0
+          importance=125 pss=0.00 rss=0.00 state=empty trace=null
+          description=stop com.aistudy.myapplication due to finished inst
+          anrInfo=null
+        ApplicationExitInfo #11:
+          timestamp=2026-10-18 18:37:48.002 pid=6158 realUid=10230 packageUid=10230 definingUid=10230 user=0
+          process=com.aistudy.myapplication reason=16 (PACKAGE UPDATED) subreason=0 (UNKNOWN) status=0
+          importance=100 pss=0.00 rss=0.00 state=empty trace=null
+          description=stop com.aistudy.myapplication due to installPackageLI
+          anrInfo=null
+        ApplicationExitInfo #12:
+          timestamp=2026-10-18 18:35:07.567 pid=2479 realUid=10230 packageUid=10230 definingUid=10230 user=0
+          process=com.aistudy.myapplication reason=10 (USER REQUESTED) subreason=21 (FORCE STOP) status=0
+          importance=125 pss=0.00 rss=0.00 state=empty trace=null
+          description=stop com.aistudy.myapplication due to finished inst
+          anrInfo=null
+        ApplicationExitInfo #13:
+          timestamp=2026-10-18 18:13:36.169 pid=24948 realUid=10230 packageUid=10230 definingUid=10230 user=0
+          process=com.aistudy.myapplication reason=10 (USER REQUESTED) subreason=21 (FORCE STOP) status=0
+          importance=125 pss=0.00 rss=0.00 state=empty trace=null
+          description=stop com.aistudy.myapplication due to finished inst
+          anrInfo=null
+        ApplicationExitInfo #14:
+          timestamp=2026-10-18 18:13:25.813 pid=24769 realUid=10230 packageUid=10230 definingUid=10230 user=0
+          process=com.aistudy.myapplication reason=16 (PACKAGE UPDATED) subreason=0 (UNKNOWN) status=0
+          importance=100 pss=0.00 rss=0.00 state=empty trace=null
+          description=stop com.aistudy.myapplication due to installPackageLI
+          anrInfo=null
+        ApplicationExitInfo #15:
+          timestamp=2026-10-18 18:10:30.647 pid=23886 realUid=10230 packageUid=10230 definingUid=10230 user=0
+          process=com.aistudy.myapplication reason=10 (USER REQUESTED) subreason=21 (FORCE STOP) status=0
+          importance=125 pss=0.00 rss=255MB state=empty trace=null
+          description=stop com.aistudy.myapplication due to finished inst
+          anrInfo=null

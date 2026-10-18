@@ -19,7 +19,7 @@ import java.io.File
 class SoakTest {
     @get:Rule val rule = createEmptyComposeRule()
     private fun text(tag: String) = rule.onNodeWithTag(tag).fetchSemanticsNode().config[SemanticsProperties.Text].first().text
-    private fun waitText(tag: String, value: String) = rule.waitUntil(5000) { text(tag).contains(value) }
+    private fun waitText(tag: String, value: String) = rule.waitUntil(5000) { if(tag=="connection")text(tag).startsWith(value) else text(tag).contains(value) }
     private fun point(tag: String) = rule.onNodeWithTag(tag).fetchSemanticsNode().boundsInRoot.center -
         rule.onNodeWithTag("controller").fetchSemanticsNode().boundsInRoot.topLeft
     private fun resources(): Map<String, Any> {

@@ -1,0 +1,86 @@
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.CompactDiagnosticsTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=2
+INSTRUMENTATION_STATUS: stream=
+com.aistudy.myapplication.CompactDiagnosticsTest:
+INSTRUMENTATION_STATUS: test=diagnosticsEntryReturnsOfflineAndKeepsControlsInPlace
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.CompactDiagnosticsTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=2
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Assert failed: The component with TestTag = 'diagnostics' is not displayed!
+	at androidx.compose.ui.test.AssertionsKt.assertIsDisplayed(Assertions.kt:34)
+	at com.aistudy.myapplication.CompactDiagnosticsTest.diagnosticsEntryReturnsOfflineAndKeepsControlsInPlace(CompactDiagnosticsTest.kt:13)
+
+INSTRUMENTATION_STATUS: stream=
+Error in diagnosticsEntryReturnsOfflineAndKeepsControlsInPlace(com.aistudy.myapplication.CompactDiagnosticsTest):
+java.lang.AssertionError: Assert failed: The component with TestTag = 'diagnostics' is not displayed!
+	at androidx.compose.ui.test.AssertionsKt.assertIsDisplayed(Assertions.kt:34)
+	at com.aistudy.myapplication.CompactDiagnosticsTest.diagnosticsEntryReturnsOfflineAndKeepsControlsInPlace(CompactDiagnosticsTest.kt:13)
+
+INSTRUMENTATION_STATUS: test=diagnosticsEntryReturnsOfflineAndKeepsControlsInPlace
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.CompactDiagnosticsTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=2
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=settingsTabsKeepDraftUntilExplicitSaveOrCancel
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.CompactDiagnosticsTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=2
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Failed to inject touch input.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (TestTag = 'settings-calibration')
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.ActionsKt.performTouchInput(Actions.kt:402)
+	at androidx.compose.ui.test.AndroidActions.performClickImpl(Actions.android.kt:23)
+	at androidx.compose.ui.test.ActionsKt.performClick(Actions.kt:60)
+	at com.aistudy.myapplication.CompactDiagnosticsTest.settingsTabsKeepDraftUntilExplicitSaveOrCancel(CompactDiagnosticsTest.kt:27)
+
+INSTRUMENTATION_STATUS: stream=
+Error in settingsTabsKeepDraftUntilExplicitSaveOrCancel(com.aistudy.myapplication.CompactDiagnosticsTest):
+java.lang.AssertionError: Failed to inject touch input.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (TestTag = 'settings-calibration')
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.ActionsKt.performTouchInput(Actions.kt:402)
+	at androidx.compose.ui.test.AndroidActions.performClickImpl(Actions.android.kt:23)
+	at androidx.compose.ui.test.ActionsKt.performClick(Actions.kt:60)
+	at com.aistudy.myapplication.CompactDiagnosticsTest.settingsTabsKeepDraftUntilExplicitSaveOrCancel(CompactDiagnosticsTest.kt:27)
+
+INSTRUMENTATION_STATUS: test=settingsTabsKeepDraftUntilExplicitSaveOrCancel
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_RESULT: stream=
+
+Time: 6.936
+There were 2 failures:
+1) diagnosticsEntryReturnsOfflineAndKeepsControlsInPlace(com.aistudy.myapplication.CompactDiagnosticsTest)
+java.lang.AssertionError: Assert failed: The component with TestTag = 'diagnostics' is not displayed!
+	at androidx.compose.ui.test.AssertionsKt.assertIsDisplayed(Assertions.kt:34)
+	at com.aistudy.myapplication.CompactDiagnosticsTest.diagnosticsEntryReturnsOfflineAndKeepsControlsInPlace(CompactDiagnosticsTest.kt:13)
+2) settingsTabsKeepDraftUntilExplicitSaveOrCancel(com.aistudy.myapplication.CompactDiagnosticsTest)
+java.lang.AssertionError: Failed to inject touch input.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (TestTag = 'settings-calibration')
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.ActionsKt.performTouchInput(Actions.kt:402)
+	at androidx.compose.ui.test.AndroidActions.performClickImpl(Actions.android.kt:23)
+	at androidx.compose.ui.test.ActionsKt.performClick(Actions.kt:60)
+	at com.aistudy.myapplication.CompactDiagnosticsTest.settingsTabsKeepDraftUntilExplicitSaveOrCancel(CompactDiagnosticsTest.kt:27)
+
+FAILURES!!!
+Tests run: 2,  Failures: 2
+
+
+INSTRUMENTATION_CODE: -1

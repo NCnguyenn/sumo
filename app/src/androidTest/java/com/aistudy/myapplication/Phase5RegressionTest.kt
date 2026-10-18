@@ -38,7 +38,7 @@ class Phase5RegressionTest {
         rule.waitUntil(5000) { Thread.getAllStackTraces().keys.count { it.isAlive && it.name == "sumo-control" } == 1 }
     }
     private fun text(tag: String) = rule.onNodeWithTag(tag).fetchSemanticsNode().config[SemanticsProperties.Text].joinToString(" ") { it.text }
-    private fun waitText(tag: String, value: String) = rule.waitUntil(5000) { text(tag).contains(value) }
+    private fun waitText(tag: String, value: String) = rule.waitUntil(5000) { if(tag=="connection")text(tag).startsWith(value) else text(tag).contains(value) }
     private fun point(tag: String) = rule.onNodeWithTag(tag).fetchSemanticsNode().boundsInRoot.center -
         rule.onNodeWithTag("controller").fetchSemanticsNode().boundsInRoot.topLeft
     private fun online() {
@@ -93,7 +93,8 @@ class Phase5RegressionTest {
     }
 
     @Test fun E03_A13_updateEntryWhileHoldingAndDuringMacroClosesSession() {
-        launch(); online()
+        // Keep the test macro active while Compose waits for the receiver ACK; the app default stays 200 ms.
+        launch(ControllerSettings(turnDurationMs = 1000)); online()
         val root = rule.onNodeWithTag("controller"); val f = point("forward"); val b = point("boost")
         val update = point("updates")
         root.performTouchInput { down(0, f); down(1, b) }; waitText("receiver", "PWM 255 / 255")

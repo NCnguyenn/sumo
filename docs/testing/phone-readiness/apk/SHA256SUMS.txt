@@ -1,0 +1,1 @@
+b31ac740afa3515c8cc5a2a344061e170c63a5972ca4beef2058c3ac7c5c736f  sumo-phone-ui-test-debug.apk

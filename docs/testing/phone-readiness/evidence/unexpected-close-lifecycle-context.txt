@@ -1,0 +1,189 @@
+   122.462   671   778 D ActivityManager: freezing 4518 com.google.android.settings.intelligence
+   122.474   671   845 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+   122.475   671   845 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+   122.475   671   845 D InetDiagMessage: Destroyed live tcp sockets for uids={10154} in 1ms
+   122.477  2479  4883 I SumoSession: wire t0_ns=-1 t1_ns=122472716900 t2_ns=122476180600 cause=periodic hex=56313a613433376361356663383538393763652c31362c302c302c302c307c533a302c302c302c302c300a enqueued_ns=0 dequeued_ns=0 work_ns=122458686500 prepare_start_ns=122472624100 prepare_end_ns=122472701100 pre_send_cpu_ns=0 send_cpu_ns=0 deadline_ns=122453126300 wait_start_ns=122452100100 wake_ns=122458686500 requested_wait_ns=1057000 prev_work_ns=285500 prev_trace_submit_ns=0 trace_pending=0
+   122.478  2479  4883 I SumoSession: 122476 send seq=16
+   122.478  2479  4883 I SumoSession: 122476 receive host=10.0.2.2:8888 hex=41313a613433376361356663383538393763652c31362c4f4b2c302c302c302c302c302c302c302c302c300a
+   122.478  2479  4883 I SumoSession: 122476 ack seq=16 result=OK pwm=0/0 rtt=4
+   122.480   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+   122.496   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+   122.500  2479  4883 I SumoSession: wire t0_ns=-1 t1_ns=122497505400 t2_ns=122497729500 cause=periodic hex=56313a613433376361356663383538393763652c31372c302c302c302c307c533a302c302c302c302c300a enqueued_ns=0 dequeued_ns=0 work_ns=122495366300 prepare_start_ns=122497428000 prepare_end_ns=122497496700 pre_send_cpu_ns=0 send_cpu_ns=0 deadline_ns=122496292200 wait_start_ns=122490250600 wake_ns=122495366300 requested_wait_ns=2000000 prev_work_ns=152000 prev_trace_submit_ns=0 trace_pending=0
+   122.501  2479  4883 I SumoSession: 122498 send seq=17
+   122.501  2479  4883 I SumoSession: 122501 receive host=10.0.2.2:8888 hex=41313a613433376361356663383538393763652c31372c4f4b2c302c302c302c302c302c302c302c302c300a
+   122.502  2479  4883 I SumoSession: 122502 ack seq=17 result=OK pwm=0/0 rtt=5
+   122.502  1297  4085 I NetworkScheduler.Stats: (REDACTED) Task %s/%s started execution. cause:%s exec_start_elapsed_seconds: %s
+   122.508  2479  4883 I SumoSession: 122507 event Press(id=1, button=FORWARD)
+   122.508  2479  4883 I SumoSession: 122507 event Press(id=2, button=BOOST)
+   122.510  2479  4883 I SumoSession: wire t0_ns=122504966900 t1_ns=122507603300 t2_ns=122510091000 cause=Press(id=2, button=BOOST) hex=56313a613433376361356663383538393763652c31382c302c302c302c307c533a3235352c3235352c312c302c300a enqueued_ns=122506086700 dequeued_ns=122507416100 work_ns=122507276300 prepare_start_ns=122507543200 prepare_end_ns=122507592600 pre_send_cpu_ns=0 send_cpu_ns=0 deadline_ns=122518210100 wait_start_ns=122503175700 wake_ns=122507276300 requested_wait_ns=2000000 prev_work_ns=1117000 prev_trace_submit_ns=810400 trace_pending=0
+   122.521  1297  4085 I FontLog : (REDACTED) Starting Update process
+   122.523  2479  4883 I SumoSession: 122515 send seq=18
+   122.524  2479  4883 I SumoSession: 122515 receive host=10.0.2.2:8888 hex=41313a613433376361356663383538393763652c31382c4f4b2c3235352c3235352c312c302c302c302c302c302c300a
+   122.524  2479  4883 I SumoSession: 122515 ack seq=18 result=OK pwm=255/255 rtt=8
+   122.528  1297  4085 I FontLog : (REDACTED) Update scheduler succeeded
+   122.546  2479  4883 I SumoSession: wire t0_ns=-1 t1_ns=122543919600 t2_ns=122544391600 cause=periodic hex=56313a613433376361356663383538393763652c31392c302c302c302c307c533a3235352c3235352c312c302c300a enqueued_ns=122506086700 dequeued_ns=122507416100 work_ns=122543574000 prepare_start_ns=122543711300 prepare_end_ns=122543748000 pre_send_cpu_ns=0 send_cpu_ns=0 deadline_ns=122543126300 wait_start_ns=122542755100 wake_ns=122543574000 requested_wait_ns=395900 prev_work_ns=104900 prev_trace_submit_ns=0 trace_pending=0
+   122.547   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+   122.547   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+   122.547  1297  4085 I NetworkScheduler.Stats: (REDACTED) Task %s/%s finished executing. cause:%s result: %s elapsed_millis: %s uptime_millis: %s exec_start_elapsed_seconds: %s
+   122.550  2479  4883 I SumoSession: 122550 send seq=19
+   122.551  2479  4883 I SumoSession: 122551 receive host=10.0.2.2:8888 hex=41313a613433376361356663383538393763652c31392c4f4b2c3235352c3235352c312c302c302c302c302c302c300a
+   122.554  2479  4883 I SumoSession: 122554 ack seq=19 result=OK pwm=255/255 rtt=10
+   122.577  2479  4883 I SumoSession: wire t0_ns=-1 t1_ns=122573700800 t2_ns=122574220900 cause=periodic hex=56313a613433376361356663383538393763652c32302c302c302c302c307c533a3235352c3235352c312c302c300a enqueued_ns=122506086700 dequeued_ns=122507416100 work_ns=122573512900 prepare_start_ns=122573626000 prepare_end_ns=122573687100 pre_send_cpu_ns=0 send_cpu_ns=0 deadline_ns=122573126300 wait_start_ns=122572028700 wake_ns=122573512900 requested_wait_ns=1112500 prev_work_ns=377100 prev_trace_submit_ns=0 trace_pending=0
+   122.577  2479  4883 I SumoSession: 122577 send seq=20
+   122.578  2479  4883 I SumoSession: 122578 receive host=10.0.2.2:8888 hex=41313a613433376361356663383538393763652c32302c4f4b2c3235352c3235352c312c302c302c302c302c302c300a
+   122.579  2479  4883 I SumoSession: 122579 ack seq=20 result=OK pwm=255/255 rtt=5
+   122.580   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+   122.597   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+   122.610  2479  4883 I SumoSession: wire t0_ns=-1 t1_ns=122609003500 t2_ns=122609375300 cause=periodic hex=56313a613433376361356663383538393763652c32312c302c302c302c307c533a3235352c3235352c312c302c300a enqueued_ns=122506086700 dequeued_ns=122507416100 work_ns=122608623000 prepare_start_ns=122608838200 prepare_end_ns=122608950600 pre_send_cpu_ns=0 send_cpu_ns=0 deadline_ns=122603126300 wait_start_ns=122601197300 wake_ns=122608623000 requested_wait_ns=1946000 prev_work_ns=149000 prev_trace_submit_ns=0 trace_pending=0
+   122.610  2479  4883 I SumoSession: 122609 send seq=21
+   122.613   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+   122.621  2479  4883 I SumoSession: 122615 receive host=10.0.2.2:8888 hex=41313a613433376361356663383538393763652c32312c4f4b2c3235352c3235352c312c302c302c302c302c302c300a
+   122.621  2479  4883 I SumoSession: 122615 ack seq=21 result=OK pwm=255/255 rtt=7
+   122.630   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+   122.638  2479  4883 I SumoSession: wire t0_ns=-1 t1_ns=122635791100 t2_ns=122636697000 cause=periodic hex=56313a613433376361356663383538393763652c32322c302c302c302c307c533a3235352c3235352c312c302c300a enqueued_ns=122506086700 dequeued_ns=122507416100 work_ns=122635198100 prepare_start_ns=122635344900 prepare_end_ns=122635761100 pre_send_cpu_ns=0 send_cpu_ns=0 deadline_ns=122633126300 wait_start_ns=122626435300 wake_ns=122635198100 requested_wait_ns=2000000 prev_work_ns=131900 prev_trace_submit_ns=0 trace_pending=0
+   122.638  2479  4883 I SumoSession: 122638 send seq=22
+   122.638  2479  4883 I SumoSession: 122638 receive host=10.0.2.2:8888 hex=41313a613433376361356663383538393763652c32322c4f4b2c3235352c3235352c312c302c302c302c302c302c300a
+   122.639  2479  4883 I SumoSession: 122639 ack seq=22 result=OK pwm=255/255 rtt=4
+   122.641  1297  1297 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.gmscompliance.sync.BackgroundSyncGmsTaskService.ACTION_TASK_READY dat=chimera-action:/... xflg=0x4 cmp=com.google.android.gms/.chimera.PersistentInternalBoundBrokerService }
+   122.641  1297  1297 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.gmscompliance.sync.BackgroundSyncGmsTaskService.ACTION_TASK_READY dat=chimera-action:/... xflg=0x4 cmp=com.google.android.gms/.chimera.PersistentInternalBoundBrokerService }
+   122.646   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+   122.664   671   913 V GrammaticalInflectionUtils: AttributionSource: android.content.AttributionSource@10e19d0f does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+   122.676  2479  4883 I SumoSession: wire t0_ns=-1 t1_ns=122667440300 t2_ns=122672900200 cause=periodic hex=56313a613433376361356663383538393763652c32332c302c302c302c307c533a3235352c3235352c312c302c300a enqueued_ns=122506086700 dequeued_ns=122507416100 work_ns=122667116200 prepare_start_ns=122667338400 prepare_end_ns=122667427200 pre_send_cpu_ns=0 send_cpu_ns=0 deadline_ns=122663126300 wait_start_ns=122653305700 wake_ns=122667116200 requested_wait_ns=2000000 prev_work_ns=574000 prev_trace_submit_ns=0 trace_pending=0
+   122.676  2479  4883 I SumoSession: 122673 send seq=23
+   122.676   671   913 V ActivityTaskManager: TaskLaunchParamsModifier: phase=2 task=Task{da549c9 #244 type=standard A=10231:com.aistudy.myapplication.test} activity=ActivityRecord{162153936 u0 com.aistudy.myapplication.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity t-1} display-from-task=0 display-id=0 task-display-area-windowing-mode=1 suggested-display-area=DefaultTaskDisplayArea@31745360 inherit-from-task=fullscreen non-freeform-task-display-area display-area=DefaultTaskDisplayArea@31745360 skip-bounds-fullscreen
+   122.676   671   913 I ActivityTaskManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 xflg=0x4 cmp=com.aistudy.myapplication.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity} with LAUNCH_MULTIPLE from uid 10230 (com.aistudy.myapplication) (BAL_ALLOW_VISIBLE_WINDOW) result code=0
+   122.677   945  1042 V WindowManagerShell: Transition requested (#35): android.os.BinderProxy@4578931 TransitionRequestInfo { type = OPEN, triggerTask = TaskInfo{userId=0 taskId=244 effectiveUid=10231 seqId=0 displayId=0 isRunning=true baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.aistudy.myapplication.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity } baseActivity=ComponentInfo{com.aistudy.myapplication.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity} topActivity=ComponentInfo{com.aistudy.myapplication.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity} origActivity=null realActivity=ComponentInfo{com.aistudy.myapplication.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity} realActivityIsAppLockEnabled=false numActivities=1 lastActiveTime=122675 supportsMultiWindow=true supportsMultiWindowWithoutConstraints=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{android.os.BinderProxy@1f88816} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 0 - 0, 0) topActivityInfo=ActivityInfo{74cd597 androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=false isInteractive=false isVisible=false isVisibleRequested=false isTopActivityNoDisplay=false isSleeping=false locusId=null displayAreaFeatureId=1 isTopActivityTransparent=false isActivityStackTransparent=false lastNonFullscreenBounds=null leafTaskBoundsFromOptions= false capturedLink=null capturedLinkTimestamp=0 requestedVisibleTypes=503 topActivityRequestOpenInBrowserEducationTimestamp=0 appCompatTaskInfo=AppCompatTaskInfo { topActivityInSizeCompat=false isLeafTask= true eligibleForLetterboxEducation= false isLetterboxEducationEnabled= true isLetterboxDoubleTapEnabled= false eligibleForUserAspectRatioButton= false topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 topActivityAppBounds=Rect(0, 0 - 2400, 1080) isUserFullscreenOverrideEnabled=false isSystemFullscreenOverrideEnabled=false hasMinAspectRatioOverride=false topActivityLetterboxBounds=null topNonResizableActivityAspectRatio=-1.0} topActivityMainWindowFrame=null isAppBubble=false}, pipChange = null, remoteTransitionInfo = null, displayChanges = null, requestedLocation = null, userChange = null, windowingLayerChange = null, fullscreenRequestChange = null, flags = 0, debugId = 35 }
+   122.677   945  1042 V ShellDesktopMode: DesktopTasksController: skipping handleRequest reason=triggerTask's display doesn't support desktop mode
+   122.677   945  1042 D ShellSplitScreen: logExit: no-op, mLoggerSessionId is null
+   122.678  2479  4883 I SumoSession: 122678 receive host=10.0.2.2:8888 hex=41313a613433376361356663383538393763652c32332c4f4b2c3235352c3235352c312c302c302c302c302c302c300a
+   122.680   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+   122.681   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+   122.681  2479  4883 I SumoSession: 122679 ack seq=23 result=OK pwm=255/255 rtt=12
+   122.682  1079  1079 D RecentsView: onTaskDisplayChanged: 244, new displayId = 0
+   122.688   671   758 W InputChannel-JNI: Channel already disposed.
+   122.688  2479  2479 D LifecycleMonitor: Lifecycle status change: com.aistudy.myapplication.MainActivity@8c5ed76 in: PAUSED
+   122.688  2479  2479 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=com.aistudy.myapplication.MainActivity@8c5ed76
+   122.690  2479  4883 I SumoSession: wire t0_ns=122683124300 t1_ns=122689323900 t2_ns=122689742300 cause=stop-gate hex=56313a613433376361356663383538393763652c32342c302c302c302c307c533a302c302c302c302c300a enqueued_ns=122683124300 dequeued_ns=122683604600 work_ns=122683587400 prepare_start_ns=122683694700 prepare_end_ns=122689304600 pre_send_cpu_ns=0 send_cpu_ns=0 deadline_ns=122663126300 wait_start_ns=122679600100 wake_ns=122683587400 requested_wait_ns=2000000 prev_work_ns=12465700 prev_trace_submit_ns=1304200 trace_pending=0
+   122.692  2479  4883 I SumoSession: 122691 send seq=24
+   122.693  2479  4883 I SumoSession: wire t0_ns=-1 t1_ns=122691530500 t2_ns=122692845700 cause=periodic hex=56313a613433376361356663383538393763652c32352c302c302c302c307c430a enqueued_ns=122683124300 dequeued_ns=122683604600 work_ns=122683587400 prepare_start_ns=122691394500 prepare_end_ns=122691489300 pre_send_cpu_ns=0 send_cpu_ns=0 deadline_ns=122663126300 wait_start_ns=122679600100 wake_ns=122683587400 requested_wait_ns=2000000 prev_work_ns=12465700 prev_trace_submit_ns=1304200 trace_pending=0
+   122.693  2479  4883 I SumoSession: 122693 send seq=25
+   122.696   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+   122.696   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+   122.697  2479  4883 I SumoSession: 122697 receive host=10.0.2.2:8888 hex=41313a613433376361356663383538393763652c32342c4f4b2c302c302c302c302c302c302c302c302c300a
+   122.697  2479  4883 I SumoSession: 122697 discard reason=SUPERSEDED: ACK của ý định cũ; không áp dụng lại
+   122.698  2479  4883 I SumoSession: 122697 receive host=10.0.2.2:8888 hex=41313a613433376361356663383538393763652c32352c4f4b2c302c302c302c302c302c302c302c302c300a
+   122.698  2479  4883 I SumoSession: 122697 ack seq=25 result=OK pwm=0/0 rtt=null
+   122.702  2479  4883 I SumoSession: 122700 closed confirmed=true requested=0/0 reason=Offline · đã ACK đóng phiên; chưa chứng minh dừng cơ học
+   122.712  4505  4523 I GFXSTREAM: [eglDisplay.cpp(297)] Opening libGLESv1_CM_emulation.so
+   122.713  4505  4523 I GFXSTREAM: [eglDisplay.cpp(297)] Opening libGLESv2_emulation.so
+   122.714   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+   122.714   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+   122.723   671  1008 D WindowManager: setClientSurface Surface(name=VRI-Splash Screen com.aistudy.myapplication.test#388)/@0x862c1e7 for 536b3da Splash Screen com.aistudy.myapplication.test
+   122.724  4505  4523 W libc    : Access denied finding property "vendor.mesa.virtgpu.kumquat"
+   122.727   945  1171 I Surface : Creating surface for consumer unnamed-945-14 with slotExpansion=1 for 64 slots
+   122.728   945  1171 I Surface : Creating surface for consumer VRI[test]#14(BLAST Consumer)14 with slotExpansion=1 for 64 slots
+   122.730   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+   122.733  2479  2479 I SumoSession: haptic connected=false
+   122.742  1297  3114 I NetworkScheduler.Stats: (REDACTED) Task %s/%s started execution. cause:%s exec_start_elapsed_seconds: %s
+   122.743   945  1042 V RecentTasksController: Notify recent tasks changed: 1
+   122.744   945  1042 V RecentTasksController: onRecentTaskRemovedForAddTask; removing task=242
+   122.744   945  1042 D ShellDesktopMode: DesktopRepository(0): Removes freeform task: taskId=242
+   122.744   945  1042 W ShellDesktopMode: DesktopRepository(0): No display id found for task: taskId=242
+   122.744   945  1042 V RecentTasksController: Notify recent tasks changed: 1
+   122.747   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+   122.763   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+   122.765  1079  1079 D RecentTasksList: invalidateLoadedTasks - previous requestLoadId: -1
+   122.765  1079  1079 D RecentTasksList: invalidateLoadedTasks - previous requestLoadId: -1
+   122.776  1297  1302 W gle.android.gms: Suspending all threads took: 32.885ms
+   122.778  4505  4523 W HWUI    : Failed to initialize 101010-2 format, error = EGL_SUCCESS
+   122.781   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+   122.781   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+   122.781   671   696 V SharedSurfaceAnimation: Checking SharedSurface matching for: ComponentInfo{com.aistudy.myapplication/com.aistudy.myapplication.MainActivity}, user= 0
+   122.781   671   696 V SharedSurfaceAnimation:   No matching provider found.
+   122.790  2597  2689 I Finsky:background: [58] DSC::L: Update all listeners for download <36:RUNNING:35%[35%]> in group com.android.vending:uf3AY4xkR26iaHBX4TZIgg
+   122.795  2597  2689 I Finsky:background: [58] DSC::L: Updating listener wzd@4c73ec6 for download <36:RUNNING:35%[35%]>
+   122.799  2597  2689 I Finsky:background: [58] DSC::L: Updating listener DownloadServiceManagerListener::arbk@2687520 for download <36:RUNNING:35%[35%]>
+   122.799  2597  2689 I Finsky:background: [58] DS: Received onProgress request_id=36
+   122.799   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+   122.799   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+   122.799   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+   122.799   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+   122.799   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+   122.799  2597  2689 I Finsky:background: [58] RM: receive resource status onProgress download_request_id=36, pkg_id=com.android.vending artifact_id=phonesky_webrtc_native_lib.config.x86_64 reason=su_auto_update isid=uf3AY4xkR26iaHBX4TZIgg, status_code=RESOURCE_STATUS_IN_PROGRESS, legacy_status_code=192, size: 2667137/7520692
+   122.799   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+   122.799   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+   122.799  2597  2689 I Finsky:background: [58] DSC::L: Updating listener DownloadServiceManagerListener::upl@6c92ca1 for download <36:RUNNING:35%[35%]>
+   122.799   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+   122.799   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+   122.799   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+   122.799  2597  2689 I Finsky:background: [58] DS::IDC: updateWith: <36:RUNNING:35%[35%]>
+   122.799   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+   122.800   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+   122.802   522   560 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+   122.803  2597  2685 I Finsky:background: [56] RM: getStatus resource_request=3f10c310-ddb8-43b1-bdaf-f55f036d3f41 request_id=36 pkg_id=com.android.vending artifact_id=phonesky_webrtc_native_lib.config.x86_64 isid=uf3AY4xkR26iaHBX4TZIgg
+   122.803  2597  2685 I Finsky:background: [56] DSC: reviveDownload(36)
+   122.806  2597  2685 I Finsky:background: [56] DS: reviveDownload(request_id=36)
+   122.810   671   692 V WindowManager: Sent Transition (#35) createdAt=10-18 18:34:03.155 via request=TransitionRequestInfo { type = OPEN, triggerTask = TaskInfo{userId=0 taskId=244 effectiveUid=10231 seqId=0 displayId=0 isRunning=true baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.aistudy.myapplication.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity } baseActivity=ComponentInfo{com.aistudy.myapplication.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity} topActivity=ComponentInfo{com.aistudy.myapplication.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity} origActivity=null realActivity=ComponentInfo{com.aistudy.myapplication.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity} realActivityIsAppLockEnabled=false numActivities=1 lastActiveTime=122675 supportsMultiWindow=true supportsMultiWindowWithoutConstraints=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{RemoteToken{f55f218 Task{da549c9 #244 type=standard A=10231:com.aistudy.myapplication.test}}} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 0 - 0, 0) topActivityInfo=ActivityInfo{deb9471 androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=false isInteractive=false isVisible=false isVisibleRequested=false isTopActivityNoDisplay=false isSleeping=false locusId=null displayAreaFeatureId=1 isTopActivityTransparent=false isActivityStackTransparent=false lastNonFullscreenBounds=null leafTaskBoundsFromOptions= false capturedLink=null capturedLinkTimestamp=0 requestedVisibleTypes=503 topActivityRequestOpenInBrowserEducationTimestamp=0 appCompatTaskInfo=AppCompatTaskInfo { topActivityInSizeCompat=false isLeafTask= true eligibleForLetterboxEducation= false isLetterboxEducationEnabled= true isLetterboxDoubleTapEnabled= false eligibleForUserAspectRatioButton= false topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 topActivityAppBounds=Rect(0, 0 - 2400, 1080) isUserFullscreenOverrideEnabled=false isSystemFullscreenOverrideEnabled=false hasMinAspectRatioOverride=false topActivityLetterboxBounds=null topNonResizableActivityAspectRatio=-1.0} topActivityMainWindowFrame=null isAppBubble=false}, pipChange = null, remoteTransitionInfo = null, displayChanges = null, requestedLocation = null, userChange = null, windowingLayerChange = null, fullscreenRequestChange = null, flags = 0, debugId = 35 }
+   122.810   671   692 V WindowManager:     startWCT=WindowContainerTransaction { changes= {} hops= [] flags= 0 errorCallbackToken=null taskFragmentOrganizer=null }
+   122.813   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+   122.817  2597  2689 I Finsky:background: [58] DS: DS: onReviveDownload(request_id=36, files_to_download=[phonesky_webrtc_native_lib.config.x86_64(size:7520692)], context[group_id=com.android.vending:uf3AY4xkR26iaHBX4TZIgg], display_data[invisible=true, title=Google Play Store], network_restrictions=ANY_NETWORK status=running, bytes_downloaded=2667137, total_bytes=7520692, retry[count=0, next_retry=n/a])
+   122.822   945  1042 V ShellTaskOrganizer: Task appeared taskId=244 listener=FullscreenTaskListener
+   122.822   945  1042 V ShellTaskOrganizer: Fullscreen Task Appeared: #244
+   122.823   945  1042 V RecentTasksController: Notify recent tasks changed: 1
+   122.823  2597  2597 I Finsky:background: [2] RF: onProgress request_id=36, pkg_id=com.android.vending artifact_id=phonesky_webrtc_native_lib.config.x86_64 isid=uf3AY4xkR26iaHBX4TZIgg artifact_bytes=2667137/7520692 pkg_bytes=12996120/24931930
+   122.823  1079  1079 D RecentTasksList: invalidateLoadedTasks - previous requestLoadId: -1
+   122.823  2597  2597 I Finsky:background: [2] RF: Preventing total bytes update to listeners
+   122.824  2479  4883 I SumoSession: 122800 closed confirmed=false requested=0/0 reason=Offline · phiên đã đóng
+   122.825   945  1342 V WindowManagerShell: onTransitionReady(transaction=2881923060638)
+   122.826   671   692 V WindowManager:     info={id=35 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[
+   122.826   671   692 V WindowManager:         {WCT{RemoteToken{f55f218 Task{da549c9 #244 type=standard A=10231:com.aistudy.myapplication.test}}} m=OPEN f=MOVE_TO_TOP|FLAG_CHANGED_INTERACTIVE leash=Surface(name=Task=244#383)/@0x62c06df sb=Rect(0, 0 - 2400, 1080) eb=Rect(0, 0 - 2400, 1080) epz=Point(2400, 1080) d=0 endFixedRotation=0 taskParent=-1 winMode=1 userId=0},
+   122.826   671   692 V WindowManager:         {WCT{RemoteToken{5ca5bb9 Task{659f577 #243 type=standard A=10230:com.aistudy.myapplication}}} m=TO_BACK f=FLAG_CHANGED_INTERACTIVE leash=Surface(name=Task=243#362)/@0xa280603 sb=Rect(0, 0 - 2400, 1080) eb=Rect(0, 0 - 2400, 1080) epz=Point(2400, 1080) d=0 taskParent=-1 winMode=1 userId=0}
+   122.826   671   692 V WindowManager:     ]}
+   122.830   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+   122.830   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+   122.842   945  1042 V RecentTasksController: generateList(getRecentTasks)
+   122.842   945  1042 V RecentTasksController: initializeDesksMap - allDeskIds: []
+   122.842   945  1042 V RecentTasksController: Task 244 is not an active desktop task
+   122.842   945  1042 V RecentTasksController: Added fullscreen task: 244
+   122.842   945  1042 V RecentTasksController: Task 243 is not an active desktop task
+   122.842   945  1042 V RecentTasksController: Added fullscreen task: 243
+   122.842   945  1042 V RecentTasksController: Task 231 is not an active desktop task
+   122.842   945  1042 V RecentTasksController: Added fullscreen task: 231
+   122.842   945  1042 V RecentTasksController: generateList - complete
+   122.842   945  1042 V RecentTasksController: Notify recent tasks changed: 1
+   122.843   945  1042 V WindowManagerShell: onTransitionReady (#35) android.os.BinderProxy@4578931: {id=35 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[
+   122.843   945  1042 V WindowManagerShell:         {m=OPEN f=MOVE_TO_TOP|FLAG_CHANGED_INTERACTIVE leash=Surface(name=Task=244#383)/@0x93742d9 sb=Rect(0, 0 - 2400, 1080) eb=Rect(0, 0 - 2400, 1080) epz=Point(2400, 1080) d=0 endFixedRotation=0 taskParent=-1 winMode=1 userId=0},
+   122.843   945  1042 V WindowManagerShell:         {m=TO_BACK f=FLAG_CHANGED_INTERACTIVE leash=Surface(name=Task=243#362)/@0xfbbc49e sb=Rect(0, 0 - 2400, 1080) eb=Rect(0, 0 - 2400, 1080) epz=Point(2400, 1080) d=0 taskParent=-1 winMode=1 userId=0}
+   122.843   945  1042 V WindowManagerShell:     ]}
+   122.843   945  1042 V WindowManagerShell: FocusTransitionObserver: Updating focus state for transition #35
+   122.843   945  1042 D WindowManagerShell: FocusTransitionObserver: Focus updated on displayId=0 to taskId=244
+   122.843  1079  1079 D RecentTasksList: invalidateLoadedTasks - previous requestLoadId: -1
+   122.843   945  1042 V WindowManagerShell: FocusTransitionObserver: Notifying local listeners of task focus change: taskId=243, isFocusedOnDisplay=false, isFocusedGlobally=false
+   122.843   945  1042 V WindowManagerShell: FocusTransitionObserver: Notifying local listeners of task focus change: taskId=244, isFocusedOnDisplay=true, isFocusedGlobally=true
+   122.843   945  1042 V RecentTasksController: Notify recent tasks changed: 2
+   122.843  1079  1079 D RecentTasksList: invalidateLoadedTasks - previous requestLoadId: -1
+   122.850  1079  1139 D PreloadThumbnailUseCase: Preloading thumbnails for task ids: [[id=231 windowingMode=0 user=0 lastActiveTime=31965 lastFocusedTime=0] null, [id=243 windowingMode=1 user=0 lastActiveTime=122670 lastFocusedTime=120501] null, [id=244 windowingMode=1 user=0 lastActiveTime=122707 lastFocusedTime=0] null]
+   122.863   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+   122.864   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+   122.880   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+   122.880   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+   122.880   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+   122.880   945  1042 V WindowManagerShell: Playing animation for (#35) android.os.BinderProxy@4578931@0
+   122.881   945  1042 D ShellSplitScreen: startAnimation: transition=35 isSplitActive=false
+   122.881   945  1042 V ShellRecents: RecentsTransitionHandler.startAnimation: no controller found
+   122.881   945  1042 V ShellDesktopMode: DesktopMixedTransitionHandler: No pending desktop transition
+   122.881   945  1042 V ShellDesktopMode: DesktopHomeScreenPeekTransitionHandler: startAnimation
+   122.881   945  1042 V WindowManagerShell: Transition doesn't have explicit remote, search filters for match for {id=35 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[{m=OPEN f=MOVE_TO_TOP|FLAG_CHANGED_INTERACTIVE leash=Surface(name=Task=244#383)/@0x93742d9 sb=Rect(0, 0 - 2400, 1080) eb=Rect(0, 0 - 2400, 1080) epz=Point(2400, 1080) d=0 endFixedRotation=0 taskParent=-1 winMode=1 userId=0},{m=TO_BACK f=FLAG_CHANGED_INTERACTIVE leash=Surface(name=Task=243#362)/@0xfbbc49e sb=Rect(0, 0 - 2400, 1080) eb=Rect(0, 0 - 2400, 1080) epz=Point(2400, 1080) d=0 taskParent=-1 winMode=1 userId=0}]}
+   122.881   945  1042 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0 notFlags=0x0 checks=[{atype=undefined independent=true modes=[CLOSE,TO_BACK] flags=IN_TASK_WITH_EMBEDDED_ACTIVITY mustBeTask=false order=ANY topActivity=null launchCookie=null taskFragmentToken=android.os.BinderProxy@e94ab69 windowingMode=undefined isCrossDisplayMove=false}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@dbd29ee, appThread = android.app.IApplicationThread$Stub$Proxy@8658e8f, debugName = overlayBackTransition, filter = {types=[] flags=0x0 notFlags=0x0 checks=[{atype=undefined independent=true modes=[CLOSE,TO_BACK] flags=IN_TASK_WITH_EMBEDDED_ACTIVITY mustBeTask=false order=ANY topActivity=null launchCookie=null taskFragmentToken=android.os.BinderProxy@e94ab69 windowingMode=undefined isCrossDisplayMove=false}]} }}
+   122.881   945  1042 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0 notFlags=0x0 checks=[{atype=dream independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null windowingMode=undefined isCrossDisplayMove=false},{atype=home independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null windowingMode=undefined isCrossDisplayMove=false}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@647751c, appThread = android.app.IApplicationThread$Stub$Proxy@1c39525, debugName = LauncherToDream, filter = {types=[] flags=0x0 notFlags=0x0 checks=[{atype=dream independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null windowingMode=undefined isCrossDisplayMove=false},{atype=home independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null windowingMode=undefined isCrossDisplayMove=false}]} }}
+   122.881   945  1042 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0 notFlags=0x0 checks=[{atype=standard independent=false modes=[CHANGE] flags=NONE mustBeTask=true order=ANY topActivity=null launchCookie=null windowingMode=undefined isCrossDisplayMove=true}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@755f6fa, appThread = android.app.IApplicationThread$Stub$Proxy@3684ab, debugName = QuickstepDisplayMove, filter = {types=[] flags=0x0 notFlags=0x0 checks=[{atype=standard independent=false modes=[CHANGE] flags=NONE mustBeTask=true order=ANY topActivity=null launchCookie=null windowingMode=undefined isCrossDisplayMove=true}]} }}
+   122.881   945  1042 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0 notFlags=0x100 checks=[{atype=home independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=ANY topActivity=ComponentInfo{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity} launchCookie=null windowingMode=undefined isCrossDisplayMove=false},{atype=standard independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null windowingMode=undefined isCrossDisplayMove=false},{NOT atype=undefined independent=true modes=[] flags=NONE mustBeTask=true order=ANY topActivity=null launchCookie=null customAnim=true windowingMode=undefined isCrossDisplayMove=false}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@ae4c708, appThread = android.app.IApplicationThread$Stub$Proxy@3d5ea1, debugName = QuickstepLaunchHome, filter = {types=[] flags=0x0 notFlags=0x100 checks=[{atype=home independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=ANY topActivity=ComponentInfo{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity} launchCookie=null windowingMode=undefined isCrossDisplayMove=false},{atype=standard independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null windowingMode=undefined isCrossDisplayMove=false},{NOT atype=undefined independent=true modes=[] flags=NONE mustBeTask=true order=ANY topActivity=null launchCookie=null customAnim=true windowingMode=undefined isCrossDisplayMove=false}]} }}
+   122.881   945  1042 V WindowManagerShell:  Checking filter Pair{{types=[OPEN,TO_FRONT] flags=0x0 notFlags=0x0 checks=[{atype=standard independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=true order=ANY topActivity=null launchCookie=null windowingMode=freeform isCrossDisplayMove=false}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@e7c88c6, appThread = null, debugName = DesktopWindowLimitUnminimize, filter = {types=[OPEN,TO_FRONT] flags=0x0 notFlags=0x0 checks=[{atype=standard independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=true order=ANY topActivity=null launchCookie=null windowingMode=freeform isCrossDisplayMove=false}]} }}
+   122.881   945  1042 V WindowManagerShell:  Delegate animation for (#35) to null
+   122.881   945  1042 V WindowManagerShell: start default transition animation, info = {id=35 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[{m=OPEN f=MOVE_TO_TOP|FLAG_CHANGED_INTERACTIVE leash=Surface(name=Task=244#383)/@0x93742d9 sb=Rect(0, 0 - 2400, 1080) eb=Rect(0, 0 - 2400, 1080) epz=Point(2400, 1080) d=0 endFixedRotation=0 taskParent=-1 winMode=1 userId=0},{m=TO_BACK f=FLAG_CHANGED_INTERACTIVE leash=Surface(name=Task=243#362)/@0xfbbc49e sb=Rect(0, 0 - 2400, 1080) eb=Rect(0, 0 - 2400, 1080) epz=Point(2400, 1080) d=0 taskParent=-1 winMode=1 userId=0}]}
+   122.881   945  1042 V WindowManagerShell: loadAnimation: anim=android.view.animation.AnimationSet@2fdc976 animAttr=0x9 type=OPEN isEntrance=false
+   122.896   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+   122.897   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+   122.897   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+   122.897   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+   122.897   522   522 W skia    : AGTM parsing failed flags.readFromStream(s) at 159

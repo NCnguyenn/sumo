@@ -1,0 +1,18 @@
+CAPTURE 01-main-dpad-offline
+SIMULATOR normal 28844
+CAPTURE 02-main-dpad-online
+CAPTURE 03-settings-general
+CAPTURE 04-settings-calibration
+CAPTURE 05-settings-update-source
+CAPTURE 06-updater
+CAPTURE 07-main-joystick-online
+CAPTURE 08-kill-locked
+SIMULATOR drop-reply 8168
+CAPTURE 09-main-ack-timeout
+CAPTURE 10-diagnostics-current
+CAPTURE 11-diagnostics-previous-error
+Traceback (most recent call last):
+  File "C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\.gradle\ui-compact-2026-10-18\journey.py", line 71, in <module>
+    assert any('PWM 0 / 0 · B0 W0 K0' in n.get('text','') for n in tree.iter('node'))
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

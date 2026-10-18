@@ -39,3 +39,11 @@ docs/testing/**/evidence/**/*.tar
 docs/testing/**/evidence/**/*.gz
 docs/testing/**/evidence/**/*.trace
 docs/testing/**/evidence/**/logcat*.txt
+
+# UI recordings also live directly under their report directories.
+docs/testing/**/*.jsonl
+docs/testing/**/*.csv
+docs/testing/**/*logcat*.txt
+docs/testing/**/evidence/avd-stdout.txt
+docs/testing/**/evidence/avd-stderr.txt
+docs/testing/**/evidence/avd-owner-pid.txt

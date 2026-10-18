@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.aistudy.myapplication.diagnostics.DiagnosticLogTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-18T10:49:56.304Z" hostname="DESKTOP-OVC24VV" time="0.093">
+  <properties/>
+  <testcase name="corruptOrOversizedHistoryIsNotLoaded" classname="com.aistudy.myapplication.diagnostics.DiagnosticLogTest" time="0.01"/>
+  <testcase name="countersDistinguishRequestedAcceptedAndDiscardedReplies" classname="com.aistudy.myapplication.diagnostics.DiagnosticLogTest" time="0.006"/>
+  <testcase name="failureIncludesOriginalAppEndpointAndHasHardUtf8ByteLimit" classname="com.aistudy.myapplication.diagnostics.DiagnosticLogTest" time="0.064"/>
+  <testcase name="failureSurvivesRestartAndCleanSessionDoesNotOverwriteIt" classname="com.aistudy.myapplication.diagnostics.DiagnosticLogTest" time="0.006"/>
+  <testcase name="ringAndExportStayBoundedAndDoNotInventHardwareFaults" classname="com.aistudy.myapplication.diagnostics.DiagnosticLogTest" time="0.003"/>
+  <testcase name="rejectedAckKeepsReceiverCauseAndLastTxIsNotPresentedAsCurrentIntent" classname="com.aistudy.myapplication.diagnostics.DiagnosticLogTest" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

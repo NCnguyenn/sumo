@@ -153,6 +153,7 @@ class ControlReducer(initialSettings: ControllerSettings = ControllerSettings(),
         unlockPending = true
         return true
     }
+    fun endUnlockHold() { unlockStart = null }
     fun acknowledgeUnlock(accepted: Boolean) {
         if (!unlockPending || !connected || pressed.isNotEmpty()) return
         unlockPending = false

@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-18",
+  "version": "SRS-v2",
+  "tool": "built-in imagegen",
+  "srs_filename": "Dac_Ta_Ky_Thuat_App_Dieu_Khien_Xe_Sumo.docx",
+  "srs_sha256": "8efd3466484e4560461ddd973bfffe3c320a32a1c819565353b2b13c510bd498",
+  "mockup_only": true,
+  "numeric_states_illustrative": true,
+  "pixel_ratios_and_touch_targets_not_verified": true,
+  "images": [
+    {
+      "file": "01-dpad-srs-v2.png",
+      "width": 1916,
+      "height": 821,
+      "sha256": "340bb29fe658697c2eee174736df0d6f8d7306550e27218f33eba018379f990e"
+    },
+    {
+      "file": "02-joystick-srs-v2.png",
+      "width": 1916,
+      "height": 821,
+      "sha256": "15858d65e57284926d7cdceaafb8350bdec04cbc9d745b2a09fe06040423b345"
+    },
+    {
+      "file": "03-settings-modal-srs-v2.png",
+      "width": 1870,
+      "height": 841,
+      "sha256": "f8e1ed765f49d12b28422694e761e33f9d5d202ff6a21e2cec7346f491aaa37c"
+    },
+    {
+      "file": "04-updater-srs-v2.png",
+      "width": 1881,
+      "height": 836,
+      "sha256": "09316ed35354aaa36abb312270bbb5671d456fd02804ef28eb0a0219f2c9588a"
+    }
+  ]
+}

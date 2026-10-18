@@ -1,0 +1,14 @@
+{
+  "apk_sha256": "b31ac740afa3515c8cc5a2a344061e170c63a5972ca4beef2058c3ac7c5c736f",
+  "method": "adb install -r same final debug APK version1",
+  "success": true,
+  "preserved_files": {
+    "shared_prefs/sumo_safety.xml": "d4df5cdc24abc7ff0f481061fc77f109f3fdac00bf925fb7b5e10ca48dcc744e",
+    "shared_prefs/sumo_install_result.xml": "731ca1223573badeb722ed73d190e822a1a9978c0393b50debaf41598e20396a",
+    "shared_prefs/sumo_settings.xml": "3325d2a819fdd8062c2cdc48a09b995c9b012915bcdf88b1cf9742a7f057c793",
+    "files/diagnostics/previous-error.txt": "7e641867af7387d05f4f372c71e87eeeba851aa7b7535e6ce6f564393373afd8"
+  },
+  "byte_identical": true,
+  "physical_phone": false,
+  "higher_version_upgrade": false
+}
