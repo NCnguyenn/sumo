@@ -1,0 +1,25 @@
+{
+  "commands": [
+    {
+      "command": [
+        "C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe",
+        "-s",
+        "emulator-5554",
+        "shell",
+        "run-as",
+        "com.aistudy.myapplication",
+        "cp",
+        "/data/local/tmp/sumo-phase5-b.apk",
+        "files/test-b.apk"
+      ],
+      "exit_code": 0,
+      "output": ""
+    }
+  ],
+  "old_bytes": 1773,
+  "first_ctrl_z_in_host": 1773,
+  "new_bytes": 30762914,
+  "sha256": "009a8da2d1c3dc67c22ccb19ddc612fc5617bd6aad4b6280aa7b19d128c8ca49",
+  "host_sha256": "009a8da2d1c3dc67c22ccb19ddc612fc5617bd6aad4b6280aa7b19d128c8ca49",
+  "identical": true
+}

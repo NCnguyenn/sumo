@@ -1,0 +1,39 @@
+**********************
+PowerShell transcript start
+Start time: 20261017080844
+Username: DESKTOP-OVC24VV\CHI NGUYEN
+RunAs User: DESKTOP-OVC24VV\CHI NGUYEN
+Configuration Name: 
+Machine: DESKTOP-OVC24VV (Microsoft Windows NT 10.0.26300.0)
+Host Application: C:\Users\CHI NGUYEN\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell\pwsh.dll -Command try { [Console]::OutputEncoding=[System.Text.Encoding]::UTF8 } catch {}
+$env:JAVA_HOME = 'C:\Program Files\Android\Android Studio\jbr'
+$env:JAVA_TOOL_OPTIONS = '"-Djdk.net.unixdomain.tmpdir=C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\.gradle"'
+Start-Transcript -LiteralPath 'docs\testing\phase-0\evidence\gradle-lint-online.txt' -Force | Out-Null
+Write-Output ('$env:JAVA_HOME = ' + $env:JAVA_HOME)
+Write-Output ('$env:JAVA_TOOL_OPTIONS = ' + $env:JAVA_TOOL_OPTIONS)
+Write-Output 'COMMAND: ./gradlew.bat :app:lintDebug --console=plain'
+./gradlew.bat :app:lintDebug --console=plain
+$phaseExit = $LASTEXITCODE
+Write-Output ('exit=' + $phaseExit)
+Stop-Transcript | Out-Null
+exit $phaseExit
+Process ID: 13828
+PSVersion: 7.6.5
+PSEdition: Core
+GitCommitId: 7.6.5
+OS: Microsoft Windows 10.0.26300
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+$env:JAVA_HOME = C:\Program Files\Android\Android Studio\jbr
+$env:JAVA_TOOL_OPTIONS = "-Djdk.net.unixdomain.tmpdir=C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\.gradle"
+COMMAND: ./gradlew.bat :app:lintDebug --console=plain
+
+exit=0
+**********************
+PowerShell transcript end
+End time: 20261017080915
+**********************

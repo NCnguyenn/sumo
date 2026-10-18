@@ -1,0 +1,9 @@
+{
+  "tests": 108,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "lint_errors": 0,
+  "lint_warnings": 17,
+  "apk_sha256": "72861bd59626aff5975f688b42cac07a2ad1f3b1cc193f92f4485f6dd7be5833"
+}

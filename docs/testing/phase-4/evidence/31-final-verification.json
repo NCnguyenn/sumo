@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-17",
+  "gate": "G3/G4 CHỜ DUYỆT CHUNG",
+  "cohorts": {
+    "jvm26": {
+      "path": "docs/testing/phase-4/evidence/26-unit-xml",
+      "tests": 97,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "android26": {
+      "path": "docs/testing/phase-4/evidence/26-android-results",
+      "tests": 24,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "ui23": {
+      "path": "docs/testing/phase-3/evidence/23-ui-feedback-results",
+      "tests": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "settings30": {
+      "path": "docs/testing/phase-3/evidence/30-settings-results",
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "integration30": {
+      "path": "docs/testing/phase-4/evidence/30-android-results",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "lint": {
+    "Error": 0,
+    "Warning": 17
+  },
+  "faultScenariosPassed": 8,
+  "nativeInstaller": "pending user confirmation and Cancel only, kept version1/config; no successful update",
+  "stop": "FAIL: 1/500 t2 >10 ms",
+  "cadence": "FAIL: every target has out-of-bound intervals",
+  "I11": "Not verified: both WAN and LAN routes removed by fixture",
+  "sourceFiles": 80,
+  "baselineChanged": [
+    "app/src/main/AndroidManifest.xml",
+    "app/src/main/java/com/aistudy/myapplication/MainActivity.kt",
+    "app/src/main/java/com/aistudy/myapplication/control/ControlReducer.kt",
+    "app/src/main/java/com/aistudy/myapplication/ui/theme/Theme.kt",
+    "app/src/main/res/values/strings.xml",
+    "app/build.gradle.kts"
+  ],
+  "brokenLocalLinks": [],
+  "signingKeysInsideWorkspace": [],
+  "sourceManifestSha256": "e8935eed11c101bd54ab0b0b7b8b65da3cf9fd346c63c88fc16378dd9c0c3fad",
+  "releaseOrUpload": false,
+  "finalSourceManifestMatches": true,
+  "finalApkMatches": true,
+  "reportGateAndLinksVerified": true
+}

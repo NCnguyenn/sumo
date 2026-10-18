@@ -1,0 +1,52 @@
+**********************
+PowerShell transcript start
+Start time: 20261017080826
+Username: DESKTOP-OVC24VV\CHI NGUYEN
+RunAs User: DESKTOP-OVC24VV\CHI NGUYEN
+Configuration Name: 
+Machine: DESKTOP-OVC24VV (Microsoft Windows NT 10.0.26300.0)
+Host Application: C:\Users\CHI NGUYEN\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell\pwsh.dll -Command try { [Console]::OutputEncoding=[System.Text.Encoding]::UTF8 } catch {}
+Start-Transcript -LiteralPath 'docs\testing\phase-0\evidence\devices-host.txt' -Force | Out-Null
+Write-Output 'COMMAND: adb.exe devices -l'
+& 'C:\Users\CHI NGUYEN\AppData\Local\Android\Sdk\platform-tools\adb.exe' devices -l
+Write-Output ('exit=' + $LASTEXITCODE)
+Write-Output 'COMMAND: emulator.exe -accel-check'
+& 'C:\Users\CHI NGUYEN\AppData\Local\Android\Sdk\emulator\emulator.exe' -accel-check
+Write-Output ('exit=' + $LASTEXITCODE)
+Write-Output 'COMMAND: Get-CimInstance Win32_OperatingSystem / Win32_Processor'
+Get-CimInstance Win32_OperatingSystem | Select-Object Caption,Version,BuildNumber,TotalVisibleMemorySize | Format-List
+Get-CimInstance Win32_Processor | Select-Object Name,NumberOfCores,NumberOfLogicalProcessors | Format-List
+Stop-Transcript | Out-Null
+Process ID: 34788
+PSVersion: 7.6.5
+PSEdition: Core
+GitCommitId: 7.6.5
+OS: Microsoft Windows 10.0.26300
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+COMMAND: adb.exe devices -l
+
+exit=0
+COMMAND: emulator.exe -accel-check
+
+exit=0
+COMMAND: Get-CimInstance Win32_OperatingSystem / Win32_Processor
+
+Caption                : Microsoft Windows 11 Pro
+Version                : 10.0.26300
+BuildNumber            : 26300
+TotalVisibleMemorySize : 16450076
+
+
+Name                      : AMD Ryzen 9 7945HX with Radeon Graphics
+NumberOfCores             : 16
+NumberOfLogicalProcessors : 32
+
+**********************
+PowerShell transcript end
+End time: 20261017080829
+**********************

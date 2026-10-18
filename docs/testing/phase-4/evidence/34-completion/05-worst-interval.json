@@ -1,0 +1,52 @@
+{
+  "interval_ms": 151.6225,
+  "previous": {
+    "t1_ns": 7295855428600,
+    "t2_ns": 7295858959900,
+    "cause": "periodic",
+    "raw": "V1:363bb59f193cbb2c,422,0,0,0,0|S:153,153,0,0,0\n",
+    "enqueued_ns": 7275060745500,
+    "dequeued_ns": 7275060876900,
+    "work_ns": 7295854796200,
+    "prepare_start_ns": 7295855243200,
+    "prepare_end_ns": 7295855321100,
+    "pre_send_cpu_ns": 251694,
+    "send_cpu_ns": 1061250,
+    "deadline_ns": 7295851472600,
+    "wait_start_ns": 7295849909000,
+    "wake_ns": 7295854796200,
+    "requested_wait_ns": 1581800,
+    "prev_work_ns": 228100,
+    "prev_trace_submit_ns": 0,
+    "trace_pending": 0
+  },
+  "current": {
+    "t1_ns": 7296007051100,
+    "t2_ns": 7296010109100,
+    "cause": "periodic",
+    "raw": "V1:363bb59f193cbb2c,423,0,0,0,0|S:153,153,0,0,0\n",
+    "enqueued_ns": 7275060745500,
+    "dequeued_ns": 7275060876900,
+    "work_ns": 7296005612600,
+    "prepare_start_ns": 7296005975300,
+    "prepare_end_ns": 7296006579200,
+    "pre_send_cpu_ns": 1415645,
+    "send_cpu_ns": 969391,
+    "deadline_ns": 7295901472600,
+    "wait_start_ns": 7295882387700,
+    "wake_ns": 7296005612600,
+    "requested_wait_ns": 2000000,
+    "prev_work_ns": 418100,
+    "prev_trace_submit_ns": 0,
+    "trace_pending": 0
+  },
+  "heap_markers": [
+    "  7274.979  9965 10067 I SumoSession: PERF_HEAP BEGIN CADENCE50 ns=7274979358900 stats={art.gc.blocking-gc-count=0, art.gc.gc-time=1476, art.gc.bytes-allocated=256509792, art.gc.bytes-freed=247735104, art.gc.gc-count-rate-histogram=0:1,2:1,4:1,5:3,6:4, art.gc.total-time-waiting-for-gc=null, art.gc.blocking-gc-count-rate-histogram=0:10, art.gc.pre-oome-gc-count=null, art.gc.objects-allocated=null, art.gc.gc-count=47, art.gc.blocking-gc-time=0}",
+    "  7339.289  9965 10067 I SumoSession: PERF_HEAP END CADENCE50 ns=7339289540000 stats={art.gc.blocking-gc-count=0, art.gc.gc-time=1968, art.gc.bytes-allocated=297240416, art.gc.bytes-freed=290862208, art.gc.gc-count-rate-histogram=0:1,1:4,2:2,3:1,4:1,5:3,6:4, art.gc.total-time-waiting-for-gc=null, art.gc.blocking-gc-count-rate-histogram=0:16, art.gc.pre-oome-gc-count=null, art.gc.objects-allocated=null, art.gc.gc-count=55, art.gc.blocking-gc-time=0}"
+  ],
+  "previous_wake_lateness_ms": 3.3236,
+  "previous_pre_send_wall_ms": 0.6324,
+  "current_wake_lateness_ms": 104.14,
+  "current_pre_send_wall_ms": 1.4385,
+  "deadline_step_ms": 50.0
+}

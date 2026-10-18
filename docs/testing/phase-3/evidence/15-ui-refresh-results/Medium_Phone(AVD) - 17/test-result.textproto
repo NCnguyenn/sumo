@@ -1,0 +1,758 @@
+# proto-message: google.testing.platform.proto.api.core.TestSuiteResult
+# 2026-10-17T06:46:50.891188600Z:
+test_suite_meta_data {
+  scheduled_test_case_count: 18
+  device {
+    id: "emulator-5554"
+    friendly_name: "primary"
+  }
+}
+test_status: FAILED
+test_result {
+  test_case {
+    test_class: "ControllerUiTest"
+    test_package: "com.aistudy.myapplication"
+    test_method: "U04_U12_toggleBrakeAndLiveLimiterUseSameReducer"
+    start_time {
+      seconds: 1792219570
+      nanos: 76000000
+    }
+    end_time {
+      seconds: 1792219575
+      nanos: 729000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\logcat-com.aistudy.myapplication.ControllerUiTest-U04_U12_toggleBrakeAndLiveLimiterUseSameReducer.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "ControllerUiTest"
+    test_package: "com.aistudy.myapplication"
+    test_method: "U03_releaseOneDirectionInvalidatesOldAndEarlyPointers"
+    start_time {
+      seconds: 1792219575
+      nanos: 744000000
+    }
+    end_time {
+      seconds: 1792219578
+      nanos: 771000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\logcat-com.aistudy.myapplication.ControllerUiTest-U03_releaseOneDirectionInvalidatesOldAndEarlyPointers.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "ControllerUiTest"
+    test_package: "com.aistudy.myapplication"
+    test_method: "U10_touchTargetsHave48DpMinimumAtCurrentWindowSize"
+    start_time {
+      seconds: 1792219578
+      nanos: 863000000
+    }
+    end_time {
+      seconds: 1792219581
+      nanos: 427000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\logcat-com.aistudy.myapplication.ControllerUiTest-U10_touchTargetsHave48DpMinimumAtCurrentWindowSize.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "ControllerUiTest"
+    test_package: "com.aistudy.myapplication"
+    test_method: "U01_U10_landscapeSafetyLabelsAndNeutralStart"
+    start_time {
+      seconds: 1792219581
+      nanos: 456000000
+    }
+    end_time {
+      seconds: 1792219583
+      nanos: 149000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\logcat-com.aistudy.myapplication.ControllerUiTest-U01_U10_landscapeSafetyLabelsAndNeutralStart.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "ControllerUiTest"
+    test_package: "com.aistudy.myapplication"
+    test_method: "U04_holdWeaponRemainsAfterDirectionUpAndCancelClearsAll"
+    start_time {
+      seconds: 1792219583
+      nanos: 151000000
+    }
+    end_time {
+      seconds: 1792219585
+      nanos: 374000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\logcat-com.aistudy.myapplication.ControllerUiTest-U04_holdWeaponRemainsAfterDirectionUpAndCancelClearsAll.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "ControllerUiTest"
+    test_package: "com.aistudy.myapplication"
+    test_method: "U10_dPadIsBalancedCrossWithSquareDirectionKeys"
+    start_time {
+      seconds: 1792219585
+      nanos: 376000000
+    }
+    end_time {
+      seconds: 1792219587
+      nanos: 66000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\logcat-com.aistudy.myapplication.ControllerUiTest-U10_dPadIsBalancedCrossWithSquareDirectionKeys.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "ControllerUiTest"
+    test_package: "com.aistudy.myapplication"
+    test_method: "U06_killSurvivesActivityRecreateWithoutRestoringMotion"
+    start_time {
+      seconds: 1792219587
+      nanos: 68000000
+    }
+    end_time {
+      seconds: 1792219589
+      nanos: 101000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\logcat-com.aistudy.myapplication.ControllerUiTest-U06_killSurvivesActivityRecreateWithoutRestoringMotion.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "ControllerUiTest"
+    test_package: "com.aistudy.myapplication"
+    test_method: "U03_directionAndBoostBothReleaseOrdersNeverResumeOldGesture"
+    start_time {
+      seconds: 1792219589
+      nanos: 224000000
+    }
+    end_time {
+      seconds: 1792219591
+      nanos: 375000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\logcat-com.aistudy.myapplication.ControllerUiTest-U03_directionAndBoostBothReleaseOrdersNeverResumeOldGesture.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "ControllerUiTest"
+    test_package: "com.aistudy.myapplication"
+    test_method: "U02_U06_joystickMovesButKillCannotBeClearedByHeldFingers"
+    start_time {
+      seconds: 1792219591
+      nanos: 405000000
+    }
+    end_time {
+      seconds: 1792219593
+      nanos: 414000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\logcat-com.aistudy.myapplication.ControllerUiTest-U02_U06_joystickMovesButKillCannotBeClearedByHeldFingers.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "SettingsUpdateTest"
+    test_package: "com.aistudy.myapplication"
+    test_method: "A09_androidAbortAndFailureNeverClaimSuccessfulUpdate"
+    start_time {
+      seconds: 1792219593
+      nanos: 416000000
+    }
+    end_time {
+      seconds: 1792219595
+      nanos: 128000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\logcat-com.aistudy.myapplication.SettingsUpdateTest-A09_androidAbortAndFailureNeverClaimSuccessfulUpdate.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "SettingsUpdateTest"
+    test_package: "com.aistudy.myapplication"
+    test_method: "A09_failureResultSurvivesProcessStateLossAndActivityRecreate"
+    start_time {
+      seconds: 1792219595
+      nanos: 130000000
+    }
+    end_time {
+      seconds: 1792219597
+      nanos: 678000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\logcat-com.aistudy.myapplication.SettingsUpdateTest-A09_failureResultSurvivesProcessStateLossAndActivityRecreate.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "SettingsUpdateTest"
+    test_package: "com.aistudy.myapplication"
+    test_method: "F06_F10_storeMigrationAndCorruptionKeepOriginalRecord"
+    start_time {
+      seconds: 1792219597
+      nanos: 680000000
+    }
+    end_time {
+      seconds: 1792219599
+      nanos: 361000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\logcat-com.aistudy.myapplication.SettingsUpdateTest-F06_F10_storeMigrationAndCorruptionKeepOriginalRecord.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "SettingsUpdateTest"
+    test_package: "com.aistudy.myapplication"
+    test_method: "U08_F05_invalidFieldCannotApplyPartialSettings"
+    start_time {
+      seconds: 1792219599
+      nanos: 363000000
+    }
+    end_time {
+      seconds: 1792219599
+      nanos: 814000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: FAILED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\logcat-com.aistudy.myapplication.SettingsUpdateTest-U08_F05_invalidFieldCannotApplyPartialSettings.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\cpuinfo"
+    }
+  }
+}
+output_artifact {
+  label {
+    label: "test-results.log"
+    namespace: "com.google.testing.platform.runtime.android.driver.AndroidInstrumentationDriver"
+  }
+  source_path {
+    path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\testlog\\test-results.log"
+  }
+  type: TEST_DATA
+  mime_type: "text/plain"
+}
+issue {
+  namespace {
+    namespace: "com.google.testing.platform.runtime.android.driver.AndroidInstrumentationDriver"
+  }
+  severity: SEVERE
+  code: 1
+  name: "INSTRUMENTATION_FAILED"
+  message: "Test run failed to complete. Instrumentation run failed due to Process crashed."
+}

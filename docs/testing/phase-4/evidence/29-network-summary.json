@@ -1,0 +1,7 @@
+{
+  "passed": false,
+  "active_default": "Active default network: none",
+  "wan_route": "RTNETLINK answers: Network is unreachable",
+  "lan_route": "RTNETLINK answers: Network is unreachable",
+  "error": "Host LAN is not available independently"
+}

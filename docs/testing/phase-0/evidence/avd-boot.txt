@@ -1,0 +1,77 @@
+**********************
+PowerShell transcript start
+Start time: 20261017080928
+Username: DESKTOP-OVC24VV\CHI NGUYEN
+RunAs User: DESKTOP-OVC24VV\CHI NGUYEN
+Configuration Name: 
+Machine: DESKTOP-OVC24VV (Microsoft Windows NT 10.0.26300.0)
+Host Application: C:\Users\CHI NGUYEN\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell\pwsh.dll -Command try { [Console]::OutputEncoding=[System.Text.Encoding]::UTF8 } catch {}
+$adbPath = 'C:\Users\CHI NGUYEN\AppData\Local\Android\Sdk\platform-tools\adb.exe'
+Start-Transcript -LiteralPath 'docs\testing\phase-0\evidence\avd-boot.txt' -Force | Out-Null
+Write-Output 'COMMAND: adb.exe devices -l'
+$deviceLines = & $adbPath devices -l
+$deviceLines
+Write-Output ('exit=' + $LASTEXITCODE)
+$phaseDevices = @($deviceLines | Where-Object { $_ -match '^emulator-\d+\s+device\b' } | ForEach-Object { ($_ -split '\s+')[0] })
+if ($phaseDevices.Count -eq 1) {
+$phaseSerial = $phaseDevices[0]
+Write-Output ('Selected serial=' + $phaseSerial)
+Write-Output 'COMMAND: adb.exe -s <selected> emu avd name'
+& $adbPath -s $phaseSerial emu avd name
+Write-Output 'COMMAND: adb.exe -s <selected> shell getprop sys.boot_completed'
+& $adbPath -s $phaseSerial shell getprop sys.boot_completed
+Write-Output 'COMMAND: adb.exe -s <selected> shell getprop ro.build.version.release / sdk / codename / incremental'
+foreach ($p in @('ro.build.version.release','ro.build.version.sdk','ro.build.version.codename','ro.build.version.incremental','ro.product.model','ro.product.cpu.abi','ro.kernel.qemu')) { Write-Output $p; & $adbPath -s $phaseSerial shell getprop $p }
+Write-Output 'COMMAND: adb.exe -s <selected> shell wm size / density'
+& $adbPath -s $phaseSerial shell wm size
+& $adbPath -s $phaseSerial shell wm density
+Write-Output 'COMMAND: adb.exe -s <selected> shell getconf PAGE_SIZE'
+& $adbPath -s $phaseSerial shell getconf PAGE_SIZE
+Set-Content -LiteralPath 'docs\testing\phase-0\evidence\selected-avd.txt' -Value $phaseSerial -Encoding ascii
+} else { Write-Output ('AVD count=' + $phaseDevices.Count + '; no device selected.') }
+Stop-Transcript | Out-Null
+Process ID: 38040
+PSVersion: 7.6.5
+PSEdition: Core
+GitCommitId: 7.6.5
+OS: Microsoft Windows 10.0.26300
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+COMMAND: adb.exe devices -l
+List of devices attached
+emulator-5554          device product:sdk_gphone16k_x86_64 model:sdk_gphone16k_x86_64 device:emu64xa16k transport_id:1
+
+exit=0
+Selected serial=emulator-5554
+COMMAND: adb.exe -s <selected> emu avd name
+
+COMMAND: adb.exe -s <selected> shell getprop sys.boot_completed
+
+COMMAND: adb.exe -s <selected> shell getprop ro.build.version.release / sdk / codename / incremental
+ro.build.version.release
+
+ro.build.version.sdk
+
+ro.build.version.codename
+
+ro.build.version.incremental
+
+ro.product.model
+
+ro.product.cpu.abi
+
+ro.kernel.qemu
+
+COMMAND: adb.exe -s <selected> shell wm size / density
+
+
+COMMAND: adb.exe -s <selected> shell getconf PAGE_SIZE
+
+**********************
+PowerShell transcript end
+End time: 20261017080929
+**********************

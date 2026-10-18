@@ -1,0 +1,26 @@
+{
+  "unit": {
+    "tests": 110,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "lint": {
+    "Error": 0,
+    "Fatal": 0,
+    "Warning": 17
+  },
+  "apks": {
+    "app/build/outputs/apk/debug/app-debug.apk": "92abb62d00eb6f841eb8b9eb158d4b0be4b98bd39c6e05bd39b69de79613e5e3",
+    "app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk": "c52c73db0b65a2c816bd578ebfccb9acdb05cfaedcfdaa5fc6f9e89d79210d7d"
+  },
+  "source_unchanged_since_cohort21_begin": true,
+  "changed_since08": [
+    "app\\src\\main\\java\\com\\aistudy\\myapplication\\control\\ControlRuntime.kt",
+    "app\\src\\main\\java\\com\\aistudy\\myapplication\\control\\ControlSession.kt",
+    "app\\src\\main\\java\\com\\aistudy\\myapplication\\MainActivity.kt",
+    "app\\src\\test\\java\\com\\aistudy\\myapplication\\control\\ControlRuntimeTest.kt",
+    "tools\\check_android_cadence.py",
+    "tools\\check_android_permissions.py"
+  ]
+}

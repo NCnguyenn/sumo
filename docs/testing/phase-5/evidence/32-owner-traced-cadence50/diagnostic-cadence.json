@@ -1,0 +1,19 @@
+{
+  "source": "docs\\testing\\phase-5\\evidence\\32-owner-traced-cadence50\\logcat-StopLatencyTest-CadenceTest.txt",
+  "policy": "G5_AVD_50_PLUS_10",
+  "measurements": [
+    {
+      "configured_ms": 50,
+      "n": 1285,
+      "minimum": 35.4534,
+      "p50": 50.006,
+      "p95": 51.2958,
+      "p99": 51.9915,
+      "maximum": 52.4731,
+      "below_20": 0,
+      "above_50": 646,
+      "upper_limit_ms": 60,
+      "above_limit": 0
+    }
+  ]
+}

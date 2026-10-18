@@ -1,0 +1,10 @@
+COMMAND: py -3.13 -X utf8 tools/check_android_cadence.py --results docs/testing/phase-5/evidence/17-g5-runtime-cohort --output-prefix docs/testing/phase-5/evidence/16-g5-avd-approval/15-runtime-cadence --g5-avd-50-jitter
+Traceback (most recent call last):
+  File "C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\tools\check_android_cadence.py", line 53, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\tools\check_android_cadence.py", line 38, in main
+    assert begin in full and end in full,f'Incomplete cohort {target} ms'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Incomplete cohort 50 ms
+EXIT_CODE: 1

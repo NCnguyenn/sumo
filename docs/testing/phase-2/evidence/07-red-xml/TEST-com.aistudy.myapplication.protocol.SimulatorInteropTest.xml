@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.aistudy.myapplication.protocol.SimulatorInteropTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2026-10-17T02:09:46.400Z" hostname="DESKTOP-OVC24VV" time="0.177">
+  <properties/>
+  <testcase name="C01_C02_C05_C08_C09_kotlinDatagramsToIndependentPythonProcess" classname="com.aistudy.myapplication.protocol.SimulatorInteropTest" time="0.174">
+    <failure message="java.lang.AssertionError: Expected READY &lt;port&gt;, got usage: sumo_simulator.py [-h] [--self-test] [--junit JUNIT]" type="java.lang.AssertionError">java.lang.AssertionError: Expected READY &lt;port&gt;, got usage: sumo_simulator.py [-h] [--self-test] [--junit JUNIT]
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.aistudy.myapplication.protocol.SimulatorInteropTest.C01_C02_C05_C08_C09_kotlinDatagramsToIndependentPythonProcess(SimulatorInteropTest.kt:26)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:299)
+	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:293)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

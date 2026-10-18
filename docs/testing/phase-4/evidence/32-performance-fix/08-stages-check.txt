@@ -1,0 +1,10 @@
+COMMAND: py -3.13 -X utf8 docs/testing/phase-4/evidence/32-performance-fix/analyze_stages.py --results docs/testing/phase-4/evidence/32-performance-fix/07-android-results --output docs/testing/phase-4/evidence/32-performance-fix
+Traceback (most recent call last):
+  File "C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\docs\testing\phase-4\evidence\32-performance-fix\analyze_stages.py", line 111, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\docs\testing\phase-4\evidence\32-performance-fix\analyze_stages.py", line 74, in main
+    stop_rows=[dict(sample=i+1,**r,**stages(r)) for i,r in enumerate(stops)]
+               ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: dict() got multiple values for keyword argument 'trace_pending'
+EXIT_CODE=1

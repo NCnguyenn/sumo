@@ -1,0 +1,309 @@
+INFO         | Android emulator version 37.1.11.0 (build_id 15917651) (CL:N/A)
+INFO         | Graphics backend: gfxstream
+INFO         | Found systemPath C:\Users\CHI NGUYEN\AppData\Local\Android\Sdk\system-images\android-37.1\google_apis_playstore_ps16k\x86_64\
+INFO         | Guest usage of host flag 'VulkanVirtualQueue' will be ignored.
+INFO         | Increasing RAM size to 4096MB
+INFO         | IPv4 server found: 123.26.26.26
+INFO         | Ignore IPv6 address: a06d:d30f:2d02:0:a06d:d30f:2d02:0
+INFO         | Ignore IPv6 address: a06d:d30f:2d02:0:a06d:d30f:2d02:0
+INFO         | Ignore IPv6 address: a06d:d30f:2d02:0:a06d:d30f:2d02:0
+INFO         | Ignore IPv6 address: e081:d30f:2d02:0:a06d:d30f:2d02:0
+INFO         | Ignore IPv6 address: e081:d30f:2d02:0:a06d:d30f:2d02:0
+INFO         | Ignore IPv6 address: e081:d30f:2d02:0:a06d:d30f:2d02:0
+INFO         | Ignore IPv6 address: 808d:d30f:2d02:0:a06d:d30f:2d02:0
+INFO         | Ignore IPv6 address: 808d:d30f:2d02:0:a06d:d30f:2d02:0
+INFO         | Ignore IPv6 address: 808d:d30f:2d02:0:a06d:d30f:2d02:0
+INFO         | Ignore IPv6 address: a095:d30f:2d02:0:a06d:d30f:2d02:0
+INFO         | Ignore IPv6 address: a095:d30f:2d02:0:a06d:d30f:2d02:0
+INFO         | Ignore IPv6 address: a095:d30f:2d02:0:a06d:d30f:2d02:0
+INFO         | Ignore IPv6 address: 80a8:d30f:2d02:0:a06d:d30f:2d02:0
+INFO         | Ignore IPv6 address: 80a8:d30f:2d02:0:a06d:d30f:2d02:0
+INFO         | Ignore IPv6 address: 80a8:d30f:2d02:0:a06d:d30f:2d02:0
+INFO         | Ignore IPv6 address: a0ae:d30f:2d02:0:a06d:d30f:2d02:0
+INFO         | Ignore IPv6 address: a0ae:d30f:2d02:0:a06d:d30f:2d02:0
+INFO         | Ignore IPv6 address: a0ae:d30f:2d02:0:a06d:d30f:2d02:0
+INFO         | Guest GLES Driver: Auto (ext controls)
+INFO         | emuglConfig_init: vulkan_mode_selected:lavapipe gles_mode_selected:swiftshader
+INFO         | Checking system compatibility:
+INFO         |   Checking: hasCompatibleHypervisor
+INFO         |      Ok: Hypervisor compatibility to run avd: `Medium_Phone` are met
+INFO         |   Checking: hasSufficientSystem
+INFO         |      Warning: Suggested minimum system RAM to run avd 'Medium_Phone' is 16384 MiB (available: 16064 MiB)
+INFO         |   Checking: hasSufficientHwGpu
+INFO         |      Ok: Hardware GPU compatibility checks are not required
+INFO         |   Checking: hasSufficientDiskSpace
+INFO         |      Ok: Disk space requirements to run avd: `Medium_Phone` are met
+USER_WARNING | Suggested minimum system RAM to run avd 'Medium_Phone' is 16384 MiB (available: 16064 MiB).
+INFO         | Storing crashdata in: C:\Users\CHINGU~1\AppData\Local\Temp\\AndroidEmulator\emu-crash-37.1.11.db, detection is enabled for process: 18996
+INFO         | Initializing gfxstream backend
+INFO         | startOpenglesRendererImpl: gpu info
+INFO         | GPU #1
+  Make: 10de
+  Model: NVIDIA GeForce RTX 4060 Laptop GPU
+  Device ID: 28e0
+
+INFO         | Vulkan 1.4 is not supported for the guest and won't be enabled
+INFO         | Disabling implicit Vulkan layers to avoid compatibility issues. Set VK_LOADER_LAYERS_DISABLE manually to disable this behavior.
+INFO         | initIcdPaths: ICD set to 'lavapipe', using Lavapipe ICD
+INFO         | Setting ICD filenames for the loader = C:\Users\CHI NGUYEN\AppData\Local\Android\Sdk\emulator\lib64\vulkan\lvp_icd.json
+INFO         | SharedLibrary::open for [C:\Users\CHI NGUYEN\AppData\Local\Android\Sdk\emulator\qemu\windows-x86_64\lib64\vulkan\vulkan-1.dll]
+INFO         | SharedLibrary::open for [C:\Users\CHI NGUYEN\AppData\Local\Android\Sdk\emulator\lib64\vulkan\vulkan-1.dll]
+INFO         | Added library: C:\Users\CHI NGUYEN\AppData\Local\Android\Sdk\emulator\lib64\vulkan\vulkan-1.dll
+INFO         | Selecting Vulkan device: llvmpipe (LLVM 21.1.2, 256 bits), Version: 1.4.318
+INFO         | Using Vulkan externalMemoryMode: HostAllocation for VkEmulation
+INFO         | Initializing VkEmulation features:
+INFO         |     glInteropSupported: false
+INFO         |     useDeferredCommands: true
+INFO         |     createResourceWithRequirements: true
+INFO         |     useVulkanComposition: false
+INFO         |     useVulkanNativeSwapchain: false
+INFO         |     enable guestRenderDoc: false
+INFO         |     ASTC LDR emulation mode: Gpu
+INFO         |     enable ETC2 emulation: true
+INFO         |     enable Ycbcr emulation: false
+INFO         |     guestVulkanOnly: false
+INFO         |     useDedicatedAllocations: false
+INFO         |     guestVulkanMaxApiVersion: 1.3.0
+INFO         |     enableProtectedMemoryEmulation: false
+INFO         | Graphics Adapter Vendor Google (Google Inc.)
+INFO         | Graphics Adapter Android Emulator OpenGL ES Translator (Google SwiftShader)
+INFO         | Graphics API Version OpenGL ES 3.0 (OpenGL ES 3.0 SwiftShader 4.0.0.1)
+INFO         | Graphics API Extensions GL_OES_EGL_sync GL_OES_EGL_image GL_OES_EGL_image_external GL_OES_depth24 GL_OES_depth32 GL_OES_element_index_uint GL_OES_texture_float GL_OES_texture_float_linear GL_OES_compressed_paletted_texture GL_OES_compressed_ETC1_RGB8_texture GL_OES_depth_texture GL_OES_texture_half_float GL_OES_texture_half_float_linear GL_OES_packed_depth_stencil GL_OES_vertex_half_float GL_OES_standard_derivatives GL_OES_texture_npot GL_OES_rgb8_rgba8 GL_EXT_color_buffer_float GL_EXT_color_buffer_half_float GL_EXT_texture_format_BGRA8888 GL_APPLE_texture_format_BGRA8888 
+INFO         | Graphics Device Extensions N/A
+INFO         | Disabling sparse binding feature support
+INFO         | Sending adb public key [QAAAAOscqKM9VFyZIk6EAwEgSZlP3pOk88oYi+ToJZrN5Kq1KVc9kecN9E2QqvXSeUgvPNDRUHYg7zbslrWJMNOPWUaOfH2zj+S9K4XWprHahxh/3wJ8z0zecSA+nU/0v4EhqPc9WYZOwYWnyESaD61SyNX07pd0+tbj6PRFr2Y7U1tIMi4T3taNurnregfuO6z1r4RN55lp4WEeLqft3R8w0X5hOx4TREqkBwuQ4/FPxdFfxewj27c77RBQPYd1xTw1CyG2QBi/DDfAMvpBjpqV3DKnKLtbzOgtJwXdHUXyOvnuJHD7Y/z0IsiHgQ71rdA0sHb4lZ4bJV/1BOcnnK+qCOZzW/e96Fww3Qm1dHOOT+/4m6oOv1qsbGNuanioKdhHsVYCX+kv3gdmekWbTS404AvCdbKdT9lM8U12MERNg5gb1IJaSZUubQCFmQZB9QIN/9q8tIIBcownu2zVzabDhnrcppiP1Dt/ygJCHW/XJRu5Hzslnnc+XtoXQkaJQWwVf9LFY7796tKhaGgP8qoqsC77e7Z3KTbFu7+cc41etw45zA3pb5DGh2mMGWhihhJmliQ5pfLN/6JO5MMwIUtqb3Hbi0fAlQx5u8zxRCtNuMDN+lLIeYZi2haJyIQyMFIjX7gQj447O7MULl7L1McooP3b8O1947QqpjU7H2W5WPnx9UkrAwEAAQA= @unknown]
+INFO         | Userspace boot properties:
+INFO         |   androidboot.boot_devices=pci0000:00/0000:00:03.0 pci0000:00/0000:00:06.0
+INFO         |   androidboot.dalvik.vm.heapsize=576m
+INFO         |   androidboot.debug.hwui.renderer=skiagl
+INFO         |   androidboot.debug.sf.nobootanimation=1
+INFO         |   androidboot.hardware=ranchu
+INFO         |   androidboot.hardware.gltransport=pipe
+INFO         |   androidboot.hardware.vulkan=ranchu
+INFO         |   androidboot.logcat=*:V
+INFO         |   androidboot.opengles.version=196608
+INFO         |   androidboot.qemu=1
+INFO         |   androidboot.qemu.adb.pubkey=QAAAAOscqKM9VFyZIk6EAwEgSZlP3pOk88oYi+ToJZrN5Kq1KVc9kecN9E2QqvXSeUgvPNDRUHYg7zbslrWJMNOPWUaOfH2zj+S9K4XWprHahxh/3wJ8z0zecSA+nU/0v4EhqPc9WYZOwYWnyESaD61SyNX07pd0+tbj6PRFr2Y7U1tIMi4T3taNurnregfuO6z1r4RN55lp4WEeLqft3R8w0X5hOx4TREqkBwuQ4/FPxdFfxewj27c77RBQPYd1xTw1CyG2QBi/DDfAMvpBjpqV3DKnKLtbzOgtJwXdHUXyOvnuJHD7Y/z0IsiHgQ71rdA0sHb4lZ4bJV/1BOcnnK+qCOZzW/e96Fww3Qm1dHOOT+/4m6oOv1qsbGNuanioKdhHsVYCX+kv3gdmekWbTS404AvCdbKdT9lM8U12MERNg5gb1IJaSZUubQCFmQZB9QIN/9q8tIIBcownu2zVzabDhnrcppiP1Dt/ygJCHW/XJRu5Hzslnnc+XtoXQkaJQWwVf9LFY7796tKhaGgP8qoqsC77e7Z3KTbFu7+cc41etw45zA3pb5DGh2mMGWhihhJmliQ5pfLN/6JO5MMwIUtqb3Hbi0fAlQx5u8zxRCtNuMDN+lLIeYZi2haJyIQyMFIjX7gQj447O7MULl7L1McooP3b8O1947QqpjU7H2W5WPnx9UkrAwEAAQA= @unknown
+INFO         |   androidboot.qemu.avd_name=Medium_Phone
+INFO         |   androidboot.qemu.camera_hq_edge_processing=0
+INFO         |   androidboot.qemu.camera_protocol_ver=1
+INFO         |   androidboot.qemu.cpuvulkan.version=4210688
+INFO         |   androidboot.qemu.gltransport.drawFlushInterval=800
+INFO         |   androidboot.qemu.gltransport.name=pipe
+INFO         |   androidboot.qemu.hwcodec.avcdec=2
+INFO         |   androidboot.qemu.hwcodec.hevcdec=2
+INFO         |   androidboot.qemu.hwcodec.vpxdec=2
+INFO         |   androidboot.qemu.settings.system.screen_off_timeout=2147483647
+INFO         |   androidboot.qemu.skin=1080x2400
+INFO         |   androidboot.qemu.virtiowifi=1
+INFO         |   androidboot.qemu.vsync=60
+INFO         |   androidboot.serialno=EMULATOR37X1X11X0
+INFO         |   androidboot.vbmeta.digest=f424461a0a397fda72fd179bc94e871022314ef1502d4ea1133175a87b4746ed
+INFO         |   androidboot.vbmeta.hash_alg=sha256
+INFO         |   androidboot.vbmeta.size=6720
+INFO         |   androidboot.veritymode=enforcing
+WHPX on Windows 10.0.26300 detected.
+Windows Hypervisor Platform accelerator is operational
+INFO         | Monitoring duration of emulator setup.
+WARNING      | The emulator now requires a signed jwt token for gRPC access! Use the -grpc flag if you really want an open unprotected grpc port
+INFO         | Using security allow list from: C:\Users\CHI NGUYEN\AppData\Local\Android\Sdk\emulator\lib\emulator_access.json
+INFO         | The active JSON Web Key Sets can be found here: C:\Users\CHI NGUYEN\AppData\Local\Temp\avd\running\18996\jwks\a4e58d80-a596-4ffc-a69a-586a5c3dcf81\active.jwk
+INFO         | Scanning C:\Users\CHI NGUYEN\AppData\Local\Temp\avd\running\18996\jwks\a4e58d80-a596-4ffc-a69a-586a5c3dcf81 for jwk keys.
+INFO         | Started GRPC server at 127.0.0.1:8554, security: Local, auth: +token
+INFO         | Advertising in: C:\Users\CHI NGUYEN\AppData\Local\Temp\avd\running\pid_18996.ini
+INFO         | Successfully initialized netsim WiFi
+INFO         | Activated packet streamer for uwb emulation
+INFO         | Activated packet streamer for bluetooth emulation
+INFO         | Setting display: 0 configuration to: 1080x2400, dpi: 420x420 
+INFO         | setDisplayActiveConfig: id:0, 1080x2400
+WARNING      | getEnvironmentConfig: No environment config is provided
+INFO         | getEnvironmentConfig: Using default virtual scene mode for the environment.
+INFO         | getEnvironmentConfig: Using default configuration for mode mesh3d for the environment.
+INFO         | Initializing a scene with mode: mesh3d, argument: Toren1BD.obj
+USER_INFO    | Emulator is performing a full startup. This may take upto two minutes, or more.
+INFO         | GPU Vendor=[Google (Google Inc.)]
+INFO         | GPU Renderer=[Android Emulator OpenGL ES Translator (Google SwiftShader)]
+INFO         | GPU Version=[OpenGL ES 3.0 (OpenGL ES 3.0 SwiftShader 4.0.0.1)]
+INFO         | Boot completed in 28065 ms
+INFO         | Increasing screen off timeout, logcat buffer size to 2M.
+INFO         | IPv4 server found: 123.26.26.26
+INFO         | Ignore IPv6 address: 3030:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 3030:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 3030:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 7044:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 7044:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 7044:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 1050:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 1050:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 1050:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 3058:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 3058:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 3058:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 106b:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 106b:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 106b:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 3071:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 3071:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 3071:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | IPv4 server found: 123.26.26.26
+INFO         | Ignore IPv6 address: 3030:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 3030:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 3030:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 7044:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 7044:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 7044:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 1050:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 1050:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 1050:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 3058:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 3058:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 3058:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 106b:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 106b:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 106b:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 3071:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 3071:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 3071:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | IPv4 server found: 123.26.26.26
+INFO         | Ignore IPv6 address: 3030:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 3030:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 3030:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 7044:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 7044:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 7044:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 1050:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 1050:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 1050:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 3058:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 3058:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 3058:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 106b:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 106b:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 106b:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 3071:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 3071:5f53:2e02:0:3030:5f53:2e02:0
+INFO         | Ignore IPv6 address: 3071:5f53:2e02:0:3030:5f53:2e02:0
+ERROR        | Failed to find ColorBuffer: 155
+ERROR        | bad color buffer handle 393
+ERROR        | Failed to find ColorBuffer: 671
+ERROR        | Failed to find ColorBuffer: 694
+ERROR        | Failed to find ColorBuffer: 778
+ERROR        | Failed to find ColorBuffer: 855
+ERROR        | Failed to find ColorBuffer: 1006
+ERROR        | Failed to find ColorBuffer: 1031
+ERROR        | Failed to find ColorBuffer: 1135
+ERROR        | Failed to find ColorBuffer: 1274
+ERROR        | Failed to find ColorBuffer: 1425
+ERROR        | Failed to find ColorBuffer: 1447
+ERROR        | Failed to find ColorBuffer: 1451
+ERROR        | Failed to find ColorBuffer: 1484
+ERROR        | Failed to find ColorBuffer: 1487
+ERROR        | Failed to find ColorBuffer: 1608
+ERROR        | Failed to find ColorBuffer: 1616
+ERROR        | Failed to find ColorBuffer: 1619
+ERROR        | Failed to find ColorBuffer: 1657
+ERROR        | Failed to find ColorBuffer: 1661
+ERROR        | Failed to find ColorBuffer: 1732
+ERROR        | Failed to find ColorBuffer: 1786
+ERROR        | Failed to find ColorBuffer: 1886
+ERROR        | Failed to find ColorBuffer: 2001
+ERROR        | Failed to find ColorBuffer: 2055
+ERROR        | Failed to find ColorBuffer: 2080
+ERROR        | Failed to find ColorBuffer: 2159
+ERROR        | Failed to find ColorBuffer: 2265
+ERROR        | Failed to find ColorBuffer: 2288
+ERROR        | Failed to find ColorBuffer: 2376
+ERROR        | Failed to find ColorBuffer: 2385
+ERROR        | Failed to find ColorBuffer: 2389
+ERROR        | Failed to find ColorBuffer: 2419
+ERROR        | Failed to find ColorBuffer: 2422
+ERROR        | Failed to find ColorBuffer: 2661
+ERROR        | Failed to find ColorBuffer: 2711
+ERROR        | Failed to find ColorBuffer: 2761
+ERROR        | Failed to find ColorBuffer: 2815
+ERROR        | Failed to find ColorBuffer: 2865
+ERROR        | Failed to find ColorBuffer: 3076
+ERROR        | Failed to find ColorBuffer: 3080
+ERROR        | Failed to find ColorBuffer: 3109
+ERROR        | Failed to find ColorBuffer: 3113
+ERROR        | Failed to find ColorBuffer: 3187
+ERROR        | Failed to find ColorBuffer: 3266
+ERROR        | Failed to find ColorBuffer: 3341
+ERROR        | Failed to find ColorBuffer: 3391
+ERROR        | Failed to find ColorBuffer: 3416
+ERROR        | Failed to find ColorBuffer: 3520
+ERROR        | Failed to find ColorBuffer: 3545
+ERROR        | Failed to find ColorBuffer: 3570
+ERROR        | Failed to find ColorBuffer: 3599
+ERROR        | Failed to find ColorBuffer: 3628
+ERROR        | Failed to find ColorBuffer: 3670
+ERROR        | Failed to find ColorBuffer: 3721
+ERROR        | Failed to find ColorBuffer: 3741
+ERROR        | Failed to find ColorBuffer: 3831
+ERROR        | Failed to find ColorBuffer: 3860
+ERROR        | Failed to find ColorBuffer: 3888
+ERROR        | Failed to find ColorBuffer: 4027
+ERROR        | Failed to find ColorBuffer: 4524
+ERROR        | Failed to find ColorBuffer: 4545
+INFO         | Boot completed in 11850604 ms
+INFO         | Increasing screen off timeout, logcat buffer size to 2M.
+INFO         | IPv4 server found: 123.26.26.26
+INFO         | Ignore IPv6 address: 3040:4104:2d02:0:3040:4104:2d02:0
+INFO         | Ignore IPv6 address: 3040:4104:2d02:0:3040:4104:2d02:0
+INFO         | Ignore IPv6 address: 3040:4104:2d02:0:3040:4104:2d02:0
+INFO         | Ignore IPv6 address: 7054:4104:2d02:0:3040:4104:2d02:0
+INFO         | Ignore IPv6 address: 7054:4104:2d02:0:3040:4104:2d02:0
+INFO         | Ignore IPv6 address: 7054:4104:2d02:0:3040:4104:2d02:0
+INFO         | Ignore IPv6 address: 1060:4104:2d02:0:3040:4104:2d02:0
+INFO         | Ignore IPv6 address: 1060:4104:2d02:0:3040:4104:2d02:0
+INFO         | Ignore IPv6 address: 1060:4104:2d02:0:3040:4104:2d02:0
+INFO         | Ignore IPv6 address: 3068:4104:2d02:0:3040:4104:2d02:0
+INFO         | Ignore IPv6 address: 3068:4104:2d02:0:3040:4104:2d02:0
+INFO         | Ignore IPv6 address: 3068:4104:2d02:0:3040:4104:2d02:0
+INFO         | Ignore IPv6 address: 107b:4104:2d02:0:3040:4104:2d02:0
+INFO         | Ignore IPv6 address: 107b:4104:2d02:0:3040:4104:2d02:0
+INFO         | Ignore IPv6 address: 107b:4104:2d02:0:3040:4104:2d02:0
+INFO         | Ignore IPv6 address: 3081:4104:2d02:0:3040:4104:2d02:0
+INFO         | Ignore IPv6 address: 3081:4104:2d02:0:3040:4104:2d02:0
+INFO         | Ignore IPv6 address: 3081:4104:2d02:0:3040:4104:2d02:0
+INFO         | IPv4 server found: 123.26.26.26
+INFO         | Ignore IPv6 address: 3061:d269:2e02:0:3061:d269:2e02:0
+INFO         | Ignore IPv6 address: 3061:d269:2e02:0:3061:d269:2e02:0
+INFO         | Ignore IPv6 address: 3061:d269:2e02:0:3061:d269:2e02:0
+INFO         | Ignore IPv6 address: 7075:d269:2e02:0:3061:d269:2e02:0
+INFO         | Ignore IPv6 address: 7075:d269:2e02:0:3061:d269:2e02:0
+INFO         | Ignore IPv6 address: 7075:d269:2e02:0:3061:d269:2e02:0
+INFO         | Ignore IPv6 address: 1081:d269:2e02:0:3061:d269:2e02:0
+INFO         | Ignore IPv6 address: 1081:d269:2e02:0:3061:d269:2e02:0
+INFO         | Ignore IPv6 address: 1081:d269:2e02:0:3061:d269:2e02:0
+INFO         | Ignore IPv6 address: 3089:d269:2e02:0:3061:d269:2e02:0
+INFO         | Ignore IPv6 address: 3089:d269:2e02:0:3061:d269:2e02:0
+INFO         | Ignore IPv6 address: 3089:d269:2e02:0:3061:d269:2e02:0
+INFO         | Ignore IPv6 address: 109c:d269:2e02:0:3061:d269:2e02:0
+INFO         | Ignore IPv6 address: 109c:d269:2e02:0:3061:d269:2e02:0
+INFO         | Ignore IPv6 address: 109c:d269:2e02:0:3061:d269:2e02:0
+INFO         | Ignore IPv6 address: 30a2:d269:2e02:0:3061:d269:2e02:0
+INFO         | Ignore IPv6 address: 30a2:d269:2e02:0:3061:d269:2e02:0
+INFO         | Ignore IPv6 address: 30a2:d269:2e02:0:3061:d269:2e02:0
+INFO         | IPv4 server found: 123.26.26.26
+INFO         | Ignore IPv6 address: 6018:fd1f:2d02:0:6018:fd1f:2d02:0
+INFO         | Ignore IPv6 address: 6018:fd1f:2d02:0:6018:fd1f:2d02:0
+INFO         | Ignore IPv6 address: 6018:fd1f:2d02:0:6018:fd1f:2d02:0
+INFO         | Ignore IPv6 address: a02c:fd1f:2d02:0:6018:fd1f:2d02:0
+INFO         | Ignore IPv6 address: a02c:fd1f:2d02:0:6018:fd1f:2d02:0
+INFO         | Ignore IPv6 address: a02c:fd1f:2d02:0:6018:fd1f:2d02:0
+INFO         | Ignore IPv6 address: 4038:fd1f:2d02:0:6018:fd1f:2d02:0
+INFO         | Ignore IPv6 address: 4038:fd1f:2d02:0:6018:fd1f:2d02:0
+INFO         | Ignore IPv6 address: 4038:fd1f:2d02:0:6018:fd1f:2d02:0
+INFO         | Ignore IPv6 address: 6040:fd1f:2d02:0:6018:fd1f:2d02:0
+INFO         | Ignore IPv6 address: 6040:fd1f:2d02:0:6018:fd1f:2d02:0
+INFO         | Ignore IPv6 address: 6040:fd1f:2d02:0:6018:fd1f:2d02:0
+INFO         | Ignore IPv6 address: 4053:fd1f:2d02:0:6018:fd1f:2d02:0
+INFO         | Ignore IPv6 address: 4053:fd1f:2d02:0:6018:fd1f:2d02:0
+INFO         | Ignore IPv6 address: 4053:fd1f:2d02:0:6018:fd1f:2d02:0
+INFO         | Ignore IPv6 address: 6059:fd1f:2d02:0:6018:fd1f:2d02:0
+INFO         | Ignore IPv6 address: 6059:fd1f:2d02:0:6018:fd1f:2d02:0
+INFO         | Ignore IPv6 address: 6059:fd1f:2d02:0:6018:fd1f:2d02:0
+ERROR        | bad color buffer handle 4934
+ERROR        | Failed to find ColorBuffer: 4941
+ERROR      

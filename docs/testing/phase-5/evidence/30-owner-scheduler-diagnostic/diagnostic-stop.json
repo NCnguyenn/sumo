@@ -1,0 +1,29 @@
+{
+  "source": "docs\\testing\\phase-5\\evidence\\31-owner-traced-stop\\logcat-StopLatencyTest-CadenceTest.txt",
+  "samples": 500,
+  "t1_minus_t0_ms": {
+    "n": 500,
+    "p50": 0.587,
+    "p95": 1.7035,
+    "p99": 2.3858,
+    "maximum": 3.9444
+  },
+  "t2_minus_t0_ms": {
+    "n": 500,
+    "p50": 0.9481,
+    "p95": 2.3269,
+    "p99": 3.0338,
+    "maximum": 4.1192
+  },
+  "before_over_10": 0,
+  "return_over_10": 0,
+  "periodic30_adjacent_without_intervening_event": {
+    "n": 1654,
+    "p50": 26.2412,
+    "p95": 31.0879,
+    "p99": 32.3228,
+    "maximum": 45.436
+  },
+  "periodic_outside_20_50": 0,
+  "periodic_sample_note": "Incidental STOP500 intervals; separate CadenceTest/check_android_cadence.py requires >=1000 intervals at each of 20/30/50 ms"
+}

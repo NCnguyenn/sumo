@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="Phase5-AVD" tests="2" failures="0" errors="0" skipped="0"><testcase classname="com.aistudy.myapplication.StopLatencyTest" name="I02_stop500RealTouchCallbacksAndReceiverAcknowledgements" /><testcase classname="com.aistudy.myapplication.CadenceTest" name="I01_F04_measure20_30_50msWithoutRebuilding" /></testsuite>

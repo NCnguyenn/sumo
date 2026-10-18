@@ -1,0 +1,265 @@
+# proto-message: google.testing.platform.proto.api.core.TestSuiteResult
+# 2026-10-17T02:44:30.327159500Z:
+test_suite_meta_data {
+  scheduled_test_case_count: 4
+  device {
+    id: "emulator-5554"
+    friendly_name: "primary"
+  }
+}
+test_status: FAILED
+test_result {
+  test_case {
+    test_class: "ControllerUiTest"
+    test_package: "com.aistudy.myapplication"
+    test_method: "U01_U10_landscapeSafetyLabelsAndNeutralStart"
+    start_time {
+      seconds: 1792205062
+      nanos: 509000000
+    }
+    end_time {
+      seconds: 1792205064
+      nanos: 796000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: FAILED
+  error {
+    error_message: "java.lang.AssertionError: expected:<6> but was:<-1>\nat org.junit.Assert.fail(Assert.java:89)\nat org.junit.Assert.failNotEquals(Assert.java:835)\nat org.junit.Assert.assertEquals(Assert.java:120)\nat org.junit.Assert.assertEquals(Assert.java:146)\nat com.aistudy.myapplication.ControllerUiTest.U01_U10_landscapeSafetyLabelsAndNeutralStart(ControllerUiTest.kt:21)\n"
+    error_type: "java.lang.AssertionError"
+    stack_trace: "java.lang.AssertionError: expected:<6> but was:<-1>\nat org.junit.Assert.fail(Assert.java:89)\nat org.junit.Assert.failNotEquals(Assert.java:835)\nat org.junit.Assert.assertEquals(Assert.java:120)\nat org.junit.Assert.assertEquals(Assert.java:146)\nat com.aistudy.myapplication.ControllerUiTest.U01_U10_landscapeSafetyLabelsAndNeutralStart(ControllerUiTest.kt:21)\n"
+  }
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\logcat-com.aistudy.myapplication.ControllerUiTest-U01_U10_landscapeSafetyLabelsAndNeutralStart.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "ControllerUiTest"
+    test_package: "com.aistudy.myapplication"
+    test_method: "U04_holdWeaponRemainsAfterDirectionUpAndCancelClearsAll"
+    start_time {
+      seconds: 1792205064
+      nanos: 816000000
+    }
+    end_time {
+      seconds: 1792205066
+      nanos: 26000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: FAILED
+  error {
+    error_message: "java.lang.AssertionError: Failed: assertExists.\nReason: Expected exactly \'1\' node but could not find any node that satisfies: (TestTag = \'forward\')\n\nat androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)\nat androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)\nat androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)\nat androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode$default(SemanticsNodeInteraction.kt:83)\nat com.aistudy.myapplication.ControllerUiTest.point-tuRUvjQ(ControllerUiTest.kt:35)\nat com.aistudy.myapplication.ControllerUiTest.U04_holdWeaponRemainsAfterDirectionUpAndCancelClearsAll(ControllerUiTest.kt:51)\n"
+    error_type: "java.lang.AssertionError"
+    stack_trace: "java.lang.AssertionError: Failed: assertExists.\nReason: Expected exactly \'1\' node but could not find any node that satisfies: (TestTag = \'forward\')\n\nat androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)\nat androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)\nat androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)\nat androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode$default(SemanticsNodeInteraction.kt:83)\nat com.aistudy.myapplication.ControllerUiTest.point-tuRUvjQ(ControllerUiTest.kt:35)\nat com.aistudy.myapplication.ControllerUiTest.U04_holdWeaponRemainsAfterDirectionUpAndCancelClearsAll(ControllerUiTest.kt:51)\n"
+  }
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\logcat-com.aistudy.myapplication.ControllerUiTest-U04_holdWeaponRemainsAfterDirectionUpAndCancelClearsAll.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "ControllerUiTest"
+    test_package: "com.aistudy.myapplication"
+    test_method: "U03_directionAndBoostBothReleaseOrdersNeverResumeOldGesture"
+    start_time {
+      seconds: 1792205066
+      nanos: 28000000
+    }
+    end_time {
+      seconds: 1792205067
+      nanos: 264000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: FAILED
+  error {
+    error_message: "java.lang.AssertionError: Failed: assertExists.\nReason: Expected exactly \'1\' node but could not find any node that satisfies: (TestTag = \'forward\')\n\nat androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)\nat androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)\nat androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)\nat androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode$default(SemanticsNodeInteraction.kt:83)\nat com.aistudy.myapplication.ControllerUiTest.point-tuRUvjQ(ControllerUiTest.kt:35)\nat com.aistudy.myapplication.ControllerUiTest.U03_directionAndBoostBothReleaseOrdersNeverResumeOldGesture(ControllerUiTest.kt:38)\n"
+    error_type: "java.lang.AssertionError"
+    stack_trace: "java.lang.AssertionError: Failed: assertExists.\nReason: Expected exactly \'1\' node but could not find any node that satisfies: (TestTag = \'forward\')\n\nat androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)\nat androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)\nat androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)\nat androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode$default(SemanticsNodeInteraction.kt:83)\nat com.aistudy.myapplication.ControllerUiTest.point-tuRUvjQ(ControllerUiTest.kt:35)\nat com.aistudy.myapplication.ControllerUiTest.U03_directionAndBoostBothReleaseOrdersNeverResumeOldGesture(ControllerUiTest.kt:38)\n"
+  }
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\logcat-com.aistudy.myapplication.ControllerUiTest-U03_directionAndBoostBothReleaseOrdersNeverResumeOldGesture.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "ControllerUiTest"
+    test_package: "com.aistudy.myapplication"
+    test_method: "U02_U06_joystickMovesButKillCannotBeClearedByHeldFingers"
+    start_time {
+      seconds: 1792205067
+      nanos: 266000000
+    }
+    end_time {
+      seconds: 1792205069
+      nanos: 525000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: FAILED
+  error {
+    error_message: "java.lang.AssertionError: Failed: assertExists.\nReason: Expected exactly \'1\' node but could not find any node that satisfies: (TestTag = \'joystick\')\n\nat androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)\nat androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)\nat androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)\nat androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode$default(SemanticsNodeInteraction.kt:83)\nat com.aistudy.myapplication.ControllerUiTest.point-tuRUvjQ(ControllerUiTest.kt:35)\nat com.aistudy.myapplication.ControllerUiTest.U02_U06_joystickMovesButKillCannotBeClearedByHeldFingers(ControllerUiTest.kt:58)\n"
+    error_type: "java.lang.AssertionError"
+    stack_trace: "java.lang.AssertionError: Failed: assertExists.\nReason: Expected exactly \'1\' node but could not find any node that satisfies: (TestTag = \'joystick\')\n\nat androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)\nat androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)\nat androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)\nat androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode$default(SemanticsNodeInteraction.kt:83)\nat com.aistudy.myapplication.ControllerUiTest.point-tuRUvjQ(ControllerUiTest.kt:35)\nat com.aistudy.myapplication.ControllerUiTest.U02_U06_joystickMovesButKillCannotBeClearedByHeldFingers(ControllerUiTest.kt:58)\n"
+  }
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\logcat-com.aistudy.myapplication.ControllerUiTest-U02_U06_joystickMovesButKillCannotBeClearedByHeldFingers.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\cpuinfo"
+    }
+  }
+}
+output_artifact {
+  label {
+    label: "test-results.log"
+    namespace: "com.google.testing.platform.runtime.android.driver.AndroidInstrumentationDriver"
+  }
+  source_path {
+    path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\testlog\\test-results.log"
+  }
+  type: TEST_DATA
+  mime_type: "text/plain"
+}

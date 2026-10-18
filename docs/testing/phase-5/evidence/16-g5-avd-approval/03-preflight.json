@@ -1,0 +1,9 @@
+{
+  "unchanged_app_test_gradle_files": 56,
+  "changed_app_files": [],
+  "apk_hashes": {
+    "app/build/outputs/apk/debug/app-debug.apk": "72861bd59626aff5975f688b42cac07a2ad1f3b1cc193f92f4485f6dd7be5833",
+    "app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk": "c52c73db0b65a2c816bd578ebfccb9acdb05cfaedcfdaa5fc6f9e89d79210d7d"
+  },
+  "policy_written_before_new_cohort": true
+}

@@ -1,0 +1,19 @@
+{
+  "source": "docs\\testing\\phase-5\\evidence\\08-final-android\\logcat-StopLatencyTest-CadenceTest.txt",
+  "policy": "G0_STRICT",
+  "measurements": [
+    {
+      "configured_ms": 50,
+      "n": 1283,
+      "minimum": 36.2196,
+      "p50": 49.9588,
+      "p95": 51.6869,
+      "p99": 52.4027,
+      "maximum": 58.4052,
+      "below_20": 0,
+      "above_50": 626,
+      "upper_limit_ms": 50,
+      "above_limit": 626
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.ControllerUiTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=4
+INSTRUMENTATION_STATUS: stream=
+com.aistudy.myapplication.ControllerUiTest:
+INSTRUMENTATION_STATUS: test=U01_U10_landscapeSafetyLabelsAndNeutralStart
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.ControllerUiTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=4
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: expected:<6> but was:<-1>
+at org.junit.Assert.fail(Assert.java:89)
+at org.junit.Assert.failNotEquals(Assert.java:835)
+at org.junit.Assert.assertEquals(Assert.java:120)
+at org.junit.Assert.assertEquals(Assert.java:146)
+at com.aistudy.myapplication.ControllerUiTest.U01_U10_landscapeSafetyLabelsAndNeutralStart(ControllerUiTest.kt:21)
+
+INSTRUMENTATION_STATUS: stream=
+Error in U01_U10_landscapeSafetyLabelsAndNeutralStart(com.aistudy.myapplication.ControllerUiTest):
+java.lang.AssertionError: expected:<6> but was:<-1>
+at org.junit.Assert.fail(Assert.java:89)
+at org.junit.Assert.failNotEquals(Assert.java:835)
+at org.junit.Assert.assertEquals(Assert.java:120)
+at org.junit.Assert.assertEquals(Assert.java:146)
+at com.aistudy.myapplication.ControllerUiTest.U01_U10_landscapeSafetyLabelsAndNeutralStart(ControllerUiTest.kt:21)
+
+INSTRUMENTATION_STATUS: test=U01_U10_landscapeSafetyLabelsAndNeutralStart
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.ControllerUiTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=4
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=U04_holdWeaponRemainsAfterDirectionUpAndCancelClearsAll
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.ControllerUiTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=4
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Failed: assertExists.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (TestTag = 'forward')
+
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode$default(SemanticsNodeInteraction.kt:83)
+at com.aistudy.myapplication.ControllerUiTest.point-tuRUvjQ(ControllerUiTest.kt:35)
+at com.aistudy.myapplication.ControllerUiTest.U04_holdWeaponRemainsAfterDirectionUpAndCancelClearsAll(ControllerUiTest.kt:51)
+
+INSTRUMENTATION_STATUS: stream=
+Error in U04_holdWeaponRemainsAfterDirectionUpAndCancelClearsAll(com.aistudy.myapplication.ControllerUiTest):
+java.lang.AssertionError: Failed: assertExists.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (TestTag = 'forward')
+
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode$default(SemanticsNodeInteraction.kt:83)
+at com.aistudy.myapplication.ControllerUiTest.point-tuRUvjQ(ControllerUiTest.kt:35)
+at com.aistudy.myapplication.ControllerUiTest.U04_holdWeaponRemainsAfterDirectionUpAndCancelClearsAll(ControllerUiTest.kt:51)
+
+INSTRUMENTATION_STATUS: test=U04_holdWeaponRemainsAfterDirectionUpAndCancelClearsAll
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.ControllerUiTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=4
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=U03_directionAndBoostBothReleaseOrdersNeverResumeOldGesture
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.ControllerUiTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=4
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Failed: assertExists.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (TestTag = 'forward')
+
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode$default(SemanticsNodeInteraction.kt:83)
+at com.aistudy.myapplication.ControllerUiTest.point-tuRUvjQ(ControllerUiTest.kt:35)
+at com.aistudy.myapplication.ControllerUiTest.U03_directionAndBoostBothReleaseOrdersNeverResumeOldGesture(ControllerUiTest.kt:38)
+
+INSTRUMENTATION_STATUS: stream=
+Error in U03_directionAndBoostBothReleaseOrdersNeverResumeOldGesture(com.aistudy.myapplication.ControllerUiTest):
+java.lang.AssertionError: Failed: assertExists.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (TestTag = 'forward')
+
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode$default(SemanticsNodeInteraction.kt:83)
+at com.aistudy.myapplication.ControllerUiTest.point-tuRUvjQ(ControllerUiTest.kt:35)
+at com.aistudy.myapplication.ControllerUiTest.U03_directionAndBoostBothReleaseOrdersNeverResumeOldGesture(ControllerUiTest.kt:38)
+
+INSTRUMENTATION_STATUS: test=U03_directionAndBoostBothReleaseOrdersNeverResumeOldGesture
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.ControllerUiTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=4
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=U02_U06_joystickMovesButKillCannotBeClearedByHeldFingers
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.ControllerUiTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=4
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Failed: assertExists.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (TestTag = 'joystick')
+
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode$default(SemanticsNodeInteraction.kt:83)
+at com.aistudy.myapplication.ControllerUiTest.point-tuRUvjQ(ControllerUiTest.kt:35)
+at com.aistudy.myapplication.ControllerUiTest.U02_U06_joystickMovesButKillCannotBeClearedByHeldFingers(ControllerUiTest.kt:58)
+
+INSTRUMENTATION_STATUS: stream=
+Error in U02_U06_joystickMovesButKillCannotBeClearedByHeldFingers(com.aistudy.myapplication.ControllerUiTest):
+java.lang.AssertionError: Failed: assertExists.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (TestTag = 'joystick')
+
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode$default(SemanticsNodeInteraction.kt:83)
+at com.aistudy.myapplication.ControllerUiTest.point-tuRUvjQ(ControllerUiTest.kt:35)
+at com.aistudy.myapplication.ControllerUiTest.U02_U06_joystickMovesButKillCannotBeClearedByHeldFingers(ControllerUiTest.kt:58)
+
+INSTRUMENTATION_STATUS: test=U02_U06_joystickMovesButKillCannotBeClearedByHeldFingers
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_RESULT: stream=
+
+Time: 6.982
+There were 4 failures:
+1) U01_U10_landscapeSafetyLabelsAndNeutralStart(com.aistudy.myapplication.ControllerUiTest)
+java.lang.AssertionError: expected:<6> but was:<-1>
+at org.junit.Assert.fail(Assert.java:89)
+at org.junit.Assert.failNotEquals(Assert.java:835)
+at org.junit.Assert.assertEquals(Assert.java:120)
+at org.junit.Assert.assertEquals(Assert.java:146)
+at com.aistudy.myapplication.ControllerUiTest.U01_U10_landscapeSafetyLabelsAndNeutralStart(ControllerUiTest.kt:21)
+2) U04_holdWeaponRemainsAfterDirectionUpAndCancelClearsAll(com.aistudy.myapplication.ControllerUiTest)
+java.lang.AssertionError: Failed: assertExists.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (TestTag = 'forward')
+
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode$default(SemanticsNodeInteraction.kt:83)
+at com.aistudy.myapplication.ControllerUiTest.point-tuRUvjQ(ControllerUiTest.kt:35)
+at com.aistudy.myapplication.ControllerUiTest.U04_holdWeaponRemainsAfterDirectionUpAndCancelClearsAll(ControllerUiTest.kt:51)
+3) U03_directionAndBoostBothReleaseOrdersNeverResumeOldGesture(com.aistudy.myapplication.ControllerUiTest)
+java.lang.AssertionError: Failed: assertExists.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (TestTag = 'forward')
+
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode$default(SemanticsNodeInteraction.kt:83)
+at com.aistudy.myapplication.ControllerUiTest.point-tuRUvjQ(ControllerUiTest.kt:35)
+at com.aistudy.myapplication.ControllerUiTest.U03_directionAndBoostBothReleaseOrdersNeverResumeOldGesture(ControllerUiTest.kt:38)
+4) U02_U06_joystickMovesButKillCannotBeClearedByHeldFingers(com.aistudy.myapplication.ControllerUiTest)
+java.lang.AssertionError: Failed: assertExists.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (TestTag = 'joystick')
+
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode$default(SemanticsNodeInteraction.kt:83)
+at com.aistudy.myapplication.ControllerUiTest.point-tuRUvjQ(ControllerUiTest.kt:35)
+at com.aistudy.myapplication.ControllerUiTest.U02_U06_joystickMovesButKillCannotBeClearedByHeldFingers(ControllerUiTest.kt:58)
+
+FAILURES!!!
+Tests run: 4,  Failures: 4
+
+
+INSTRUMENTATION_CODE: -1
+

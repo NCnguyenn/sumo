@@ -1,0 +1,24 @@
+[
+  {
+    "sample": 40,
+    "before_ms": 4.6084,
+    "total_ms": 10.6125,
+    "queue_ms": 1.4674,
+    "enqueue_ms": 0.0179,
+    "prepare_ms": 0.2384,
+    "pre_send_cpu_ms": 1.549828,
+    "send_cpu_ms": 1.561511,
+    "line": "2549.958  5357  5396 I SumoSession: wire t0_ns=2549946233800 t1_ns=2549950842200 t2_ns=2549956846300 cause=Release(id=40) hex=56313a313766623062373235666536666565302c3333322c302c302c302c307c533a302c302c302c302c300a enqueued_ns=2549946251700 dequeued_ns=2549947719100 work_ns=2549947704400 prepare_start_ns=2549950472700 prepare_end_ns=2549950711100 pre_send_cpu_ns=1549828 send_cpu_ns=1561511 deadline_ns=2549945245600 wait_start_ns=2549947691800 wake_ns=2549947704400 requested_wait_ns=2000000 prev_work_ns=764000 prev_trace_submit_ns=53600 trace_pending=0"
+  },
+  {
+    "sample": 498,
+    "before_ms": 10.7871,
+    "total_ms": 11.5856,
+    "queue_ms": 0.3149,
+    "enqueue_ms": 0.0106,
+    "prepare_ms": 9.9571,
+    "pre_send_cpu_ms": 10.308108,
+    "send_cpu_ms": 0.813671,
+    "line": "2622.816  5357  5396 I SumoSession: wire t0_ns=2622804944600 t1_ns=2622815731700 t2_ns=2622816530200 cause=Release(id=498) hex=56313a313766623062373235666536666565302c333537312c302c302c302c307c533a302c302c302c302c300a enqueued_ns=2622804955200 dequeued_ns=2622805270100 work_ns=2622805254800 prepare_start_ns=2622805758400 prepare_end_ns=2622815715500 pre_send_cpu_ns=10308108 send_cpu_ns=813671 deadline_ns=2622815245600 wait_start_ns=2622802898800 wake_ns=2622805254800 requested_wait_ns=2000000 prev_work_ns=246700 prev_trace_submit_ns=0 trace_pending=0"
+  }
+]

@@ -1,0 +1,172 @@
+--- before/app/src/main/java/com/aistudy/myapplication/control/ControlReducer.kt
++++ after/app/src/main/java/com/aistudy/myapplication/control/ControlReducer.kt
+@@ -42,7 +42,7 @@
+                 fun axis(positive: ControlButton, negative: ControlButton) =
+                     (if (positive in valid.values) 1f else 0f) - (if (negative in valid.values) 1f else 0f)
+                 DriveMixer.mix(axis(ControlButton.RIGHT, ControlButton.LEFT), axis(ControlButton.FORWARD, ControlButton.BACKWARD),
+-                    settings.limitPercent, boostHeld, settings.calibration.copy(sensitivity = 1f, deadZone = 0f))
++                    settings.limitPercent, boostHeld, settings.calibration, InputMode.D_PAD)
+             }
+         } else WheelPwm(0, 0)
+         return ControlState(pwm, boostHeld && pwm != WheelPwm(0, 0), weapon, brake, killed, connected, mode,
+
+--- before/app/src/main/java/com/aistudy/myapplication/control/DriveMixer.kt
++++ after/app/src/main/java/com/aistudy/myapplication/control/DriveMixer.kt
+@@ -1,6 +1,7 @@
+ package com.aistudy.myapplication.control
+ 
+ import com.aistudy.myapplication.settings.DriveCalibration
++import com.aistudy.myapplication.settings.InputMode
+ import kotlin.math.abs
+ import kotlin.math.hypot
+ import kotlin.math.max
+@@ -13,17 +14,21 @@
+ 
+ object DriveMixer {
+     fun mix(x: Float, y: Float, limitPercent: Int, boost: Boolean,
+-            calibration: DriveCalibration = DriveCalibration()): WheelPwm {
++            calibration: DriveCalibration = DriveCalibration(), inputMode: InputMode = InputMode.JOYSTICK): WheelPwm {
+         require(limitPercent in 30..100)
+         calibration.validated()
+         if (!x.isFinite() || !y.isFinite()) return WheelPwm(0, 0)
+-        val cx = x.coerceIn(-1f, 1f).toDouble()
+-        val cy = y.coerceIn(-1f, 1f).toDouble()
+-        val radius = hypot(cx, cy)
+-        if (radius <= calibration.deadZone) return WheelPwm(0, 0)
+-        val magnitude = min(1.0, calibration.sensitivity * (min(radius, 1.0) - calibration.deadZone) / (1 - calibration.deadZone))
+-        val turn = cx / radius * magnitude * calibration.turnPercent / 100
+-        val forward = cy / radius * magnitude
++        var cx = x.coerceIn(-1f, 1f).toDouble()
++        var cy = y.coerceIn(-1f, 1f).toDouble()
++        if (inputMode == InputMode.JOYSTICK) {
++            val radius = hypot(cx, cy)
++            if (radius <= calibration.deadZone) return WheelPwm(0, 0)
++            val magnitude = min(1.0, calibration.sensitivity * (min(radius, 1.0) - calibration.deadZone) / (1 - calibration.deadZone))
++            cx = cx / radius * magnitude
++            cy = cy / radius * magnitude
++        }
++        val turn = cx * calibration.turnPercent / 100
++        val forward = cy
+         val scale = max(1.0, max(abs(forward + turn), abs(forward - turn)))
+         val left = (forward + turn) / scale * calibration.leftGain
+         val right = (forward - turn) / scale * calibration.rightGain
+
+--- before/app/src/main/java/com/aistudy/myapplication/protocol/ReplyTracker.kt
++++ after/app/src/main/java/com/aistudy/myapplication/protocol/ReplyTracker.kt
+@@ -92,7 +92,6 @@
+             val config=sent.frame.payload as? Payload.Configure ?: return null
+             if(!online || config.id!=reply.configId || config.homeDeg!=reply.homeDeg || config.activeDeg!=reply.activeDeg) return null
+         } else if(reply is RobotReply.Ack) {
+-            if(seq<intentFloor) return null
+             if(reply.result=="OK" && !confirms(sent.frame,reply)) return null
+             if(sent.frame.payload is Payload.Configure) {
+                 if(reply.result=="OK" || !online) return null
+@@ -107,6 +106,8 @@
+         }
+         lastAck=seq
+         pending.keys.removeAll { it<=seq }
++        // Superseded ACKs prove communication progress but cannot confirm current reducer intent.
++        if(reply is RobotReply.Ack && seq<intentFloor) return null
+         if(reply is RobotReply.Ack && sent.frame.payload==Payload.Close && reply.result=="OK") clear()
+         return reply
+     }
+
+--- before/app/src/test/java/com/aistudy/myapplication/control/ControlReducerTest.kt
++++ after/app/src/test/java/com/aistudy/myapplication/control/ControlReducerTest.kt
+@@ -196,4 +196,26 @@
+         val r=online(ControllerSettings(calibration=DriveCalibration(sensitivity=0.25f,deadZone=0.3f)))
+         forward(r); assertEquals(WheelPwm(153,153),r.state.pwm)
+     }
++    @Test fun F03_dpadForwardRightUsesFullAxesWithLowTurnCalibration() {
++        for (c in listOf(DriveCalibration(turnPercent=30), DriveCalibration(sensitivity=0.25f,deadZone=0.3f,turnPercent=30))) {
++            val r=online(ControllerSettings(limitPercent=60,calibration=c))
++            forward(r); assertEquals(WheelPwm(153,153),r.state.pwm)
++            r.press(1,ControlButton.RIGHT)
++            assertEquals(WheelPwm(153,82),r.state.pwm)
++        }
++    }
++    @Test fun F03_dpadForwardLeftUsesFullAxesWithLowTurnCalibration() {
++        for (c in listOf(DriveCalibration(turnPercent=30), DriveCalibration(sensitivity=0.25f,deadZone=0.3f,turnPercent=30))) {
++            val r=online(ControllerSettings(limitPercent=60,calibration=c))
++            forward(r); assertEquals(WheelPwm(153,153),r.state.pwm)
++            r.press(1,ControlButton.LEFT)
++            assertEquals(WheelPwm(82,153),r.state.pwm)
++        }
++    }
++    @Test fun F03_joystickDiagonalsKeepRadialNormalizationWithLowTurnCalibration() {
++        val r=online(ControllerSettings(inputMode=InputMode.JOYSTICK,limitPercent=60,calibration=DriveCalibration(turnPercent=30)))
++        r.press(0,ControlButton.JOYSTICK)
++        r.moveJoystick(0,1f,1f); assertEquals(WheelPwm(141,76),r.state.pwm)
++        r.moveJoystick(0,-1f,1f); assertEquals(WheelPwm(76,141),r.state.pwm)
++    }
+ }
+
+--- before/app/src/test/java/com/aistudy/myapplication/protocol/ReplyTrackerTest.kt
++++ after/app/src/test/java/com/aistudy/myapplication/protocol/ReplyTrackerTest.kt
+@@ -1,6 +1,7 @@
+ package com.aistudy.myapplication.protocol
+ 
+ import com.aistudy.myapplication.control.WheelPwm
++import com.aistudy.myapplication.control.DriveMode
+ import org.junit.Assert.*
+ import org.junit.Test
+ 
+@@ -59,6 +60,58 @@
+         val t=confirmed(); t.recordSent(ControlFrame(sid,2),10); t.recordSent(ControlFrame(sid,3),40)
+         assertNotNull(receive(t,ack(2),50)); assertEquals(40L,t.lastRttMs)
+     }
++    @Test fun C05_changingDriveAcksKeepSessionAliveWithoutConfirmingSupersededState() {
++        val t=confirmed()
++        for (seq in 2..15) {
++            val sentAt=10L+(seq-2)*30
++            val pwm=(seq-1)*10
++            t.recordSent(ControlFrame(sid,seq,payload=Payload.Drive(WheelPwm(pwm,pwm))),sentAt)
++            if (seq>2) {
++                val previousPwm=pwm-10
++                assertNull(receive(t,ack(seq-1,"$previousPwm,$previousPwm,0,0,0,0,0,0,0"),sentAt+20))
++                assertEquals("seq ${seq-1} must record 50 ms RTT",50L,t.lastRttMs)
++                assertTrue(t.online); assertEquals(sid,t.sid)
++                if (sentAt==280L) { t.tick(301); assertTrue(t.online) }
++            }
++        }
++        assertNotNull(receive(t,ack(15,"140,140,0,0,0,0,0,0,0"),450))
++        assertEquals(50L,t.lastRttMs)
++        assertNull(receive(t,ack(15,"140,140,0,0,0,0,0,0,0"),600))
++        t.tick(749); assertTrue(t.online)
++        t.tick(750); assertFalse(t.online); assertNull(t.sid)
++    }
++    @Test fun C05_supersededMismatchedAckCannotMaintainProgress() {
++        val t=confirmed()
++        t.recordSent(ControlFrame(sid,2,payload=Payload.Drive(WheelPwm(10,10))),10)
++        t.recordSent(ControlFrame(sid,3,payload=Payload.Drive(WheelPwm(20,20))),40)
++        assertNull(receive(t,ack(2,"20,20,0,0,0,0,0,0,0"),60))
++        assertNull(receive(t,ack(2,"10,10,0,0,0,0,0,0,0"),61,from="127.0.0.2"))
++        assertNull(receive(t,ack(4,"10,10,0,0,0,0,0,0,0"),62))
++        assertEquals(1L,t.lastRttMs)
++        t.tick(301); assertFalse(t.online); assertNull(t.sid)
++    }
++    @Test fun C05_supersededSafetyAcksOnlyAdvanceCommunication() {
++        val neutral="0,0,0,0,0,0,0,0,0"
++        val killed="0,0,0,0,0,1,0,0,0"
++        val cases=listOf(
++            Triple(ControlFrame(sid,2,payload=Payload.Drive(WheelPwm(153,153))),"153,153,0,0,0,0,0,0,0",ControlFrame(sid,3)),
++            Triple(ControlFrame(sid,2),neutral,ControlFrame(sid,3,kill=true)),
++            Triple(ControlFrame(sid,2,kill=true),killed,ControlFrame(sid,3,payload=Payload.Unlock)),
++            Triple(ControlFrame(sid,2,payload=Payload.Unlock),neutral,ControlFrame(sid,3,kill=true)),
++            Triple(ControlFrame(sid,2,mode=DriveMode.AUTO),"0,0,0,0,0,0,1,0,0",ControlFrame(sid,3)),
++            Triple(ControlFrame(sid,2,turnId=1,durationMs=200),"-255,255,0,0,0,0,0,1,1",ControlFrame(sid,3)),
++            Triple(ControlFrame(sid,2,payload=Payload.Close),neutral,ControlFrame(sid,3))
++        )
++        for ((old,fields,current) in cases) {
++            val t=confirmed(); t.recordSent(old,10); t.recordSent(current,40)
++            assertNull("Obsolete $old must not reach reducer",receive(t,ack(2,fields),60))
++            assertEquals(50L,t.lastRttMs); assertTrue(t.online); assertEquals(sid,t.sid)
++            val currentFields=if(current.kill) killed else neutral
++            assertNotNull(receive(t,ack(3,currentFields),61))
++            assertEquals(21L,t.lastRttMs)
++            assertNull(receive(t,ack(2,fields),62))
++        }
++    }
+     @Test fun C05_configAckIsMatchedButDoesNotMaintainControlWatchdogOrPing() {
+         val t=confirmed(); t.recordSent(ControlFrame(sid,2,payload=Payload.Configure(1,0,100)),100)
+         assertNull(receive(t,"Q1:$sid,2,2,0,100,OK\n",101))

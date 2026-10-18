@@ -1,0 +1,212 @@
+[
+  {
+    "Path": ".gitignore",
+    "Length": 225,
+    "Sha256": "703238443066325af08e3868d1e4b571a633baf68fcc93e323f0066999a97e1b"
+  },
+  {
+    "Path": "app/.gitignore",
+    "Length": 6,
+    "Sha256": "5c3174b74edc6f2b9e0743594b8bd3c7f31e4f4405758cc9872b3fe1de1d28b4"
+  },
+  {
+    "Path": "app/build.gradle.kts",
+    "Length": 1601,
+    "Sha256": "014d6397acf16d78d3f7de5cb5ef510db46b9399cb85dd060876ee43cca03f79"
+  },
+  {
+    "Path": "app/src/androidTest/java/com/aistudy/myapplication/ExampleInstrumentedTest.kt",
+    "Length": 677,
+    "Sha256": "2c1991201a364c0b5267e2e7ac16e00417682a73d5ccb22f8b2554f872db9e0d"
+  },
+  {
+    "Path": "app/src/main/AndroidManifest.xml",
+    "Length": 1063,
+    "Sha256": "59a8b2e04dba227e9a106f2ceef7d0c1bbd5d3d583e73063f9127c8978dc255b"
+  },
+  {
+    "Path": "app/src/main/java/com/aistudy/myapplication/MainActivity.kt",
+    "Length": 1358,
+    "Sha256": "4d229082a1423d242e5401d6947db76150c3679c6ef8a0b23b5258fedfdef0d3"
+  },
+  {
+    "Path": "app/src/main/java/com/aistudy/myapplication/ui/theme/Color.kt",
+    "Length": 289,
+    "Sha256": "c6d91b6755bcceab6c8a697285a65c13bf6902c10f927858d7f2379f0e810ba7"
+  },
+  {
+    "Path": "app/src/main/java/com/aistudy/myapplication/ui/theme/Theme.kt",
+    "Length": 1706,
+    "Sha256": "b7b89fa22da6d4e36a9db2305864d8d9b70ad4e70a0c03d5460f0ee7d1063a4e"
+  },
+  {
+    "Path": "app/src/main/java/com/aistudy/myapplication/ui/theme/Type.kt",
+    "Length": 994,
+    "Sha256": "170bccbb5542122a3a40e374db8c605480c42240952f571418d32ae958bfa7bd"
+  },
+  {
+    "Path": "app/src/main/keepRules/rules.keep",
+    "Length": 418,
+    "Sha256": "cd9f36ade2d8604e1b7cf24eff5b171f9c0816c0aa013ba7eb55be4fe2e1dac7"
+  },
+  {
+    "Path": "app/src/main/res/drawable/ic_launcher_background.xml",
+    "Length": 5606,
+    "Sha256": "ed423c73a6f40a4d2909f0901e60527b3a807cd59e1b5593bcaae1808b1c6321"
+  },
+  {
+    "Path": "app/src/main/res/drawable/ic_launcher_foreground.xml",
+    "Length": 1702,
+    "Sha256": "01d1a6a6c1234eb7fe270d097eb283d72b9c95ae5118886f1b6573aad280f1f7"
+  },
+  {
+    "Path": "app/src/main/res/mipmap-anydpi/ic_launcher_round.xml",
+    "Length": 343,
+    "Sha256": "88f7653499ef524126ea5018a99baf9cc3269e7e584d6205dfdd76db39f39cc0"
+  },
+  {
+    "Path": "app/src/main/res/mipmap-anydpi/ic_launcher.xml",
+    "Length": 343,
+    "Sha256": "88f7653499ef524126ea5018a99baf9cc3269e7e584d6205dfdd76db39f39cc0"
+  },
+  {
+    "Path": "app/src/main/res/mipmap-hdpi/ic_launcher_round.webp",
+    "Length": 2898,
+    "Sha256": "1ed73f5341a69d3b41c7e02e126803f50cc8c3284adf4bbb737f0c93577aef07"
+  },
+  {
+    "Path": "app/src/main/res/mipmap-hdpi/ic_launcher.webp",
+    "Length": 1404,
+    "Sha256": "dd00996198640ed28fbc09cdcd7a3807cf8707f3eb255b659634da3ca6a6ff01"
+  },
+  {
+    "Path": "app/src/main/res/mipmap-mdpi/ic_launcher_round.webp",
+    "Length": 1772,
+    "Sha256": "4e2c58b91de01130e6479e00cbbaaf6e77cd961dd2c8e303cf13cd077fa92632"
+  },
+  {
+    "Path": "app/src/main/res/mipmap-mdpi/ic_launcher.webp",
+    "Length": 982,
+    "Sha256": "846219e6f72fe9a6c104ca8919cbee36a101e7d2ff8da9da67b689a5888f060d"
+  },
+  {
+    "Path": "app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp",
+    "Length": 3918,
+    "Sha256": "91b490aef86574901137f0a252272e1f1add99c1ad709e0696ed68929b88d261"
+  },
+  {
+    "Path": "app/src/main/res/mipmap-xhdpi/ic_launcher.webp",
+    "Length": 1900,
+    "Sha256": "398340dad816fc9a6338cb151a8cf1e45b926f9bfb70628b24c4bd2523cc94d4"
+  },
+  {
+    "Path": "app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp",
+    "Length": 5914,
+    "Sha256": "3009fad079f5772f30ecd767f98924367fbe0f81c30048d672d4fda2d5ca7d12"
+  },
+  {
+    "Path": "app/src/main/res/mipmap-xxhdpi/ic_launcher.webp",
+    "Length": 2884,
+    "Sha256": "58ae87fa0c5b5d1562d27fd648d2c061553fe20e3ed570bde588162d01ea7a27"
+  },
+  {
+    "Path": "app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp",
+    "Length": 7778,
+    "Sha256": "5faf033745c8c882c43bb1b372d4e4a5890caec63d9892a2e756c954108b85dc"
+  },
+  {
+    "Path": "app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp",
+    "Length": 3844,
+    "Sha256": "f98fef5bc3bfe5b65692c40ad1cbae2bec4faf9f1b249c397626740db71b62d8"
+  },
+  {
+    "Path": "app/src/main/res/values/colors.xml",
+    "Length": 378,
+    "Sha256": "b5626527d503417f0d8e5b1e08f338de7b31173bf0e122815f03e64932adbd88"
+  },
+  {
+    "Path": "app/src/main/res/values/strings.xml",
+    "Length": 76,
+    "Sha256": "22e88cca26de9e26e33916dce55a324dca54a842b197f191b3406f7e11a1ab90"
+  },
+  {
+    "Path": "app/src/main/res/values/themes.xml",
+    "Length": 155,
+    "Sha256": "e7da25bef4929044796beabbc86093f0f7687867f935066a6b5972daa3889603"
+  },
+  {
+    "Path": "app/src/main/res/xml/backup_rules.xml",
+    "Length": 478,
+    "Sha256": "6cf1a27e6807b1d24e41d3fbe7ddc1bfe1f42226027964f6eaf477d71b43b283"
+  },
+  {
+    "Path": "app/src/main/res/xml/data_extraction_rules.xml",
+    "Length": 551,
+    "Sha256": "cb1fc47ab4a984530ed60e0e6ee638929c3038290e7e7e0b4b03a3a30fbe7381"
+  },
+  {
+    "Path": "app/src/test/java/com/aistudy/myapplication/ExampleUnitTest.kt",
+    "Length": 349,
+    "Sha256": "57d4631759caafccb4a48b3f4577de8b41d4924223e7daa91fae44379ab06434"
+  },
+  {
+    "Path": "build.gradle.kts",
+    "Length": 218,
+    "Sha256": "be7dbfa1841b18b020f744e203b995d3dac5709c2a6b8e310fbcfaed0364919a"
+  },
+  {
+    "Path": "docs/MO_TA_DU_AN.md",
+    "Length": 26126,
+    "Sha256": "ffe119e380f88a820ce4874d816b9969f1ee30d4624cbd85133e81a67a7a74d9"
+  },
+  {
+    "Path": "docs/superpowers/plans/2026-10-16-sumo-controller-test-first.md",
+    "Length": 79063,
+    "Sha256": "253bf1c217d059cff2af0b97e963fa8cefac7072e5058078a17e3a3a0c00b549"
+  },
+  {
+    "Path": "gradle.properties",
+    "Length": 1120,
+    "Sha256": "cf774135f23cd1e6c054168ce772e24140800347f95b29819744c96f97e4ef26"
+  },
+  {
+    "Path": "gradle/gradle-daemon-jvm.properties",
+    "Length": 1138,
+    "Sha256": "6c13aa5ba36690ccfbbb25a8807d01d98c15833e446d7ae82ddc726472cb8ef7"
+  },
+  {
+    "Path": "gradle/libs.versions.toml",
+    "Length": 1751,
+    "Sha256": "384d80edad2799cbf9495882613ec6329176b6ae424581a2ee143775b336de6c"
+  },
+  {
+    "Path": "gradle/wrapper/gradle-wrapper.jar",
+    "Length": 45457,
+    "Sha256": "76805e32c009c0cf0dd5d206bddc9fb22ea42e84db904b764f3047de095493f3"
+  },
+  {
+    "Path": "gradle/wrapper/gradle-wrapper.properties",
+    "Length": 384,
+    "Sha256": "adfc28b54b74c98b47dffb0253e71252bef046cbe4292334a7bfc95e3f41f3ff"
+  },
+  {
+    "Path": "gradlew",
+    "Length": 8728,
+    "Sha256": "3238afb2aed5cb16eb7d6718077e7138059108f007b54179e9cc157c5a6e0e89"
+  },
+  {
+    "Path": "gradlew.bat",
+    "Length": 2937,
+    "Sha256": "1d297e00bd21de3ace22b4d7f2de1f9dfa858883d66bbf7c1ccbecccec8f4f3b"
+  },
+  {
+    "Path": "local.properties",
+    "Length": 454,
+    "Sha256": "4dbd3668c3155f3087bb98f41c561cc12b56af26296ba11db4f11cb2da2fcfef"
+  },
+  {
+    "Path": "settings.gradle.kts",
+    "Length": 625,
+    "Sha256": "90daff74eda09c73f2c54a912d61dc266858a39f33daf469675de1c8cd09aca7"
+  }
+]

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.aistudy.myapplication.settings.SettingsDocumentTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-17T03:45:05.116Z" hostname="DESKTOP-OVC24VV" time="0.024">
+  <properties/>
+  <testcase name="F06_roundTripEverySettingWithoutRuntimeState" classname="com.aistudy.myapplication.settings.SettingsDocumentTest" time="0.022"/>
+  <testcase name="F10_legacyAddsDefaultsAndBadSchemaDoesNotBecomeDefaults" classname="com.aistudy.myapplication.settings.SettingsDocumentTest" time="0.001"/>
+  <testcase name="F05_invalidRecordCannotBeEncodedOrPartiallyApplied" classname="com.aistudy.myapplication.settings.SettingsDocumentTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,16 @@
+{
+  "source": "docs\\testing\\phase-4\\evidence\\32-performance-fix\\07-android-results\\Medium_Phone(AVD) - 17\\logcat-com.aistudy.myapplication.CadenceTest-I01_F04_measure20_30_50msWithoutRebuilding.txt",
+  "measurements": [
+    {
+      "configured_ms": 50,
+      "n": 1281,
+      "minimum": 32.6513,
+      "p50": 49.994,
+      "p95": 51.6336,
+      "p99": 52.1065,
+      "maximum": 60.1096,
+      "below_20": 0,
+      "above_50": 637
+    }
+  ]
+}

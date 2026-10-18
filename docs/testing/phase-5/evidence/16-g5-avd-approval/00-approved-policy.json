@@ -1,0 +1,33 @@
+{
+  "id": "G5_AVD_50_PLUS_10",
+  "approved_by": "user",
+  "approval_text": "Duyệt phương án này để tiếp tục kiểm tra",
+  "scope": "G5 independent AVD API37 only; no Phase6/7/release",
+  "configured_ms": [
+    20,
+    30,
+    50
+  ],
+  "minimum_interval_ms": 20,
+  "upper_ms": {
+    "20": 50,
+    "30": 50,
+    "50": 60
+  },
+  "minimum_samples_per_target": 1000,
+  "stop_max_ms": 10,
+  "unchanged": [
+    "nominal scheduler 20/30/50",
+    "STOP/Kill behavior",
+    "watchdog 300ms",
+    "all historical G0 failures"
+  ],
+  "deferred_unverified": [
+    "phone",
+    "HTTPS A-B-C",
+    "API36",
+    "I11",
+    "firmware/physical robot"
+  ],
+  "result_status": "Not measured yet; permission to test is not user approval of results"
+}

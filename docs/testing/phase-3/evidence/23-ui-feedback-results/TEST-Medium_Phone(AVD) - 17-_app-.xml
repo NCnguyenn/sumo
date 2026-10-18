@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="10" failures="0" errors="0" skipped="0" time="21.107" timestamp="2026-10-17T07:04:50" hostname="localhost">
+  <testsuite name="com.aistudy.myapplication.ControllerUiTest" tests="10" failures="0" errors="0" skipped="0" time="20.027" timestamp="2026-10-17T07:04:50" hostname="localhost">
+    <properties>
+      <property name="device" value="Medium_Phone(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="U04_U12_toggleBrakeAndLiveLimiterUseSameReducer" classname="com.aistudy.myapplication.ControllerUiTest" time="4.495" />
+    <testcase name="U06_U07_unlockRequiresFreshTouchAfterEveryOtherFingerIsUp" classname="com.aistudy.myapplication.ControllerUiTest" time="1.95" />
+    <testcase name="U03_releaseOneDirectionInvalidatesOldAndEarlyPointers" classname="com.aistudy.myapplication.ControllerUiTest" time="2.032" />
+    <testcase name="U10_touchTargetsHave48DpMinimumAtCurrentWindowSize" classname="com.aistudy.myapplication.ControllerUiTest" time="1.562" />
+    <testcase name="U01_U10_landscapeSafetyLabelsAndNeutralStart" classname="com.aistudy.myapplication.ControllerUiTest" time="1.651" />
+    <testcase name="U04_holdWeaponRemainsAfterDirectionUpAndCancelClearsAll" classname="com.aistudy.myapplication.ControllerUiTest" time="1.7" />
+    <testcase name="U10_dPadIsBalancedCrossWithSquareDirectionKeys" classname="com.aistudy.myapplication.ControllerUiTest" time="1.608" />
+    <testcase name="U06_killSurvivesActivityRecreateWithoutRestoringMotion" classname="com.aistudy.myapplication.ControllerUiTest" time="1.557" />
+    <testcase name="U03_directionAndBoostBothReleaseOrdersNeverResumeOldGesture" classname="com.aistudy.myapplication.ControllerUiTest" time="1.807" />
+    <testcase name="U02_U06_joystickMovesButKillCannotBeClearedByHeldFingers" classname="com.aistudy.myapplication.ControllerUiTest" time="1.665" />
+  </testsuite>
+</testsuites>

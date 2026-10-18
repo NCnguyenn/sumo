@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.aistudy.myapplication.updates.HttpsTransferTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-17T13:11:28.986Z" hostname="DESKTOP-OVC24VV" time="0.008">
+  <properties/>
+  <testcase name="A08_redirectCannotDowngradeHttpsOrLoopWithoutLimit" classname="com.aistudy.myapplication.updates.HttpsTransferTest" time="0.004"/>
+  <testcase name="A03_successStreamsExactBytesAndReportsProgress" classname="com.aistudy.myapplication.updates.HttpsTransferTest" time="0.001"/>
+  <testcase name="A08_G0RedirectHostCountAndTimeoutsAreEnforced" classname="com.aistudy.myapplication.updates.HttpsTransferTest" time="0.001"/>
+  <testcase name="A03_A04_cancelOversizeAndHttpErrorDoNotSucceed" classname="com.aistudy.myapplication.updates.HttpsTransferTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

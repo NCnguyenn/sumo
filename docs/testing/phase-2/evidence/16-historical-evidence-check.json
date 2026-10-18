@@ -1,0 +1,142 @@
+[
+  {
+    "stage": "phase-1/01-red-xml",
+    "tests": 11,
+    "failures": 11,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "stage": "phase-1/02-green-xml",
+    "tests": 11,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "stage": "phase-1/03-red-xml",
+    "tests": 36,
+    "failures": 25,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "stage": "phase-1/04-green-xml",
+    "tests": 36,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "stage": "phase-1/05-red-xml",
+    "tests": 1,
+    "failures": 1,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "stage": "phase-1/06-final-xml",
+    "tests": 37,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "stage": "phase-2/01-red-xml",
+    "tests": 6,
+    "failures": 6,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "stage": "phase-2/02-green-xml",
+    "tests": 6,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "stage": "phase-2/03-red-xml",
+    "tests": 9,
+    "failures": 9,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "stage": "phase-2/04-green-xml",
+    "tests": 15,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "stage": "phase-2/07-red-xml",
+    "tests": 1,
+    "failures": 1,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "stage": "phase-2/08-green-xml",
+    "tests": 1,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "stage": "phase-2/10-red-xml",
+    "tests": 1,
+    "failures": 1,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "stage": "phase-2/11-green-xml",
+    "tests": 17,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "stage": "phase-2/13-final-xml",
+    "tests": 54,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "stage": "phase-2/17a-p1-red-xml",
+    "tests": 36,
+    "failures": 2,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "stage": "phase-2/05b-simulator-red.xml",
+    "tests": 29,
+    "failures": 29,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "stage": "phase-2/06-simulator-green.xml",
+    "tests": 29,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "stage": "phase-2/12b-simulator-final.xml",
+    "tests": 31,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "stage": "phase-2/16b-current-simulator.xml",
+    "tests": 31,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  }
+]

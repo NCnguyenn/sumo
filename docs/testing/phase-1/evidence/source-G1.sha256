@@ -1,0 +1,12 @@
+
+Algorithm Hash                                                             Path
+--------- ----                                                             ----
+SHA256    18BF60CC60321182AABDD36EFDD9562D8BFBF3F1ADEA289ED6B6AA67291453A5 C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\app\src\main\java\com\aistudy\myapplication\control\ControlReducer.kt
+SHA256    09272AE0B1EDD9819FD2812EDCFE528A8A075E5AD88BF4B84319032245D431CF C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\app\src\main\java\com\aistudy\myapplication\control\ControlState.kt
+SHA256    42EE60853D730CF3CF6CE7ADB5EAD9BC6435A2FB601AD108B7D2001F8755DF2D C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\app\src\main\java\com\aistudy\myapplication\control\DriveMixer.kt
+SHA256    682EABBF3D62182559144316FBA783200901869E535E4548FF542A80658F5867 C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\app\src\main\java\com\aistudy\myapplication\settings\ControllerSettings.kt
+SHA256    C4317C2E564F3061A96BD3773B934484B64D40DA9C6E01E0B0BC451E24DF253F C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\app\src\test\java\com\aistudy\myapplication\control\ControlReducerTest.kt
+SHA256    2B772C7DD18A688A5D4337013E676E742094D9F1DFEA76332D1D14EA75BCD04E C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\app\src\test\java\com\aistudy\myapplication\control\DriveMixerTest.kt
+SHA256    9908748E12CF8171A6EE0AD44F4B0E4DB2FAC27B763B91FDB420B35A4756F04C C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\app\src\test\java\com\aistudy\myapplication\settings\ControllerSettingsTest.kt
+
+

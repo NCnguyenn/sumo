@@ -1,0 +1,24 @@
+COMMAND: ["C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe", "-s", "emulator-5554", "shell", "am", "instrument", "-w", "-r", "-e", "class", "com.aistudy.myapplication.AndroidFaultTest", "-e", "scenario", "delay", "-e", "delay", "350", "com.aistudy.myapplication.test/androidx.test.runner.AndroidJUnitRunner"]
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.AndroidFaultTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=
+com.aistudy.myapplication.AndroidFaultTest:
+INSTRUMENTATION_STATUS: test=I05_I07_I08_faultedAndroidSessionNeverRestoresHeldDirection
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.AndroidFaultTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=I05_I07_I08_faultedAndroidSessionNeverRestoresHeldDirection
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_RESULT: stream=
+
+Time: 7.174
+
+OK (1 test)
+
+
+INSTRUMENTATION_CODE: -1

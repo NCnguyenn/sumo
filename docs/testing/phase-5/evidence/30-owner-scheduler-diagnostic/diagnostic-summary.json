@@ -1,0 +1,14 @@
+{
+  "purpose": "DIAGNOSTIC ONLY; same APK, scheduler and ART tracing overhead, not an acceptance run",
+  "binary_sha256": "92abb62d00eb6f841eb8b9eb158d4b0be4b98bd39c6e05bd39b69de79613e5e3",
+  "stop_samples": 500,
+  "before_max_ms": 3.9444,
+  "after_max_ms": 4.1192,
+  "above_10": 0,
+  "permission_binder_hypothesis": "not supported: 1 Binder transaction observed on owner, not one per pump",
+  "trace_coverage": "ring overwrite: entries 2531238/2751383; early CPU2 events unavailable, do not use incomplete intervals for causal attribution",
+  "trace_sha256": "14ad2cf58ba3ccc9a0e67d320e23ce03c6360c3c1994844059bb31a71a48d112",
+  "compressed_bytes": 30837539,
+  "source_changed": false,
+  "old_stop_and_cadence_failures_retained": true
+}

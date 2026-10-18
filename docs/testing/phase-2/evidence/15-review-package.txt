@@ -1,0 +1,1775 @@
+Phase 1+2 review: current additions vs the source-before baseline (no Git repository).
+
+--- /dev/null
++++ app/src/main/java/com/aistudy/myapplication/control/ControlReducer.kt
+@@ -0,0 +1,190 @@
++package com.aistudy.myapplication.control
++
++import com.aistudy.myapplication.settings.ControllerSettings
++import com.aistudy.myapplication.settings.InputMode
++import com.aistudy.myapplication.settings.WeaponMode
++
++class ControlReducer(initialSettings: ControllerSettings = ControllerSettings(),
++                     private val nowMs: () -> Long = { System.nanoTime() / 1_000_000 }) {
++    var settings = initialSettings.validated()
++        private set
++    private val pressed = mutableMapOf<Int, ControlButton>()
++    private val blocked = mutableSetOf<Int>()
++    private val awaitRelease = mutableSetOf<Int>()
++    private val joystick = mutableMapOf<Int, Pair<Float, Float>>()
++    private var connected = false
++    private var killed = false
++    private var caps = 0
++    private var autoApproved = false
++    private var mode = DriveMode.MANUAL
++    private var pendingMode: DriveMode? = null
++    private var toggledWeapon = false
++    private var unlockStart: Long? = null
++    private var unlockPending = false
++    private var nextTurnId = 0
++    private var turnId = 0
++    private var turnDuration = 0
++    private var turnActive = false
++    private fun ControlButton.direction() = this in setOf(ControlButton.FORWARD, ControlButton.BACKWARD,
++        ControlButton.LEFT, ControlButton.RIGHT, ControlButton.JOYSTICK)
++
++    val state: ControlState get() {
++        val valid = pressed.filterKeys { it !in blocked }
++        val brake = connected && !killed && ControlButton.BRAKE in valid.values
++        val manual = connected && !killed && !brake && mode == DriveMode.MANUAL && pendingMode == null && !unlockPending && turnId == 0
++        val weapon = manual && (toggledWeapon || (settings.weaponMode == WeaponMode.HOLD && ControlButton.WEAPON in valid.values))
++        val boostHeld = ControlButton.BOOST in valid.values
++        val pwm = if (manual && awaitRelease.isEmpty()) {
++            if (settings.inputMode == InputMode.JOYSTICK) {
++                val position = valid.entries.firstOrNull { it.value == ControlButton.JOYSTICK }?.let { joystick[it.key] }
++                DriveMixer.mix(position?.first ?: 0f, position?.second ?: 0f, settings.limitPercent, boostHeld, settings.calibration)
++            } else {
++                fun axis(positive: ControlButton, negative: ControlButton) =
++                    (if (positive in valid.values) 1f else 0f) - (if (negative in valid.values) 1f else 0f)
++                DriveMixer.mix(axis(ControlButton.RIGHT, ControlButton.LEFT), axis(ControlButton.FORWARD, ControlButton.BACKWARD),
++                    settings.limitPercent, boostHeld, settings.calibration.copy(sensitivity = 1f, deadZone = 0f))
++            }
++        } else WheelPwm(0, 0)
++        return ControlState(pwm, boostHeld && pwm != WheelPwm(0, 0), weapon, brake, killed, connected, mode,
++            pendingMode, turnId, turnDuration, turnActive, unlockPending)
++    }
++
++    fun connectAcknowledged(capabilities: Int = 3, autoApproved: Boolean = false, receiverKilled: Boolean = false) {
++        require(capabilities and 1 != 0)
++        cancelAll()
++        caps = capabilities
++        this.autoApproved = autoApproved
++        killed = killed || receiverKilled
++        nextTurnId = 0
++        connected = true
++    }
++    fun disconnect() { cancelAll(); connected = false }
++
++    fun press(pointerId: Int, button: ControlButton) {
++        if (pointerId in pressed) return
++        pressed[pointerId] = button
++        unlockStart = null
++        unlockPending = false
++        if (!connected || killed) { blocked.add(pointerId); return }
++        if (button == ControlButton.BRAKE) {
++            invalidateExceptBrakes()
++            return
++        }
++        if (state.brake || mode != DriveMode.MANUAL || pendingMode != null) { blocked.add(pointerId); return }
++        if (turnId != 0) {
++            if (button.direction()) { endTurn(); awaitRelease.add(pointerId) }
++            blocked.add(pointerId)
++            return
++        }
++        if (button.direction()) {
++            val inputMatches = (button == ControlButton.JOYSTICK) == (settings.inputMode == InputMode.JOYSTICK)
++            val otherJoystick = pressed.any { (id, value) -> id != pointerId && id !in blocked && value == ControlButton.JOYSTICK }
++            if (!inputMatches || awaitRelease.isNotEmpty() || (button == ControlButton.JOYSTICK && otherJoystick)) {
++                blocked.add(pointerId)
++                return
++            }
++            if (button == ControlButton.JOYSTICK) joystick[pointerId] = 0f to 0f
++        }
++        if (button == ControlButton.WEAPON && settings.weaponMode == WeaponMode.TOGGLE) toggledWeapon = !toggledWeapon
++    }
++
++    fun moveJoystick(pointerId: Int, x: Float, y: Float) {
++        if (pressed[pointerId] == ControlButton.JOYSTICK && pointerId !in blocked) joystick[pointerId] = x to y
++    }
++    private fun invalidateDirections() {
++        for ((id, button) in pressed) if (button.direction() && id !in blocked) {
++            blocked.add(id)
++            awaitRelease.add(id)
++        }
++        endTurn()
++    }
++    fun release(pointerId: Int) {
++        val button = pressed.remove(pointerId) ?: return
++        val wasValid = !blocked.remove(pointerId)
++        awaitRelease.remove(pointerId)
++        joystick.remove(pointerId)
++        if (wasValid && button.direction()) invalidateDirections()
++        if (wasValid && button == ControlButton.BRAKE) invalidateExceptBrakes()
++    }
++    fun leaveControl(pointerId: Int) {
++        if (pressed[pointerId]?.direction() == true && pointerId !in blocked) invalidateDirections()
++    }
++    fun tick(): ControlState = state
++
++    private fun endTurn() { turnId = 0; turnDuration = 0; turnActive = false }
++    private fun invalidateExceptBrakes() {
++        for ((id, button) in pressed) if (button != ControlButton.BRAKE) { blocked.add(id); awaitRelease.add(id) }
++        toggledWeapon = false
++        endTurn()
++        pendingMode = null
++        mode = DriveMode.MANUAL
++        unlockPending = false
++        unlockStart = null
++    }
++    fun cancelAll() {
++        pressed.clear(); blocked.clear(); awaitRelease.clear(); joystick.clear()
++        toggledWeapon = false
++        endTurn()
++        mode = DriveMode.MANUAL
++        pendingMode = null
++        unlockPending = false
++        unlockStart = null
++    }
++    fun kill() {
++        blocked.addAll(pressed.keys)
++        awaitRelease.addAll(pressed.keys)
++        toggledWeapon = false
++        endTurn()
++        killed = true
++        mode = DriveMode.MANUAL
++        pendingMode = null
++        unlockStart = null
++        unlockPending = false
++    }
++    fun beginUnlock(): Boolean {
++        if (!connected || !killed || pressed.isNotEmpty() || unlockPending) return false
++        unlockStart = nowMs()
++        return true
++    }
++    fun unlock(): Boolean {
++        val start = unlockStart ?: return false
++        if (!connected || !killed || pressed.isNotEmpty() || unlockPending || nowMs() - start < 1000) return false
++        unlockPending = true
++        return true
++    }
++    fun acknowledgeUnlock(accepted: Boolean) {
++        if (!unlockPending || !connected || pressed.isNotEmpty()) return
++        unlockPending = false
++        unlockStart = null
++        if (accepted) { killed = false; cancelAll() }
++    }
++    fun requestMode(mode: DriveMode): Boolean {
++        if (!connected || killed || pressed.isNotEmpty() || pendingMode != null || turnId != 0 || state.weapon || this.mode == mode) return false
++        if (mode == DriveMode.AUTO && (caps and 4 == 0 || !autoApproved)) return false
++        pendingMode = mode
++        return true
++    }
++    fun acknowledgeMode(mode: DriveMode, accepted: Boolean) {
++        if (!connected || killed || pendingMode != mode) return
++        pendingMode = null
++        if (accepted) this.mode = mode
++    }
++    fun quickTurn(): Boolean {
++        if (!connected || killed || mode != DriveMode.MANUAL || pendingMode != null || pressed.isNotEmpty() ||
++            state.weapon || turnId != 0 || caps and 2 == 0 || nextTurnId == Int.MAX_VALUE) return false
++        turnId = ++nextTurnId
++        turnDuration = settings.turnDurationMs
++        turnActive = false
++        return true
++    }
++    fun acknowledgeTurn(id: Int, active: Boolean, accepted: Boolean = true) {
++        if (id != turnId || turnId == 0) return
++        // The receiver owns the timer; retransmitting the same ID must not restart it.
++        if (!accepted || !active) endTurn() else turnActive = true
++    }
++    fun setLimiter(percent: Int) { settings = settings.copy(limitPercent = percent).validated() }
++    fun applySettings(value: ControllerSettings) {
++        check(!connected && pressed.isEmpty() && turnId == 0)
++        settings = value.validated()
++    }
++}
+
+--- /dev/null
++++ app/src/main/java/com/aistudy/myapplication/control/ControlState.kt
+@@ -0,0 +1,12 @@
++package com.aistudy.myapplication.control
++
++enum class ControlButton { FORWARD, BACKWARD, LEFT, RIGHT, BOOST, WEAPON, BRAKE, JOYSTICK }
++enum class DriveMode { MANUAL, AUTO }
++
++data class ControlState(
++    val pwm: WheelPwm = WheelPwm(0, 0), val boost: Boolean = false,
++    val weapon: Boolean = false, val brake: Boolean = false, val killed: Boolean = false,
++    val connected: Boolean = false, val mode: DriveMode = DriveMode.MANUAL,
++    val pendingMode: DriveMode? = null, val turnId: Int = 0, val turnDurationMs: Int = 0,
++    val turnActive: Boolean = false, val unlockPending: Boolean = false
++)
+
+--- /dev/null
++++ app/src/main/java/com/aistudy/myapplication/control/DriveMixer.kt
+@@ -0,0 +1,39 @@
++package com.aistudy.myapplication.control
++
++import com.aistudy.myapplication.settings.DriveCalibration
++import kotlin.math.abs
++import kotlin.math.hypot
++import kotlin.math.max
++import kotlin.math.min
++import kotlin.math.roundToInt
++
++data class WheelPwm(val left: Int, val right: Int) {
++    init { require(left in -255..255 && right in -255..255) }
++}
++
++object DriveMixer {
++    fun mix(x: Float, y: Float, limitPercent: Int, boost: Boolean,
++            calibration: DriveCalibration = DriveCalibration()): WheelPwm {
++        require(limitPercent in 30..100)
++        calibration.validated()
++        if (!x.isFinite() || !y.isFinite()) return WheelPwm(0, 0)
++        val cx = x.coerceIn(-1f, 1f).toDouble()
++        val cy = y.coerceIn(-1f, 1f).toDouble()
++        val radius = hypot(cx, cy)
++        if (radius <= calibration.deadZone) return WheelPwm(0, 0)
++        val magnitude = min(1.0, calibration.sensitivity * (min(radius, 1.0) - calibration.deadZone) / (1 - calibration.deadZone))
++        val turn = cx / radius * magnitude * calibration.turnPercent / 100
++        val forward = cy / radius * magnitude
++        val scale = max(1.0, max(abs(forward + turn), abs(forward - turn)))
++        val left = (forward + turn) / scale * calibration.leftGain
++        val right = (forward - turn) / scale * calibration.rightGain
++        val peak = max(abs(left), abs(right))
++        if (peak == 0.0) return WheelPwm(0, 0)
++        val multiplier = if (boost) 255 / peak else 255 * limitPercent / 100.0
++        fun pwm(value: Double): Int {
++            val rounded = abs(value * multiplier).roundToInt().coerceIn(0, 255)
++            return if (value < 0) -rounded else rounded
++        }
++        return WheelPwm(pwm(left), pwm(right))
++    }
++}
+
+--- /dev/null
++++ app/src/main/java/com/aistudy/myapplication/protocol/CommandCodec.kt
+@@ -0,0 +1,98 @@
++package com.aistudy.myapplication.protocol
++
++import com.aistudy.myapplication.control.*
++import com.aistudy.myapplication.settings.ControllerSettings
++
++sealed interface Payload {
++    data class Drive(val pwm:WheelPwm=WheelPwm(0,0),val boost:Boolean=false,val weapon:Boolean=false,val brake:Boolean=false):Payload
++    data object Unlock:Payload
++    data object Close:Payload
++    data class Configure(val id:Int,val homeDeg:Int,val activeDeg:Int):Payload
++}
++data class ControlFrame(val sid:String,val seq:Int,val kill:Boolean=false,val mode:DriveMode=DriveMode.MANUAL,
++    val turnId:Int=0,val durationMs:Int=0,val payload:Payload=Payload.Drive())
++sealed interface RobotReply {
++    data class Offer(val nonce:String,val sid:String,val capabilities:Int):RobotReply
++    data class Busy(val nonce:String):RobotReply
++    data class Ack(val sid:String,val seq:Int,val result:String,val state:ControlState):RobotReply
++    data class ConfigAck(val sid:String,val seq:Int,val configId:Int,val homeDeg:Int,val activeDeg:Int,val result:String):RobotReply
++}
++object CommandCodec {
++    private val results = setOf("OK", "LOCKED", "BAD", "UNSUPPORTED", "BUSY")
++    private fun id(value:String):String = value.also { require(it.matches(Regex("[0-9a-f]{16}")) && it != "0".repeat(16)) }
++    private fun number(value:String, min:Int=0, max:Int=Int.MAX_VALUE):Int {
++        require(value.matches(Regex(if (min < 0) "-?[0-9]+" else "[0-9]+")))
++        return requireNotNull(value.toIntOrNull()).also { require(it in min..max) }
++    }
++    private fun flag(value:String):Boolean { require(value == "0" || value == "1"); return value == "1" }
++    private fun Boolean.bit() = if (this) 1 else 0
++    private fun text(bytes:ByteArray):String {
++        require(bytes.size in 1..256 && bytes.last() == 10.toByte())
++        require(bytes.dropLast(1).all { (it.toInt() and 255) in 32..126 })
++        return String(bytes, Charsets.US_ASCII).dropLast(1)
++    }
++    private fun wire(value:String):ByteArray = value.toByteArray(Charsets.US_ASCII).also { text(it) }
++    fun encodeHello(nonce:String):ByteArray = wire("H1:${id(nonce)}\n")
++    fun encodeDrive(pwm:WheelPwm,boost:Boolean,weapon:Boolean,brake:Boolean,template:String=ControllerSettings.S_TEMPLATE):String {
++        require(template == ControllerSettings.S_TEMPLATE || template == ControllerSettings.D_TEMPLATE)
++        val verb = if (template == ControllerSettings.D_TEMPLATE) "D" else "S"
++        return "$verb:${pwm.left},${pwm.right},${boost.bit()},${weapon.bit()},${brake.bit()}\n"
++    }
++    fun encodeControl(frame:ControlFrame,template:String=ControllerSettings.S_TEMPLATE):ByteArray {
++        id(frame.sid)
++        require(frame.seq > 0 && frame.turnId >= 0)
++        require((frame.turnId == 0 && frame.durationMs == 0) || (frame.turnId > 0 && frame.durationMs in 1..2000))
++        val neutralMetadata = !frame.kill && frame.mode == DriveMode.MANUAL && frame.turnId == 0
++        val body = when (val p = frame.payload) {
++            is Payload.Drive -> {
++                val zero = p.pwm == WheelPwm(0, 0)
++                if (frame.kill) require(frame.mode == DriveMode.MANUAL && frame.turnId == 0 && zero && !p.boost && !p.weapon && !p.brake)
++                if (p.brake) require(neutralMetadata && zero && !p.boost && !p.weapon)
++                if (frame.mode == DriveMode.AUTO || frame.turnId > 0) require(!frame.kill && zero && !p.boost && !p.weapon && !p.brake)
++                if (frame.mode == DriveMode.AUTO) require(frame.turnId == 0)
++                if (frame.turnId > 0) require(frame.mode == DriveMode.MANUAL)
++                require(!p.boost || !zero)
++                encodeDrive(p.pwm,p.boost,p.weapon,p.brake,template).dropLast(1)
++            }
++            Payload.Unlock -> { require(neutralMetadata); "U" }
++            Payload.Close -> { require(neutralMetadata); "C" }
++            is Payload.Configure -> {
++                require(neutralMetadata && p.id > 0 && p.homeDeg in 0..180 && p.activeDeg in 0..180)
++                "Q:${p.id},${p.homeDeg},${p.activeDeg}"
++            }
++        }
++        return wire("V1:${frame.sid},${frame.seq},${frame.kill.bit()},${if(frame.mode==DriveMode.AUTO) 1 else 0},${frame.turnId},${frame.durationMs}|$body\n")
++    }
++    fun decodeReply(bytes:ByteArray):RobotReply {
++        val raw=text(bytes).split(':',limit=2)
++        require(raw.size==2)
++        val p=raw[1].split(',')
++        return when(raw[0]) {
++            "H1" -> {
++                require(p.size==3)
++                val caps=number(p[2],1)
++                require(caps and 1 != 0)
++                RobotReply.Offer(id(p[0]),id(p[1]),caps)
++            }
++            "N1" -> { require(p.size==2 && p[1]=="BUSY"); RobotReply.Busy(id(p[0])) }
++            "Q1" -> {
++                require(p.size==6 && p[5] in results)
++                RobotReply.ConfigAck(id(p[0]),number(p[1],1),number(p[2],1),number(p[3],0,180),number(p[4],0,180),p[5])
++            }
++            "A1" -> {
++                require(p.size==12 && p[2] in results)
++                val pwm=WheelPwm(number(p[3],-255,255),number(p[4],-255,255))
++                val b=flag(p[5]); val w=flag(p[6]); val k=flag(p[7]); val x=flag(p[8])
++                val mode=if(flag(p[9])) DriveMode.AUTO else DriveMode.MANUAL
++                val turn=number(p[10]); val active=flag(p[11]); val zero=pwm==WheelPwm(0,0)
++                require(!b || !zero)
++                if(x) require(zero && !b && !w && !k && mode==DriveMode.MANUAL && turn==0 && !active)
++                if(k) require(zero && !b && !w && !x && mode==DriveMode.MANUAL && turn==0 && !active)
++                if(active) require(turn>0 && pwm==WheelPwm(-255,255) && !b && !w && !k && !x && mode==DriveMode.MANUAL)
++                if(turn>0 && !active) require(zero && !b && !w && !k && !x && mode==DriveMode.MANUAL)
++                RobotReply.Ack(id(p[0]),number(p[1],1),p[2],ControlState(pwm=pwm,boost=b,weapon=w,brake=k,killed=x,mode=mode,turnId=turn,turnActive=active))
++            }
++            else -> throw IllegalArgumentException("Unsupported SUMO-SIM/1 reply")
++        }
++    }
++}
+
+--- /dev/null
++++ app/src/main/java/com/aistudy/myapplication/protocol/ReplyTracker.kt
+@@ -0,0 +1,118 @@
++package com.aistudy.myapplication.protocol
++
++import com.aistudy.myapplication.control.DriveMode
++import com.aistudy.myapplication.control.WheelPwm
++import com.aistudy.myapplication.settings.ControllerSettings
++
++class ReplyTracker(private val host:String,private val port:Int) {
++    init { ControllerSettings(host=host,port=port).validated() }
++    var sid:String? = null
++        private set
++    var capabilities:Int = 0
++        private set
++    var online:Boolean = false
++        private set
++    var lastRttMs:Long? = null
++        private set
++    private var nonce:String?=null
++    private var startedAt:Long?=null
++    private var lastProgress:Long?=null
++    private var lastSent=0
++    private var lastAck=0
++    private var intentFloor=1
++    private var lastIntent:ControlFrame?=null
++    private data class Sent(val frame:ControlFrame,val at:Long)
++    private val pending=linkedMapOf<Int,Sent>()
++    private fun clear() {
++        sid=null; capabilities=0; online=false; lastRttMs=null
++        nonce=null; startedAt=null; lastProgress=null; lastSent=0; lastAck=0
++        intentFloor=1; lastIntent=null; pending.clear()
++    }
++    fun begin(nonce:String,nowMs:Long) {
++        CommandCodec.encodeHello(nonce)
++        clear(); this.nonce=nonce; startedAt=nowMs
++    }
++    fun recordSent(frame:ControlFrame,nowMs:Long) {
++        tick(nowMs)
++        require(sid!=null && frame.sid==sid && startedAt!=null && nowMs>=startedAt!!)
++        CommandCodec.encodeControl(frame)
++        if(!online) require(frame==ControlFrame(sid!!,1))
++        val existing=pending[frame.seq]
++        if(existing!=null) { require(existing.frame==frame); return }
++        require(frame.seq>lastSent)
++        lastSent=frame.seq
++        pending[frame.seq]=Sent(frame,nowMs)
++        if(frame.payload !is Payload.Configure) {
++            val intent=frame.copy(seq=1)
++            if(intent!=lastIntent) { intentFloor=frame.seq; lastIntent=intent }
++        }
++        while(pending.size>256) pending.remove(pending.keys.first())
++    }
++    private fun confirms(frame:ControlFrame,reply:RobotReply.Ack):Boolean {
++        val s=reply.state
++        val stopped=s.pwm==WheelPwm(0,0) && !s.boost && !s.weapon && !s.brake &&
++            s.mode==DriveMode.MANUAL && s.turnId==0 && !s.turnActive
++        return when(val p=frame.payload) {
++            Payload.Unlock -> stopped && !s.killed
++            Payload.Close -> stopped
++            is Payload.Configure -> false
++            is Payload.Drive -> when {
++                frame.kill -> stopped && s.killed
++                frame.turnId>0 -> !s.killed && !s.brake && (s.turnId==frame.turnId || (s.turnId==0 && stopped))
++                frame.mode==DriveMode.AUTO -> s.mode==DriveMode.AUTO && s.pwm==WheelPwm(0,0) &&
++                    !s.boost && !s.weapon && !s.brake && !s.killed && s.turnId==0 && !s.turnActive
++                s.killed -> p==Payload.Drive() && stopped
++                else -> s.pwm==p.pwm && s.boost==p.boost && s.weapon==p.weapon && s.brake==p.brake &&
++                    s.mode==DriveMode.MANUAL && s.turnId==0 && !s.turnActive
++            }
++        }
++    }
++    fun accept(bytes:ByteArray,fromHost:String,fromPort:Int,nowMs:Long):RobotReply? {
++        tick(nowMs)
++        val start=startedAt ?: return null
++        if(fromHost!=host || fromPort!=port || nowMs<start) return null
++        val reply=try { CommandCodec.decodeReply(bytes) } catch(_:IllegalArgumentException) { return null }
++        if(reply is RobotReply.Offer) {
++            if(online || reply.nonce!=nonce || (sid!=null && sid!=reply.sid)) return null
++            sid=reply.sid; capabilities=reply.capabilities
++            return reply
++        }
++        val replySid:String
++        val seq:Int
++        when(reply) {
++            is RobotReply.Ack -> { replySid=reply.sid; seq=reply.seq }
++            is RobotReply.ConfigAck -> { replySid=reply.sid; seq=reply.seq }
++            else -> return null
++        }
++        if(replySid!=sid || seq<=lastAck) return null
++        val sent=pending[seq] ?: return null
++        val age=nowMs-sent.at
++        if(age !in 0..299) return null
++        if(reply is RobotReply.ConfigAck) {
++            val config=sent.frame.payload as? Payload.Configure ?: return null
++            if(!online || config.id!=reply.configId || config.homeDeg!=reply.homeDeg || config.activeDeg!=reply.activeDeg) return null
++        } else if(reply is RobotReply.Ack) {
++            if(seq<intentFloor) return null
++            if(reply.result=="OK" && !confirms(sent.frame,reply)) return null
++            if(sent.frame.payload is Payload.Configure) {
++                if(reply.result=="OK" || !online) return null
++            } else {
++                if(!online) {
++                    val s=reply.state
++                    if(seq!=1 || reply.result!="OK" || s.pwm!=WheelPwm(0,0) || s.boost || s.weapon || s.brake ||
++                        s.mode!=DriveMode.MANUAL || s.turnId!=0 || s.turnActive) return null
++                }
++                online=true; lastProgress=nowMs; lastRttMs=age
++            }
++        }
++        lastAck=seq
++        pending.keys.removeAll { it<=seq }
++        if(reply is RobotReply.Ack && sent.frame.payload==Payload.Close && reply.result=="OK") clear()
++        return reply
++    }
++    fun tick(nowMs:Long) {
++        val start=startedAt ?: return
++        val progress=lastProgress
++        if((progress==null && nowMs-start>=1000) || (progress!=null && nowMs-progress>=300)) clear()
++    }
++}
+
+--- /dev/null
++++ app/src/main/java/com/aistudy/myapplication/settings/ControllerSettings.kt
+@@ -0,0 +1,39 @@
++package com.aistudy.myapplication.settings
++
++enum class WeaponMode { HOLD, TOGGLE }
++enum class InputMode { D_PAD, JOYSTICK }
++
++data class DriveCalibration(
++    val sensitivity: Float = 1f, val deadZone: Float = 0f,
++    val leftGain: Float = 1f, val rightGain: Float = 1f, val turnPercent: Int = 100
++) {
++    fun validated(): DriveCalibration = apply {
++        require(sensitivity.isFinite() && sensitivity in 0.25f..2f)
++        require(deadZone.isFinite() && deadZone in 0f..0.30f)
++        require(leftGain.isFinite() && leftGain in 0.5f..1f)
++        require(rightGain.isFinite() && rightGain in 0.5f..1f)
++        require(turnPercent in 30..100)
++    }
++}
++
++data class ControllerSettings(
++    val limitPercent: Int = 60, val calibration: DriveCalibration = DriveCalibration(),
++    val turnDurationMs: Int = 200, val weaponMode: WeaponMode = WeaponMode.HOLD,
++    val inputMode: InputMode = InputMode.D_PAD, val host: String = "10.0.2.2",
++    val port: Int = 8888, val sendIntervalMs: Int = 30, val driveTemplate: String = S_TEMPLATE
++) {
++    fun validated(): ControllerSettings = apply {
++        require(limitPercent in 30..100)
++        calibration.validated()
++        require(turnDurationMs in 1..2000 && port in 1..65535 && sendIntervalMs in 20..50)
++        val octets = host.split('.')
++        require(octets.size == 4 && octets.all { it.matches(Regex("[0-9]{1,3}")) && it.toInt() in 0..255 })
++        require(octets.any { it.toInt() != 0 } && octets.any { it.toInt() != 255 })
++        require(octets.first().toInt() !in 224..239)
++        require(driveTemplate == S_TEMPLATE || driveTemplate == D_TEMPLATE)
++    }
++    companion object {
++        const val S_TEMPLATE = "S:{L},{R},{B},{W},{K}\n"
++        const val D_TEMPLATE = "D:{L},{R},{B},{W},{K}\n"
++    }
++}
+
+--- /dev/null
++++ app/src/test/java/com/aistudy/myapplication/control/ControlReducerTest.kt
+@@ -0,0 +1,199 @@
++package com.aistudy.myapplication.control
++
++import com.aistudy.myapplication.settings.*
++import org.junit.Assert.*
++import org.junit.Test
++
++class ControlReducerTest {
++    private var now = 0L
++    private fun online(settings: ControllerSettings = ControllerSettings(), caps: Int = 3, auto: Boolean = false) =
++        ControlReducer(settings) { now }.also { it.connectAcknowledged(caps, auto) }
++    private fun stop(r: ControlReducer) {
++        assertEquals(WheelPwm(0, 0), r.state.pwm)
++        assertFalse(r.state.boost)
++    }
++    private fun forward(r: ControlReducer, id: Int = 0) = r.press(id, ControlButton.FORWARD)
++
++    @Test fun offlineInputsCannotDriveAndConnectionAckStartsNeutral() {
++        val r = ControlReducer()
++        forward(r); r.press(1, ControlButton.BOOST); stop(r)
++        assertFalse(r.state.connected)
++        r.connectAcknowledged(); stop(r)
++        r.moveJoystick(0, 0f, 1f); stop(r)
++        r.release(0); r.release(1); forward(r, 2)
++        assertEquals(WheelPwm(153, 153), r.state.pwm)
++    }
++    @Test fun L04_L07_L19_releasingOnlyBoostKeepsDirectionAcrossTicks() {
++        val r = online(); forward(r); r.press(7, ControlButton.BOOST)
++        assertEquals(WheelPwm(255, 255), r.state.pwm); assertTrue(r.state.boost)
++        r.release(7)
++        repeat(5) { r.tick(); assertEquals(WheelPwm(153, 153), r.state.pwm); assertFalse(r.state.boost) }
++    }
++    @Test fun L08_pointerIdsAndPressOrderAreIndependent() {
++        val r = online(); r.press(99, ControlButton.BOOST); forward(r, 42)
++        assertEquals(WheelPwm(255, 255), r.state.pwm)
++        r.release(99); assertEquals(WheelPwm(153, 153), r.state.pwm)
++        r.release(999); assertEquals(WheelPwm(153, 153), r.state.pwm)
++    }
++    @Test fun L05_L06_L20_boostCannotRestoreReleasedDirection() {
++        val r = online(); r.press(1, ControlButton.BOOST); stop(r)
++        forward(r); r.release(0)
++        repeat(5) { r.tick(); r.moveJoystick(0, 0f, 1f); stop(r) }
++        forward(r, 2)
++        assertEquals(WheelPwm(255, 255), r.state.pwm); assertTrue(r.state.boost)
++    }
++    @Test fun L17_opposedReleaseInvalidatesOldForwardUntilAllUpAndFreshDown() {
++        val r = online(); forward(r); r.press(8, ControlButton.BACKWARD); stop(r)
++        r.release(8)
++        repeat(5) { r.tick(); r.moveJoystick(0, 0f, 1f); forward(r); stop(r) }
++        r.release(0); repeat(3) { r.tick(); stop(r) }
++        forward(r, 3); assertEquals(WheelPwm(153, 153), r.state.pwm)
++    }
++    @Test fun L18_adjacentReleaseStopsInsteadOfReturningToForward() {
++        val r = online(); forward(r); r.press(1, ControlButton.LEFT)
++        assertEquals(WheelPwm(0, 153), r.state.pwm)
++        r.release(1); repeat(5) { r.tick(); stop(r) }
++        r.release(0); r.tick(); stop(r)
++        forward(r, 9); assertEquals(WheelPwm(153, 153), r.state.pwm)
++    }
++    @Test fun L22_earlyDownNeverBecomesValidByMoveAfterOldFingersLift() {
++        val r = online(); forward(r, 42); r.press(7, ControlButton.LEFT); r.release(7)
++        forward(r, 99); stop(r)
++        r.release(42)
++        repeat(4) { r.moveJoystick(99, 0f, 1f); r.tick(); stop(r) }
++        forward(r, 100); assertEquals(WheelPwm(153, 153), r.state.pwm)
++        r.release(99); assertEquals(WheelPwm(153, 153), r.state.pwm)
++    }
++    @Test fun L22_leavingDpadRequiresPhysicalUpAndFreshDown() {
++        val r = online(); forward(r); r.leaveControl(0)
++        repeat(4) { forward(r); r.tick(); stop(r) }
++        forward(r, 1); stop(r); r.release(0); r.tick(); stop(r)
++        r.release(1); forward(r, 2); assertEquals(WheelPwm(153, 153), r.state.pwm)
++    }
++    @Test fun L09_L22_joystickReleaseOrLostCaptureCannotReviveByOldMove() {
++        val r = online(ControllerSettings(inputMode = InputMode.JOYSTICK))
++        r.press(4, ControlButton.JOYSTICK); r.moveJoystick(4, 0f, 1f)
++        assertEquals(WheelPwm(153, 153), r.state.pwm)
++        r.leaveControl(4); r.moveJoystick(4, 0f, 1f); r.tick(); stop(r)
++        r.release(4); r.moveJoystick(4, 0f, 1f); stop(r)
++        r.press(5, ControlButton.JOYSTICK); r.moveJoystick(5, 0f, 1f)
++        assertEquals(WheelPwm(153, 153), r.state.pwm)
++        r.release(5); repeat(3) { r.tick(); stop(r) }
++    }
++    @Test fun L11_L21_holdSurvivesDirectionReleaseAndEndsOnWeaponUp() {
++        val r = online(); r.press(2, ControlButton.WEAPON); forward(r)
++        r.release(0)
++        repeat(4) { r.tick(); stop(r); assertTrue(r.state.weapon) }
++        r.release(2); assertFalse(r.state.weapon)
++    }
++    @Test fun L11_L21_toggleChangesOnlyOnNewDownNotUpOrRepeatedDown() {
++        val r = online(ControllerSettings(weaponMode = WeaponMode.TOGGLE))
++        r.press(2, ControlButton.WEAPON); r.press(2, ControlButton.WEAPON); r.release(2)
++        assertTrue(r.state.weapon); forward(r); r.release(0)
++        repeat(4) { r.tick(); stop(r); assertTrue(r.state.weapon) }
++        r.press(3, ControlButton.WEAPON); r.release(3); assertFalse(r.state.weapon)
++    }
++    @Test fun L12_brakeOverridesBoostWeaponAndRequiresOldFingersUp() {
++        val r = online(); forward(r); r.press(1, ControlButton.BOOST); r.press(2, ControlButton.WEAPON)
++        r.press(3, ControlButton.BRAKE); stop(r); assertTrue(r.state.brake); assertFalse(r.state.weapon)
++        r.release(3); assertFalse(r.state.brake); stop(r)
++        forward(r, 4); stop(r); r.release(0); forward(r, 5); stop(r)
++        r.release(1); r.release(2); r.release(4); r.release(5); forward(r, 6)
++        assertEquals(WheelPwm(153, 153), r.state.pwm)
++    }
++    @Test fun L13_L14_killNeedsAllFingersUpHoldAndMatchingUnlockAck() {
++        val r = online(); forward(r); r.press(1, ControlButton.BOOST); r.kill()
++        r.release(0); assertFalse(r.beginUnlock()); stop(r)
++        r.release(1); assertTrue(r.beginUnlock())
++        now=999; assertFalse(r.unlock()); now=1000; assertTrue(r.unlock())
++        assertTrue(r.state.killed); forward(r, 2); stop(r); r.release(2)
++        r.acknowledgeUnlock(false); assertTrue(r.state.killed)
++        assertTrue(r.beginUnlock()); now=2000; assertTrue(r.unlock())
++        r.acknowledgeUnlock(true); assertFalse(r.state.killed); stop(r)
++        r.tick(); stop(r); forward(r, 4); assertEquals(WheelPwm(153, 153), r.state.pwm)
++    }
++    @Test fun L13_killAgainOrDisconnectInvalidatesPendingUnlockAck() {
++        val r=online(); r.kill(); r.beginUnlock(); now=1000; assertTrue(r.unlock())
++        r.kill(); r.acknowledgeUnlock(true); assertTrue(r.state.killed)
++        r.beginUnlock(); now=2000; r.unlock(); r.disconnect(); r.acknowledgeUnlock(true)
++        assertTrue(r.state.killed); stop(r)
++    }
++    @Test fun L14_reconnectNeverRestoresOldPointersOrUnlocksKill() {
++        val r=online(); forward(r); r.disconnect(); r.connectAcknowledged()
++        r.moveJoystick(0,0f,1f); r.tick(); stop(r)
++        r.release(0); forward(r,5); assertEquals(WheelPwm(153,153),r.state.pwm)
++        r.kill(); r.disconnect(); r.connectAcknowledged(); assertTrue(r.state.killed); stop(r)
++    }
++    @Test fun L15_cancelClearsToggleAndRequiresNewGesture() {
++        val r=online(ControllerSettings(weaponMode=WeaponMode.TOGGLE)); r.press(4,ControlButton.WEAPON)
++        forward(r); r.cancelAll(); r.moveJoystick(0,0f,1f); r.tick(); stop(r); assertFalse(r.state.weapon)
++        r.release(0); forward(r,6); assertEquals(WheelPwm(153,153),r.state.pwm)
++    }
++    @Test fun L15_autoIsLockedWithoutCapabilityApprovalOrNeutrality() {
++        assertFalse(online().requestMode(DriveMode.AUTO))
++        assertFalse(online(caps=7).requestMode(DriveMode.AUTO))
++        val r=online(caps=7,auto=true); forward(r); assertFalse(r.requestMode(DriveMode.AUTO))
++        r.release(0); assertTrue(r.requestMode(DriveMode.AUTO))
++        assertEquals(DriveMode.MANUAL,r.state.mode)
++        r.acknowledgeMode(DriveMode.MANUAL,true); assertEquals(DriveMode.MANUAL,r.state.mode)
++        r.acknowledgeMode(DriveMode.AUTO,false); assertEquals(DriveMode.MANUAL,r.state.mode)
++        assertTrue(r.requestMode(DriveMode.AUTO)); r.acknowledgeMode(DriveMode.AUTO,true)
++        assertEquals(DriveMode.AUTO,r.state.mode); forward(r,4); stop(r)
++        r.release(4); assertTrue(r.requestMode(DriveMode.MANUAL)); forward(r,5); stop(r)
++        r.acknowledgeMode(DriveMode.MANUAL,true); r.release(5); forward(r,6)
++        assertEquals(WheelPwm(153,153),r.state.pwm)
++    }
++    @Test fun L15_brakeExitsAutoAndStaleModeAckDoesNotReenableIt() {
++        val r=online(caps=7,auto=true); r.requestMode(DriveMode.AUTO); r.acknowledgeMode(DriveMode.AUTO,true)
++        r.press(2,ControlButton.BRAKE); assertEquals(DriveMode.MANUAL,r.state.mode)
++        r.acknowledgeMode(DriveMode.AUTO,true); assertEquals(DriveMode.MANUAL,r.state.mode); stop(r)
++    }
++    @Test fun L16_macroUsesNewIdAndNeedsAckButNeverResumesOldDirection() {
++        val r=online(); assertTrue(r.quickTurn()); val id=r.state.turnId
++        assertTrue(id>0); assertEquals(200,r.state.turnDurationMs); assertFalse(r.state.turnActive)
++        assertFalse(r.quickTurn()); r.acknowledgeTurn(id+1,true); assertFalse(r.state.turnActive)
++        r.acknowledgeTurn(id,true); assertTrue(r.state.turnActive)
++        r.acknowledgeTurn(id,false); assertEquals(0,r.state.turnId); stop(r)
++        r.tick(); stop(r); assertTrue(r.quickTurn()); assertTrue(r.state.turnId>id)
++    }
++    @Test fun L16_killBrakeCancelDisconnectAndDirectionCancelMacro() {
++        for (action in listOf<(ControlReducer)->Unit>({it.kill()}, {it.press(8,ControlButton.BRAKE)},
++            {it.cancelAll()}, {it.disconnect()}, {forward(it,6)})) {
++            val r=online(); r.quickTurn(); val id=r.state.turnId; action(r)
++            assertEquals(0,r.state.turnId); stop(r)
++            r.acknowledgeTurn(id,true); r.tick(); assertEquals(0,r.state.turnId); stop(r)
++        }
++    }
++    @Test fun L16_macroRequiresNeutralityAndCapability() {
++        val r=online(caps=1); assertFalse(r.quickTurn())
++        val driving=online(); forward(driving); assertFalse(driving.quickTurn())
++        driving.release(0); driving.press(1,ControlButton.WEAPON); assertFalse(driving.quickTurn())
++    }
++    @Test fun newSessionResetsTurnIdSpaceAndKeepsConfiguredDuration() {
++        val r=online(ControllerSettings(turnDurationMs=350)); r.quickTurn()
++        assertEquals(350,r.state.turnDurationMs); r.acknowledgeTurn(r.state.turnId,false)
++        r.quickTurn(); assertEquals(2,r.state.turnId)
++        r.disconnect(); r.connectAcknowledged(); r.quickTurn(); assertEquals(1,r.state.turnId)
++    }
++    @Test fun F01_liveLimiterUsesSameReducerAndKeepsGesture() {
++        val r=online(); forward(r)
++        for ((limit,pwm) in listOf(30 to 77,60 to 153,100 to 255)) {
++            r.setLimiter(limit); assertEquals(WheelPwm(pwm,pwm),r.state.pwm)
++        }
++        assertThrows(IllegalArgumentException::class.java){r.setLimiter(101)}
++        assertEquals(WheelPwm(255,255),r.state.pwm)
++    }
++    @Test fun F03_advancedCalibrationRequiresStoppedSessionAndAffectsOutput() {
++        val r=online(); forward(r)
++        assertThrows(IllegalStateException::class.java){r.applySettings(r.settings.copy(calibration=DriveCalibration(leftGain=0.5f)))}
++        r.disconnect(); r.applySettings(r.settings.copy(calibration=DriveCalibration(leftGain=0.5f)))
++        r.connectAcknowledged(); forward(r,5); assertEquals(WheelPwm(77,153),r.state.pwm)
++        r.disconnect(); val old=r.settings
++        assertThrows(IllegalArgumentException::class.java){r.applySettings(old.copy(calibration=DriveCalibration(sensitivity=Float.NaN)))}
++        assertEquals(old,r.settings)
++    }
++    @Test fun F03_dpadIgnoresJoystickSensitivityAndDeadZone() {
++        val r=online(ControllerSettings(calibration=DriveCalibration(sensitivity=0.25f,deadZone=0.3f)))
++        forward(r); assertEquals(WheelPwm(153,153),r.state.pwm)
++    }
++}
+
+--- /dev/null
++++ app/src/test/java/com/aistudy/myapplication/control/DriveMixerTest.kt
+@@ -0,0 +1,60 @@
++package com.aistudy.myapplication.control
++
++import com.aistudy.myapplication.settings.DriveCalibration
++import org.junit.Assert.*
++import org.junit.Test
++
++class DriveMixerTest {
++    @Test fun L01_L03_F01_limitsAndSymmetricRounding() {
++        for ((limit, pwm) in listOf(30 to 77, 60 to 153, 100 to 255)) {
++            assertEquals(WheelPwm(pwm, pwm), DriveMixer.mix(0f, 1f, limit, false))
++            assertEquals(WheelPwm(-pwm, -pwm), DriveMixer.mix(0f, -1f, limit, false))
++        }
++    }
++    @Test fun L02_pivotsHaveCorrectSigns() {
++        assertEquals(WheelPwm(-255, 255), DriveMixer.mix(-1f, 0f, 100, false))
++        assertEquals(WheelPwm(255, -255), DriveMixer.mix(1f, 0f, 100, false))
++    }
++    @Test fun L04_L05_boostPreservesRatioAndNeverCreatesDirection() {
++        assertEquals(WheelPwm(255, 255), DriveMixer.mix(0f, 0.2f, 30, true))
++        assertEquals(WheelPwm(255, 0), DriveMixer.mix(1f, 1f, 30, true))
++        assertEquals(WheelPwm(0, 0), DriveMixer.mix(0f, 0f, 60, true))
++        assertEquals(WheelPwm(-255, -255), DriveMixer.mix(0f, -1f, 60, true))
++    }
++    @Test fun L09_L10_allQuadrantsFiniteClampedAndBounded() {
++        for (x in listOf(-10f, -1f, -0.3f, 0f, 0.3f, 1f, 10f)) {
++            for (y in listOf(-10f, -1f, 0f, 1f, 10f)) {
++                for (boost in listOf(false, true)) {
++                    val pwm = DriveMixer.mix(x, y, 100, boost)
++                    assertTrue(pwm.left in -255..255 && pwm.right in -255..255)
++                }
++            }
++        }
++        assertEquals(WheelPwm(255, 0), DriveMixer.mix(4f, 4f, 100, false))
++        assertEquals(WheelPwm(0, 255), DriveMixer.mix(-1f, 1f, 100, false))
++        assertEquals(WheelPwm(0, -255), DriveMixer.mix(1f, -1f, 100, false))
++    }
++    @Test fun L10_nonFiniteInputIsNeutralEvenWithBoost() {
++        for (bad in listOf(Float.NaN, Float.POSITIVE_INFINITY, Float.NEGATIVE_INFINITY)) {
++            assertEquals(WheelPwm(0, 0), DriveMixer.mix(bad, 1f, 60, true))
++            assertEquals(WheelPwm(0, 0), DriveMixer.mix(1f, bad, 60, false))
++        }
++    }
++    @Test fun F03_deadZoneIsRadialAndRescaled() {
++        val c = DriveCalibration(deadZone = 0.2f)
++        assertEquals(WheelPwm(0, 0), DriveMixer.mix(0f, 0.2f, 100, true, c))
++        assertEquals(WheelPwm(128, 128), DriveMixer.mix(0f, 0.6f, 100, false, c))
++        assertEquals(WheelPwm(0, 0), DriveMixer.mix(0.1f, 0.1f, 100, false, c))
++    }
++    @Test fun F03_sensitivityGainsTurnAndBoostUseCalibration() {
++        assertEquals(WheelPwm(128, 128), DriveMixer.mix(0f, 0.25f, 100, false, DriveCalibration(sensitivity = 2f)))
++        assertEquals(WheelPwm(77, 153), DriveMixer.mix(0f, 1f, 60, false, DriveCalibration(leftGain = 0.5f)))
++        assertEquals(WheelPwm(128, 255), DriveMixer.mix(0f, 1f, 30, true, DriveCalibration(leftGain = 0.5f)))
++        assertEquals(WheelPwm(128, -128), DriveMixer.mix(1f, 0f, 100, false, DriveCalibration(turnPercent = 50)))
++    }
++    @Test fun invalidLimitsAndPwmAreRejected() {
++        assertThrows(IllegalArgumentException::class.java) { DriveMixer.mix(0f, 1f, 29, false) }
++        assertThrows(IllegalArgumentException::class.java) { WheelPwm(256, 0) }
++        assertThrows(IllegalArgumentException::class.java) { WheelPwm(0, -256) }
++    }
++}
+
+--- /dev/null
++++ app/src/test/java/com/aistudy/myapplication/protocol/CommandCodecTest.kt
+@@ -0,0 +1,97 @@
++package com.aistudy.myapplication.protocol
++
++import com.aistudy.myapplication.control.*
++import com.aistudy.myapplication.settings.ControllerSettings
++import java.io.File
++import org.junit.Assert.*
++import org.junit.Test
++
++class CommandCodecTest {
++    private val sid="0123456789abcdef"
++    private val nonce="1111111111111111"
++    private fun bytes(s:String)=s.toByteArray(Charsets.US_ASCII)
++    private fun frame(seq:Int=1, pwm:WheelPwm=WheelPwm(0,0), boost:Boolean=false, weapon:Boolean=false,
++        brake:Boolean=false, kill:Boolean=false, mode:DriveMode=DriveMode.MANUAL, turnId:Int=0,
++        duration:Int=0, payload:Payload=Payload.Drive(pwm,boost,weapon,brake)) =
++        ControlFrame(sid,seq,kill,mode,turnId,duration,payload)
++
++    @Test fun C01_legacyCompositeAndSrsSamplesAreExactLfBytes() {
++        assertEquals("S:200,200,1,0,0\n",CommandCodec.encodeDrive(WheelPwm(200,200),true,false,false))
++        assertEquals("D:-255,255,0,0,0\n",CommandCodec.encodeDrive(WheelPwm(-255,255),false,false,false,ControllerSettings.D_TEMPLATE))
++        for (pwm in listOf(WheelPwm(0,0),WheelPwm(255,255),WheelPwm(-255,-255),WheelPwm(-255,255),WheelPwm(255,-255))) {
++            assertArrayEquals(bytes("V1:$sid,1,0,0,0,0|S:${pwm.left},${pwm.right},0,0,0\n"),CommandCodec.encodeControl(frame(pwm=pwm)))
++        }
++    }
++    @Test fun C01_C02_exactFrozenKotlinVectorsForIndependentPythonReceiver() {
++        val commands=mapOf(
++            "hello" to CommandCodec.encodeHello(nonce),"servoHello" to CommandCodec.encodeHello(nonce),
++            "confirm" to CommandCodec.encodeControl(frame()),"servoConfirm" to CommandCodec.encodeControl(frame()),
++            "forward" to CommandCodec.encodeControl(frame(2,WheelPwm(153,153))),
++            "boost" to CommandCodec.encodeControl(frame(3,WheelPwm(255,255),boost=true)),
++            "stop" to CommandCodec.encodeControl(frame(4)),"weapon" to CommandCodec.encodeControl(frame(5,weapon=true)),
++            "weaponOff" to CommandCodec.encodeControl(frame(6)),"brake" to CommandCodec.encodeControl(frame(7,brake=true)),
++            "brakeOff" to CommandCodec.encodeControl(frame(8)),"kill" to CommandCodec.encodeControl(frame(9,kill=true)),
++            "unlock" to CommandCodec.encodeControl(frame(10,payload=Payload.Unlock)),
++            "autoUnsupported" to CommandCodec.encodeControl(frame(11,mode=DriveMode.AUTO)),
++            "manual" to CommandCodec.encodeControl(frame(12)),"turn" to CommandCodec.encodeControl(frame(13,turnId=1,duration=200)),
++            "turnRepeat" to CommandCodec.encodeControl(frame(14,turnId=1,duration=200)),
++            "turnDone" to CommandCodec.encodeControl(frame(15,turnId=1,duration=200)),
++            "turnStop" to CommandCodec.encodeControl(frame(16)),
++            "alias" to CommandCodec.encodeControl(frame(17,WheelPwm(153,153)),ControllerSettings.D_TEMPLATE),
++            "close" to CommandCodec.encodeControl(frame(18,payload=Payload.Close)),
++            "retiredSid" to CommandCodec.encodeControl(frame(19,WheelPwm(153,153))),
++            "config" to CommandCodec.encodeControl(frame(2,payload=Payload.Configure(1,0,100))),
++            "configRetry" to CommandCodec.encodeControl(frame(3,payload=Payload.Configure(1,0,100))),
++            "configConflict" to CommandCodec.encodeControl(frame(4,payload=Payload.Configure(1,0,101)))
++        )
++        val root=generateSequence(File(".").canonicalFile){it.parentFile}.first{File(it,"docs/testing/phase-2/fixtures.tsv").exists()}
++        val rows=File(root,"docs/testing/phase-2/fixtures.tsv").readLines()
++        val generated=mutableListOf(rows.first())
++        for (row in rows.drop(1)) {
++            val columns=row.split('\t'); val actual=commands.getValue(columns[2])
++            val hex=actual.joinToString(""){"%02x".format(it.toInt() and 255)}
++            assertEquals(columns[2],columns[3],hex)
++            if(columns[4]!="-") assertNotNull(CommandCodec.decodeReply(columns[4].chunked(2).map{it.toInt(16).toByte()}.toByteArray()))
++            generated.add(columns.toMutableList().also{it[3]=hex}.joinToString("\t"))
++        }
++        File(root,"docs/testing/phase-2/evidence/kotlin-vectors.tsv").writeText(generated.joinToString("\n",postfix="\n"))
++    }
++    @Test fun C02_decodeEveryReplyTypeAndPendingState() {
++        assertEquals(RobotReply.Offer(nonce,sid,3),CommandCodec.decodeReply(bytes("H1:$nonce,$sid,3\n")))
++        assertEquals(RobotReply.Busy(nonce),CommandCodec.decodeReply(bytes("N1:$nonce,BUSY\n")))
++        val ack=CommandCodec.decodeReply(bytes("A1:$sid,4,OK,0,0,0,1,0,0,0,0,0\n")) as RobotReply.Ack
++        assertTrue(ack.state.weapon); assertEquals(4,ack.seq)
++        val q=CommandCodec.decodeReply(bytes("Q1:$sid,7,2,0,100,OK\n")) as RobotReply.ConfigAck
++        assertEquals(100,q.activeDeg)
++    }
++    @Test fun C03_C04_rejectMalformedLfAsciiBoundsAndCounts() {
++        val good="A1:$sid,1,OK,0,0,0,0,0,0,0,0,0\n"
++        val bad=listOf(good.trimEnd(),good.replace("\n","\\n"),good.replace("\n","\r\n"),good+"x",good+good,
++            good.replace(",OK,",",WAT,"),good.replace(",1,OK",",0,OK"),good.replace(",1,OK",",2147483648,OK"),
++            good.replace("OK,0,0","OK,256,0"),good.replace("OK,0,0","OK,-256,0"),
++            good.replace("OK,0,0","OK,+1,0"),good.replace("OK,0,0","OK,NaN,0"),good.replace("OK,0,0","OK, 1,0"),
++            good.replace(sid,"0000000000000000"),good.replace(sid,"0123456789ABCDEF"),
++            "A1:$sid,1,OK,0,0,0,0,0,0,0,0,1\n", "A1:$sid,1,OK,0,0,0,0,0,0,0,0\n",
++            "H1:$nonce,$sid,0\n","N1:$nonce,OK\n","Q1:$sid,1,0,0,90,OK\n","Q1:$sid,1,1,0,181,OK\n",
++            "X".repeat(256)+"\n",good.replace("OK","O\u0000K"))
++        for(s in bad) assertThrows(s,IllegalArgumentException::class.java){CommandCodec.decodeReply(bytes(s))}
++        assertThrows(IllegalArgumentException::class.java){CommandCodec.decodeReply(byteArrayOf(0xff.toByte(),10))}
++    }
++    @Test fun C03_outgoingFrameSemanticValidationCannotBeBypassed() {
++        for(f in listOf(frame().copy(seq=0),frame().copy(sid="0".repeat(16)),frame(turnId=1),
++            frame(duration=200),frame(turnId=1,duration=2001),frame(pwm=WheelPwm(1,1),kill=true),
++            frame(pwm=WheelPwm(1,1),brake=true),frame(weapon=true,mode=DriveMode.AUTO),
++            frame(turnId=1,duration=200,pwm=WheelPwm(1,1)),frame(boost=true),
++            frame(kill=true,payload=Payload.Unlock),frame(payload=Payload.Configure(0,0,90)),
++            frame(payload=Payload.Configure(1,-1,90)))) {
++            assertThrows(IllegalArgumentException::class.java){CommandCodec.encodeControl(f)}
++        }
++        assertArrayEquals(bytes("V1:$sid,2147483647,0,0,0,0|S:0,0,0,0,0\n"),CommandCodec.encodeControl(frame(Int.MAX_VALUE)))
++    }
++    @Test fun C10_templatesAreWhitelistedAndAffectWireBytes() {
++        val f=frame(2,WheelPwm(153,153))
++        assertTrue(String(CommandCodec.encodeControl(f,ControllerSettings.D_TEMPLATE)).contains("|D:153,153"))
++        for(t in listOf("S:{R},{L},{B},{W},{K}\n","S:{L},{R}\\n","S:{L},{R},{B},{W},{K}\nX:1\n"))
++            assertThrows(IllegalArgumentException::class.java){CommandCodec.encodeControl(f,t)}
++    }
++}
+
+--- /dev/null
++++ app/src/test/java/com/aistudy/myapplication/protocol/ReplyTrackerTest.kt
+@@ -0,0 +1,90 @@
++package com.aistudy.myapplication.protocol
++
++import com.aistudy.myapplication.control.WheelPwm
++import org.junit.Assert.*
++import org.junit.Test
++
++class ReplyTrackerTest {
++    private val sid="0123456789abcdef"
++    private val nonce="1111111111111111"
++    private val host="127.0.0.1"
++    private fun tracker()=ReplyTracker(host,8888).also { it.begin(nonce,0) }
++    private fun receive(t:ReplyTracker,s:String,at:Long=1,from:String=host,port:Int=8888)=t.accept(s.toByteArray(),from,port,at)
++    private fun offer(t:ReplyTracker)=receive(t,"H1:$nonce,$sid,3\n",0)
++    private fun ack(seq:Int,fields:String="0,0,0,0,0,0,0,0,0")="A1:$sid,$seq,OK,$fields\n"
++    private fun confirmed():ReplyTracker = tracker().also { t -> offer(t); t.recordSent(ControlFrame(sid,1),0); receive(t,ack(1),1) }
++
++    @Test fun C05_offerAndSendAreNotOnlineUntilNeutralConfirmationAck() {
++        val t=tracker(); offer(t); assertFalse(t.online); assertEquals(sid,t.sid)
++        t.recordSent(ControlFrame(sid,1),0); assertFalse(t.online)
++        assertNotNull(receive(t,ack(1),5)); assertTrue(t.online); assertEquals(5L,t.lastRttMs)
++        assertNull(receive(t,ack(1),6)); assertEquals(5L,t.lastRttMs)
++    }
++    @Test fun C05_badPeerNonceSidUnsentSeqAndMalformedNeverMakeOnline() {
++        val t=tracker()
++        assertNull(receive(t,"H1:$nonce,$sid,3\n",from="127.0.0.2"))
++        assertNull(receive(t,"H1:2222222222222222,$sid,3\n"))
++        offer(t); t.recordSent(ControlFrame(sid,1),0)
++        for((s,ip,port) in listOf(Triple(ack(1),host,8889),Triple(ack(1),"127.0.0.2",8888),
++            Triple(ack(1).replace(sid,"2222222222222222"),host,8888),Triple(ack(2),host,8888),Triple("bad\n",host,8888))) {
++            assertNull(receive(t,s,1,ip,port)); assertFalse(t.online); assertNull(t.lastRttMs)
++        }
++    }
++    @Test fun C05_movingConfirmationAndWrongInitialRequestCannotBeAccepted() {
++        val t=tracker(); offer(t)
++        assertThrows(IllegalArgumentException::class.java){t.recordSent(ControlFrame(sid,1,payload=Payload.Drive(WheelPwm(153,153))),0)}
++        t.recordSent(ControlFrame(sid,1),0)
++        assertNull(receive(t,ack(1,"153,153,0,0,0,0,0,0,0")))
++        assertFalse(t.online)
++    }
++    @Test fun C05_timeoutRetiresSidAndLateRepliesCannotReconnect() {
++        val t=confirmed(); t.recordSent(ControlFrame(sid,2),20)
++        t.tick(300); assertTrue(t.online)
++        t.tick(301); assertFalse(t.online); assertNull(t.sid); assertNull(t.lastRttMs)
++        assertNull(receive(t,ack(2),302)); assertFalse(t.online)
++    }
++    @Test fun C05_handshakeDeadlineDoesNotExtendFromDuplicateOffers() {
++        val t=tracker(); offer(t); receive(t,"H1:$nonce,$sid,3\n",999)
++        t.tick(1000); assertNull(t.sid); assertFalse(t.online)
++    }
++    @Test fun C05_oldIntentAckAfterStopCannotConfirmCurrentState() {
++        val t=confirmed()
++        t.recordSent(ControlFrame(sid,2,payload=Payload.Drive(WheelPwm(153,153))),10)
++        t.recordSent(ControlFrame(sid,3),11)
++        assertNull(receive(t,ack(2,"153,153,0,0,0,0,0,0,0"),12))
++        assertNotNull(receive(t,ack(3),13)); assertEquals(2L,t.lastRttMs)
++        assertNull(receive(t,ack(2),14))
++    }
++    @Test fun C05_unchangedHeartbeatAckCanProgressWhileNewerTickIsInFlight() {
++        val t=confirmed(); t.recordSent(ControlFrame(sid,2),10); t.recordSent(ControlFrame(sid,3),40)
++        assertNotNull(receive(t,ack(2),50)); assertEquals(40L,t.lastRttMs)
++    }
++    @Test fun C05_configAckIsMatchedButDoesNotMaintainControlWatchdogOrPing() {
++        val t=confirmed(); t.recordSent(ControlFrame(sid,2,payload=Payload.Configure(1,0,100)),100)
++        assertNull(receive(t,"Q1:$sid,2,2,0,100,OK\n",101))
++        assertNotNull(receive(t,"Q1:$sid,2,1,0,100,OK\n",102))
++        assertEquals(1L,t.lastRttMs); t.tick(301); assertFalse(t.online)
++    }
++    @Test fun C05_closeAckAndNewBeginResetConnectionIdentity() {
++        val t=confirmed(); t.recordSent(ControlFrame(sid,2,payload=Payload.Close),10)
++        assertNotNull(receive(t,ack(2),11)); assertFalse(t.online); assertNull(t.sid)
++        t.begin("2222222222222222",20)
++        assertNull(receive(t,"H1:$nonce,$sid,3\n",21)); assertFalse(t.online)
++    }
++    @Test fun C05_okMustConfirmRequestedKillUnlockModeAndWheelState() {
++        val t=confirmed()
++        t.recordSent(ControlFrame(sid,2,kill=true),10)
++        assertNull(receive(t,ack(2),11))
++        assertNotNull(receive(t,ack(2,"0,0,0,0,0,1,0,0,0"),12))
++        t.recordSent(ControlFrame(sid,3,payload=Payload.Unlock),13)
++        assertNull(receive(t,ack(3,"0,0,0,0,0,1,0,0,0"),14))
++        assertNotNull(receive(t,ack(3),15))
++        t.recordSent(ControlFrame(sid,4,mode=com.aistudy.myapplication.control.DriveMode.AUTO),16)
++        assertNull(receive(t,ack(4),17))
++        assertNotNull(receive(t,ack(4,"0,0,0,0,0,0,1,0,0"),18))
++        t.recordSent(ControlFrame(sid,5),19); assertNotNull(receive(t,ack(5),20))
++        t.recordSent(ControlFrame(sid,6,payload=Payload.Drive(WheelPwm(153,153))),21)
++        assertNull(receive(t,ack(6,"200,200,0,0,0,0,0,0,0"),22))
++        assertNotNull(receive(t,ack(6,"153,153,0,0,0,0,0,0,0"),23))
++    }
++}
+
+--- /dev/null
++++ app/src/test/java/com/aistudy/myapplication/protocol/SimulatorInteropTest.kt
+@@ -0,0 +1,91 @@
++package com.aistudy.myapplication.protocol
++
++import com.aistudy.myapplication.control.DriveMode
++import com.aistudy.myapplication.control.WheelPwm
++import com.aistudy.myapplication.settings.ControllerSettings
++import java.io.File
++import java.net.DatagramPacket
++import java.net.DatagramSocket
++import java.net.InetAddress
++import java.net.SocketTimeoutException
++import java.util.concurrent.Callable
++import java.util.concurrent.Executors
++import java.util.concurrent.TimeUnit
++import org.junit.Assert.*
++import org.junit.Test
++
++class SimulatorInteropTest {
++    @Test(timeout=20000) fun C01_C02_C05_C08_C09_kotlinDatagramsToIndependentPythonProcess() {
++        val root=generateSequence(File(".").canonicalFile){it.parentFile}.first{File(it,"tools/sumo_simulator.py").exists()}
++        val log=File(root,"docs/testing/phase-2/evidence/udp-kotlin-python.jsonl")
++        val process=ProcessBuilder("py","-3.13",File(root,"tools/sumo_simulator.py").path,"--host","127.0.0.1",
++            "--port","0","--log",log.path).redirectErrorStream(true).start()
++        val reader=Executors.newSingleThreadExecutor()
++        try {
++            val ready=reader.submit(Callable{process.inputStream.bufferedReader().readLine()}).get(5,TimeUnit.SECONDS)
++            assertTrue("Expected READY <port>, got $ready",ready?.startsWith("READY ")==true)
++            val port=ready.substringAfter("READY ").toInt()
++            val loopback=InetAddress.getByName("127.0.0.1")
++            DatagramSocket(0,loopback).use { socket ->
++                socket.soTimeout=2000
++                fun send(data:ByteArray) { socket.send(DatagramPacket(data,data.size,loopback,port)) }
++                fun receive():DatagramPacket {
++                    val packet=DatagramPacket(ByteArray(1024),1024)
++                    socket.receive(packet); return packet
++                }
++                fun exchange(data:ByteArray):ByteArray { send(data); val p=receive(); assertEquals(port,p.port); return p.data.copyOf(p.length) }
++                val nonce="1111111111111111"
++                val offerBytes=exchange(CommandCodec.encodeHello(nonce))
++                val offer=CommandCodec.decodeReply(offerBytes) as RobotReply.Offer
++                assertEquals(nonce,offer.nonce); assertEquals(3,offer.capabilities)
++                val sid=offer.sid
++                fun frame(seq:Int,payload:Payload=Payload.Drive(),x:Boolean=false,mode:DriveMode=DriveMode.MANUAL,tid:Int=0,duration:Int=0)=
++                    ControlFrame(sid,seq,x,mode,tid,duration,payload)
++                fun expected(seq:Int,fields:String="0,0,0,0,0,0,0,0,0",status:String="OK")="A1:$sid,$seq,$status,$fields\n".toByteArray()
++                fun expect(f:ControlFrame,fields:String="0,0,0,0,0,0,0,0,0",status:String="OK",template:String=ControllerSettings.S_TEMPLATE):ByteArray {
++                    val reply=exchange(CommandCodec.encodeControl(f,template)); assertArrayEquals(expected(f.seq,fields,status),reply); return reply
++                }
++                val confirm=expect(frame(1))
++                val tracker=ReplyTracker("127.0.0.1",port); tracker.begin(nonce,0)
++                tracker.accept(offerBytes,"127.0.0.1",port,0); tracker.recordSent(frame(1),0)
++                DatagramSocket(0,loopback).use { attacker ->
++                    attacker.send(DatagramPacket(confirm,confirm.size,loopback,socket.localPort))
++                    val forged=receive()
++                    assertNull(tracker.accept(forged.data.copyOf(forged.length),requireNotNull(forged.address.hostAddress),forged.port,1))
++                    assertFalse(tracker.online)
++                }
++                assertNotNull(tracker.accept(confirm,"127.0.0.1",port,2)); assertTrue(tracker.online)
++                expect(frame(2,Payload.Drive(WheelPwm(153,153))),"153,153,0,0,0,0,0,0,0")
++                expect(frame(3,Payload.Drive(WheelPwm(255,255),boost=true)),"255,255,1,0,0,0,0,0,0")
++                expect(frame(4)); expect(frame(5,Payload.Drive(weapon=true)),"0,0,0,1,0,0,0,0,0")
++                expect(frame(6)); expect(frame(7,Payload.Drive(brake=true)),"0,0,0,0,1,0,0,0,0")
++                expect(frame(8)); expect(frame(9,x=true),"0,0,0,0,0,1,0,0,0")
++                expect(frame(10,Payload.Unlock)); expect(frame(11,mode=DriveMode.AUTO),status="UNSUPPORTED")
++                expect(frame(12,tid=1,duration=200),"-255,255,0,0,0,0,0,1,1")
++                expect(frame(13,tid=1,duration=200),"-255,255,0,0,0,0,0,1,1")
++                expect(frame(14)); expect(frame(15,tid=1,duration=200))
++                expect(frame(16,Payload.Drive(WheelPwm(153,153))),"153,153,0,0,0,0,0,0,0",template=ControllerSettings.D_TEMPLATE)
++                expect(frame(17))
++                assertArrayEquals("Q1:$sid,18,1,0,100,UNSUPPORTED\n".toByteArray(),exchange(CommandCodec.encodeControl(frame(18,Payload.Configure(1,0,100)))))
++                expect(frame(19,Payload.Close))
++                socket.soTimeout=150
++                send(CommandCodec.encodeControl(frame(20,Payload.Drive(WheelPwm(153,153)))))
++                assertThrows(SocketTimeoutException::class.java){receive()}
++                socket.soTimeout=2000
++                val next=CommandCodec.decodeReply(exchange(CommandCodec.encodeHello(nonce))) as RobotReply.Offer
++                assertNotEquals(sid,next.sid)
++                exchange(CommandCodec.encodeControl(ControlFrame(next.sid,1)))
++                send(CommandCodec.encodeControl(frame(21,Payload.Drive(WheelPwm(153,153)))))
++                socket.soTimeout=150
++                assertThrows(SocketTimeoutException::class.java){receive()}
++            }
++        } finally {
++            process.destroy()
++            if(!process.waitFor(2,TimeUnit.SECONDS)) process.destroyForcibly()
++            reader.shutdownNow()
++        }
++        val records=log.readText()
++        assertTrue(records.contains("\"applied\""))
++        assertEquals(1,Regex("\"event\"\\s*:\\s*\"macro-start\"").findAll(records).count())
++    }
++}
+
+--- /dev/null
++++ app/src/test/java/com/aistudy/myapplication/settings/ControllerSettingsTest.kt
+@@ -0,0 +1,37 @@
++package com.aistudy.myapplication.settings
++
++import org.junit.Assert.*
++import org.junit.Test
++
++class ControllerSettingsTest {
++    @Test fun defaultsAndApprovedBoundaryValuesAreValid() {
++        assertEquals(ControllerSettings(), ControllerSettings().validated())
++        for (interval in listOf(20, 30, 50)) for (duration in listOf(1, 200, 2000)) {
++            ControllerSettings(sendIntervalMs = interval, turnDurationMs = duration, port = 65535).validated()
++        }
++        DriveCalibration(0.25f, 0.30f, 0.5f, 0.5f, 30).validated()
++        DriveCalibration(2f, 0f, 1f, 1f, 100).validated()
++    }
++    @Test fun F03_invalidCalibrationCannotBeApplied() {
++        val invalid = listOf(
++            DriveCalibration(sensitivity = Float.NaN), DriveCalibration(sensitivity = Float.POSITIVE_INFINITY),
++            DriveCalibration(sensitivity = 0.24f), DriveCalibration(sensitivity = 2.01f),
++            DriveCalibration(deadZone = -0.1f), DriveCalibration(deadZone = 0.31f),
++            DriveCalibration(leftGain = 0.49f), DriveCalibration(rightGain = 1.01f),
++            DriveCalibration(turnPercent = 29), DriveCalibration(turnPercent = 101)
++        )
++        for (c in invalid) assertThrows(IllegalArgumentException::class.java) { c.validated() }
++    }
++    @Test fun invalidSettingsAreRejectedAsAWhole() {
++        val s = ControllerSettings()
++        for (bad in listOf(s.copy(limitPercent = 29), s.copy(limitPercent = 101), s.copy(port = 0),
++            s.copy(port = 65536), s.copy(turnDurationMs = 0), s.copy(turnDurationMs = 2001),
++            s.copy(sendIntervalMs = 19), s.copy(sendIntervalMs = 51), s.copy(host = ""),
++            s.copy(host = "0.0.0.0"), s.copy(host = "000.000.000.000"), s.copy(host = "224.0.0.1"), s.copy(host = "255.255.255.255"),
++            s.copy(host = "1.2.3.256"), s.copy(host = "example.org"), s.copy(host = "1.2.3"),
++            s.copy(driveTemplate = "S:{L},{R}\\n"), s.copy(driveTemplate = "evil\n"))) {
++            assertThrows(IllegalArgumentException::class.java) { bad.validated() }
++        }
++        s.copy(driveTemplate = ControllerSettings.D_TEMPLATE).validated()
++    }
++}
+
+--- /dev/null
++++ tools/sumo_simulator.py
+@@ -0,0 +1,363 @@
++"""SUMO-SIM/1 receiver for local tests, independent of the Android encoder."""
++import argparse
++import csv
++import heapq
++import ipaddress
++import json
++import re
++import secrets
++import socket
++import time
++import sys
++import unittest
++import xml.etree.ElementTree as ET
++from pathlib import Path
++
++
++class Receiver:
++    def __init__(self, clock=None, sid_factory=None, caps=3, log=None):
++        if not 0 < caps <= 2147483647 or not caps & 1: raise ValueError("caps must include state capability")
++        self.clock=clock or (lambda: time.monotonic_ns() // 1_000_000)
++        self.sid_factory=sid_factory or (lambda: secrets.token_hex(8))
++        self.log=log; self.caps=caps; self.sid=None; self.active=False
++        self.last_valid=None; self.last_seq=0; self.turn_count=0; self.config_pair=(0,90)
++        self.state=dict(L=0,R=0,B=0,W=0,K=0,X=0,mode=0,turnId=0,turnActive=0)
++        self.peer=None; self.nonce=None; self.offer_deadline=None; self.previous_sid=None
++        self.acks={}; self.highest_turn=0; self.turn_duration=0; self.turn_deadline=None
++        self.config_id=0
++
++    def emit(self,event,data=b"",peer=None,reason="",accepted=None):
++        if self.log:
++            self.log(dict(at_ms=self.clock(),event=event,sid=self.sid,seq=self.last_seq,
++                          peer=peer or self.peer,payload_hex=data.hex(),reason=reason,accepted=accepted,
++                          applied=dict(self.state),config=list(self.config_pair),active=self.active))
++
++    @staticmethod
++    def ident(value):
++        if not re.fullmatch(r"[0-9a-f]{16}",value) or value=="0"*16: raise ValueError("invalid identity")
++        return value
++
++    @staticmethod
++    def number(value,low=0,high=2147483647):
++        if not re.fullmatch(r"-?[0-9]+" if low<0 else r"[0-9]+",value): raise ValueError("invalid integer")
++        result=int(value)
++        if not low<=result<=high: raise ValueError("integer out of range")
++        return result
++
++    @staticmethod
++    def flag(value):
++        if value not in ("0","1"): raise ValueError("flag must be 0 or 1")
++        return int(value)
++
++    @staticmethod
++    def wire_text(data):
++        if not 1<=len(data)<=256 or data[-1:]!=b"\n" or any(not 32<=c<=126 for c in data[:-1]):
++            raise ValueError("ASCII frame requires exactly one final LF, maximum 256 bytes")
++        return data[:-1].decode("ascii")
++
++    def stop(self,brake=0,kill=None):
++        if kill is None: kill=self.state["X"]
++        self.state.update(L=0,R=0,B=0,W=0,K=brake,X=kill,mode=0,turnId=0,turnActive=0)
++        self.turn_deadline=None
++
++    def neutral(self):
++        return all(self.state[k]==0 for k in ("L","R","B","W","K","turnActive"))
++
++    def retire(self,reason):
++        self.emit("retire",reason=reason)
++        self.previous_sid=self.sid
++        self.sid=None; self.peer=None; self.nonce=None; self.active=False
++        self.offer_deadline=None; self.last_valid=None; self.last_seq=0; self.acks.clear()
++        self.highest_turn=0; self.turn_duration=0; self.config_id=0
++
++    def advance(self,now):
++        if self.active and now-self.last_valid>=300:
++            self.stop(); self.emit("watchdog",reason="300ms without fresh applied control"); self.retire("watchdog")
++        elif self.turn_deadline is not None and now>=self.turn_deadline:
++            self.state.update(L=0,R=0,B=0,turnActive=0); self.turn_deadline=None
++            self.emit("macro-complete")
++        if not self.active and self.sid is not None and now>=self.offer_deadline:
++            self.retire("offer-expired")
++
++    def tick(self): self.advance(self.clock())
++
++    def ack(self,seq,result):
++        values=",".join(str(self.state[k]) for k in ("L","R","B","W","K","X","mode","turnId","turnActive"))
++        return f"A1:{self.sid},{seq},{result},{values}\n".encode("ascii")
++
++    def cache(self,seq,data,reply):
++        self.acks[seq]=(data,reply)
++        while len(self.acks)>256: self.acks.pop(next(iter(self.acks)))
++
++    def hello(self,text,data,peer,now):
++        nonce=self.ident(text[3:])
++        if self.active or (self.sid is not None and (self.peer!=peer or self.nonce!=nonce)):
++            self.emit("reject",data,peer,"session-busy",False)
++            return f"N1:{nonce},BUSY\n".encode("ascii")
++        if self.sid is None:
++            new_sid=self.ident(self.sid_factory())
++            if new_sid==self.previous_sid: raise ValueError("SID must be fresh")
++            self.sid=new_sid; self.peer=peer; self.nonce=nonce; self.offer_deadline=now+1000
++            self.stop(); self.emit("offer",data,peer)
++        return f"H1:{nonce},{self.sid},{self.caps}\n".encode("ascii")
++
++    def drive(self,x,mode,tid,duration,body,now):
++        p=body[2:].split(',')
++        if len(p)!=5: raise ValueError("drive field count")
++        left,right=self.number(p[0],-255,255),self.number(p[1],-255,255)
++        boost,weapon,brake=(self.flag(v) for v in p[2:])
++        zero=(left,right,boost,weapon,brake)==(0,0,0,0,0)
++        if boost and left==right==0: raise ValueError("boost without direction")
++        if x and (mode or tid or not zero): raise ValueError("contradictory Kill")
++        if brake and (x or mode or tid or (left,right,boost,weapon)!=(0,0,0,0)): raise ValueError("contradictory Brake")
++        if (mode or tid) and (x or not zero): raise ValueError("contradictory mode or turn")
++        if mode and tid: raise ValueError("AUTO and macro cannot coexist")
++        if x: self.stop(kill=1); return "OK"
++        if self.state["X"]: return "OK" if zero and mode==tid==0 else "LOCKED"
++        if brake: self.stop(brake=1); return "OK"
++        if mode:
++            if not self.caps & 4: return "UNSUPPORTED"
++            if not self.neutral(): return "BUSY"
++            self.stop(); self.state["mode"]=1; return "OK"
++        if self.state["mode"]:
++            if not zero or tid: return "BUSY"
++            self.stop(); return "OK"
++        if tid:
++            if not self.caps & 2: return "UNSUPPORTED"
++            if tid<self.highest_turn: return "BAD"
++            if tid==self.highest_turn: return "OK" if duration==self.turn_duration else "BAD"
++            if not self.neutral(): return "BUSY"
++            self.highest_turn=tid; self.turn_duration=duration
++            self.stop(); self.state.update(L=-255,R=255,turnId=tid,turnActive=1)
++            self.turn_deadline=now+duration; self.turn_count+=1; self.emit("macro-start")
++            return "OK"
++        if self.state["turnActive"] and not zero: return "BUSY"
++        self.turn_deadline=None
++        self.state.update(L=left,R=right,B=boost,W=weapon,K=0,mode=0,turnId=0,turnActive=0)
++        return "OK"
++
++    def configure(self,seq,body):
++        p=body[2:].split(',')
++        if len(p)!=3: raise ValueError("config field count")
++        cfg=self.number(p[0],1); home=self.number(p[1],0,180); active=self.number(p[2],0,180)
++        if not self.caps & 8: result="UNSUPPORTED"
++        elif self.state["X"]: result="LOCKED"
++        elif not self.neutral() or self.state["mode"]: result="BUSY"
++        elif cfg<self.config_id or (cfg==self.config_id and (home,active)!=self.config_pair): result="BAD"
++        else:
++            self.config_pair=(home,active); self.config_id=cfg; result="OK"
++            self.emit("config-applied")
++        return f"Q1:{self.sid},{seq},{cfg},{home},{active},{result}\n".encode("ascii"),result
++
++    def handle(self,data,peer):
++        now=self.clock(); self.advance(now)
++        try:
++            text=self.wire_text(data)
++            if text.startswith("H1:"): return self.hello(text,data,peer,now)
++            if not text.startswith("V1:") or text.count('|')!=1: raise ValueError("V1 envelope required")
++            envelope,body=text[3:].split('|')
++            p=envelope.split(',')
++            if len(p)!=6: raise ValueError("envelope field count")
++            sid=self.ident(p[0]); seq=self.number(p[1],1); x=self.flag(p[2]); mode=self.flag(p[3])
++            tid=self.number(p[4]); duration=self.number(p[5],0,2000)
++            if (tid==0 and duration!=0) or (tid>0 and duration==0): raise ValueError("turn metadata mismatch")
++        except ValueError as error:
++            self.emit("reject",data,peer,str(error),False); return None
++        if sid!=self.sid or peer!=self.peer:
++            self.emit("reject",data,peer,"wrong-peer-or-retired-sid",False); return None
++        if seq<=self.last_seq:
++            cached=self.acks.get(seq)
++            self.emit("reject",data,peer,"duplicate-or-old-seq",False)
++            return cached[1] if cached and cached[0]==data else None
++        self.last_seq=seq
++        if not self.active:
++            if seq==1 and (x,mode,tid,duration)==(0,0,0,0) and body=="S:0,0,0,0,0":
++                self.active=True; self.last_valid=now; self.offer_deadline=None; result="OK"
++            else: result="BAD"
++            reply=self.ack(seq,result); self.cache(seq,data,reply)
++            self.emit("accept" if result=="OK" else "reject",data,peer,result,result=="OK")
++            return reply
++        control=True
++        try:
++            if body.startswith(("S:","D:")):
++                result=self.drive(x,mode,tid,duration,body,now); reply=self.ack(seq,result)
++            else:
++                if (x,mode,tid,duration)!=(0,0,0,0): raise ValueError("non-neutral control envelope")
++                if body=="U":
++                    result="OK" if self.neutral() and self.state["mode"]==0 else "BUSY"
++                    if result=="OK": self.stop(kill=0)
++                    reply=self.ack(seq,result)
++                elif body=="C":
++                    self.stop(); reply=self.ack(seq,"OK")
++                    self.emit("accept",data,peer,"closed",True); self.retire("close")
++                    return reply
++                elif body.startswith("Q:"):
++                    control=False; reply,result=self.configure(seq,body)
++                else: raise ValueError("unsupported payload")
++        except ValueError:
++            result="BAD"; reply=self.ack(seq,result)
++        if result=="OK" and control: self.last_valid=now
++        self.cache(seq,data,reply)
++        self.emit("accept" if result=="OK" else "reject",data,peer,result,result=="OK")
++        return reply
++
++
++class Scenario:
++    def __init__(self, receiver, name="normal", fault_after=2, delay_ms=150, delay_target="rx"):
++        if name not in ("normal","drop-rx","drop-reply","delay","duplicate","reorder","malformed"): raise ValueError("unknown scenario")
++        if fault_after<0 or delay_ms<0 or delay_target not in ("rx","reply"): raise ValueError("invalid scenario arguments")
++        self.receiver=receiver; self.name=name; self.fault_after=fault_after; self.delay_ms=delay_ms; self.delay_target=delay_target
++        self.count=0; self.order=0; self.queue=[]; self.held=None; self.malformed_count=0
++
++    def later(self,delay,kind,data,peer):
++        self.order+=1; heapq.heappush(self.queue,(self.receiver.clock()+delay,self.order,kind,data,peer))
++
++    def deliver(self,data,peer):
++        reply=self.receiver.handle(data,peer)
++        return [] if reply is None else [(peer,reply)]
++
++    @staticmethod
++    def motion(data):
++        try:
++            body=data.split(b'|',1)[1]
++            if not body.startswith((b'S:',b'D:')): return None
++            p=body[2:].split(b',')
++            return int(p[0])!=0 or int(p[1])!=0
++        except (IndexError,ValueError): return None
++
++    def receive(self,data,peer):
++        self.receiver.tick()
++        is_control=data.startswith(b'V1:')
++        if is_control: self.count+=1
++        if not is_control or self.count<=self.fault_after or self.name=="normal": return self.deliver(data,peer)
++        self.receiver.emit("scenario",data,peer,self.name)
++        if self.name=="drop-rx": return []
++        if self.name=="delay" and self.delay_target=="rx":
++            self.later(self.delay_ms,"rx",data,peer); return []
++        if self.name=="reorder":
++            motion=self.motion(data)
++            if motion is True and self.held is None:
++                self.held=(data,peer); return []
++            replies=self.deliver(data,peer)
++            if motion is False and self.held is not None:
++                old,old_peer=self.held; self.held=None; self.later(100,"rx",old,old_peer)
++            return replies
++        replies=self.deliver(data,peer)
++        if self.name=="drop-reply": return []
++        if self.name=="delay":
++            for target,reply in replies: self.later(self.delay_ms,"reply",reply,target)
++            return []
++        if self.name=="duplicate": return replies+self.deliver(data,peer)
++        if self.name=="malformed":
++            mutated=[]
++            for target,reply in replies:
++                prefix,fields=reply.decode('ascii').rstrip('\n').split(':',1); p=fields.split(',')
++                kind=self.malformed_count%3; self.malformed_count+=1
++                if kind==0: p=p[:-1]
++                elif kind==1: p[0]='f'*16
++                else: p[1]=str(int(p[1])+1)
++                changed=(prefix+':'+','.join(p)+'\n').encode('ascii')
++                self.receiver.emit("scenario-reply",changed,target,"malformed-"+str(kind))
++                mutated.append((target,changed))
++            return mutated
++        return replies
++
++    def poll(self):
++        self.receiver.tick(); replies=[]; now=self.receiver.clock()
++        while self.queue and self.queue[0][0]<=now:
++            _,_,kind,data,peer=heapq.heappop(self.queue)
++            if kind=="rx": replies.extend(self.deliver(data,peer))
++            else: replies.append((peer,data))
++        return replies
++
++
++def check_fixtures(path, log=None):
++    receivers={}; clocks={}; count=0
++    with open(path,encoding='utf-8',newline='') as file:
++        for row in csv.DictReader(file,delimiter='\t'):
++            group=row['group']
++            if group not in receivers:
++                clocks[group]=[0]
++                receivers[group]=Receiver(clock=lambda g=group:clocks[g][0],sid_factory=lambda:'0123456789abcdef',
++                                           caps=11 if group=='servo' else 3,log=log)
++            clocks[group][0]=int(row['at_ms'])
++            actual=receivers[group].handle(bytes.fromhex(row['request_hex']),('127.0.0.1',50000))
++            expected=None if row['reply_hex']=='-' else bytes.fromhex(row['reply_hex'])
++            if actual!=expected: raise AssertionError(f"{row['name']}: expected {expected!r}, actual {actual!r}")
++            count+=1
++    return count
++
++
++def self_test(junit_path=None,trace_path=None):
++    import test_sumo_simulator
++    SimulatorTests=test_sumo_simulator.SimulatorTests
++    test_sumo_simulator.TRACE_PATH=trace_path
++    if trace_path:
++        output=Path(trace_path); output.parent.mkdir(parents=True,exist_ok=True); output.write_text('',encoding='utf-8')
++    suite=unittest.defaultTestLoader.loadTestsFromTestCase(SimulatorTests)
++    cases=list(suite)
++    result=unittest.TextTestRunner(verbosity=2).run(suite)
++    if junit_path:
++        failures={t.id():message for t,message in result.failures}
++        errors={t.id():message for t,message in result.errors}
++        root=ET.Element("testsuite",name="sumo_simulator",tests=str(result.testsRun),
++                        failures=str(len(failures)),errors=str(len(errors)),skipped=str(len(result.skipped)))
++        for test in cases:
++            case=ET.SubElement(root,"testcase",name=test.id())
++            if test.id() in failures: ET.SubElement(case,"failure").text=failures[test.id()]
++            if test.id() in errors: ET.SubElement(case,"error").text=errors[test.id()]
++        output=Path(junit_path); output.parent.mkdir(parents=True,exist_ok=True)
++        ET.ElementTree(root).write(output,encoding="utf-8",xml_declaration=True)
++    return 0 if result.wasSuccessful() else 1
++
++
++def main():
++    parser=argparse.ArgumentParser(description="Local SUMO-SIM/1-draft1 test receiver; no firmware claims")
++    mode=parser.add_mutually_exclusive_group()
++    mode.add_argument("--self-test",action="store_true")
++    mode.add_argument("--check-fixtures",type=Path)
++    parser.add_argument("--junit")
++    parser.add_argument("--host",default="127.0.0.1")
++    parser.add_argument("--port",type=int,default=8888,help="0 chooses an ephemeral port for automated loopback tests")
++    parser.add_argument("--scenario",choices=("normal","drop-rx","drop-reply","delay","duplicate","reorder","malformed"),default="normal")
++    parser.add_argument("--fault-after",type=int,default=2,help="number of V1 datagrams processed normally before fault injection")
++    parser.add_argument("--delay-ms",type=int,default=150)
++    parser.add_argument("--delay-target",choices=("rx","reply"),default="rx")
++    parser.add_argument("--caps",type=int,default=3,help="simulator fixture capabilities; default AUTO disabled")
++    parser.add_argument("--log",type=Path)
++    args=parser.parse_args()
++    if args.self_test: return self_test(args.junit,args.log)
++    if args.junit: parser.error("--junit requires --self-test")
++    try:
++        address=ipaddress.ip_address(args.host)
++        if address.version!=4 or not address.is_loopback: raise ValueError("Phase 2 receiver binds IPv4 loopback only")
++        if not 0<=args.port<=65535 or args.fault_after<0 or args.delay_ms<0: raise ValueError("invalid port or scenario limits")
++        if args.log: args.log.parent.mkdir(parents=True,exist_ok=True)
++        log_file=args.log.open('w',encoding='utf-8',newline='\n') if args.log else None
++        try:
++            def emit(record):
++                if log_file: log_file.write(json.dumps(record,ensure_ascii=True)+'\n'); log_file.flush()
++            if args.check_fixtures:
++                count=check_fixtures(args.check_fixtures,emit)
++                print(json.dumps(dict(vectors=count,passed=count)))
++                return 0
++            receiver=Receiver(caps=args.caps,log=emit)
++            scenario=Scenario(receiver,args.scenario,args.fault_after,args.delay_ms,args.delay_target)
++            with socket.socket(socket.AF_INET,socket.SOCK_DGRAM) as server:
++                server.bind((args.host,args.port)); server.settimeout(0.01)
++                print(f"READY {server.getsockname()[1]}",flush=True)
++                while True:
++                    for target,reply in scenario.poll(): server.sendto(reply,target)
++                    try: data,peer=server.recvfrom(65536)
++                    except socket.timeout: continue
++                    for target,reply in scenario.receive(data,peer): server.sendto(reply,target)
++        finally:
++            if log_file: log_file.close()
++    except KeyboardInterrupt:
++        return 0
++    except (OSError,ValueError,AssertionError) as error:
++        print(f"sumo_simulator: {error}",file=sys.stderr)
++        return 2
++
++
++if __name__ == "__main__": sys.exit(main())
+
+--- /dev/null
++++ tools/test_sumo_simulator.py
+@@ -0,0 +1,285 @@
++"""Independent receiver assertions for the approved simulator contract."""
++import unittest
++import json
++import socket
++import subprocess
++import sys
++from pathlib import Path
++from sumo_simulator import Receiver, Scenario, check_fixtures
++
++SID = "0123456789abcdef"
++NONCE = "1111111111111111"
++PEER = ("127.0.0.1", 50000)
++TRACE_PATH = None
++
++
++class Clock:
++    def __init__(self): self.value = 0
++    def __call__(self): return self.value
++
++
++class SimulatorTests(unittest.TestCase):
++    def setUp(self):
++        self.clock = Clock()
++        self.logs = []
++        self.r = self.make()
++
++    def make(self, caps=3):
++        ids = iter(f"{int(SID, 16)+i:016x}" for i in range(20))
++        return Receiver(clock=self.clock, sid_factory=lambda: next(ids), caps=caps, log=self.logs.append)
++
++    def tearDown(self):
++        if TRACE_PATH:
++            with Path(TRACE_PATH).open('a',encoding='utf-8',newline='\n') as output:
++                for record in self.logs: output.write(json.dumps(dict(case=self.id(),**record))+'\n')
++
++    def frame(self, seq, body="S:0,0,0,0,0", x=0, mode=0, tid=0, duration=0, sid=SID):
++        return f"V1:{sid},{seq},{x},{mode},{tid},{duration}|{body}\n".encode()
++
++    def connect(self, r=None, caps=3):
++        r = r or self.r
++        self.assertEqual(f"H1:{NONCE},{SID},{caps}\n".encode(), r.handle(f"H1:{NONCE}\n".encode(), PEER))
++        self.assertFalse(r.active)
++        reply = r.handle(self.frame(1), PEER)
++        self.assertEqual(f"A1:{SID},1,OK,0,0,0,0,0,0,0,0,0\n".encode(), reply)
++        self.assertTrue(r.active)
++        return r
++
++    def send(self, seq, body="S:0,0,0,0,0", **kwargs):
++        return self.r.handle(self.frame(seq, body, **kwargs), PEER)
++
++    def zero(self, r=None):
++        r = r or self.r
++        self.assertEqual((0, 0, 0), (r.state["L"], r.state["R"], r.state["B"]))
++
++    def test_C01_C02_frozen_vectors_from_contract(self):
++        self.assertEqual(25, check_fixtures(Path(__file__).resolve().parents[1] / "docs/testing/phase-2/fixtures.tsv"))
++
++    def test_C01_state_flags_alias_and_no_double_boost(self):
++        self.connect()
++        self.send(2, "S:200,200,1,1,0")
++        self.assertEqual((200, 200, 1, 1), tuple(self.r.state[k] for k in ("L", "R", "B", "W")))
++        self.send(3, "D:-153,153,0,0,0")
++        self.assertEqual((-153, 153), (self.r.state["L"], self.r.state["R"]))
++
++    def test_C03_handshake_requires_neutral_seq_one(self):
++        self.r.handle(f"H1:{NONCE}\n".encode(), PEER)
++        reply = self.send(1, "S:153,153,0,0,0")
++        self.assertIsNotNone(reply)
++        self.assertIn(b",BAD,", reply)
++        self.assertFalse(self.r.active)
++        self.zero()
++
++    def test_C03_wrong_peer_sid_and_pre_handshake_frames_do_not_apply(self):
++        self.assertIsNone(self.send(1, "S:153,153,0,0,0"))
++        self.connect()
++        self.assertIsNone(self.r.handle(self.frame(2, "S:153,153,0,0,0"), ("127.0.0.1", 50001)))
++        self.assertIsNone(self.send(2, "S:153,153,0,0,0", sid="2222222222222222"))
++        self.zero()
++
++    def test_C03_C04_malformed_frames_never_refresh_watchdog(self):
++        self.connect(); self.send(2, "S:153,153,0,0,0")
++        valid = self.frame(3)
++        bad = [valid[:-1], valid[:-1]+b"\\n", valid[:-1]+b"\r\n", valid+valid, valid+b"x",
++               valid.replace(b"S:0,0", b"S:256,0"), valid.replace(b"S:0,0", b"S:-256,0"),
++               valid.replace(b"S:0,0", b"S:NaN,0"), valid.replace(b"S:0,0", b"S:+1,0"),
++               valid.replace(b"S:0,0", b"S: 1,0"), self.frame(4,"S:0,0,2,0,0"),
++               self.frame(5,"S:0,0,0,0"), self.frame(6,"S:0,0,0,0,0,0"),
++               b"x"*256+b"\n", b"\xff\n", valid.replace(b"S:", b"S:\x00"),
++               self.frame(7,tid=1), self.frame(8,duration=200), self.frame(9,tid=1,duration=2001)]
++        for data in bad:
++            self.clock.value += 1
++            self.r.handle(data, PEER)
++            self.assertEqual(0, self.r.last_valid)
++        self.clock.value=300; self.r.tick(); self.zero(); self.assertIsNone(self.r.sid)
++
++    def test_C03_number_boundary_and_exhausted_sequence_cannot_wrap(self):
++        self.connect(); self.send(2147483647, "S:153,153,0,0,0")
++        self.assertEqual(2147483647, self.r.last_seq)
++        self.assertIsNone(self.send(2147483648))
++        self.send(2, "S:-153,-153,0,0,0")
++        self.assertEqual(153, self.r.state["L"])
++
++    def test_C03_raw_legacy_commands_are_fixture_only(self):
++        self.connect(); self.send(2, "S:153,153,0,0,0")
++        for line in [b"M:0,0\n",b"M:200,200\n",b"M:-200,-200\n",b"M:-180,180\n",b"M:180,-180\n",
++                     b"B:1\n",b"B:0\n",b"W:1\n",b"W:0\n",b"K:1\n",b"K:0\n",b"T:180\n",b"S:200,200,1,0,0\n"]:
++            self.assertIsNone(self.r.handle(line,PEER))
++        self.assertEqual(0,self.r.last_valid)
++
++    def test_C06_payload_rejection_consumes_seq_without_extending_watchdog(self):
++        self.connect(); self.send(2,"S:153,153,0,0,0")
++        self.clock.value=100
++        self.assertIn(b",BAD,",self.send(100,"UNKNOWN"))
++        self.assertEqual(100,self.r.last_seq); self.assertEqual(0,self.r.last_valid)
++        self.send(99,"S:-153,-153,0,0,0"); self.assertEqual(153,self.r.state["L"])
++        self.clock.value=300; self.r.tick(); self.zero()
++
++    def test_C06_duplicate_has_cached_ack_but_does_not_extend_lease(self):
++        self.connect(); original=self.frame(2,"S:153,153,0,0,0")
++        reply=self.r.handle(original,PEER)
++        self.clock.value=200; self.assertEqual(reply,self.r.handle(original,PEER))
++        self.assertIsNone(self.send(2,"S:-153,-153,0,0,0"))
++        self.assertEqual(0,self.r.last_valid)
++        self.clock.value=300; self.r.tick(); self.zero()
++
++    def test_C07_watchdog_299_300_301_and_retired_sid(self):
++        self.connect(); self.send(2,"S:255,255,1,0,0")
++        self.clock.value=299; self.r.tick(); self.assertEqual(255,self.r.state["L"])
++        self.clock.value=300; self.r.tick(); self.zero(); self.assertIsNone(self.r.sid)
++        self.clock.value=301; self.assertIsNone(self.send(100,"S:255,255,1,0,0")); self.zero()
++
++    def test_C07_watchdog_overrides_long_macro(self):
++        self.connect(); self.send(2,tid=1,duration=1000)
++        self.assertEqual(1,self.r.state["turnActive"])
++        self.clock.value=300; self.r.tick(); self.zero(); self.assertEqual(0,self.r.state["turnActive"])
++
++    def test_C07_hello_during_active_session_does_not_keep_it_alive(self):
++        self.connect(); self.send(2,"S:153,153,0,0,0")
++        self.clock.value=299
++        self.assertEqual(f"N1:{NONCE},BUSY\n".encode(),self.r.handle(f"H1:{NONCE}\n".encode(),PEER))
++        self.clock.value=300; self.r.tick(); self.zero()
++
++    def test_offer_duplicate_does_not_extend_1000ms_deadline(self):
++        first=self.r.handle(f"H1:{NONCE}\n".encode(),PEER)
++        self.clock.value=999; self.assertEqual(first,self.r.handle(f"H1:{NONCE}\n".encode(),PEER))
++        self.clock.value=1000; self.r.tick(); self.assertIsNone(self.r.sid)
++        offer=self.r.handle(f"H1:{NONCE}\n".encode(),PEER)
++        self.assertNotEqual(first,offer)
++
++    def test_C08_macro_repeats_once_does_not_reset_timer(self):
++        self.connect(); self.send(2,tid=1,duration=200)
++        self.clock.value=100; self.send(3,tid=1,duration=200)
++        self.clock.value=199; self.r.tick(); self.assertEqual(1,self.r.state["turnActive"])
++        self.clock.value=200; self.r.tick(); self.zero()
++        self.send(4,tid=1,duration=200); self.zero(); self.assertEqual(1,self.r.turn_count)
++
++    def test_C08_macro_id_duration_conflicts_and_new_id_while_busy(self):
++        self.connect(); self.send(2,tid=1,duration=200)
++        self.assertIn(b",BAD,",self.send(3,tid=1,duration=350))
++        self.assertIn(b",BUSY,",self.send(4,tid=2,duration=200))
++        self.clock.value=200; self.r.tick(); self.send(5,tid=2,duration=350)
++        self.assertEqual(2,self.r.turn_count)
++        self.assertIn(b",BAD,",self.send(6,tid=1,duration=200))
++
++    def test_C08_C09_stop_brake_kill_cancel_without_macro_restart(self):
++        for body,x in [("S:0,0,0,0,0",0),("S:0,0,0,0,1",0),("S:0,0,0,0,0",1)]:
++            self.clock.value=0; self.r=self.make(); self.connect(); self.send(2,tid=1,duration=200)
++            self.send(3,body,x=x); self.zero(); self.send(4,tid=1,duration=200)
++            self.zero(); self.assertEqual(1,self.r.turn_count)
++
++    def test_C09_old_motion_after_stop_and_kill_never_applies(self):
++        self.connect(); old=self.frame(2,"S:153,153,0,0,0")
++        self.r.handle(old,PEER); self.send(3); self.r.handle(old,PEER); self.zero()
++        self.send(4,x=1); self.r.handle(old,PEER); self.zero(); self.assertEqual(1,self.r.state["X"])
++
++    def test_C09_receiver_restart_does_not_accept_old_boot_sid(self):
++        self.connect(); old=self.frame(2,"S:153,153,0,0,0")
++        newer=Receiver(clock=self.clock,sid_factory=lambda:"2222222222222222")
++        newer.handle(f"H1:{NONCE}\n".encode(),PEER)
++        newer.handle(self.frame(1,sid="2222222222222222"),PEER)
++        self.assertIsNone(newer.handle(old,PEER)); self.zero(newer)
++
++    def test_kill_persists_across_timeout_and_new_handshake_until_unlock(self):
++        self.connect(); self.send(2,x=1); self.clock.value=300; self.r.tick()
++        self.r.handle(f"H1:{NONCE}\n".encode(),PEER); sid=self.r.sid
++        reply=self.r.handle(self.frame(1,sid=sid),PEER)
++        self.assertIn(b",0,0,0,0,0,1,0,0,0\n",reply)
++        self.assertIn(b",LOCKED,",self.r.handle(self.frame(2,"S:153,153,0,0,0",sid=sid),PEER))
++        self.r.handle(self.frame(3,"U",sid=sid),PEER); self.assertEqual(0,self.r.state["X"]); self.zero()
++
++    def test_unlock_and_close_are_safe_explicit_commands(self):
++        self.connect(); self.send(2,"S:153,153,0,0,0")
++        self.assertIn(b",BUSY,",self.send(3,"U")); self.assertEqual(153,self.r.state["L"])
++        reply=self.send(4,"C"); self.assertIn(b",OK,",reply); self.zero(); self.assertIsNone(self.r.sid)
++        self.assertIsNone(self.send(5,"S:153,153,0,0,0"))
++
++    def test_auto_guard_and_manual_inputs_do_not_override_auto(self):
++        self.connect(); self.assertIn(b",UNSUPPORTED,",self.send(2,mode=1))
++        self.r=self.make(caps=7); self.connect(caps=7)
++        self.send(2,"S:153,153,0,0,0"); self.assertIn(b",BUSY,",self.send(3,mode=1))
++        self.send(4); self.send(5,mode=1); self.assertEqual(1,self.r.state["mode"])
++        self.send(6,"S:153,153,0,0,0"); self.assertEqual(1,self.r.state["mode"]); self.zero()
++        self.send(7,"S:0,0,0,0,1"); self.assertEqual(0,self.r.state["mode"]); self.assertEqual(1,self.r.state["K"])
++        self.send(8); self.send(9,mode=1); self.send(10,x=1); self.assertEqual(0,self.r.state["mode"]); self.zero()
++
++    def test_config_is_atomic_idempotent_and_does_not_refresh_watchdog(self):
++        self.r=self.make(caps=11); self.connect(caps=11)
++        self.clock.value=100
++        self.assertEqual(f"Q1:{SID},2,1,0,100,OK\n".encode(),self.send(2,"Q:1,0,100"))
++        self.assertEqual((0,100),self.r.config_pair)
++        self.send(3,"Q:1,0,100"); self.assertEqual((0,100),self.r.config_pair)
++        self.assertIn(b",BAD\n",self.send(4,"Q:1,0,101")); self.assertEqual((0,100),self.r.config_pair)
++        self.send(5,"Q:2,10,181"); self.assertEqual((0,100),self.r.config_pair)
++        self.assertEqual(0,self.r.last_valid); self.clock.value=300; self.r.tick(); self.assertIsNone(self.r.sid)
++
++    def test_config_unsupported_or_busy_keeps_previous_pair(self):
++        self.connect(); self.assertIn(b",UNSUPPORTED\n",self.send(2,"Q:1,0,100"))
++        self.assertEqual((0,90),self.r.config_pair)
++        self.r=self.make(caps=11); self.connect(caps=11); self.send(2,"S:153,153,0,0,0")
++        self.assertIn(b",BUSY\n",self.send(3,"Q:1,0,100")); self.assertEqual((0,90),self.r.config_pair)
++
++    def test_scenario_drop_rx_does_not_refresh_watchdog(self):
++        self.connect(); self.send(2,"S:153,153,0,0,0")
++        s=Scenario(self.r,"drop-rx",fault_after=0)
++        self.clock.value=100; self.assertEqual([],s.receive(self.frame(3,"S:255,255,1,0,0"),PEER))
++        self.assertEqual(0,self.r.last_valid); self.clock.value=300; s.poll(); self.zero()
++
++    def test_scenario_drop_reply_applies_but_does_not_send_ack(self):
++        self.connect(); s=Scenario(self.r,"drop-reply",fault_after=0)
++        self.clock.value=100; self.assertEqual([],s.receive(self.frame(2,"S:153,153,0,0,0"),PEER))
++        self.assertEqual(153,self.r.state["L"]); self.assertEqual(100,self.r.last_valid)
++
++    def test_scenario_delay_rx_150_and_350_cannot_revive_expired_sid(self):
++        for delay in (150,350):
++            self.clock.value=0; self.r=self.make(); self.connect()
++            s=Scenario(self.r,"delay",fault_after=0,delay_ms=delay,delay_target="rx")
++            self.assertEqual([],s.receive(self.frame(2,"S:153,153,0,0,0"),PEER)); self.zero()
++            self.clock.value=delay-1; self.assertEqual([],s.poll()); self.zero()
++            self.clock.value=delay; replies=s.poll()
++            if delay==150: self.assertEqual(153,self.r.state["L"]); self.assertEqual(1,len(replies))
++            else: self.zero(); self.assertEqual([],replies); self.assertIsNone(self.r.sid)
++
++    def test_scenario_delayed_reply_is_returned_at_exact_due_time(self):
++        self.connect(); s=Scenario(self.r,"delay",fault_after=0,delay_target="reply",delay_ms=150)
++        self.assertEqual([],s.receive(self.frame(2,"S:153,153,0,0,0"),PEER)); self.assertEqual(153,self.r.state["L"])
++        self.clock.value=149; self.assertEqual([],s.poll())
++        self.clock.value=150; self.assertEqual(1,len(s.poll()))
++
++    def test_scenario_duplicate_macro_and_reorder_after_stop(self):
++        self.connect(); s=Scenario(self.r,"duplicate",fault_after=0)
++        self.assertEqual(2,len(s.receive(self.frame(2,tid=1,duration=200),PEER))); self.assertEqual(1,self.r.turn_count)
++        self.r=self.make(); self.connect(); s=Scenario(self.r,"reorder",fault_after=0)
++        self.assertEqual([],s.receive(self.frame(2,"S:153,153,0,0,0"),PEER))
++        self.assertEqual(1,len(s.receive(self.frame(3),PEER))); self.zero()
++        self.clock.value=99; self.assertEqual([],s.poll())
++        self.clock.value=100; s.poll(); self.zero(); self.assertEqual(3,self.r.last_seq)
++
++    def test_scenario_malformed_replies_are_deterministic(self):
++        self.connect(); s=Scenario(self.r,"malformed",fault_after=0)
++        first=s.receive(self.frame(2),PEER)[0][1]
++        second=s.receive(self.frame(3),PEER)[0][1]
++        third=s.receive(self.frame(4),PEER)[0][1]
++        self.assertEqual(11,len(first.decode().strip().split(':',1)[1].split(',')))
++        self.assertNotIn(SID.encode(),second)
++        self.assertIn(b",5,OK,",third)
++
++    def test_cli_rejects_invalid_endpoint_limits_and_capabilities(self):
++        script=Path(__file__).with_name('sumo_simulator.py')
++        for args in [('--host','0.0.0.0'),('--port','65536'),('--fault-after','-1'),('--delay-ms','-1'),('--caps','0')]:
++            result=subprocess.run([sys.executable,str(script),*args],capture_output=True,text=True,timeout=5)
++            self.assertEqual(2,result.returncode)
++            self.assertIn('sumo_simulator:',result.stderr)
++
++    def test_cli_port_in_use_reports_error_and_keeps_owner_alive(self):
++        with socket.socket(socket.AF_INET,socket.SOCK_DGRAM) as owner:
++            owner.bind(('127.0.0.1',0)); owner.settimeout(1)
++            endpoint=owner.getsockname()
++            result=subprocess.run([sys.executable,str(Path(__file__).with_name('sumo_simulator.py')),
++                                   '--port',str(endpoint[1])],capture_output=True,text=True,timeout=5)
++            self.assertEqual(2,result.returncode); self.assertIn('sumo_simulator:',result.stderr)
++            owner.sendto(b'owner-alive',endpoint)
++            self.assertEqual(b'owner-alive',owner.recvfrom(32)[0])
++
++
++if __name__ == "__main__": unittest.main()

@@ -1,0 +1,14 @@
+START: C:\Users\CHI NGUYEN\python.exe -u "C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\tools\sumo_simulator.py" --host 127.0.0.1 --port 8888 --log "C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\docs\testing\phase-5\evidence\11-permissions\receiver.jsonl"
+COMMAND: py -3.13 -X utf8 tools/check_android_permissions.py --serial emulator-5554 --receiver-log docs/testing/phase-5/evidence/11-permissions/receiver.jsonl --evidence-dir docs/testing/phase-5/evidence/11-permissions
+Traceback (most recent call last):
+  File "C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\tools\check_android_permissions.py", line 92, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\tools\check_android_permissions.py", line 54, in main
+    click(tree,lambda n:n.get('text')=='Kết nối lại')
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\tools\check_android_permissions.py", line 36, in click
+    node=next(n for n in tree.iter('node') if test(n))
+StopIteration
+EXIT_CODE: 1
+CLEANUP own receiver PID=700

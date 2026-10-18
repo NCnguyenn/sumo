@@ -1,0 +1,29 @@
+{
+  "source": "docs\\testing\\phase-4\\evidence\\26-android-results\\Medium_Phone(AVD) - 17\\logcat-com.aistudy.myapplication.StopLatencyTest-I02_stop500RealTouchCallbacksAndReceiverAcknowledgements.txt",
+  "samples": 500,
+  "t1_minus_t0_ms": {
+    "n": 500,
+    "p50": 0.6258,
+    "p95": 2.0061,
+    "p99": 4.661,
+    "maximum": 8.9006
+  },
+  "t2_minus_t0_ms": {
+    "n": 500,
+    "p50": 1.1044,
+    "p95": 2.7155,
+    "p99": 4.9647,
+    "maximum": 13.2437
+  },
+  "before_over_10": 0,
+  "return_over_10": 1,
+  "periodic30_adjacent_without_intervening_event": {
+    "n": 1283,
+    "p50": 31.1981,
+    "p95": 33.3833,
+    "p99": 35.4849,
+    "maximum": 48.2799
+  },
+  "periodic_outside_20_50": 1,
+  "periodic_sample_note": "Incidental STOP500 intervals; separate CadenceTest/check_android_cadence.py requires >=1000 intervals at each of 20/30/50 ms"
+}

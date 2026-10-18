@@ -1,0 +1,18 @@
+[
+  {
+    "Path": "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\apk\\debug\\app-debug.apk",
+    "Hash": "638934AE0E846E7538F92ACD744E24BE7C2F2973EBFBBF750AC333003B9C2ACB"
+  },
+  {
+    "Path": "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\src\\main\\java\\com\\aistudy\\myapplication\\control\\ControlRuntime.kt",
+    "Hash": "7ABE825130EA94C109FDD8A2861098D728F4AD5877813691E69562FEBB55B369"
+  },
+  {
+    "Path": "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\src\\main\\java\\com\\aistudy\\myapplication\\control\\ControlSession.kt",
+    "Hash": "C7CD4726D88FBA6795A7B6EB26E4CD489095AACC6368DAFF06B8F590AD042ABE"
+  },
+  {
+    "Path": "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\src\\main\\java\\com\\aistudy\\myapplication\\protocol\\ReplyTracker.kt",
+    "Hash": "3CC0C8802F24C3261344BD76AEBA6AA2AD8DAF1C70FFCF7FA8534D21BEFE49C7"
+  }
+]

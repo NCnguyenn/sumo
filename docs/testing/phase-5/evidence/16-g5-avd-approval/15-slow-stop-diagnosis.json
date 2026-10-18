@@ -1,0 +1,13 @@
+[
+  {
+    "sample": 130,
+    "before_ms": 15.717,
+    "total_ms": 18.0994,
+    "queue_ms": 14.867,
+    "enqueue_ms": 0.1486,
+    "prepare_ms": 0.1683,
+    "pre_send_cpu_ms": 0.419727,
+    "send_cpu_ms": 1.947164,
+    "line": "3316.496  5716  5762 I SumoSession: wire t0_ns=3316477980300 t1_ns=3316493697300 t2_ns=3316496079700 cause=Release(id=130) hex=56313a376330313938656263306263653838372c3939332c302c302c302c307c533a302c302c302c302c300a enqueued_ns=3316478128900 dequeued_ns=3316492995900 work_ns=3316492972300 prepare_start_ns=3316493517000 prepare_end_ns=3316493685300 pre_send_cpu_ns=419727 send_cpu_ns=1947164 deadline_ns=3316486123400 wait_start_ns=3316475463200 wake_ns=3316492972300 requested_wait_ns=2000000 prev_work_ns=67500 prev_trace_submit_ns=0 trace_pending=0"
+  }
+]

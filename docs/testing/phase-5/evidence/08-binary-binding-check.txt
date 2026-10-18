@@ -1,0 +1,3 @@
+COMMAND: adb pm path + exec-out APK SHA256; compare app/test with frozen source manifest
+{"binary_matches": ["com.aistudy.myapplication", "com.aistudy.myapplication.test"], "app_source_files_unchanged": 56}
+EXIT_CODE: 0

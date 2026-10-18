@@ -1,0 +1,8 @@
+{
+  "resize_while_held": true,
+  "stop_before_release_ms": 186,
+  "no_motion_after_stop": true,
+  "restored_size_neutral": true,
+  "no_new_session_on_resize": true,
+  "note": "E03 requires no resumed motion; Online+neutral is allowed for resize/Leave, unlike background or reboot"
+}

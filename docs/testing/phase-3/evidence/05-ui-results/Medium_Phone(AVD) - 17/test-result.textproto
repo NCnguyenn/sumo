@@ -1,0 +1,250 @@
+# proto-message: google.testing.platform.proto.api.core.TestSuiteResult
+# 2026-10-17T02:48:24.841547300Z:
+test_suite_meta_data {
+  scheduled_test_case_count: 4
+  device {
+    id: "emulator-5554"
+    friendly_name: "primary"
+  }
+}
+test_status: FAILED
+test_result {
+  test_case {
+    test_class: "ControllerUiTest"
+    test_package: "com.aistudy.myapplication"
+    test_method: "U01_U10_landscapeSafetyLabelsAndNeutralStart"
+    start_time {
+      seconds: 1792205292
+      nanos: 834000000
+    }
+    end_time {
+      seconds: 1792205296
+      nanos: 4000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\logcat-com.aistudy.myapplication.ControllerUiTest-U01_U10_landscapeSafetyLabelsAndNeutralStart.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "ControllerUiTest"
+    test_package: "com.aistudy.myapplication"
+    test_method: "U04_holdWeaponRemainsAfterDirectionUpAndCancelClearsAll"
+    start_time {
+      seconds: 1792205296
+      nanos: 71000000
+    }
+    end_time {
+      seconds: 1792205299
+      nanos: 373000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\logcat-com.aistudy.myapplication.ControllerUiTest-U04_holdWeaponRemainsAfterDirectionUpAndCancelClearsAll.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "ControllerUiTest"
+    test_package: "com.aistudy.myapplication"
+    test_method: "U03_directionAndBoostBothReleaseOrdersNeverResumeOldGesture"
+    start_time {
+      seconds: 1792205299
+      nanos: 376000000
+    }
+    end_time {
+      seconds: 1792205301
+      nanos: 141000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\logcat-com.aistudy.myapplication.ControllerUiTest-U03_directionAndBoostBothReleaseOrdersNeverResumeOldGesture.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "ControllerUiTest"
+    test_package: "com.aistudy.myapplication"
+    test_method: "U02_U06_joystickMovesButKillCannotBeClearedByHeldFingers"
+    start_time {
+      seconds: 1792205301
+      nanos: 143000000
+    }
+    end_time {
+      seconds: 1792205303
+      nanos: 993000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: FAILED
+  error {
+    error_message: "java.lang.AssertionError: Failed to assert the following: (Text + InputText + EditableText contains \'\304\220\303\203 KH\303\223A\' (ignoreCase: false) as substring)\nSemantics of the node:\nNode #322 at (l=987.0, t=163.0, r=1412.0, b=459.0)px, Tag: \'kill\'\nContentDescription = \'[KILL \302\267 \304\220\303\203 KH\303\223A]\'\nRole = \'Button\'\nShape = \'RoundedCornerShape(topStart = CornerSize(size = 12.0.dp), topEnd = CornerSize(size = 12.0.dp), bottomEnd = CornerSize(size = 12.0.dp), bottomStart = CornerSize(size = 12.0.dp))\'\nActions = [OnClick]\nHas 1 child, 15 siblings\nSelector used: (TestTag = \'kill\')\n\nat androidx.compose.ui.test.AssertionsKt.assert(Assertions.kt:264)\nat androidx.compose.ui.test.AssertionsKt.assert$default(Assertions.kt:254)\nat androidx.compose.ui.test.AssertionsKt.assertTextContains(Assertions.kt:208)\nat androidx.compose.ui.test.AssertionsKt.assertTextContains$default(Assertions.kt:204)\nat com.aistudy.myapplication.ControllerUiTest.U02_U06_joystickMovesButKillCannotBeClearedByHeldFingers(ControllerUiTest.kt:63)\n"
+    error_type: "java.lang.AssertionError"
+    stack_trace: "java.lang.AssertionError: Failed to assert the following: (Text + InputText + EditableText contains \'\304\220\303\203 KH\303\223A\' (ignoreCase: false) as substring)\nSemantics of the node:\nNode #322 at (l=987.0, t=163.0, r=1412.0, b=459.0)px, Tag: \'kill\'\nContentDescription = \'[KILL \302\267 \304\220\303\203 KH\303\223A]\'\nRole = \'Button\'\nShape = \'RoundedCornerShape(topStart = CornerSize(size = 12.0.dp), topEnd = CornerSize(size = 12.0.dp), bottomEnd = CornerSize(size = 12.0.dp), bottomStart = CornerSize(size = 12.0.dp))\'\nActions = [OnClick]\nHas 1 child, 15 siblings\nSelector used: (TestTag = \'kill\')\n\nat androidx.compose.ui.test.AssertionsKt.assert(Assertions.kt:264)\nat androidx.compose.ui.test.AssertionsKt.assert$default(Assertions.kt:254)\nat androidx.compose.ui.test.AssertionsKt.assertTextContains(Assertions.kt:208)\nat androidx.compose.ui.test.AssertionsKt.assertTextContains$default(Assertions.kt:204)\nat com.aistudy.myapplication.ControllerUiTest.U02_U06_joystickMovesButKillCannotBeClearedByHeldFingers(ControllerUiTest.kt:63)\n"
+  }
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\logcat-com.aistudy.myapplication.ControllerUiTest-U02_U06_joystickMovesButKillCannotBeClearedByHeldFingers.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\cpuinfo"
+    }
+  }
+}
+output_artifact {
+  label {
+    label: "test-results.log"
+    namespace: "com.google.testing.platform.runtime.android.driver.AndroidInstrumentationDriver"
+  }
+  source_path {
+    path: "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\androidTest-results\\connected\\debug\\Medium_Phone(AVD) - 17\\testlog\\test-results.log"
+  }
+  type: TEST_DATA
+  mime_type: "text/plain"
+}

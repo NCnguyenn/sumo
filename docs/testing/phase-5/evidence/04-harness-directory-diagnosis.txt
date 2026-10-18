@@ -1,0 +1,4 @@
+COMMAND: inspect app output directory; stop incomplete instrumentation before timing cohorts
+drwxrws--- 2 shell ext_data_rw 4096 2026-10-17 18:14 /sdcard/Android/data/com.aistudy.myapplication/files/phase5-04-final-android
+ls: /sdcard/Android/data/com.aistudy.myapplication/files/phase5-04-final-android: Permission denied
+EXIT_CODE: 0

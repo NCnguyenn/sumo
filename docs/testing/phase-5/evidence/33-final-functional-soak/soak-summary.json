@@ -1,0 +1,21 @@
+{
+  "binary_sha256": "92abb62d00eb6f841eb8b9eb158d4b0be4b98bd39c6e05bd39b69de79613e5e3",
+  "duration_ms": 1800668,
+  "cycles": 600,
+  "reconnects": 20,
+  "kills": 10,
+  "resource_checkpoints": 20,
+  "worker_max": 1,
+  "trace_max": 1,
+  "sockets_begin": 14,
+  "sockets_max": 14,
+  "sockets_after_close": 10,
+  "issued_frames": 60557,
+  "applied_frames_checked": 60557,
+  "sessions": 21,
+  "neutral_periodic_frames_after_stop": 57469,
+  "unwanted_motion": 0,
+  "app_crash_anr_in_captured_log": false,
+  "negative_auditor_self_check": "PASS",
+  "limitation": "AVD only; 20 stabilized all-socket FD checkpoints include Unix sockets; no continuous allocation profile, no physical stop/firmware or timing guarantee"
+}

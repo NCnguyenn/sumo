@@ -1,0 +1,2 @@
+72861bd59626aff5975f688b42cac07a2ad1f3b1cc193f92f4485f6dd7be5833  sumo-phase5-avd-debug-v1.apk
+92abb62d00eb6f841eb8b9eb158d4b0be4b98bd39c6e05bd39b69de79613e5e3  sumo-phase5-avd-debug-v1-g5-check.apk

@@ -1,0 +1,9 @@
+{
+  "serial": "emulator-5554",
+  "windowSize": "Physical size: 1080x2400",
+  "installAppOp": "No operations.\nDefault mode: default",
+  "wifi": "1",
+  "mobileData": "1",
+  "selectedActivity": "    topResumedActivity=ActivityRecord{30084464 u0 com.aistudy.myapplication/.MainActivity t38}",
+  "simulatorEndpoints": []
+}

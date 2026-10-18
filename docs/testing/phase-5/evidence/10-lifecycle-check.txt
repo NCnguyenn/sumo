@@ -1,0 +1,10 @@
+COMMAND: py -3.13 -X utf8 docs/testing/phase-5/evidence/run_lifecycle.py
+Traceback (most recent call last):
+  File "C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\docs\testing\phase-5\evidence\run_lifecycle.py", line 201, in <module>
+    if __name__ == '__main__': main()
+                               ~~~~^^
+  File "C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\docs\testing\phase-5\evidence\run_lifecycle.py", line 124, in main
+    configured_record = ET.fromstring(configured).find("string[@name='record']").text
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'text'
+EXIT_CODE: 1

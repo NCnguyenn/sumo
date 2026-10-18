@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-17",
+  "timezone": "Asia/Bangkok",
+  "source": "User answer in this chat after the final results were disclosed",
+  "user_choice_verbatim": "Chốt G5 CÓ ĐIỀU KIỆN cho chức năng AVD; giữ lỗi hiệu năng mở, chặn dùng xe và release",
+  "gate": "G5",
+  "status": "CLOSED_CONDITIONALLY_AVD_FUNCTIONALITY",
+  "performance_status": "OPEN_FAIL",
+  "latest_stop": {"samples": 500, "over_10_ms": 2, "maximum_ms": 11.4174},
+  "thresholds_unchanged": {"stop_ms": 10, "cadence20_30_range_ms": [20, 50], "cadence50_avd_range_ms": [20, 60]},
+  "restrictions": ["NO_REAL_CAR_USE", "NO_RELEASE", "NO_PHASE_6_OR_7_AUTOSTART", "NO_UPLOAD_AUTHORIZATION"],
+  "other_gates": {"G3": "PENDING_JOINT_APPROVAL", "G4": "PENDING_JOINT_APPROVAL"},
+  "unverified": ["physical_phone", "HTTPS_update_A_B_C", "API36", "I11_LAN_without_WAN", "distribution_signing_and_backup", "hosting", "firmware_and_car", "soak_on_final_binary"],
+  "not_asserted": ["all_performance_passed", "user_physically_tested_app", "system_acceptance", "release_approval"],
+  "final_avd_apk": "docs/testing/phase-5/apk/sumo-phase5-avd-debug-v1-g5-check.apk",
+  "apk_sha256": "92abb62d00eb6f841eb8b9eb158d4b0be4b98bd39c6e05bd39b69de79613e5e3"
+}

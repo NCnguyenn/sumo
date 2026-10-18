@@ -1,0 +1,166 @@
+[
+  {
+    "Path": "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\src\\androidTest\\java\\com\\aistudy\\myapplication\\ExampleInstrumentedTest.kt",
+    "Hash": "2C1991201A364C0B5267E2E7AC16E00417682A73D5CCB22F8B2554F872DB9E0D"
+  },
+  {
+    "Path": "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\src\\main\\AndroidManifest.xml",
+    "Hash": "59A8B2E04DBA227E9A106F2CEEF7D0C1BBD5D3D583E73063F9127C8978DC255B"
+  },
+  {
+    "Path": "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\src\\main\\java\\com\\aistudy\\myapplication\\MainActivity.kt",
+    "Hash": "4D229082A1423D242E5401D6947DB76150C3679C6EF8A0B23B5258FEDFDEF0D3"
+  },
+  {
+    "Path": "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\src\\main\\java\\com\\aistudy\\myapplication\\control\\ControlReducer.kt",
+    "Hash": "EE5D6F40D76171F615C1382FAA3C1D1273C543F783C3AC2E9B49B7E4BE753AAA"
+  },
+  {
+    "Path": "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\src\\main\\java\\com\\aistudy\\myapplication\\control\\ControlState.kt",
+    "Hash": "09272AE0B1EDD9819FD2812EDCFE528A8A075E5AD88BF4B84319032245D431CF"
+  },
+  {
+    "Path": "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\src\\main\\java\\com\\aistudy\\myapplication\\control\\DriveMixer.kt",
+    "Hash": "BE77FB52E1D8D93FDC7E2852223328BB11F8E9749D01AD0D9A49956D32AF66CB"
+  },
+  {
+    "Path": "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\src\\main\\java\\com\\aistudy\\myapplication\\protocol\\CommandCodec.kt",
+    "Hash": "99CB72F1FD72E6145B88AEBF08F17C401D3EA39427EF3EF7DE34F1D0B3D3FDB5"
+  },
+  {
+    "Path": "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\src\\main\\java\\com\\aistudy\\myapplication\\protocol\\ReplyTracker.kt",
+    "Hash": "F0CAF6D524AFB04EAE6AFB73A538E31F20C58794C9340C6BB92E0B674226BBB5"
+  },
+  {
+    "Path": "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\src\\main\\java\\com\\aistudy\\myapplication\\settings\\ControllerSettings.kt",
+    "Hash": "682EABBF3D62182559144316FBA783200901869E535E4548FF542A80658F5867"
+  },
+  {
+    "Path": "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\src\\main\\java\\com\\aistudy\\myapplication\\ui\\theme\\Color.kt",
+    "Hash": "C6D91B6755BCCEAB6C8A697285A65C13BF6902C10F927858D7F2379F0E810BA7"
+  },
+  {
+    "Path": "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\src\\main\\java\\com\\aistudy\\myapplication\\ui\\theme\\Theme.kt",
+    "Hash": "B7B89FA22DA6D4E36A9DB2305864D8D9B70AD4E70A0C03D5460F0EE7D1063A4E"
+  },
+  {
+    "Path": "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\src\\main\\java\\com\\aistudy\\myapplication\\ui\\theme\\Type.kt",
+    "Hash": "170BCCBB5542122A3A40E374DB8C605480C42240952F571418D32AE958BFA7BD"
+  },
+  {
+    "Path": "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\src\\main\\keepRules\\rules.keep",
+    "Hash": "CD9F36ADE2D8604E1B7CF24EFF5B171F9C0816C0AA013BA7EB55BE4FE2E1DAC7"
+  },
+  {
+    "Path": "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml",
+    "Hash": "ED423C73A6F40A4D2909F0901E60527B3A807CD59E1B5593BCAAE1808B1C6321"
+  },
+  {
+    "Path": "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\src\\main\\res\\drawable\\ic_launcher_foreground.xml",
+    "Hash": "01D1A6A6C1234EB7FE270D097EB283D72B9C95AE5118886F1B6573AAD280F1F7"
+  },
+  {
+    "Path": "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\src\\main\\res\\mipmap-anydpi\\ic_launcher_round.xml",
+    "Hash": "88F7653499EF524126EA5018A99BAF9CC3269E7E584D6205DFDD76DB39F39CC0"
+  },
+  {
+    "Path": "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\src\\main\\res\\mipmap-anydpi\\ic_launcher.xml",
+    "Hash": "88F7653499EF524126EA5018A99BAF9CC3269E7E584D6205DFDD76DB39F39CC0"
+  },
+  {
+    "Path": "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.webp",
+    "Hash": "1ED73F5341A69D3B41C7E02E126803F50CC8C3284ADF4BBB737F0C93577AEF07"
+  },
+  {
+    "Path": "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.webp",
+    "Hash": "DD00996198640ED28FBC09CDCD7A3807CF8707F3EB255B659634DA3CA6A6FF01"
+  },
+  {
+    "Path": "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp",
+    "Hash": "4E2C58B91DE01130E6479E00CBBAAF6E77CD961DD2C8E303CF13CD077FA92632"
+  },
+  {
+    "Path": "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.webp",
+    "Hash": "846219E6F72FE9A6C104CA8919CBEE36A101E7D2FF8DA9DA67B689A5888F060D"
+  },
+  {
+    "Path": "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.webp",
+    "Hash": "91B490AEF86574901137F0A252272E1F1ADD99C1AD709E0696ED68929B88D261"
+  },
+  {
+    "Path": "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.webp",
+    "Hash": "398340DAD816FC9A6338CB151A8CF1E45B926F9BFB70628B24C4BD2523CC94D4"
+  },
+  {
+    "Path": "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.webp",
+    "Hash": "3009FAD079F5772F30ECD767F98924367FBE0F81C30048D672D4FDA2D5CA7D12"
+  },
+  {
+    "Path": "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp",
+    "Hash": "58AE87FA0C5B5D1562D27FD648D2C061553FE20E3ED570BDE588162D01EA7A27"
+  },
+  {
+    "Path": "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.webp",
+    "Hash": "5FAF033745C8C882C43BB1B372D4E4A5890CAEC63D9892A2E756C954108B85DC"
+  },
+  {
+    "Path": "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.webp",
+    "Hash": "F98FEF5BC3BFE5B65692C40AD1CBAE2BEC4FAF9F1B249C397626740DB71B62D8"
+  },
+  {
+    "Path": "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\src\\main\\res\\values\\colors.xml",
+    "Hash": "B5626527D503417F0D8E5B1E08F338DE7B31173BF0E122815F03E64932ADBD88"
+  },
+  {
+    "Path": "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\src\\main\\res\\values\\strings.xml",
+    "Hash": "22E88CCA26DE9E26E33916DCE55A324DCA54A842B197F191B3406F7E11A1AB90"
+  },
+  {
+    "Path": "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\src\\main\\res\\values\\themes.xml",
+    "Hash": "E7DA25BEF4929044796BEABBC86093F0F7687867F935066A6B5972DAA3889603"
+  },
+  {
+    "Path": "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\src\\main\\res\\xml\\backup_rules.xml",
+    "Hash": "6CF1A27E6807B1D24E41D3FBE7DDC1BFE1F42226027964F6EAF477D71B43B283"
+  },
+  {
+    "Path": "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\src\\main\\res\\xml\\data_extraction_rules.xml",
+    "Hash": "CB1FC47AB4A984530ED60E0E6EE638929C3038290E7E7E0B4B03A3A30FBE7381"
+  },
+  {
+    "Path": "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\src\\test\\java\\com\\aistudy\\myapplication\\ExampleUnitTest.kt",
+    "Hash": "57D4631759CAAFCCB4A48B3F4577DE8B41D4924223E7DAA91FAE44379AB06434"
+  },
+  {
+    "Path": "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\src\\test\\java\\com\\aistudy\\myapplication\\control\\ControlReducerTest.kt",
+    "Hash": "83CF6338499CA7619684DC0A415D2ECDD94815EEC8DAD69303383057C4F874B8"
+  },
+  {
+    "Path": "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\src\\test\\java\\com\\aistudy\\myapplication\\control\\DriveMixerTest.kt",
+    "Hash": "2B772C7DD18A688A5D4337013E676E742094D9F1DFEA76332D1D14EA75BCD04E"
+  },
+  {
+    "Path": "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\src\\test\\java\\com\\aistudy\\myapplication\\protocol\\CommandCodecTest.kt",
+    "Hash": "16508243DF8C1D4A3B5A2A006D812A8DA748B48BD1C292113A0AB61F8010EFA8"
+  },
+  {
+    "Path": "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\src\\test\\java\\com\\aistudy\\myapplication\\protocol\\ReplyTrackerTest.kt",
+    "Hash": "51CD09C6B1626912B2E0F4BA8D552480BA7E3530ECBD83B3178C32E15DC9C244"
+  },
+  {
+    "Path": "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\src\\test\\java\\com\\aistudy\\myapplication\\protocol\\SimulatorInteropTest.kt",
+    "Hash": "9E370ED4DDDC60208087D1E7F4FDEA84BD835205271C32A46875E9C0A427B43B"
+  },
+  {
+    "Path": "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\src\\test\\java\\com\\aistudy\\myapplication\\settings\\ControllerSettingsTest.kt",
+    "Hash": "9908748E12CF8171A6EE0AD44F4B0E4DB2FAC27B763B91FDB420B35A4756F04C"
+  },
+  {
+    "Path": "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build.gradle.kts",
+    "Hash": "014D6397ACF16D78D3F7DE5CB5EF510DB46B9399CB85DD060876EE43CCA03F79"
+  },
+  {
+    "Path": "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\gradle\\libs.versions.toml",
+    "Hash": "384D80EDAD2799CBF9495882613EC6329176B6AE424581A2EE143775B336DE6C"
+  }
+]

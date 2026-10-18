@@ -1,0 +1,261 @@
+{
+  "total": 41,
+  "changed": [
+    "app/src/main/AndroidManifest.xml",
+    "app/src/main/java/com/aistudy/myapplication/MainActivity.kt",
+    "app/src/main/java/com/aistudy/myapplication/control/ControlReducer.kt",
+    "app/src/main/java/com/aistudy/myapplication/ui/theme/Theme.kt",
+    "app/src/main/res/values/strings.xml",
+    "app/build.gradle.kts"
+  ],
+  "unchanged": 35,
+  "missing": 0,
+  "records": [
+    {
+      "path": "app/src/androidTest/java/com/aistudy/myapplication/ExampleInstrumentedTest.kt",
+      "before": "2c1991201a364c0b5267e2e7ac16e00417682a73d5ccb22f8b2554f872db9e0d",
+      "after": "2c1991201a364c0b5267e2e7ac16e00417682a73d5ccb22f8b2554f872db9e0d",
+      "status": "same"
+    },
+    {
+      "path": "app/src/main/AndroidManifest.xml",
+      "before": "59a8b2e04dba227e9a106f2ceef7d0c1bbd5d3d583e73063f9127c8978dc255b",
+      "after": "733289ef3537ec045d7fef8f6f7463108fab818b39e221c2141fe3aaa93a0210",
+      "status": "changed"
+    },
+    {
+      "path": "app/src/main/java/com/aistudy/myapplication/MainActivity.kt",
+      "before": "4d229082a1423d242e5401d6947db76150c3679c6ef8a0b23b5258fedfdef0d3",
+      "after": "5b616a1dfb57610883064c422f4a39754a378f73fd207a4ec5e92e4bb3282788",
+      "status": "changed"
+    },
+    {
+      "path": "app/src/main/java/com/aistudy/myapplication/control/ControlReducer.kt",
+      "before": "ee5d6f40d76171f615c1382faa3c1d1273c543f783c3ac2e9b49b7e4be753aaa",
+      "after": "b72515b340805aea40ba6fbf68e15ffba56ad380a667b0159d217af38fe56223",
+      "status": "changed"
+    },
+    {
+      "path": "app/src/main/java/com/aistudy/myapplication/control/ControlState.kt",
+      "before": "09272ae0b1edd9819fd2812edcfe528a8a075e5ad88bf4b84319032245d431cf",
+      "after": "09272ae0b1edd9819fd2812edcfe528a8a075e5ad88bf4b84319032245d431cf",
+      "status": "same"
+    },
+    {
+      "path": "app/src/main/java/com/aistudy/myapplication/control/DriveMixer.kt",
+      "before": "be77fb52e1d8d93fdc7e2852223328bb11f8e9749d01ad0d9a49956d32af66cb",
+      "after": "be77fb52e1d8d93fdc7e2852223328bb11f8e9749d01ad0d9a49956d32af66cb",
+      "status": "same"
+    },
+    {
+      "path": "app/src/main/java/com/aistudy/myapplication/protocol/CommandCodec.kt",
+      "before": "99cb72f1fd72e6145b88aebf08f17c401d3ea39427ef3ef7de34f1d0b3d3fdb5",
+      "after": "99cb72f1fd72e6145b88aebf08f17c401d3ea39427ef3ef7de34f1d0b3d3fdb5",
+      "status": "same"
+    },
+    {
+      "path": "app/src/main/java/com/aistudy/myapplication/protocol/ReplyTracker.kt",
+      "before": "f0caf6d524afb04eae6afb73a538e31f20c58794c9340c6bb92e0b674226bbb5",
+      "after": "f0caf6d524afb04eae6afb73a538e31f20c58794c9340c6bb92e0b674226bbb5",
+      "status": "same"
+    },
+    {
+      "path": "app/src/main/java/com/aistudy/myapplication/settings/ControllerSettings.kt",
+      "before": "682eabbf3d62182559144316fba783200901869e535e4548ff542a80658f5867",
+      "after": "682eabbf3d62182559144316fba783200901869e535e4548ff542a80658f5867",
+      "status": "same"
+    },
+    {
+      "path": "app/src/main/java/com/aistudy/myapplication/ui/theme/Color.kt",
+      "before": "c6d91b6755bcceab6c8a697285a65c13bf6902c10f927858d7f2379f0e810ba7",
+      "after": "c6d91b6755bcceab6c8a697285a65c13bf6902c10f927858d7f2379f0e810ba7",
+      "status": "same"
+    },
+    {
+      "path": "app/src/main/java/com/aistudy/myapplication/ui/theme/Theme.kt",
+      "before": "b7b89fa22da6d4e36a9db2305864d8d9b70ad4e70a0c03d5460f0ee7d1063a4e",
+      "after": "e4e6075164bcded992d0d1d2e84dc1df3bc7bb9d5a621c865b110e145eae6d67",
+      "status": "changed"
+    },
+    {
+      "path": "app/src/main/java/com/aistudy/myapplication/ui/theme/Type.kt",
+      "before": "170bccbb5542122a3a40e374db8c605480c42240952f571418d32ae958bfa7bd",
+      "after": "170bccbb5542122a3a40e374db8c605480c42240952f571418d32ae958bfa7bd",
+      "status": "same"
+    },
+    {
+      "path": "app/src/main/keepRules/rules.keep",
+      "before": "cd9f36ade2d8604e1b7cf24eff5b171f9c0816c0aa013ba7eb55be4fe2e1dac7",
+      "after": "cd9f36ade2d8604e1b7cf24eff5b171f9c0816c0aa013ba7eb55be4fe2e1dac7",
+      "status": "same"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_launcher_background.xml",
+      "before": "ed423c73a6f40a4d2909f0901e60527b3a807cd59e1b5593bcaae1808b1c6321",
+      "after": "ed423c73a6f40a4d2909f0901e60527b3a807cd59e1b5593bcaae1808b1c6321",
+      "status": "same"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_launcher_foreground.xml",
+      "before": "01d1a6a6c1234eb7fe270d097eb283d72b9c95ae5118886f1b6573aad280f1f7",
+      "after": "01d1a6a6c1234eb7fe270d097eb283d72b9c95ae5118886f1b6573aad280f1f7",
+      "status": "same"
+    },
+    {
+      "path": "app/src/main/res/mipmap-anydpi/ic_launcher_round.xml",
+      "before": "88f7653499ef524126ea5018a99baf9cc3269e7e584d6205dfdd76db39f39cc0",
+      "after": "88f7653499ef524126ea5018a99baf9cc3269e7e584d6205dfdd76db39f39cc0",
+      "status": "same"
+    },
+    {
+      "path": "app/src/main/res/mipmap-anydpi/ic_launcher.xml",
+      "before": "88f7653499ef524126ea5018a99baf9cc3269e7e584d6205dfdd76db39f39cc0",
+      "after": "88f7653499ef524126ea5018a99baf9cc3269e7e584d6205dfdd76db39f39cc0",
+      "status": "same"
+    },
+    {
+      "path": "app/src/main/res/mipmap-hdpi/ic_launcher_round.webp",
+      "before": "1ed73f5341a69d3b41c7e02e126803f50cc8c3284adf4bbb737f0c93577aef07",
+      "after": "1ed73f5341a69d3b41c7e02e126803f50cc8c3284adf4bbb737f0c93577aef07",
+      "status": "same"
+    },
+    {
+      "path": "app/src/main/res/mipmap-hdpi/ic_launcher.webp",
+      "before": "dd00996198640ed28fbc09cdcd7a3807cf8707f3eb255b659634da3ca6a6ff01",
+      "after": "dd00996198640ed28fbc09cdcd7a3807cf8707f3eb255b659634da3ca6a6ff01",
+      "status": "same"
+    },
+    {
+      "path": "app/src/main/res/mipmap-mdpi/ic_launcher_round.webp",
+      "before": "4e2c58b91de01130e6479e00cbbaaf6e77cd961dd2c8e303cf13cd077fa92632",
+      "after": "4e2c58b91de01130e6479e00cbbaaf6e77cd961dd2c8e303cf13cd077fa92632",
+      "status": "same"
+    },
+    {
+      "path": "app/src/main/res/mipmap-mdpi/ic_launcher.webp",
+      "before": "846219e6f72fe9a6c104ca8919cbee36a101e7d2ff8da9da67b689a5888f060d",
+      "after": "846219e6f72fe9a6c104ca8919cbee36a101e7d2ff8da9da67b689a5888f060d",
+      "status": "same"
+    },
+    {
+      "path": "app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp",
+      "before": "91b490aef86574901137f0a252272e1f1add99c1ad709e0696ed68929b88d261",
+      "after": "91b490aef86574901137f0a252272e1f1add99c1ad709e0696ed68929b88d261",
+      "status": "same"
+    },
+    {
+      "path": "app/src/main/res/mipmap-xhdpi/ic_launcher.webp",
+      "before": "398340dad816fc9a6338cb151a8cf1e45b926f9bfb70628b24c4bd2523cc94d4",
+      "after": "398340dad816fc9a6338cb151a8cf1e45b926f9bfb70628b24c4bd2523cc94d4",
+      "status": "same"
+    },
+    {
+      "path": "app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp",
+      "before": "3009fad079f5772f30ecd767f98924367fbe0f81c30048d672d4fda2d5ca7d12",
+      "after": "3009fad079f5772f30ecd767f98924367fbe0f81c30048d672d4fda2d5ca7d12",
+      "status": "same"
+    },
+    {
+      "path": "app/src/main/res/mipmap-xxhdpi/ic_launcher.webp",
+      "before": "58ae87fa0c5b5d1562d27fd648d2c061553fe20e3ed570bde588162d01ea7a27",
+      "after": "58ae87fa0c5b5d1562d27fd648d2c061553fe20e3ed570bde588162d01ea7a27",
+      "status": "same"
+    },
+    {
+      "path": "app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp",
+      "before": "5faf033745c8c882c43bb1b372d4e4a5890caec63d9892a2e756c954108b85dc",
+      "after": "5faf033745c8c882c43bb1b372d4e4a5890caec63d9892a2e756c954108b85dc",
+      "status": "same"
+    },
+    {
+      "path": "app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp",
+      "before": "f98fef5bc3bfe5b65692c40ad1cbae2bec4faf9f1b249c397626740db71b62d8",
+      "after": "f98fef5bc3bfe5b65692c40ad1cbae2bec4faf9f1b249c397626740db71b62d8",
+      "status": "same"
+    },
+    {
+      "path": "app/src/main/res/values/colors.xml",
+      "before": "b5626527d503417f0d8e5b1e08f338de7b31173bf0e122815f03e64932adbd88",
+      "after": "b5626527d503417f0d8e5b1e08f338de7b31173bf0e122815f03e64932adbd88",
+      "status": "same"
+    },
+    {
+      "path": "app/src/main/res/values/strings.xml",
+      "before": "22e88cca26de9e26e33916dce55a324dca54a842b197f191b3406f7e11a1ab90",
+      "after": "7a9298900247aefd8691d7cfaf0b9fc28bca6519174354af75054eec3bf0b053",
+      "status": "changed"
+    },
+    {
+      "path": "app/src/main/res/values/themes.xml",
+      "before": "e7da25bef4929044796beabbc86093f0f7687867f935066a6b5972daa3889603",
+      "after": "e7da25bef4929044796beabbc86093f0f7687867f935066a6b5972daa3889603",
+      "status": "same"
+    },
+    {
+      "path": "app/src/main/res/xml/backup_rules.xml",
+      "before": "6cf1a27e6807b1d24e41d3fbe7ddc1bfe1f42226027964f6eaf477d71b43b283",
+      "after": "6cf1a27e6807b1d24e41d3fbe7ddc1bfe1f42226027964f6eaf477d71b43b283",
+      "status": "same"
+    },
+    {
+      "path": "app/src/main/res/xml/data_extraction_rules.xml",
+      "before": "cb1fc47ab4a984530ed60e0e6ee638929c3038290e7e7e0b4b03a3a30fbe7381",
+      "after": "cb1fc47ab4a984530ed60e0e6ee638929c3038290e7e7e0b4b03a3a30fbe7381",
+      "status": "same"
+    },
+    {
+      "path": "app/src/test/java/com/aistudy/myapplication/ExampleUnitTest.kt",
+      "before": "57d4631759caafccb4a48b3f4577de8b41d4924223e7daa91fae44379ab06434",
+      "after": "57d4631759caafccb4a48b3f4577de8b41d4924223e7daa91fae44379ab06434",
+      "status": "same"
+    },
+    {
+      "path": "app/src/test/java/com/aistudy/myapplication/control/ControlReducerTest.kt",
+      "before": "83cf6338499ca7619684dc0a415d2ecdd94815eec8dad69303383057c4f874b8",
+      "after": "83cf6338499ca7619684dc0a415d2ecdd94815eec8dad69303383057c4f874b8",
+      "status": "same"
+    },
+    {
+      "path": "app/src/test/java/com/aistudy/myapplication/control/DriveMixerTest.kt",
+      "before": "2b772c7dd18a688a5d4337013e676e742094d9f1dfea76332d1d14ea75bcd04e",
+      "after": "2b772c7dd18a688a5d4337013e676e742094d9f1dfea76332d1d14ea75bcd04e",
+      "status": "same"
+    },
+    {
+      "path": "app/src/test/java/com/aistudy/myapplication/protocol/CommandCodecTest.kt",
+      "before": "16508243df8c1d4a3b5a2a006d812a8da748b48bd1c292113a0ab61f8010efa8",
+      "after": "16508243df8c1d4a3b5a2a006d812a8da748b48bd1c292113a0ab61f8010efa8",
+      "status": "same"
+    },
+    {
+      "path": "app/src/test/java/com/aistudy/myapplication/protocol/ReplyTrackerTest.kt",
+      "before": "51cd09c6b1626912b2e0f4ba8d552480ba7e3530ecbd83b3178c32e15dc9c244",
+      "after": "51cd09c6b1626912b2e0f4ba8d552480ba7e3530ecbd83b3178c32e15dc9c244",
+      "status": "same"
+    },
+    {
+      "path": "app/src/test/java/com/aistudy/myapplication/protocol/SimulatorInteropTest.kt",
+      "before": "9e370ed4dddc60208087d1e7f4fdea84bd835205271c32a46875e9c0a427b43b",
+      "after": "9e370ed4dddc60208087d1e7f4fdea84bd835205271c32a46875e9c0a427b43b",
+      "status": "same"
+    },
+    {
+      "path": "app/src/test/java/com/aistudy/myapplication/settings/ControllerSettingsTest.kt",
+      "before": "9908748e12cf8171a6ee0ad44f4b0e4db2fac27b763b91fdb420b35a4756f04c",
+      "after": "9908748e12cf8171a6ee0ad44f4b0e4db2fac27b763b91fdb420b35a4756f04c",
+      "status": "same"
+    },
+    {
+      "path": "app/build.gradle.kts",
+      "before": "014d6397acf16d78d3f7de5cb5ef510db46b9399cb85dd060876ee43cca03f79",
+      "after": "d3b96f6294b43f8bdf1a5725f335294d7cec1701ec56d6d32841d3796db4b1c9",
+      "status": "changed"
+    },
+    {
+      "path": "gradle/libs.versions.toml",
+      "before": "384d80edad2799cbf9495882613ec6329176b6ae424581a2ee143775b336de6c",
+      "after": "384d80edad2799cbf9495882613ec6329176b6ae424581a2ee143775b336de6c",
+      "status": "same"
+    }
+  ]
+}

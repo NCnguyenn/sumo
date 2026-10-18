@@ -1,0 +1,29 @@
+{
+  "source": "docs\\testing\\phase-5\\evidence\\20-g5-profiler-off-cohort\\logcat-StopLatencyTest-CadenceTest.txt",
+  "samples": 500,
+  "t1_minus_t0_ms": {
+    "n": 500,
+    "p50": 0.8167,
+    "p95": 3.2904,
+    "p99": 4.6101,
+    "maximum": 12.5273
+  },
+  "t2_minus_t0_ms": {
+    "n": 500,
+    "p50": 1.6241,
+    "p95": 4.7524,
+    "p99": 6.8757,
+    "maximum": 14.0058
+  },
+  "before_over_10": 1,
+  "return_over_10": 3,
+  "periodic30_adjacent_without_intervening_event": {
+    "n": 1976,
+    "p50": 28.6696,
+    "p95": 34.1474,
+    "p99": 40.6139,
+    "maximum": 50.7477
+  },
+  "periodic_outside_20_50": 1,
+  "periodic_sample_note": "Incidental STOP500 intervals; separate CadenceTest/check_android_cadence.py requires >=1000 intervals at each of 20/30/50 ms"
+}

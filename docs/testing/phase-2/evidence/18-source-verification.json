@@ -1,0 +1,13 @@
+{
+  "manifest_file": "18-source-final.sha256",
+  "manifest_files": 51,
+  "manifest_sha256": "65a9cb63aebfb64297a3cbf5a1aa781b64a0b52777d135a5ab50609aa2517ff1",
+  "original_baseline_files": 35,
+  "changed_original_files": [],
+  "unchanged_python_codec": [
+    "app/src/main/java/com/aistudy/myapplication/protocol/CommandCodec.kt",
+    "tools/sumo_simulator.py",
+    "tools/test_sumo_simulator.py"
+  ],
+  "fixture_files_identical": true
+}

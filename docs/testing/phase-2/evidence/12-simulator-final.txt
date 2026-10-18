@@ -1,0 +1,13 @@
+COMMAND: py -3.13 tools/sumo_simulator.py --self-test --junit docs/testing/phase-2/evidence/12-simulator-final.xml --log docs/testing/phase-2/evidence/scenarios-applied.jsonl
+Traceback (most recent call last):
+  File "C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\tools\sumo_simulator.py", line 364, in <module>
+    if __name__ == "__main__": sys.exit(main())
+                                        ~~~~^^
+  File "C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\tools\sumo_simulator.py", line 330, in main
+    if args.self_test: return self_test(args.junit,args.log)
+                              ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\tools\sumo_simulator.py", line 296, in self_test
+    output=Path(trace_path); output.parent.mkdir(parents=True,exist_ok=True); output.write_text('',encoding='utf-8')
+           ^^^^
+UnboundLocalError: cannot access local variable 'Path' where it is not associated with a value
+exit=1

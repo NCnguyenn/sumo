@@ -1,0 +1,70 @@
+**********************
+PowerShell transcript start
+Start time: 20261017081147
+Username: DESKTOP-OVC24VV\CHI NGUYEN
+RunAs User: DESKTOP-OVC24VV\CHI NGUYEN
+Configuration Name: 
+Machine: DESKTOP-OVC24VV (Microsoft Windows NT 10.0.26300.0)
+Host Application: C:\Users\CHI NGUYEN\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell\pwsh.dll -Command try { [Console]::OutputEncoding=[System.Text.Encoding]::UTF8 } catch {}
+$env:JAVA_HOME = 'C:\Program Files\Android\Android Studio\jbr'
+Start-Transcript -LiteralPath 'docs\testing\phase-0\evidence\artifact-info.txt' -Force | Out-Null
+$apkPath = 'app\build\outputs\apk\debug\app-debug.apk'
+Write-Output 'COMMAND: apksigner.bat verify --verbose --print-certs app/build/outputs/apk/debug/app-debug.apk'
+& 'C:\Users\CHI NGUYEN\AppData\Local\Android\Sdk\build-tools\36.0.0\apksigner.bat' verify --verbose --print-certs $apkPath
+Write-Output ('exit=' + $LASTEXITCODE)
+Write-Output 'COMMAND: aapt2.exe dump badging app/build/outputs/apk/debug/app-debug.apk'
+& 'C:\Users\CHI NGUYEN\AppData\Local\Android\Sdk\build-tools\36.0.0\aapt2.exe' dump badging $apkPath
+Write-Output ('exit=' + $LASTEXITCODE)
+Write-Output 'COMMAND: Get-Item and Get-FileHash -Algorithm SHA256 app/build/outputs/apk/debug/app-debug.apk'
+Get-Item -LiteralPath $apkPath | Select-Object FullName,Length,LastWriteTime | Format-List
+Get-FileHash -LiteralPath $apkPath -Algorithm SHA256 | Format-List
+Write-Output 'COMMAND: Get-FileHash original DOCX -Algorithm SHA256'
+Get-FileHash -LiteralPath 'C:\Users\CHI NGUYEN\Downloads\Dac_Ta_Ky_Thuat_App_Dieu_Khien_Xe_Sumo.docx' -Algorithm SHA256 | Format-List
+Stop-Transcript | Out-Null
+Copy-Item -LiteralPath 'app\build\test-results\testDebugUnitTest\TEST-com.aistudy.myapplication.ExampleUnitTest.xml' -Destination 'docs\testing\phase-0\evidence\unit-result.xml'
+$phaseTestResults = @(Get-ChildItem -LiteralPath 'app\build\outputs\androidTest-results\connected\debug' -Filter 'TEST-*.xml')
+if ($phaseTestResults.Count -ne 1) { throw 'Expected one fresh instrumentation result' }
+Copy-Item -LiteralPath $phaseTestResults[0].FullName -Destination 'docs\testing\phase-0\evidence\instrumentation-result.xml'
+Copy-Item -LiteralPath 'app\build\reports\lint-results-debug.xml' -Destination 'docs\testing\phase-0\evidence\lint-result.xml'
+[xml]$phaseLint = Get-Content -Raw 'docs\testing\phase-0\evidence\lint-result.xml'
+$phaseLint.issues.issue | Group-Object severity | Select-Object Name,Count | Format-Table
+[xml]$phaseInstrument = Get-Content -Raw 'docs\testing\phase-0\evidence\instrumentation-result.xml'
+$phaseInstrument.testsuite | Select-Object name,tests,failures,errors,skipped,timestamp | Format-List
+Process ID: 2652
+PSVersion: 7.6.5
+PSEdition: Core
+GitCommitId: 7.6.5
+OS: Microsoft Windows 10.0.26300
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+COMMAND: apksigner.bat verify --verbose --print-certs app/build/outputs/apk/debug/app-debug.apk
+
+exit=0
+COMMAND: aapt2.exe dump badging app/build/outputs/apk/debug/app-debug.apk
+
+exit=0
+COMMAND: Get-Item and Get-FileHash -Algorithm SHA256 app/build/outputs/apk/debug/app-debug.apk
+
+FullName      : C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\app\build\outputs\apk\debug\app-debug.apk
+Length        : 30352902
+LastWriteTime : 10/17/2026 8:08:20 AM
+
+
+Algorithm : SHA256
+Hash      : 18B1C13AD56A8BD99D10564F124737D98336F91FA95318AF83EBD94474D24453
+Path      : C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\app\build\outputs\apk\debug\app-debug.apk
+
+COMMAND: Get-FileHash original DOCX -Algorithm SHA256
+
+Algorithm : SHA256
+Hash      : 8EFD3466484E4560461DDD973BFFFE3C320A32A1C819565353B2B13C510BD498
+Path      : C:\Users\CHI NGUYEN\Downloads\Dac_Ta_Ky_Thuat_App_Dieu_Khien_Xe_Sumo.docx
+
+**********************
+PowerShell transcript end
+End time: 20261017081148
+**********************

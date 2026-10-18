@@ -1,0 +1,113 @@
+COMMAND: ./gradlew.bat --offline :app:testDebugUnitTest :app:lintDebug :app:assembleDebug :app:assembleDebugAndroidTest --rerun-tasks --console=plain
+Picked up JAVA_TOOL_OPTIONS: "-Djdk.net.unixdomain.tmpdir=C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\.gradle"
+Calculating task graph as no cached configuration is available for tasks: :app:testDebugUnitTest :app:lintDebug :app:assembleDebug :app:assembleDebugAndroidTest
+> Task :app:preBuild UP-TO-DATE
+> Task :app:generateDebugAndroidTestAssets UP-TO-DATE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:preDebugUnitTestBuild UP-TO-DATE
+> Task :app:preDebugAndroidTestBuild SKIPPED
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:desugarDebugFileDependencies
+> Task :app:processDebugAndroidTestNavigationResources
+> Task :app:desugarDebugAndroidTestFileDependencies
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:writeDebugAppMetadata
+> Task :app:generateDebugResources
+> Task :app:generateDebugAndroidTestResources
+> Task :app:extractDeepLinksDebug
+> Task :app:extractProguardFiles
+> Task :app:mapDebugAndroidTestSourceSetPaths
+> Task :app:mapDebugSourceSetPaths
+> Task :app:javaPreCompileDebug
+> Task :app:javaPreCompileDebugUnitTest
+> Task :app:javaPreCompileDebugAndroidTest
+> Task :app:processDebugNavigationResources
+> Task :app:checkDebugAndroidTestAarMetadata
+> Task :app:checkDebugAndroidTestDuplicateClasses
+> Task :app:validateSigningDebugAndroidTest
+> Task :app:validateSigningDebug
+> Task :app:compileDebugNavigationResources
+> Task :app:compileDebugAndroidTestNavigationResources
+> Task :app:mergeDebugAndroidTestAssets
+> Task :app:mergeDebugJniLibFolders
+> Task :app:mergeDebugAndroidTestJniLibFolders
+> Task :app:mergeDebugAssets
+> Task :app:compressDebugAndroidTestAssets
+> Task :app:compressDebugAssets
+> Task :app:writeDebugSigningConfigVersions
+> Task :app:writeDebugAndroidTestSigningConfigVersions
+> Task :app:packageDebugAndroidTestResources
+> Task :app:mergeLibDexDebugAndroidTest
+> Task :app:checkDebugAarMetadata
+> Task :app:checkDebugDuplicateClasses
+> Task :app:mergeDebugNativeLibs
+> Task :app:mergeLibDexDebug
+> Task :app:mergeDebugAndroidTestNativeLibs NO-SOURCE
+> Task :app:stripDebugAndroidTestDebugSymbols NO-SOURCE
+> Task :app:parseDebugAndroidTestLocalResources
+
+> Task :app:stripDebugDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so. Run with --info option to learn more.
+
+> Task :app:mergeDebugAndroidTestManifest
+> Task :app:packageDebugResources
+> Task :app:processDebugAndroidTestManifest
+> Task :app:processDebugMainManifest
+> Task :app:generateDebugAndroidTestRFile
+> Task :app:processDebugManifest
+> Task :app:processDebugManifestForPackage
+> Task :app:parseDebugLocalResources
+> Task :app:generateDebugRFile
+> Task :app:mergeExtDexDebugAndroidTest
+> Task :app:generateDebugGlobalSynthetics
+> Task :app:generateDebugAndroidTestGlobalSynthetics
+> Task :app:mergeDebugAndroidTestResources
+> Task :app:mergeDebugResources
+> Task :app:processDebugAndroidTestResources
+> Task :app:processDebugResources
+> Task :app:mergeExtDexDebug
+> Task :app:compileDebugKotlin
+> Task :app:compileDebugJavaWithJavac NO-SOURCE
+> Task :app:bundleDebugClassesToCompileJar
+> Task :app:bundleDebugClassesToRuntimeJar
+> Task :app:processDebugJavaRes
+> Task :app:generateDebugLintReportModel
+> Task :app:generateDebugUnitTestLintModel
+> Task :app:generateDebugAndroidTestLintModel
+> Task :app:dexBuilderDebug
+> Task :app:mergeProjectDexDebug
+> Task :app:mergeDebugJavaResource
+> Task :app:packageDebug
+> Task :app:assembleDebug
+> Task :app:createDebugApkListingFileRedirect
+> Task :app:compileDebugAndroidTestKotlin
+> Task :app:compileDebugAndroidTestJavaWithJavac NO-SOURCE
+> Task :app:processDebugAndroidTestJavaRes
+> Task :app:compileDebugUnitTestKotlin
+> Task :app:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :app:processDebugUnitTestJavaRes
+> Task :app:mergeDebugAndroidTestJavaResource
+> Task :app:dexBuilderDebugAndroidTest
+> Task :app:mergeProjectDexDebugAndroidTest
+> Task :app:packageDebugAndroidTest
+> Task :app:assembleDebugAndroidTest
+> Task :app:createDebugAndroidTestApkListingFileRedirect
+
+> Task :app:testDebugUnitTest
+Picked up JAVA_TOOL_OPTIONS: "-Djdk.net.unixdomain.tmpdir=C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\.gradle"
+
+> Task :app:lintAnalyzeDebugAndroidTest
+> Task :app:lintAnalyzeDebugUnitTest
+> Task :app:lintAnalyzeDebug
+
+> Task :app:lintReportDebug
+Wrote HTML report to file:///C:/Users/CHI%20NGUYEN/AndroidStudioProjects/IoT/app/build/reports/lint-results-debug.html
+Wrote SARIF report to file:///C:/Users/CHI%20NGUYEN/AndroidStudioProjects/IoT/app/build/reports/lint-results-debug.sarif
+
+> Task :app:lintDebug
+
+BUILD SUCCESSFUL in 26s
+81 actionable tasks: 81 executed
+Configuration cache entry stored.
+EXIT_CODE: 0

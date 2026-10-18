@@ -1,0 +1,31 @@
+COMMAND: py -3.13 -X utf8 tools/check_android_timing.py --results docs/testing/phase-4/evidence/32-performance-fix/07-android-results --output-prefix docs/testing/phase-4/evidence/32-performance-fix/08-stop
+{
+  "source": "docs\\testing\\phase-4\\evidence\\32-performance-fix\\07-android-results\\Medium_Phone(AVD) - 17\\logcat-com.aistudy.myapplication.StopLatencyTest-I02_stop500RealTouchCallbacksAndReceiverAcknowledgements.txt",
+  "samples": 500,
+  "t1_minus_t0_ms": {
+    "n": 500,
+    "p50": 0.6255,
+    "p95": 1.6752,
+    "p99": 2.4044,
+    "maximum": 3.3828
+  },
+  "t2_minus_t0_ms": {
+    "n": 500,
+    "p50": 1.0112,
+    "p95": 2.1304,
+    "p99": 2.9897,
+    "maximum": 3.533
+  },
+  "before_over_10": 0,
+  "return_over_10": 0,
+  "periodic30_adjacent_without_intervening_event": {
+    "n": 1481,
+    "p50": 25.3346,
+    "p95": 30.8161,
+    "p99": 31.5516,
+    "maximum": 35.1746
+  },
+  "periodic_outside_20_50": 0,
+  "periodic_sample_note": "Incidental STOP500 intervals; separate CadenceTest/check_android_cadence.py requires >=1000 intervals at each of 20/30/50 ms"
+}
+EXIT_CODE=0

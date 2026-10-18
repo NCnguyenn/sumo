@@ -1,0 +1,66 @@
+{
+  "installed_apks": [
+    {
+      "package": "com.aistudy.myapplication",
+      "local": "docs\\testing\\phase-5\\apk\\sumo-phase5-avd-debug-v1.apk",
+      "device": "/data/app/~~pw1wNObAq1FwnG3kby5YZw==/com.aistudy.myapplication-7KuNDTlVQ0X6u44AH6opGA==/base.apk",
+      "bytes": 30795682,
+      "sha256": "72861bd59626aff5975f688b42cac07a2ad1f3b1cc193f92f4485f6dd7be5833",
+      "commands": [
+        [
+          "C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe",
+          "-s",
+          "emulator-5554",
+          "shell",
+          "pm",
+          "path",
+          "com.aistudy.myapplication"
+        ],
+        [
+          "C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe",
+          "-s",
+          "emulator-5554",
+          "exec-out",
+          "cat",
+          "/data/app/~~pw1wNObAq1FwnG3kby5YZw==/com.aistudy.myapplication-7KuNDTlVQ0X6u44AH6opGA==/base.apk"
+        ]
+      ],
+      "exit_codes": [
+        0,
+        0
+      ]
+    },
+    {
+      "package": "com.aistudy.myapplication.test",
+      "local": "app\\build\\outputs\\apk\\androidTest\\debug\\app-debug-androidTest.apk",
+      "device": "/data/app/~~AMuV_ldAq-Ev8fHBx9xiuQ==/com.aistudy.myapplication.test-EyZIoYEI6XTPuqxiNzZ7_w==/base.apk",
+      "bytes": 2592471,
+      "sha256": "c52c73db0b65a2c816bd578ebfccb9acdb05cfaedcfdaa5fc6f9e89d79210d7d",
+      "commands": [
+        [
+          "C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe",
+          "-s",
+          "emulator-5554",
+          "shell",
+          "pm",
+          "path",
+          "com.aistudy.myapplication.test"
+        ],
+        [
+          "C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe",
+          "-s",
+          "emulator-5554",
+          "exec-out",
+          "cat",
+          "/data/app/~~AMuV_ldAq-Ev8fHBx9xiuQ==/com.aistudy.myapplication.test-EyZIoYEI6XTPuqxiNzZ7_w==/base.apk"
+        ]
+      ],
+      "exit_codes": [
+        0,
+        0
+      ]
+    }
+  ],
+  "app_source_and_test_files_unchanged": 56,
+  "source_manifest": "08-final-android/source.json"
+}

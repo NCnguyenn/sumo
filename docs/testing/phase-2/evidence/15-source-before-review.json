@@ -1,0 +1,58 @@
+[
+  {
+    "Path": "app/src/main/java/com/aistudy/myapplication/control/ControlReducer.kt",
+    "Sha256": "18bf60cc60321182aabdd36efdd9562d8bfbf3f1adea289ed6b6aa67291453a5"
+  },
+  {
+    "Path": "app/src/main/java/com/aistudy/myapplication/control/ControlState.kt",
+    "Sha256": "09272ae0b1edd9819fd2812edcfe528a8a075e5ad88bf4b84319032245d431cf"
+  },
+  {
+    "Path": "app/src/main/java/com/aistudy/myapplication/control/DriveMixer.kt",
+    "Sha256": "42ee60853d730cf3cf6ce7adb5ead9bc6435a2fb601ad108b7d2001f8755df2d"
+  },
+  {
+    "Path": "app/src/main/java/com/aistudy/myapplication/protocol/CommandCodec.kt",
+    "Sha256": "99cb72f1fd72e6145b88aebf08f17c401d3ea39427ef3ef7de34f1d0b3d3fdb5"
+  },
+  {
+    "Path": "app/src/main/java/com/aistudy/myapplication/protocol/ReplyTracker.kt",
+    "Sha256": "a68a32b12db8f2d17677f3bd257b44edff645f4ffa821f38ced52eca27745ca5"
+  },
+  {
+    "Path": "app/src/main/java/com/aistudy/myapplication/settings/ControllerSettings.kt",
+    "Sha256": "682eabbf3d62182559144316fba783200901869e535e4548ff542a80658f5867"
+  },
+  {
+    "Path": "app/src/test/java/com/aistudy/myapplication/control/ControlReducerTest.kt",
+    "Sha256": "c4317c2e564f3061a96bd3773b934484b64d40da9c6e01e0b0bc451e24df253f"
+  },
+  {
+    "Path": "app/src/test/java/com/aistudy/myapplication/control/DriveMixerTest.kt",
+    "Sha256": "2b772c7dd18a688a5d4337013e676e742094d9f1dfea76332d1d14ea75bcd04e"
+  },
+  {
+    "Path": "app/src/test/java/com/aistudy/myapplication/protocol/CommandCodecTest.kt",
+    "Sha256": "16508243df8c1d4a3b5a2a006d812a8da748b48bd1c292113a0ab61f8010efa8"
+  },
+  {
+    "Path": "app/src/test/java/com/aistudy/myapplication/protocol/ReplyTrackerTest.kt",
+    "Sha256": "8ff103b690527ee4393cb8017c505ce0f2e8a7e43c9e58a495ba00cf5049be32"
+  },
+  {
+    "Path": "app/src/test/java/com/aistudy/myapplication/protocol/SimulatorInteropTest.kt",
+    "Sha256": "9e370ed4dddc60208087d1e7f4fdea84bd835205271c32a46875e9c0a427b43b"
+  },
+  {
+    "Path": "app/src/test/java/com/aistudy/myapplication/settings/ControllerSettingsTest.kt",
+    "Sha256": "9908748e12cf8171a6ee0ad44f4b0e4db2fac27b763b91fdb420b35a4756f04c"
+  },
+  {
+    "Path": "tools/sumo_simulator.py",
+    "Sha256": "6b0ecfabe042d5d6d0ac9b6be17aa88288829ae54779faac30ee2a18db432b5b"
+  },
+  {
+    "Path": "tools/test_sumo_simulator.py",
+    "Sha256": "ac2fce632b03f740108a3b6f58e12f3fbe43e9e83d8e953f970709612f753132"
+  }
+]

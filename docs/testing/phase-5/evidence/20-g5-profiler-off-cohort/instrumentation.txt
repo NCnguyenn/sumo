@@ -1,0 +1,98 @@
+COMMAND: ["C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe", "-s", "emulator-5554", "shell", "am", "instrument", "-w", "-r", "-e", "class", "com.aistudy.myapplication.StopLatencyTest,com.aistudy.myapplication.CadenceTest,com.aistudy.myapplication.AndroidSimulatorTest", "-e", "candidate", "/data/user/0/com.aistudy.myapplication/files/test-b.apk", "-e", "trackingProfileLabel", "after", "-e", "additionalTestOutputDir", "/data/user/0/com.aistudy.myapplication/files/phase5-20-g5-profiler-off-cohort", "com.aistudy.myapplication.test/androidx.test.runner.AndroidJUnitRunner"]
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.StopLatencyTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=
+com.aistudy.myapplication.StopLatencyTest:
+INSTRUMENTATION_STATUS: test=I02_stop500RealTouchCallbacksAndReceiverAcknowledgements
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.StopLatencyTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=I02_stop500RealTouchCallbacksAndReceiverAcknowledgements
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.CadenceTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=
+com.aistudy.myapplication.CadenceTest:
+INSTRUMENTATION_STATUS: test=I01_F04_measure20_30_50msWithoutRebuilding
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.CadenceTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=I01_F04_measure20_30_50msWithoutRebuilding
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.AndroidSimulatorTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=
+com.aistudy.myapplication.AndroidSimulatorTest:
+INSTRUMENTATION_STATUS: test=I09_F02_F04_F07_settingsStopsOldEndpointAndAppliesAliasJoystickMacro
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.AndroidSimulatorTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=I09_F02_F04_F07_settingsStopsOldEndpointAndAppliesAliasJoystickMacro
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.AndroidSimulatorTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=I08_U05_lifecycleClosesAndResumesOfflineWithoutHeldGestureReplay
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.AndroidSimulatorTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=I08_U05_lifecycleClosesAndResumesOfflineWithoutHeldGestureReplay
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.AndroidSimulatorTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=I02_U04_U06_U07_weaponBrakeKillAndHeldUnlockUseReceiverAck
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.AndroidSimulatorTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=I02_U04_U06_U07_weaponBrakeKillAndHeldUnlockUseReceiverAck
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.AndroidSimulatorTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=I01_I02_U03_androidUdpToIndependentPythonHasRealAckAndSafeRelease
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.AndroidSimulatorTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=6
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=I01_I02_U03_androidUdpToIndependentPythonHasRealAckAndSafeRelease
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_RESULT: stream=
+
+Time: 269.705
+
+OK (6 tests)
+
+
+INSTRUMENTATION_CODE: -1
+
+EXIT_CODE: 0

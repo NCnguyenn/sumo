@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.aistudy.myapplication.protocol.ReplyTrackerTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2026-10-17T06:49:42.407Z" hostname="DESKTOP-OVC24VV" time="0.009">
+  <properties/>
+  <testcase name="C05_movingConfirmationAndWrongInitialRequestCannotBeAccepted" classname="com.aistudy.myapplication.protocol.ReplyTrackerTest" time="0.001"/>
+  <testcase name="C05_offerAndSendAreNotOnlineUntilNeutralConfirmationAck" classname="com.aistudy.myapplication.protocol.ReplyTrackerTest" time="0.0"/>
+  <testcase name="C05_timeoutRetiresSidAndLateRepliesCannotReconnect" classname="com.aistudy.myapplication.protocol.ReplyTrackerTest" time="0.001"/>
+  <testcase name="C05_configAckIsMatchedButDoesNotMaintainControlWatchdogOrPing" classname="com.aistudy.myapplication.protocol.ReplyTrackerTest" time="0.0"/>
+  <testcase name="C05_closeAckAndNewBeginResetConnectionIdentity" classname="com.aistudy.myapplication.protocol.ReplyTrackerTest" time="0.0"/>
+  <testcase name="C05_oldIntentAckAfterStopCannotConfirmCurrentState" classname="com.aistudy.myapplication.protocol.ReplyTrackerTest" time="0.001"/>
+  <testcase name="C05_supersededSafetyAcksOnlyAdvanceCommunication" classname="com.aistudy.myapplication.protocol.ReplyTrackerTest" time="0.004"/>
+  <testcase name="C05_changingDriveAcksKeepSessionAliveWithoutConfirmingSupersededState" classname="com.aistudy.myapplication.protocol.ReplyTrackerTest" time="0.0"/>
+  <testcase name="C05_unchangedHeartbeatAckCanProgressWhileNewerTickIsInFlight" classname="com.aistudy.myapplication.protocol.ReplyTrackerTest" time="0.001"/>
+  <testcase name="C05_supersededMismatchedAckCannotMaintainProgress" classname="com.aistudy.myapplication.protocol.ReplyTrackerTest" time="0.0"/>
+  <testcase name="C05_handshakeDeadlineDoesNotExtendFromDuplicateOffers" classname="com.aistudy.myapplication.protocol.ReplyTrackerTest" time="0.0"/>
+  <testcase name="C05_okMustConfirmRequestedKillUnlockModeAndWheelState" classname="com.aistudy.myapplication.protocol.ReplyTrackerTest" time="0.0"/>
+  <testcase name="C05_badPeerNonceSidUnsentSeqAndMalformedNeverMakeOnline" classname="com.aistudy.myapplication.protocol.ReplyTrackerTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

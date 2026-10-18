@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="18" failures="1" errors="0" skipped="0" time="48.501" timestamp="2026-10-17T06:48:49" hostname="localhost">
+  <testsuite name="com.aistudy.myapplication.ControllerUiTest" tests="9" failures="0" errors="0" skipped="0" time="17.135" timestamp="2026-10-17T06:48:49" hostname="localhost">
+    <properties>
+      <property name="device" value="Medium_Phone(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="U04_U12_toggleBrakeAndLiveLimiterUseSameReducer" classname="com.aistudy.myapplication.ControllerUiTest" time="3.921" />
+    <testcase name="U03_releaseOneDirectionInvalidatesOldAndEarlyPointers" classname="com.aistudy.myapplication.ControllerUiTest" time="1.844" />
+    <testcase name="U10_touchTargetsHave48DpMinimumAtCurrentWindowSize" classname="com.aistudy.myapplication.ControllerUiTest" time="1.505" />
+    <testcase name="U01_U10_landscapeSafetyLabelsAndNeutralStart" classname="com.aistudy.myapplication.ControllerUiTest" time="1.559" />
+    <testcase name="U04_holdWeaponRemainsAfterDirectionUpAndCancelClearsAll" classname="com.aistudy.myapplication.ControllerUiTest" time="1.84" />
+    <testcase name="U10_dPadIsBalancedCrossWithSquareDirectionKeys" classname="com.aistudy.myapplication.ControllerUiTest" time="1.378" />
+    <testcase name="U06_killSurvivesActivityRecreateWithoutRestoringMotion" classname="com.aistudy.myapplication.ControllerUiTest" time="1.654" />
+    <testcase name="U03_directionAndBoostBothReleaseOrdersNeverResumeOldGesture" classname="com.aistudy.myapplication.ControllerUiTest" time="1.726" />
+    <testcase name="U02_U06_joystickMovesButKillCannotBeClearedByHeldFingers" classname="com.aistudy.myapplication.ControllerUiTest" time="1.708" />
+  </testsuite>
+  <testsuite name="com.aistudy.myapplication.SettingsUpdateTest" tests="5" failures="0" errors="0" skipped="0" time="10.694" timestamp="2026-10-17T06:48:49" hostname="localhost">
+    <properties>
+      <property name="device" value="Medium_Phone(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="A09_androidAbortAndFailureNeverClaimSuccessfulUpdate" classname="com.aistudy.myapplication.SettingsUpdateTest" time="1.319" />
+    <testcase name="A09_failureResultSurvivesProcessStateLossAndActivityRecreate" classname="com.aistudy.myapplication.SettingsUpdateTest" time="2.148" />
+    <testcase name="F06_F10_storeMigrationAndCorruptionKeepOriginalRecord" classname="com.aistudy.myapplication.SettingsUpdateTest" time="1.386" />
+    <testcase name="U08_F05_invalidFieldCannotApplyPartialSettings" classname="com.aistudy.myapplication.SettingsUpdateTest" time="4.306" />
+    <testcase name="A01_A02_A08_jsonTypesAndActualInstalledIdentityAreChecked" classname="com.aistudy.myapplication.SettingsUpdateTest" time="1.535" />
+  </testsuite>
+  <testsuite name="com.aistudy.myapplication.AndroidSimulatorTest" tests="4" failures="1" errors="0" skipped="0" time="19.274" timestamp="2026-10-17T06:48:49" hostname="localhost">
+    <properties>
+      <property name="device" value="Medium_Phone(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="I09_F02_F04_F07_settingsStopsOldEndpointAndAppliesAliasJoystickMacro" classname="com.aistudy.myapplication.AndroidSimulatorTest" time="9.836">
+      <failure>java.lang.AssertionError: Failed to assert the following: (ContentDescription = [QUAY NHANH
+350 ms])
+Semantics of the node:
+Node #2133 at (l=1880.0, t=515.0, r=2363.0, b=770.0)px, Tag: 'turn'
+ContentDescription = '[QUAY NHANH]'
+Role = 'Button'
+Shape = 'RoundedCornerShape(topStart = CornerSize(size = 14.0.dp), topEnd = CornerSize(size = 14.0.dp), bottomEnd = CornerSize(size = 14.0.dp), bottomStart = CornerSize(size = 14.0.dp))'
+Actions = [OnClick]
+Has 2 children, 14 siblings
+Selector used: (TestTag = 'turn')
+
+at androidx.compose.ui.test.AssertionsKt.assert(Assertions.kt:264)
+at androidx.compose.ui.test.AssertionsKt.assert$default(Assertions.kt:254)
+at androidx.compose.ui.test.AssertionsKt.assertContentDescriptionEquals(Assertions.kt:141)
+at com.aistudy.myapplication.AndroidSimulatorTest.I09_F02_F04_F07_settingsStopsOldEndpointAndAppliesAliasJoystickMacro(AndroidSimulatorTest.kt:86)
+</failure>
+    </testcase>
+    <testcase name="I08_U05_lifecycleClosesAndResumesOfflineWithoutHeldGestureReplay" classname="com.aistudy.myapplication.AndroidSimulatorTest" time="3.206" />
+    <testcase name="I02_U04_U06_U07_weaponBrakeKillAndHeldUnlockUseReceiverAck" classname="com.aistudy.myapplication.AndroidSimulatorTest" time="3.641" />
+    <testcase name="I01_I02_U03_androidUdpToIndependentPythonHasRealAckAndSafeRelease" classname="com.aistudy.myapplication.AndroidSimulatorTest" time="2.591" />
+  </testsuite>
+</testsuites>

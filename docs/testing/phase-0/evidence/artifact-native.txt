@@ -1,0 +1,139 @@
+Direct native capture: 2026-10-17T08:21:08.7332693+07:00
+COMMAND: apksigner.bat verify --verbose --print-certs app/build/outputs/apk/debug/app-debug.apk
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::loadLibrary has been called by org.conscrypt.NativeLibraryUtil in an unnamed module (file:/C:/Users/CHI%20NGUYEN/AppData/Local/Android/Sdk/build-tools/36.0.0/lib/apksigner.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): true
+Verified using v3 scheme (APK Signature Scheme v3): false
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+Signer #1 certificate DN: C=US, O=Android, CN=Android Debug
+Signer #1 certificate SHA-256 digest: d97c9cee077a242672a3d3b19276d6c9d76983ce862c59b0268b9a154c2915ba
+Signer #1 certificate SHA-1 digest: 108858d7d57f5040b98a236fa150bc5440c2496f
+Signer #1 certificate MD5 digest: ab68e35cf7fa46ed3b230fc1a1ac3b17
+Signer #1 key algorithm: RSA
+Signer #1 key size (bits): 2048
+Signer #1 public key SHA-256 digest: 4f879dbabd722fe19958056b63a44570137e9fbd094119c35e1945ef6a7c3314
+Signer #1 public key SHA-1 digest: 5de8c9f4fab45f1c9f6385d083e2ef9fe9e1a137
+Signer #1 public key MD5 digest: ff734c11879f210beb5e490a7d97282a
+exit=0
+COMMAND: aapt2.exe dump badging app/build/outputs/apk/debug/app-debug.apk
+package: name='com.aistudy.myapplication' versionCode='1' versionName='1.0' platformBuildVersionName='17' platformBuildVersionCode='37' compileSdkVersion='37' compileSdkVersionCodename='17'
+minSdkVersion:'36'
+targetSdkVersion:'37'
+uses-permission: name='com.aistudy.myapplication.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION'
+application-label:'My Application'
+application-label-af:'My Application'
+application-label-am:'My Application'
+application-label-ar:'My Application'
+application-label-as:'My Application'
+application-label-az:'My Application'
+application-label-be:'My Application'
+application-label-bg:'My Application'
+application-label-bn:'My Application'
+application-label-bs:'My Application'
+application-label-ca:'My Application'
+application-label-cs:'My Application'
+application-label-da:'My Application'
+application-label-de:'My Application'
+application-label-el:'My Application'
+application-label-en-AU:'My Application'
+application-label-en-CA:'My Application'
+application-label-en-GB:'My Application'
+application-label-en-IN:'My Application'
+application-label-en-XC:'My Application'
+application-label-es:'My Application'
+application-label-es-US:'My Application'
+application-label-et:'My Application'
+application-label-eu:'My Application'
+application-label-fa:'My Application'
+application-label-fi:'My Application'
+application-label-fr:'My Application'
+application-label-fr-CA:'My Application'
+application-label-gl:'My Application'
+application-label-gu:'My Application'
+application-label-hi:'My Application'
+application-label-hr:'My Application'
+application-label-hu:'My Application'
+application-label-hy:'My Application'
+application-label-in:'My Application'
+application-label-is:'My Application'
+application-label-it:'My Application'
+application-label-iw:'My Application'
+application-label-ja:'My Application'
+application-label-ka:'My Application'
+application-label-kk:'My Application'
+application-label-km:'My Application'
+application-label-kn:'My Application'
+application-label-ko:'My Application'
+application-label-ky:'My Application'
+application-label-lo:'My Application'
+application-label-lt:'My Application'
+application-label-lv:'My Application'
+application-label-mk:'My Application'
+application-label-ml:'My Application'
+application-label-mn:'My Application'
+application-label-mr:'My Application'
+application-label-ms:'My Application'
+application-label-my:'My Application'
+application-label-nb:'My Application'
+application-label-ne:'My Application'
+application-label-nl:'My Application'
+application-label-or:'My Application'
+application-label-pa:'My Application'
+application-label-pl:'My Application'
+application-label-pt:'My Application'
+application-label-pt-BR:'My Application'
+application-label-pt-PT:'My Application'
+application-label-ro:'My Application'
+application-label-ru:'My Application'
+application-label-si:'My Application'
+application-label-sk:'My Application'
+application-label-sl:'My Application'
+application-label-sq:'My Application'
+application-label-sr:'My Application'
+application-label-sr-Latn:'My Application'
+application-label-sv:'My Application'
+application-label-sw:'My Application'
+application-label-ta:'My Application'
+application-label-te:'My Application'
+application-label-th:'My Application'
+application-label-tl:'My Application'
+application-label-tr:'My Application'
+application-label-uk:'My Application'
+application-label-ur:'My Application'
+application-label-uz:'My Application'
+application-label-vi:'My Application'
+application-label-zh-CN:'My Application'
+application-label-zh-HK:'My Application'
+application-label-zh-TW:'My Application'
+application-label-zu:'My Application'
+application-icon-160:'res/mipmap-anydpi-v21/ic_launcher.xml'
+application-icon-240:'res/mipmap-anydpi-v21/ic_launcher.xml'
+application-icon-320:'res/mipmap-anydpi-v21/ic_launcher.xml'
+application-icon-480:'res/mipmap-anydpi-v21/ic_launcher.xml'
+application-icon-640:'res/mipmap-anydpi-v21/ic_launcher.xml'
+application-icon-65534:'res/mipmap-anydpi-v21/ic_launcher.xml'
+application: label='My Application' icon='res/mipmap-anydpi-v21/ic_launcher.xml'
+application-debuggable
+launchable-activity: name='com.aistudy.myapplication.MainActivity'  label='My Application' icon=''
+uses-library-not-required:'androidx.window.extensions'
+uses-library-not-required:'androidx.window.sidecar'
+feature-group: label=''
+  uses-feature: name='android.hardware.faketouch'
+  uses-implied-feature: name='android.hardware.faketouch' reason='default feature for all apps'
+main
+other-activities
+other-receivers
+supports-screens: 'small' 'normal' 'large' 'xlarge'
+supports-any-density: 'true'
+locales: '--_--' 'af' 'am' 'ar' 'as' 'az' 'be' 'bg' 'bn' 'bs' 'ca' 'cs' 'da' 'de' 'el' 'en-AU' 'en-CA' 'en-GB' 'en-IN' 'en-XC' 'es' 'es-US' 'et' 'eu' 'fa' 'fi' 'fr' 'fr-CA' 'gl' 'gu' 'hi' 'hr' 'hu' 'hy' 'in' 'is' 'it' 'iw' 'ja' 'ka' 'kk' 'km' 'kn' 'ko' 'ky' 'lo' 'lt' 'lv' 'mk' 'ml' 'mn' 'mr' 'ms' 'my' 'nb' 'ne' 'nl' 'or' 'pa' 'pl' 'pt' 'pt-BR' 'pt-PT' 'ro' 'ru' 'si' 'sk' 'sl' 'sq' 'sr' 'sr-Latn' 'sv' 'sw' 'ta' 'te' 'th' 'tl' 'tr' 'uk' 'ur' 'uz' 'vi' 'zh-CN' 'zh-HK' 'zh-TW' 'zu'
+densities: '160' '240' '320' '480' '640' '65534'
+native-code: 'arm64-v8a' 'armeabi-v7a' 'x86' 'x86_64'
+exit=0

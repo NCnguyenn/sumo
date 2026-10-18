@@ -1,0 +1,21 @@
+COMMAND: ./gradlew.bat --offline help -PsumoDistribution=true -PsumoVersionCode=2 --console=plain (expected rejection without key env)
+Picked up JAVA_TOOL_OPTIONS: "-Djdk.net.unixdomain.tmpdir=C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\.gradle"
+Calculating task graph as no cached configuration is available for tasks: help
+
+FAILURE: Build failed with an exception.
+
+* Where:
+Build file 'C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\app\build.gradle.kts' line: 11
+
+* What went wrong:
+Distribution signing is missing SUMO_KEYSTORE; emulator key will not be used
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 916ms
+Configuration cache entry stored.
+exit=1 (expected 1: no distribution keystore fallback)

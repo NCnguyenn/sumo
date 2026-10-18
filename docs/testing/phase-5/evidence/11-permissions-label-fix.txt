@@ -1,0 +1,7 @@
+COMMAND: py -3.13 -X utf8 docs/testing/phase-5/evidence/run_permissions.py
+{"start": ["C:\\Users\\CHI NGUYEN\\python.exe", "-u", "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\tools\\sumo_simulator.py", "--host", "127.0.0.1", "--port", "8888", "--log", "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\docs\\testing\\phase-5\\evidence\\11-permissions-label-fix\\receiver.jsonl"], "pid": 43136, "ready": "READY 8888"}
+COMMAND: ["C:\\Users\\CHI NGUYEN\\python.exe", "-X", "utf8", "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\tools\\check_android_permissions.py", "--serial", "emulator-5554", "--receiver-log", "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\docs\\testing\\phase-5\\evidence\\11-permissions-label-fix\\receiver.jsonl", "--evidence-dir", "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\docs\\testing\\phase-5\\evidence\\11-permissions-label-fix"]
+API37 real permission deny/grant/revoke + neutral reopen passed
+EXIT_CODE: 0
+CLEANUP own receiver 43136
+EXIT_CODE: 0

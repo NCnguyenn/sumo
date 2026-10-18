@@ -1,0 +1,10 @@
+COMMAND: py -3.13 -X utf8 docs/testing/phase-5/evidence/run_installer.py (API37 semantic checkable toggle, native View)
+Traceback (most recent call last):
+  File "C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\docs\testing\phase-5\evidence\run_installer.py", line 79, in <module>
+    if __name__ == '__main__': main()
+                               ~~~~^^
+  File "C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\docs\testing\phase-5\evidence\run_installer.py", line 59, in main
+    assert result == dict(tests=1, failures=0, skipped=0, successful=1) and 'OK (1 test)' in raw
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+EXIT_CODE: 1

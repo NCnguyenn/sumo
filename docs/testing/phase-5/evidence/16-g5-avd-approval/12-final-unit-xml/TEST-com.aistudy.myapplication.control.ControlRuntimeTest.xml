@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.aistudy.myapplication.control.ControlRuntimeTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-17T12:55:17.294Z" hostname="DESKTOP-OVC24VV" time="3.964">
+  <properties/>
+  <testcase name="I02_slowDiagnosticSinkCannotBlockUrgentStop" classname="com.aistudy.myapplication.control.ControlRuntimeTest" time="0.031"/>
+  <testcase name="I01_idlePollingDoesNotRebuildUnchangedSnapshots" classname="com.aistudy.myapplication.control.ControlRuntimeTest" time="3.923"/>
+  <testcase name="I09_A13_stopCallbackRunsOnlyAfterCloseAckOrWatchdogAndIsOffUiThread" classname="com.aistudy.myapplication.control.ControlRuntimeTest" time="0.004"/>
+  <testcase name="I02_I09_cachedPollingStillPublishesControlSettingsAndDisconnect" classname="com.aistudy.myapplication.control.ControlRuntimeTest" time="0.004"/>
+  <testcase name="I03_busySenderNeverFlushesQueuedMovementAfterRelease" classname="com.aistudy.myapplication.control.ControlRuntimeTest" time="0.002"/>
+  <system-out><![CDATA[runtime_idle_bytes_per_1000_empty_poll_gaps=136552
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

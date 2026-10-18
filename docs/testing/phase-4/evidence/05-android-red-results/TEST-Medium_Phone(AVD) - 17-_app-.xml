@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="1" failures="1" errors="0" skipped="0" time="9.092" timestamp="2026-10-17T03:01:40" hostname="localhost">
+  <testsuite name="com.aistudy.myapplication.AndroidSimulatorTest" tests="1" failures="1" errors="0" skipped="0" time="8.236" timestamp="2026-10-17T03:01:40" hostname="localhost">
+    <properties>
+      <property name="device" value="Medium_Phone(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="I01_I02_U03_androidUdpToIndependentPythonHasRealAckAndSafeRelease" classname="com.aistudy.myapplication.AndroidSimulatorTest" time="8.236">
+      <failure>androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 5000 ms
+at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:809)
+at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:378)
+at com.aistudy.myapplication.AndroidSimulatorTest.online(AndroidSimulatorTest.kt:20)
+at com.aistudy.myapplication.AndroidSimulatorTest.I01_I02_U03_androidUdpToIndependentPythonHasRealAckAndSafeRelease(AndroidSimulatorTest.kt:24)
+</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

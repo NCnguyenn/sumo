@@ -1,0 +1,28 @@
+{
+  "source": "docs\\testing\\phase-4\\evidence\\12-android-results\\Medium_Phone(AVD) - 17\\logcat-com.aistudy.myapplication.StopLatencyTest-I02_stop500RealTouchCallbacksAndReceiverAcknowledgements.txt",
+  "samples": 500,
+  "t1_minus_t0_ms": {
+    "n": 500,
+    "p50": 1.2437,
+    "p95": 9.5827,
+    "p99": 27.3941,
+    "maximum": 37.0377
+  },
+  "t2_minus_t0_ms": {
+    "n": 500,
+    "p50": 1.7246,
+    "p95": 10.2546,
+    "p99": 27.7872,
+    "maximum": 37.3233
+  },
+  "before_over_10": 24,
+  "return_over_10": 26,
+  "periodic30_adjacent_without_intervening_event": {
+    "n": 2755,
+    "p50": 32.3105,
+    "p95": 36.0059,
+    "p99": 44.4676,
+    "maximum": 89.2809
+  },
+  "periodic_outside_20_50": 17
+}

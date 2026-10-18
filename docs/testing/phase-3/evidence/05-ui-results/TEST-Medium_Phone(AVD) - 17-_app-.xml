@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="4" failures="1" errors="0" skipped="0" time="11.984" timestamp="2026-10-17T02:48:24" hostname="localhost">
+  <testsuite name="com.aistudy.myapplication.ControllerUiTest" tests="4" failures="1" errors="0" skipped="0" time="11.078" timestamp="2026-10-17T02:48:24" hostname="localhost">
+    <properties>
+      <property name="device" value="Medium_Phone(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="U01_U10_landscapeSafetyLabelsAndNeutralStart" classname="com.aistudy.myapplication.ControllerUiTest" time="3.162" />
+    <testcase name="U04_holdWeaponRemainsAfterDirectionUpAndCancelClearsAll" classname="com.aistudy.myapplication.ControllerUiTest" time="3.301" />
+    <testcase name="U03_directionAndBoostBothReleaseOrdersNeverResumeOldGesture" classname="com.aistudy.myapplication.ControllerUiTest" time="1.764" />
+    <testcase name="U02_U06_joystickMovesButKillCannotBeClearedByHeldFingers" classname="com.aistudy.myapplication.ControllerUiTest" time="2.851">
+      <failure>java.lang.AssertionError: Failed to assert the following: (Text + InputText + EditableText contains 'ĐÃ KHÓA' (ignoreCase: false) as substring)
+Semantics of the node:
+Node #322 at (l=987.0, t=163.0, r=1412.0, b=459.0)px, Tag: 'kill'
+ContentDescription = '[KILL · ĐÃ KHÓA]'
+Role = 'Button'
+Shape = 'RoundedCornerShape(topStart = CornerSize(size = 12.0.dp), topEnd = CornerSize(size = 12.0.dp), bottomEnd = CornerSize(size = 12.0.dp), bottomStart = CornerSize(size = 12.0.dp))'
+Actions = [OnClick]
+Has 1 child, 15 siblings
+Selector used: (TestTag = 'kill')
+
+at androidx.compose.ui.test.AssertionsKt.assert(Assertions.kt:264)
+at androidx.compose.ui.test.AssertionsKt.assert$default(Assertions.kt:254)
+at androidx.compose.ui.test.AssertionsKt.assertTextContains(Assertions.kt:208)
+at androidx.compose.ui.test.AssertionsKt.assertTextContains$default(Assertions.kt:204)
+at com.aistudy.myapplication.ControllerUiTest.U02_U06_joystickMovesButKillCannotBeClearedByHeldFingers(ControllerUiTest.kt:63)
+</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

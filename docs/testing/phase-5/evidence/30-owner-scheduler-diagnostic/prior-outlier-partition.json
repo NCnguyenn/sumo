@@ -1,0 +1,64 @@
+[
+  {
+    "cohort": "20",
+    "stop_samples": 500,
+    "violations": [
+      {
+        "cause": "Release(id=59)",
+        "t0_ns": 4241128146100,
+        "total_ms": 12.4065,
+        "enqueue_ms": 0.0147,
+        "queue_ms": 0.546,
+        "dispatch_ms": 0.2156,
+        "encode_ms": 0.0824,
+        "send_ms": 11.523
+      },
+      {
+        "cause": "Release(id=61)",
+        "t0_ns": 4241711134400,
+        "total_ms": 10.8891,
+        "enqueue_ms": 0.0167,
+        "queue_ms": 2.2413,
+        "dispatch_ms": 3.6139,
+        "encode_ms": 0.0871,
+        "send_ms": 4.9169
+      },
+      {
+        "cause": "Release(id=132)",
+        "t0_ns": 4260063254000,
+        "total_ms": 14.0058,
+        "enqueue_ms": 0.2185,
+        "queue_ms": 11.0233,
+        "dispatch_ms": 1.048,
+        "encode_ms": 0.2255,
+        "send_ms": 1.4785
+      }
+    ]
+  },
+  {
+    "cohort": "21",
+    "stop_samples": 500,
+    "violations": [
+      {
+        "cause": "Release(id=202)",
+        "t0_ns": 4711769715400,
+        "total_ms": 10.5637,
+        "enqueue_ms": 0.0146,
+        "queue_ms": 5.9391,
+        "dispatch_ms": 0.7573,
+        "encode_ms": 0.0788,
+        "send_ms": 3.7572
+      },
+      {
+        "cause": "Release(id=296)",
+        "t0_ns": 4727956481500,
+        "total_ms": 11.4174,
+        "enqueue_ms": 0.1092,
+        "queue_ms": 6.0039,
+        "dispatch_ms": 3.3509,
+        "encode_ms": 0.3201,
+        "send_ms": 1.615
+      }
+    ]
+  }
+]

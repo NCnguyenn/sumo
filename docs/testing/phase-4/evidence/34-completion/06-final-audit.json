@@ -1,0 +1,86 @@
+{
+  "scope": {
+    "baseline": "33-tracking-profile/15-source-after.sha256",
+    "files_checked": 82,
+    "missing": [],
+    "changed": [
+      "app/src/main/java/com/aistudy/myapplication/protocol/CommandCodec.kt"
+    ],
+    "new_test": "app/src/test/java/com/aistudy/myapplication/protocol/CommandCodecAllocationTest.kt",
+    "apk_sha256": "76d693f87432834da52fc676dfdbf2d8b914a546cb592e126a335a1c17ea151b",
+    "signing_configured": {
+      "SUMO_KEYSTORE": false,
+      "SUMO_STORE_PASSWORD": false,
+      "SUMO_KEY_ALIAS": false,
+      "SUMO_KEY_PASSWORD": false
+    }
+  },
+  "unit": {
+    "tests": 54,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "android_functional": {
+    "tests": 2,
+    "result": "OK; raw AndroidJUnitRunner output, not Gradle XML"
+  },
+  "one_acceptance_batch": {
+    "STOP500": 1,
+    "CADENCE50": 1
+  },
+  "stop": {
+    "source": "docs\\testing\\phase-4\\evidence\\34-completion\\03-results\\logcat-StopLatencyTest-CadenceTest.txt",
+    "samples": 500,
+    "t1_minus_t0_ms": {
+      "n": 500,
+      "p50": 0.7946,
+      "p95": 2.1754,
+      "p99": 3.3834,
+      "maximum": 6.5814
+    },
+    "t2_minus_t0_ms": {
+      "n": 500,
+      "p50": 1.4857,
+      "p95": 3.4198,
+      "p99": 4.7481,
+      "maximum": 6.963
+    },
+    "before_over_10": 0,
+    "return_over_10": 0,
+    "periodic30_adjacent_without_intervening_event": {
+      "n": 1851,
+      "p50": 26.7296,
+      "p95": 31.0511,
+      "p99": 32.0526,
+      "maximum": 39.3684
+    },
+    "periodic_outside_20_50": 0,
+    "periodic_sample_note": "Incidental STOP500 intervals; separate CadenceTest/check_android_cadence.py requires >=1000 intervals at each of 20/30/50 ms"
+  },
+  "cadence50": {
+    "configured_ms": 50,
+    "n": 1282,
+    "minimum": 23.1701,
+    "p50": 49.9979,
+    "p95": 52.5062,
+    "p99": 56.0456,
+    "maximum": 151.6225,
+    "below_20": 0,
+    "above_50": 641
+  },
+  "cadence20_30": "not rerun; evidence32 only",
+  "gate": "G3/G4 CHO DUYET CHUNG; cadence50 FAILED",
+  "apk_hash_matches_installed_build": true,
+  "owned_process_cleanup": [
+    "simulator36660",
+    "logcat41552"
+  ],
+  "limits": [
+    "no real phone",
+    "no stable signing configuration",
+    "no hosting/HTTPS A-B-C proof",
+    "no firmware/physical robot proof",
+    "I11 remains unverified"
+  ]
+}

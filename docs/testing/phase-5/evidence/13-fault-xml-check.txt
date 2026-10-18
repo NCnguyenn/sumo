@@ -1,0 +1,3 @@
+COMMAND: validate existing 8 fault outcomes and convert raw JUnit status to XML (no new execution)
+8/8 scenario invocations validated and XML saved; one test method across eight deterministic configurations
+EXIT_CODE: 0

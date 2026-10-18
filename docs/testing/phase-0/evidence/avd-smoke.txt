@@ -1,0 +1,67 @@
+**********************
+PowerShell transcript start
+Start time: 20261017081152
+Username: DESKTOP-OVC24VV\CHI NGUYEN
+RunAs User: DESKTOP-OVC24VV\CHI NGUYEN
+Configuration Name: 
+Machine: DESKTOP-OVC24VV (Microsoft Windows NT 10.0.26300.0)
+Host Application: C:\Users\CHI NGUYEN\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell\pwsh.dll -Command try { [Console]::OutputEncoding=[System.Text.Encoding]::UTF8 } catch {}
+$adbPath = 'C:\Users\CHI NGUYEN\AppData\Local\Android\Sdk\platform-tools\adb.exe'
+$phaseSerial = (Get-Content -Raw 'docs\testing\phase-0\evidence\selected-avd.txt').Trim()
+Start-Transcript -LiteralPath 'docs\testing\phase-0\evidence\avd-smoke.txt' -Force | Out-Null
+Write-Output ('Selected=' + $phaseSerial)
+Write-Output 'COMMAND: adb.exe -s <selected> install -r app/build/outputs/apk/debug/app-debug.apk'
+& $adbPath -s $phaseSerial install -r 'app\build\outputs\apk\debug\app-debug.apk'
+Write-Output ('exit=' + $LASTEXITCODE)
+Write-Output 'COMMAND: adb.exe -s <selected> shell am start -W -n com.aistudy.myapplication/.MainActivity'
+& $adbPath -s $phaseSerial shell am start -W -n 'com.aistudy.myapplication/.MainActivity'
+Write-Output ('exit=' + $LASTEXITCODE)
+Write-Output 'COMMAND: adb.exe -s <selected> shell uiautomator dump /data/local/tmp/phase-0-baseline.xml'
+& $adbPath -s $phaseSerial shell uiautomator dump '/data/local/tmp/phase-0-baseline.xml'
+Write-Output ('exit=' + $LASTEXITCODE)
+& $adbPath -s $phaseSerial pull '/data/local/tmp/phase-0-baseline.xml' 'docs\testing\phase-0\evidence\baseline-ui.xml'
+Write-Output ('pull UI exit=' + $LASTEXITCODE)
+Write-Output 'COMMAND: adb.exe -s <selected> shell screencap -p /data/local/tmp/phase-0-baseline.png'
+& $adbPath -s $phaseSerial shell screencap -p '/data/local/tmp/phase-0-baseline.png'
+Write-Output ('exit=' + $LASTEXITCODE)
+& $adbPath -s $phaseSerial pull '/data/local/tmp/phase-0-baseline.png' 'docs\testing\phase-0\evidence\baseline-screen.png'
+Write-Output ('pull image exit=' + $LASTEXITCODE)
+Write-Output 'COMMAND: adb.exe -s <selected> shell dumpsys activity activities (filter resumed activity)'
+& $adbPath -s $phaseSerial shell dumpsys activity activities | Select-String 'ResumedActivity|topResumedActivity'
+Stop-Transcript | Out-Null
+Process ID: 33976
+PSVersion: 7.6.5
+PSEdition: Core
+GitCommitId: 7.6.5
+OS: Microsoft Windows 10.0.26300
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Selected=emulator-5554
+COMMAND: adb.exe -s <selected> install -r app/build/outputs/apk/debug/app-debug.apk
+
+exit=0
+COMMAND: adb.exe -s <selected> shell am start -W -n com.aistudy.myapplication/.MainActivity
+
+exit=0
+COMMAND: adb.exe -s <selected> shell uiautomator dump /data/local/tmp/phase-0-baseline.xml
+
+exit=0
+
+pull UI exit=0
+COMMAND: adb.exe -s <selected> shell screencap -p /data/local/tmp/phase-0-baseline.png
+
+exit=0
+
+pull image exit=0
+COMMAND: adb.exe -s <selected> shell dumpsys activity activities (filter resumed activity)
+
+    topResumedActivity=ActivityRecord{11520253 u0 com.aistudy.myapplication/.MainActivity t11}
+  ResumedActivity: ActivityRecord{11520253 u0 com.aistudy.myapplication/.MainActivity t11}
+**********************
+PowerShell transcript end
+End time: 20261017081200
+**********************

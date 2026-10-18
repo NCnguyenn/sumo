@@ -1,0 +1,70 @@
+COMMAND: ./gradlew.bat --offline :app:testDebugUnitTest --tests *.CommandCodecTest --console=plain
+Picked up JAVA_TOOL_OPTIONS: "-Djdk.net.unixdomain.tmpdir=C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\.gradle"
+Calculating task graph as no cached configuration is available for tasks: :app:testDebugUnitTest --tests *.CommandCodecTest
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:preDebugUnitTestBuild UP-TO-DATE
+> Task :app:extractDeepLinksDebug UP-TO-DATE
+> Task :app:generateDebugResources UP-TO-DATE
+> Task :app:javaPreCompileDebug UP-TO-DATE
+> Task :app:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :app:mapDebugSourceSetPaths UP-TO-DATE
+> Task :app:javaPreCompileDebugUnitTest UP-TO-DATE
+> Task :app:packageDebugResources UP-TO-DATE
+> Task :app:processDebugNavigationResources UP-TO-DATE
+> Task :app:checkDebugAarMetadata UP-TO-DATE
+> Task :app:compileDebugNavigationResources UP-TO-DATE
+> Task :app:mergeDebugResources UP-TO-DATE
+> Task :app:parseDebugLocalResources UP-TO-DATE
+> Task :app:processDebugMainManifest UP-TO-DATE
+> Task :app:generateDebugRFile UP-TO-DATE
+> Task :app:processDebugManifest UP-TO-DATE
+> Task :app:processDebugManifestForPackage UP-TO-DATE
+> Task :app:processDebugResources UP-TO-DATE
+> Task :app:compileDebugKotlin
+> Task :app:compileDebugJavaWithJavac NO-SOURCE
+> Task :app:bundleDebugClassesToCompileJar
+> Task :app:bundleDebugClassesToRuntimeJar
+> Task :app:processDebugJavaRes
+> Task :app:compileDebugUnitTestKotlin
+> Task :app:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :app:processDebugUnitTestJavaRes
+
+Picked up JAVA_TOOL_OPTIONS: "-Djdk.net.unixdomain.tmpdir=C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\.gradle"
+> Task :app:testDebugUnitTest FAILED
+
+CommandCodecTest > C10_templatesAreWhitelistedAndAffectWireBytes FAILED
+    kotlin.NotImplementedError at CommandCodecTest.kt:93
+
+CommandCodecTest > C01_C02_exactFrozenKotlinVectorsForIndependentPythonReceiver FAILED
+    kotlin.NotImplementedError at CommandCodecTest.kt:27
+
+CommandCodecTest > C02_decodeEveryReplyTypeAndPendingState FAILED
+    kotlin.NotImplementedError at CommandCodecTest.kt:60
+
+CommandCodecTest > C03_C04_rejectMalformedLfAsciiBoundsAndCounts FAILED
+    java.lang.AssertionError at CommandCodecTest.kt:77
+        Caused by: kotlin.NotImplementedError at CommandCodecTest.kt:77
+
+CommandCodecTest > C03_outgoingFrameSemanticValidationCannotBeBypassed FAILED
+    java.lang.AssertionError at CommandCodecTest.kt:87
+        Caused by: kotlin.NotImplementedError at CommandCodecTest.kt:87
+
+CommandCodecTest > C01_legacyCompositeAndSrsSamplesAreExactLfBytes FAILED
+
+    kotlin.NotImplementedError at CommandCodecTest.kt:19
+6 tests completed, 6 failed
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:testDebugUnitTest'.
+> There were failing tests. See the report at: file:///C:/Users/CHI%20NGUYEN/AndroidStudioProjects/IoT/app/build/reports/tests/testDebugUnitTest/index.html
+
+* Try:
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+24 actionable tasks: 7 executed, 17 up-to-date
+BUILD FAILED in 2s
+Configuration cache entry stored.
+exit=1

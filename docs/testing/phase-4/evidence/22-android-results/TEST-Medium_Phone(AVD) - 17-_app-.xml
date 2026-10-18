@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="1" failures="0" errors="0" skipped="0" time="0.899" timestamp="2026-10-17T03:45:04" hostname="localhost">
+  <testsuite name="com.aistudy.myapplication.AndroidTransportTest" tests="1" failures="0" errors="0" skipped="0" time="0.119" timestamp="2026-10-17T03:45:04" hostname="localhost">
+    <properties>
+      <property name="device" value="Medium_Phone(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="I02_I12_emptyReceivePollDoesNotBlockUrgentSendOwner" classname="com.aistudy.myapplication.AndroidTransportTest" time="0.119" />
+  </testsuite>
+</testsuites>

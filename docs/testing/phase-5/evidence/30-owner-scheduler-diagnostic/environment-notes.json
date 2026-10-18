@@ -1,0 +1,24 @@
+{
+  "avd": "Medium_Phone",
+  "api": 37,
+  "headless": true,
+  "renderer": "swiftshader",
+  "initial_boot_job": "bg_1 timeout after 300 seconds; diagnostic STOP already completed",
+  "continuing_avd_job": "bg_3, timeout=0, same arguments",
+  "boot_command": [
+    "emulator.exe",
+    "-avd",
+    "Medium_Phone",
+    "-no-window",
+    "-no-audio",
+    "-no-snapshot-save",
+    "-gpu",
+    "swiftshader",
+    "-no-boot-anim"
+  ],
+  "original_cohort_renderer": "historical record says software; do not equate this condition with cohort20/21",
+  "host_power_and_priority_changed": false,
+  "permission_source": "SDK sources android-37.0/android/permission/PermissionManager.java:1866-1896 contains PropertyInvalidatedCache",
+  "clock_alignment": "wire System.nanoTime ns and atrace monotonic seconds",
+  "limits": "tracing overhead; STOP ring overwrite; no causal failure captured; no old FAIL invalidated"
+}

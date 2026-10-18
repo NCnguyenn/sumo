@@ -1,0 +1,51 @@
+COMMAND: py -3.13 -X utf8 tools/check_android_cadence.py --results docs/testing/phase-5/evidence/20-g5-profiler-off-cohort --output-prefix docs/testing/phase-5/evidence/16-g5-avd-approval/22-profiler-off-cadence --g5-avd-50-jitter
+[
+  {
+    "configured_ms": 20,
+    "n": 1259,
+    "minimum": 20.6342,
+    "p50": 22.1718,
+    "p95": 24.0016,
+    "p99": 25.6344,
+    "maximum": 28.4474,
+    "below_20": 0,
+    "above_50": 0,
+    "upper_limit_ms": 50,
+    "above_limit": 0
+  },
+  {
+    "configured_ms": 30,
+    "n": 1339,
+    "minimum": 23.0131,
+    "p50": 30.0061,
+    "p95": 31.863,
+    "p99": 33.0147,
+    "maximum": 42.3504,
+    "below_20": 0,
+    "above_50": 0,
+    "upper_limit_ms": 50,
+    "above_limit": 0
+  },
+  {
+    "configured_ms": 50,
+    "n": 1281,
+    "minimum": 22.791,
+    "p50": 49.9491,
+    "p95": 54.0782,
+    "p99": 62.1891,
+    "maximum": 76.8416,
+    "below_20": 0,
+    "above_50": 619,
+    "upper_limit_ms": 60,
+    "above_limit": 33
+  }
+]
+Traceback (most recent call last):
+  File "C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\tools\check_android_cadence.py", line 53, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\tools\check_android_cadence.py", line 50, in main
+    assert all(row['n']>=1000 and row['below_20']==row['above_limit']==0 for row in summary),f'{policy} cadence failed/incomplete; do not discard jitter'
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: G5_AVD_50_PLUS_10 cadence failed/incomplete; do not discard jitter
+EXIT_CODE: 1

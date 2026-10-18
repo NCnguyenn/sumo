@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<map>
+    <string name="record">#Sat Oct 17 19:01:19 GMT+07:00 2026
+schema=1
+template=S\:{L},{R},{B},{W},{K}\n
+leftGain=1.0
+turnPercent=100
+rightGain=1.0
+deadZone=0.0
+duration=2000
+weapon=HOLD
+input=D_PAD
+feed=
+port=8889
+limit=60
+host=10.0.2.2
+interval=30
+sensitivity=1.0
+    </string>
+</map>

@@ -1,0 +1,14 @@
+COMMAND: adb -s emulator-5554 shell am start -W -n com.aistudy.myapplication/.MainActivity
+Starting: Intent { cmp=com.aistudy.myapplication/.MainActivity }
+Status: ok
+LaunchState: COLD
+Activity: com.aistudy.myapplication/.MainActivity
+TotalTime: 4076
+WaitTime: 4083
+Complete
+EXIT_CODE: 0
+COMMAND: adb devices -l
+List of devices attached
+emulator-5554          device product:sdk_gphone16k_x86_64 model:sdk_gphone16k_x86_64 device:emu64xa16k transport_id:1
+
+EXIT_CODE: 0

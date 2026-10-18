@@ -1,0 +1,45 @@
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.ControllerUiTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=
+com.aistudy.myapplication.ControllerUiTest:
+INSTRUMENTATION_STATUS: test=U10_dPadIsBalancedCrossWithSquareDirectionKeys
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.ControllerUiTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Forward must be square expected:<231.0> but was:<589.0>
+at org.junit.Assert.fail(Assert.java:89)
+at org.junit.Assert.failNotEquals(Assert.java:835)
+at org.junit.Assert.assertEquals(Assert.java:577)
+at com.aistudy.myapplication.ControllerUiTest.U10_dPadIsBalancedCrossWithSquareDirectionKeys(ControllerUiTest.kt:111)
+
+INSTRUMENTATION_STATUS: stream=
+Error in U10_dPadIsBalancedCrossWithSquareDirectionKeys(com.aistudy.myapplication.ControllerUiTest):
+java.lang.AssertionError: Forward must be square expected:<231.0> but was:<589.0>
+at org.junit.Assert.fail(Assert.java:89)
+at org.junit.Assert.failNotEquals(Assert.java:835)
+at org.junit.Assert.assertEquals(Assert.java:577)
+at com.aistudy.myapplication.ControllerUiTest.U10_dPadIsBalancedCrossWithSquareDirectionKeys(ControllerUiTest.kt:111)
+
+INSTRUMENTATION_STATUS: test=U10_dPadIsBalancedCrossWithSquareDirectionKeys
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_RESULT: stream=
+
+Time: 8.466
+There was 1 failure:
+1) U10_dPadIsBalancedCrossWithSquareDirectionKeys(com.aistudy.myapplication.ControllerUiTest)
+java.lang.AssertionError: Forward must be square expected:<231.0> but was:<589.0>
+at org.junit.Assert.fail(Assert.java:89)
+at org.junit.Assert.failNotEquals(Assert.java:835)
+at org.junit.Assert.assertEquals(Assert.java:577)
+at com.aistudy.myapplication.ControllerUiTest.U10_dPadIsBalancedCrossWithSquareDirectionKeys(ControllerUiTest.kt:111)
+
+FAILURES!!!
+Tests run: 1,  Failures: 1
+
+
+INSTRUMENTATION_CODE: -1
+

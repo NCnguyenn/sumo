@@ -1,0 +1,46 @@
+{
+  "baseline_files": 85,
+  "baseline_missing": [],
+  "baseline_changed": [
+    "tools\\check_android_permissions.py"
+  ],
+  "added_android_tests": [
+    "Phase5RegressionTest.kt",
+    "SoakTest.kt"
+  ],
+  "unchanged_app_and_test_manifest_files": 56,
+  "installed_apk_sha256": "72861bd59626aff5975f688b42cac07a2ad1f3b1cc193f92f4485f6dd7be5833",
+  "unit_tests": 108,
+  "android_full": {
+    "tests": 37,
+    "passed": 36,
+    "failed_fixture_precondition": 1
+  },
+  "installer_related_rerun": {
+    "tests": 1,
+    "passed": 1
+  },
+  "soak": {
+    "duration_ms": 1801232,
+    "cycles": 600,
+    "reconnects": 20,
+    "kills": 10,
+    "resource_checkpoints": 20,
+    "worker_max": 1,
+    "trace_max": 1,
+    "sockets_begin": 14,
+    "sockets_max": 14,
+    "sockets_after_close": 10,
+    "issued_frames": 61097,
+    "applied_frames_checked": 61097,
+    "sessions": 21,
+    "neutral_periodic_frames_after_stop": 57925,
+    "unwanted_motion": 0,
+    "weapon_haptic_calls_for_one_hold": 1,
+    "app_crash_anr_in_captured_log": false,
+    "limitation": "All socket FDs of the app process (including Unix sockets); 20 stabilized resource checkpoints. No hardware/phone claim."
+  },
+  "cadence50_pass": false,
+  "gates": "G3/G4 pending; G5 not sufficient; no Phase6/7/release",
+  "handoff": "emulator-5554 Offline/PWM0, original size/config restored"
+}

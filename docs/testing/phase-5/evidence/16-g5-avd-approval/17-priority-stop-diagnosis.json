@@ -1,0 +1,11 @@
+[
+  {
+    "cause": "Release(id=340)",
+    "before_ms": 13.1928,
+    "total_ms": 14.3341,
+    "queue_ms": 0.6361,
+    "prepare_ms": 0.0684,
+    "pre_send_cpu_ms": 2.278165,
+    "send_cpu_ms": 1.189984
+  }
+]

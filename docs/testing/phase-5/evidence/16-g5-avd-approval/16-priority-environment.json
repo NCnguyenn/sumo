@@ -1,0 +1,8 @@
+{
+  "ProcessId": 18996,
+  "Process": "qemu-system-x86_64-headless",
+  "OriginalPriority": "Normal",
+  "Experiment": "AboveNormal",
+  "Restored": true,
+  "Scope": "This AVD process only; no global Windows settings or app thresholds changed"
+}

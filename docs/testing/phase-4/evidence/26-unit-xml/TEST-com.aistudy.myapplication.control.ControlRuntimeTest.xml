@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.aistudy.myapplication.control.ControlRuntimeTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-17T06:49:36.689Z" hostname="DESKTOP-OVC24VV" time="0.032">
+  <properties/>
+  <testcase name="I09_A13_stopCallbackRunsOnlyAfterCloseAckOrWatchdogAndIsOffUiThread" classname="com.aistudy.myapplication.control.ControlRuntimeTest" time="0.026"/>
+  <testcase name="I03_busySenderNeverFlushesQueuedMovementAfterRelease" classname="com.aistudy.myapplication.control.ControlRuntimeTest" time="0.006"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

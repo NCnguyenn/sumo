@@ -1,0 +1,1 @@
+Settings byte-identical after native Cancel=True

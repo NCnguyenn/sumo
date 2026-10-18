@@ -1,0 +1,16 @@
+{
+  "source": "docs\\testing\\phase-4\\evidence\\33-tracking-profile\\12-acceptance-results\\Medium_Phone(AVD) - 17\\logcat-com.aistudy.myapplication.CadenceTest-I01_F04_measure20_30_50msWithoutRebuilding.txt",
+  "measurements": [
+    {
+      "configured_ms": 50,
+      "n": 1283,
+      "minimum": 34.1609,
+      "p50": 47.2893,
+      "p95": 62.4068,
+      "p99": 63.5466,
+      "maximum": 64.8975,
+      "below_20": 0,
+      "above_50": 420
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "purpose": "DIAGNOSTIC ONLY, tracing overhead; no acceptance or threshold change",
+  "hypothesis": "permission callback in owner pump and urgent event may make synchronous Binder calls before send; identify actual wait via sched/Binder",
+  "binary_sha256": "92abb62d00eb6f841eb8b9eb158d4b0be4b98bd39c6e05bd39b69de79613e5e3",
+  "old_outliers": [
+    {
+      "cohort": 20,
+      "cause": "Release(id=59)",
+      "send_ms": 11.523
+    },
+    {
+      "cohort": 21,
+      "cause": "Release(id=296)",
+      "queue_ms": 6.0039,
+      "dispatch_ms": 3.3509
+    }
+  ],
+  "host_priority": "not changed",
+  "host_power_policy": "not changed"
+}

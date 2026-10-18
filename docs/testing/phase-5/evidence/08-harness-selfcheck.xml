@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="Phase5-AVD" tests="3" failures="1" errors="0" skipped="1"><testcase classname="C" name="t0" /><testcase classname="C" name="t1"><failure message="Instrumentation status -2">detail
+second line</failure></testcase><testcase classname="C" name="t2"><skipped>detail
+second line</skipped></testcase></testsuite>

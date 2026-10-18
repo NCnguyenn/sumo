@@ -1,0 +1,77 @@
+{
+  "unit_tests": 108,
+  "unit_failures": 0,
+  "unit_skipped": 0,
+  "lint_errors": 0,
+  "lint_warnings": 17,
+  "suites": [
+    {
+      "name": "com.aistudy.myapplication.connection.UdpRobotTransportTest",
+      "tests": 4
+    },
+    {
+      "name": "com.aistudy.myapplication.control.ControlReducerTest",
+      "tests": 28
+    },
+    {
+      "name": "com.aistudy.myapplication.control.ControlRuntimeTest",
+      "tests": 3
+    },
+    {
+      "name": "com.aistudy.myapplication.control.ControlSchedulingTest",
+      "tests": 5
+    },
+    {
+      "name": "com.aistudy.myapplication.control.ControlSessionTest",
+      "tests": 18
+    },
+    {
+      "name": "com.aistudy.myapplication.control.ControlTraceTest",
+      "tests": 1
+    },
+    {
+      "name": "com.aistudy.myapplication.control.DriveMixerTest",
+      "tests": 8
+    },
+    {
+      "name": "com.aistudy.myapplication.control.SessionSimulatorInteropTest",
+      "tests": 2
+    },
+    {
+      "name": "com.aistudy.myapplication.ExampleUnitTest",
+      "tests": 1
+    },
+    {
+      "name": "com.aistudy.myapplication.protocol.CommandCodecAllocationTest",
+      "tests": 1
+    },
+    {
+      "name": "com.aistudy.myapplication.protocol.CommandCodecTest",
+      "tests": 6
+    },
+    {
+      "name": "com.aistudy.myapplication.protocol.ReplyTrackerTest",
+      "tests": 16
+    },
+    {
+      "name": "com.aistudy.myapplication.protocol.SimulatorInteropTest",
+      "tests": 1
+    },
+    {
+      "name": "com.aistudy.myapplication.settings.ControllerSettingsTest",
+      "tests": 3
+    },
+    {
+      "name": "com.aistudy.myapplication.settings.SettingsDocumentTest",
+      "tests": 3
+    },
+    {
+      "name": "com.aistudy.myapplication.updates.HttpsTransferTest",
+      "tests": 4
+    },
+    {
+      "name": "com.aistudy.myapplication.updates.UpdateInfoTest",
+      "tests": 4
+    }
+  ]
+}

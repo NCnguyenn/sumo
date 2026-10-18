@@ -1,0 +1,143 @@
+COMMAND: aapt2 dump badging app/build/outputs/apk/debug/app-debug.apk
+package: name='com.aistudy.myapplication' versionCode='1' versionName='1.0' platformBuildVersionName='17' platformBuildVersionCode='37' compileSdkVersion='37' compileSdkVersionCodename='17'
+minSdkVersion:'36'
+targetSdkVersion:'37'
+uses-permission: name='android.permission.INTERNET'
+uses-permission: name='android.permission.ACCESS_LOCAL_NETWORK'
+uses-permission: name='android.permission.REQUEST_INSTALL_PACKAGES'
+uses-permission: name='com.aistudy.myapplication.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION'
+application-label:'Sumo Controller · Test'
+application-label-af:'Sumo Controller · Test'
+application-label-am:'Sumo Controller · Test'
+application-label-ar:'Sumo Controller · Test'
+application-label-as:'Sumo Controller · Test'
+application-label-az:'Sumo Controller · Test'
+application-label-be:'Sumo Controller · Test'
+application-label-bg:'Sumo Controller · Test'
+application-label-bn:'Sumo Controller · Test'
+application-label-bs:'Sumo Controller · Test'
+application-label-ca:'Sumo Controller · Test'
+application-label-cs:'Sumo Controller · Test'
+application-label-da:'Sumo Controller · Test'
+application-label-de:'Sumo Controller · Test'
+application-label-el:'Sumo Controller · Test'
+application-label-en-AU:'Sumo Controller · Test'
+application-label-en-CA:'Sumo Controller · Test'
+application-label-en-GB:'Sumo Controller · Test'
+application-label-en-IN:'Sumo Controller · Test'
+application-label-en-XC:'Sumo Controller · Test'
+application-label-es:'Sumo Controller · Test'
+application-label-es-US:'Sumo Controller · Test'
+application-label-et:'Sumo Controller · Test'
+application-label-eu:'Sumo Controller · Test'
+application-label-fa:'Sumo Controller · Test'
+application-label-fi:'Sumo Controller · Test'
+application-label-fr:'Sumo Controller · Test'
+application-label-fr-CA:'Sumo Controller · Test'
+application-label-gl:'Sumo Controller · Test'
+application-label-gu:'Sumo Controller · Test'
+application-label-hi:'Sumo Controller · Test'
+application-label-hr:'Sumo Controller · Test'
+application-label-hu:'Sumo Controller · Test'
+application-label-hy:'Sumo Controller · Test'
+application-label-in:'Sumo Controller · Test'
+application-label-is:'Sumo Controller · Test'
+application-label-it:'Sumo Controller · Test'
+application-label-iw:'Sumo Controller · Test'
+application-label-ja:'Sumo Controller · Test'
+application-label-ka:'Sumo Controller · Test'
+application-label-kk:'Sumo Controller · Test'
+application-label-km:'Sumo Controller · Test'
+application-label-kn:'Sumo Controller · Test'
+application-label-ko:'Sumo Controller · Test'
+application-label-ky:'Sumo Controller · Test'
+application-label-lo:'Sumo Controller · Test'
+application-label-lt:'Sumo Controller · Test'
+application-label-lv:'Sumo Controller · Test'
+application-label-mk:'Sumo Controller · Test'
+application-label-ml:'Sumo Controller · Test'
+application-label-mn:'Sumo Controller · Test'
+application-label-mr:'Sumo Controller · Test'
+application-label-ms:'Sumo Controller · Test'
+application-label-my:'Sumo Controller · Test'
+application-label-nb:'Sumo Controller · Test'
+application-label-ne:'Sumo Controller · Test'
+application-label-nl:'Sumo Controller · Test'
+application-label-or:'Sumo Controller · Test'
+application-label-pa:'Sumo Controller · Test'
+application-label-pl:'Sumo Controller · Test'
+application-label-pt:'Sumo Controller · Test'
+application-label-pt-BR:'Sumo Controller · Test'
+application-label-pt-PT:'Sumo Controller · Test'
+application-label-ro:'Sumo Controller · Test'
+application-label-ru:'Sumo Controller · Test'
+application-label-si:'Sumo Controller · Test'
+application-label-sk:'Sumo Controller · Test'
+application-label-sl:'Sumo Controller · Test'
+application-label-sq:'Sumo Controller · Test'
+application-label-sr:'Sumo Controller · Test'
+application-label-sr-Latn:'Sumo Controller · Test'
+application-label-sv:'Sumo Controller · Test'
+application-label-sw:'Sumo Controller · Test'
+application-label-ta:'Sumo Controller · Test'
+application-label-te:'Sumo Controller · Test'
+application-label-th:'Sumo Controller · Test'
+application-label-tl:'Sumo Controller · Test'
+application-label-tr:'Sumo Controller · Test'
+application-label-uk:'Sumo Controller · Test'
+application-label-ur:'Sumo Controller · Test'
+application-label-uz:'Sumo Controller · Test'
+application-label-vi:'Sumo Controller · Test'
+application-label-zh-CN:'Sumo Controller · Test'
+application-label-zh-HK:'Sumo Controller · Test'
+application-label-zh-TW:'Sumo Controller · Test'
+application-label-zu:'Sumo Controller · Test'
+application-icon-160:'res/mipmap-anydpi-v21/ic_launcher.xml'
+application-icon-240:'res/mipmap-anydpi-v21/ic_launcher.xml'
+application-icon-320:'res/mipmap-anydpi-v21/ic_launcher.xml'
+application-icon-480:'res/mipmap-anydpi-v21/ic_launcher.xml'
+application-icon-640:'res/mipmap-anydpi-v21/ic_launcher.xml'
+application-icon-65534:'res/mipmap-anydpi-v21/ic_launcher.xml'
+application: label='Sumo Controller · Test' icon='res/mipmap-anydpi-v21/ic_launcher.xml'
+application-debuggable
+launchable-activity: name='com.aistudy.myapplication.MainActivity'  label='Sumo Controller · Test' icon=''
+uses-library-not-required:'androidx.window.extensions'
+uses-library-not-required:'androidx.window.sidecar'
+feature-group: label=''
+  uses-feature: name='android.hardware.faketouch'
+  uses-implied-feature: name='android.hardware.faketouch' reason='default feature for all apps'
+  uses-feature: name='android.hardware.screen.landscape'
+  uses-implied-feature: name='android.hardware.screen.landscape' reason='one or more activities have specified a landscape orientation'
+main
+other-activities
+other-receivers
+supports-screens: 'small' 'normal' 'large' 'xlarge'
+supports-any-density: 'true'
+locales: '--_--' 'af' 'am' 'ar' 'as' 'az' 'be' 'bg' 'bn' 'bs' 'ca' 'cs' 'da' 'de' 'el' 'en-AU' 'en-CA' 'en-GB' 'en-IN' 'en-XC' 'es' 'es-US' 'et' 'eu' 'fa' 'fi' 'fr' 'fr-CA' 'gl' 'gu' 'hi' 'hr' 'hu' 'hy' 'in' 'is' 'it' 'iw' 'ja' 'ka' 'kk' 'km' 'kn' 'ko' 'ky' 'lo' 'lt' 'lv' 'mk' 'ml' 'mn' 'mr' 'ms' 'my' 'nb' 'ne' 'nl' 'or' 'pa' 'pl' 'pt' 'pt-BR' 'pt-PT' 'ro' 'ru' 'si' 'sk' 'sl' 'sq' 'sr' 'sr-Latn' 'sv' 'sw' 'ta' 'te' 'th' 'tl' 'tr' 'uk' 'ur' 'uz' 'vi' 'zh-CN' 'zh-HK' 'zh-TW' 'zu'
+densities: '160' '240' '320' '480' '640' '65534'
+native-code: 'arm64-v8a' 'armeabi-v7a' 'x86' 'x86_64'
+aapt_exit=0
+COMMAND: apksigner verify --verbose --print-certs app/build/outputs/apk/debug/app-debug.apk
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::loadLibrary has been called by org.conscrypt.NativeLibraryUtil in an unnamed module (file:/C:/Users/CHI%20NGUYEN/AppData/Local/Android/Sdk/build-tools/36.0.0/lib/apksigner.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): true
+Verified using v3 scheme (APK Signature Scheme v3): false
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+Signer #1 certificate DN: C=US, O=Android, CN=Android Debug
+Signer #1 certificate SHA-256 digest: d97c9cee077a242672a3d3b19276d6c9d76983ce862c59b0268b9a154c2915ba
+Signer #1 certificate SHA-1 digest: 108858d7d57f5040b98a236fa150bc5440c2496f
+Signer #1 certificate MD5 digest: ab68e35cf7fa46ed3b230fc1a1ac3b17
+Signer #1 key algorithm: RSA
+Signer #1 key size (bits): 2048
+Signer #1 public key SHA-256 digest: 4f879dbabd722fe19958056b63a44570137e9fbd094119c35e1945ef6a7c3314
+Signer #1 public key SHA-1 digest: 5de8c9f4fab45f1c9f6385d083e2ef9fe9e1a137
+Signer #1 public key MD5 digest: ff734c11879f210beb5e490a7d97282a
+signature_exit=0

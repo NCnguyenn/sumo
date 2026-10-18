@@ -1,0 +1,16 @@
+{
+  "purpose": "DIAGNOSTIC ONLY, tracing overhead; no prior FAIL erased",
+  "binary_sha256": "92abb62d00eb6f841eb8b9eb158d4b0be4b98bd39c6e05bd39b69de79613e5e3",
+  "configured_ms": 50,
+  "n": 1285,
+  "minimum_ms": 35.4534,
+  "maximum_ms": 52.4731,
+  "above60": 0,
+  "below20": 0,
+  "owner_tids": [
+    3459
+  ],
+  "owner_binder_transactions": 0,
+  "trace_entries": "1105126/1105126; no overwrite",
+  "test_exit": 0
+}

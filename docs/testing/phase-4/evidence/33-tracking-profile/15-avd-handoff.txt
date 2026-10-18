@@ -1,0 +1,13 @@
+COMMAND: adb -s emulator-5554 install -r app/build/outputs/apk/debug/app-debug.apk
+Performing Streamed Install
+Success
+EXIT_CODE=0
+COMMAND: adb -s emulator-5554 shell am start -W -n com.aistudy.myapplication/.MainActivity
+Starting: Intent { cmp=com.aistudy.myapplication/.MainActivity }
+Status: ok
+LaunchState: COLD
+Activity: com.aistudy.myapplication/.MainActivity
+TotalTime: 3943
+WaitTime: 3949
+Complete
+EXIT_CODE=0

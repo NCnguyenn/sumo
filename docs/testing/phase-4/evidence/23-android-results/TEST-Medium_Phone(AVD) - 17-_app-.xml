@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="22" failures="2" errors="0" skipped="0" time="305.79" timestamp="2026-10-17T03:51:34" hostname="localhost">
+  <testsuite name="com.aistudy.myapplication.ControllerUiTest" tests="8" failures="0" errors="0" skipped="0" time="32.719" timestamp="2026-10-17T03:51:34" hostname="localhost">
+    <properties>
+      <property name="device" value="Medium_Phone(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="U04_U12_toggleBrakeAndLiveLimiterUseSameReducer" classname="com.aistudy.myapplication.ControllerUiTest" time="4.489" />
+    <testcase name="U03_releaseOneDirectionInvalidatesOldAndEarlyPointers" classname="com.aistudy.myapplication.ControllerUiTest" time="5.118" />
+    <testcase name="U10_touchTargetsHave48DpMinimumAtCurrentWindowSize" classname="com.aistudy.myapplication.ControllerUiTest" time="4.144" />
+    <testcase name="U01_U10_landscapeSafetyLabelsAndNeutralStart" classname="com.aistudy.myapplication.ControllerUiTest" time="3.659" />
+    <testcase name="U04_holdWeaponRemainsAfterDirectionUpAndCancelClearsAll" classname="com.aistudy.myapplication.ControllerUiTest" time="4.343" />
+    <testcase name="U06_killSurvivesActivityRecreateWithoutRestoringMotion" classname="com.aistudy.myapplication.ControllerUiTest" time="3.279" />
+    <testcase name="U03_directionAndBoostBothReleaseOrdersNeverResumeOldGesture" classname="com.aistudy.myapplication.ControllerUiTest" time="4.137" />
+    <testcase name="U02_U06_joystickMovesButKillCannotBeClearedByHeldFingers" classname="com.aistudy.myapplication.ControllerUiTest" time="3.55" />
+  </testsuite>
+  <testsuite name="com.aistudy.myapplication.SettingsUpdateTest" tests="5" failures="0" errors="0" skipped="0" time="85.841" timestamp="2026-10-17T03:51:34" hostname="localhost">
+    <properties>
+      <property name="device" value="Medium_Phone(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="A09_androidAbortAndFailureNeverClaimSuccessfulUpdate" classname="com.aistudy.myapplication.SettingsUpdateTest" time="39.888" />
+    <testcase name="A09_failureResultSurvivesProcessStateLossAndActivityRecreate" classname="com.aistudy.myapplication.SettingsUpdateTest" time="10.143" />
+    <testcase name="F06_F10_storeMigrationAndCorruptionKeepOriginalRecord" classname="com.aistudy.myapplication.SettingsUpdateTest" time="7.401" />
+    <testcase name="U08_F05_invalidFieldCannotApplyPartialSettings" classname="com.aistudy.myapplication.SettingsUpdateTest" time="17.404" />
+    <testcase name="A01_A02_A08_jsonTypesAndActualInstalledIdentityAreChecked" classname="com.aistudy.myapplication.SettingsUpdateTest" time="11.005" />
+  </testsuite>
+  <testsuite name="com.aistudy.myapplication.ApkSignatureTest" tests="1" failures="0" errors="0" skipped="0" time="0.235" timestamp="2026-10-17T03:51:34" hostname="localhost">
+    <properties>
+      <property name="device" value="Medium_Phone(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="A05_modifiedDexWithOriginalCertificateMustFailCryptographicVerification" classname="com.aistudy.myapplication.ApkSignatureTest" time="0.235" />
+  </testsuite>
+  <testsuite name="com.aistudy.myapplication.ExampleInstrumentedTest" tests="1" failures="0" errors="0" skipped="0" time="0.003" timestamp="2026-10-17T03:51:34" hostname="localhost">
+    <properties>
+      <property name="device" value="Medium_Phone(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="useAppContext" classname="com.aistudy.myapplication.ExampleInstrumentedTest" time="0.003" />
+  </testsuite>
+  <testsuite name="com.aistudy.myapplication.AndroidSimulatorTest" tests="4" failures="1" errors="0" skipped="0" time="66.453" timestamp="2026-10-17T03:51:34" hostname="localhost">
+    <properties>
+      <property name="device" value="Medium_Phone(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="I09_F02_F04_F07_settingsStopsOldEndpointAndAppliesAliasJoystickMacro" classname="com.aistudy.myapplication.AndroidSimulatorTest" time="23.652">
+      <failure>java.lang.IllegalStateException: No compose hierarchies found in the app. Possible reasons include: (1) the Activity that calls setContent did not launch; (2) setContent was not called; (3) setContent was called before the ComposeTestRule ran. If setContent is called by the Activity, make sure the Activity is launched after the ComposeTestRule runs
+at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes(TestOwner.kt:106)
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNodes$ui_test(SemanticsNodeInteraction.kt:64)
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:157)
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+at androidx.compose.ui.test.ActionsKt.performTouchInput(Actions.kt:402)
+at com.aistudy.myapplication.AndroidSimulatorTest.I09_F02_F04_F07_settingsStopsOldEndpointAndAppliesAliasJoystickMacro(AndroidSimulatorTest.kt:83)
+</failure>
+    </testcase>
+    <testcase name="I08_U05_lifecycleClosesAndResumesOfflineWithoutHeldGestureReplay" classname="com.aistudy.myapplication.AndroidSimulatorTest" time="19.719" />
+    <testcase name="I02_U04_U06_U07_weaponBrakeKillAndHeldUnlockUseReceiverAck" classname="com.aistudy.myapplication.AndroidSimulatorTest" time="9.109" />
+    <testcase name="I01_I02_U03_androidUdpToIndependentPythonHasRealAckAndSafeRelease" classname="com.aistudy.myapplication.AndroidSimulatorTest" time="13.973" />
+  </testsuite>
+  <testsuite name="com.aistudy.myapplication.AndroidFaultTest" tests="1" failures="0" errors="0" skipped="0" time="9.422" timestamp="2026-10-17T03:51:34" hostname="localhost">
+    <properties>
+      <property name="device" value="Medium_Phone(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="I05_I07_I08_faultedAndroidSessionNeverRestoresHeldDirection" classname="com.aistudy.myapplication.AndroidFaultTest" time="9.422" />
+  </testsuite>
+  <testsuite name="com.aistudy.myapplication.AndroidTransportTest" tests="1" failures="0" errors="0" skipped="0" time="0.003" timestamp="2026-10-17T03:51:34" hostname="localhost">
+    <properties>
+      <property name="device" value="Medium_Phone(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="I02_I12_emptyReceivePollDoesNotBlockUrgentSendOwner" classname="com.aistudy.myapplication.AndroidTransportTest" time="0.003" />
+  </testsuite>
+  <testsuite name="com.aistudy.myapplication.StopLatencyTest" tests="1" failures="1" errors="0" skipped="0" time="105.514" timestamp="2026-10-17T03:51:34" hostname="localhost">
+    <properties>
+      <property name="device" value="Medium_Phone(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="I02_stop500RealTouchCallbacksAndReceiverAcknowledgements" classname="com.aistudy.myapplication.StopLatencyTest" time="105.514">
+      <failure>androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 2000 ms
+at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:809)
+at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:378)
+at com.aistudy.myapplication.StopLatencyTest.I02_stop500RealTouchCallbacksAndReceiverAcknowledgements(StopLatencyTest.kt:26)
+</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,31 @@
+Local AVD fixture: real PackageInstaller prompt, not a hosted update.
+Performing Streamed Install
+Success
+Performing Streamed Install
+Success
+.gradle/phase3-fixture-b.apk: 1 file pushed, 0 skipped. 154.1 MB/s (30762914 bytes in 0.190s)
+COMMAND: adb -s emulator-5554 shell am instrument -w -r -e class com.aistudy.myapplication.InstallerPlatformTest -e candidate /data/user/0/com.aistudy.myapplication/files/test-b.apk com.aistudy.myapplication.test/androidx.test.runner.AndroidJUnitRunner
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.InstallerPlatformTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=
+com.aistudy.myapplication.InstallerPlatformTest:
+INSTRUMENTATION_STATUS: test=A07_A09_preparedAvdFixtureUsesRealPackageInstallerUserAction
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.InstallerPlatformTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=A07_A09_preparedAvdFixtureUsesRealPackageInstallerUserAction
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_RESULT: stream=
+
+Time: 4.586
+
+OK (1 test)
+
+
+INSTRUMENTATION_CODE: -1
+adb_exit=0

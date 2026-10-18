@@ -1,0 +1,45 @@
+{
+  "source": "docs\\testing\\phase-5\\evidence\\21-g5-power-cohort\\logcat-StopLatencyTest-CadenceTest.txt",
+  "policy": "G5_AVD_50_PLUS_10",
+  "measurements": [
+    {
+      "configured_ms": 20,
+      "n": 1245,
+      "minimum": 20.7291,
+      "p50": 22.4152,
+      "p95": 24.7931,
+      "p99": 26.8367,
+      "maximum": 30.9317,
+      "below_20": 0,
+      "above_50": 0,
+      "upper_limit_ms": 50,
+      "above_limit": 0
+    },
+    {
+      "configured_ms": 30,
+      "n": 1339,
+      "minimum": 21.3939,
+      "p50": 29.9723,
+      "p95": 31.8613,
+      "p99": 32.7545,
+      "maximum": 38.7934,
+      "below_20": 0,
+      "above_50": 0,
+      "upper_limit_ms": 50,
+      "above_limit": 0
+    },
+    {
+      "configured_ms": 50,
+      "n": 1282,
+      "minimum": 46.0671,
+      "p50": 49.961,
+      "p95": 51.8572,
+      "p99": 52.7583,
+      "maximum": 54.4796,
+      "below_20": 0,
+      "above_50": 624,
+      "upper_limit_ms": 60,
+      "above_limit": 0
+    }
+  ]
+}

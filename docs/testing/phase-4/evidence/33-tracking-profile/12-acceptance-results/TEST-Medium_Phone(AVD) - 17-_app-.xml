@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="2" failures="0" errors="0" skipped="0" time="184.693" timestamp="2026-10-17T09:53:17" hostname="localhost">
+  <testsuite name="com.aistudy.myapplication.StopLatencyTest" tests="1" failures="0" errors="0" skipped="0" time="116.287" timestamp="2026-10-17T09:53:17" hostname="localhost">
+    <properties>
+      <property name="device" value="Medium_Phone(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="I02_stop500RealTouchCallbacksAndReceiverAcknowledgements" classname="com.aistudy.myapplication.StopLatencyTest" time="116.287" />
+  </testsuite>
+  <testsuite name="com.aistudy.myapplication.CadenceTest" tests="1" failures="0" errors="0" skipped="0" time="66.898" timestamp="2026-10-17T09:53:17" hostname="localhost">
+    <properties>
+      <property name="device" value="Medium_Phone(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="I01_F04_measure20_30_50msWithoutRebuilding" classname="com.aistudy.myapplication.CadenceTest" time="66.898" />
+  </testsuite>
+</testsuites>

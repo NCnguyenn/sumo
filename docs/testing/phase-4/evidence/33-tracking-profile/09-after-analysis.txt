@@ -1,0 +1,142 @@
+COMMAND: py -3.13 -X utf8 docs/testing/phase-4/evidence/33-tracking-profile/analyze_profile.py --prefix docs/testing/phase-4/evidence/33-tracking-profile/tracking-after --require-single-encode
+{
+  "groups": {
+    "session-prepare": {
+      "wall_ns": {
+        "n": 400,
+        "minimum": 1642600,
+        "p50": 2047900,
+        "p95": 2996900,
+        "p99": 3865400,
+        "maximum": 9594800,
+        "total": 883164300
+      },
+      "cpu_ns": {
+        "n": 400,
+        "minimum": 0,
+        "p50": 0,
+        "p95": 12836014,
+        "p99": 13961931,
+        "maximum": 15300711,
+        "total": 767145569
+      },
+      "allocated_bytes": {
+        "n": 400,
+        "minimum": 1552,
+        "p50": 1616,
+        "p95": 1648,
+        "p99": 1712,
+        "maximum": 3680,
+        "total": 649024
+      },
+      "allocated_objects": {
+        "n": 400,
+        "minimum": 41,
+        "p50": 44,
+        "p95": 45,
+        "p99": 45,
+        "maximum": 46,
+        "total": 17377
+      },
+      "cpu_zero_samples": 243
+    },
+    "tracker-ack": {
+      "wall_ns": {
+        "n": 400,
+        "minimum": 47100,
+        "p50": 99600,
+        "p95": 2618800,
+        "p99": 3410100,
+        "maximum": 9991300,
+        "total": 222678300
+      },
+      "cpu_ns": {
+        "n": 400,
+        "minimum": 0,
+        "p50": 0,
+        "p95": 2642029,
+        "p99": 13664258,
+        "maximum": 13974100,
+        "total": 241104903
+      },
+      "allocated_bytes": {
+        "n": 400,
+        "minimum": 1456,
+        "p50": 1504,
+        "p95": 1504,
+        "p99": 1504,
+        "maximum": 1504,
+        "total": 597440
+      },
+      "allocated_objects": {
+        "n": 400,
+        "minimum": 38,
+        "p50": 40,
+        "p95": 40,
+        "p99": 40,
+        "maximum": 40,
+        "total": 15748
+      },
+      "cpu_zero_samples": 246
+    },
+    "tracker-window": {
+      "wall_ns": {
+        "n": 400,
+        "minimum": 50000,
+        "p50": 69800,
+        "p95": 109200,
+        "p99": 219600,
+        "maximum": 1100100,
+        "total": 31149900
+      },
+      "cpu_ns": {
+        "n": 400,
+        "minimum": 0,
+        "p50": 0,
+        "p95": 96371,
+        "p99": 236426,
+        "maximum": 12006881,
+        "total": 32460920
+      },
+      "allocated_bytes": {
+        "n": 400,
+        "minimum": 1456,
+        "p50": 1504,
+        "p95": 1536,
+        "p99": 1616,
+        "maximum": 3568,
+        "total": 606096
+      },
+      "allocated_objects": {
+        "n": 400,
+        "minimum": 38,
+        "p50": 40,
+        "p95": 41,
+        "p99": 41,
+        "maximum": 41,
+        "total": 15897
+      },
+      "cpu_zero_samples": 291
+    }
+  },
+  "header": {
+    "data-file-overflow": "true",
+    "clock": "dual",
+    "elapsed-time-usec": "5732265",
+    "num-method-calls": "4600360",
+    "clock-call-overhead-nsec": "793",
+    "vm": "art",
+    "pid": "9056",
+    "is_streaming": "false",
+    "is_precise_trace": "true",
+    "end_time": "3723364407400",
+    "end_tsc": "9290080888928",
+    "compilation-filter": "run-from-apk",
+    "alloc-count": "203354",
+    "alloc-size": "6843784",
+    "gc-count": "0"
+  },
+  "completed_focus_calls": 841,
+  "mismatched_exits": 0
+}
+EXIT_CODE=0

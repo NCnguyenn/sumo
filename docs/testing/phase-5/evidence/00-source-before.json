@@ -1,0 +1,342 @@
+[
+  {
+    "path": "app/build.gradle.kts",
+    "sha256": "d3b96f6294b43f8bdf1a5725f335294d7cec1701ec56d6d32841d3796db4b1c9"
+  },
+  {
+    "path": "app/src\\androidTest\\java\\com\\aistudy\\myapplication\\AndroidFaultTest.kt",
+    "sha256": "e03a33a73ae890a90e2ffa19a1f104366368b9117076ed1dd8e442564f2b71df"
+  },
+  {
+    "path": "app/src\\androidTest\\java\\com\\aistudy\\myapplication\\AndroidSimulatorTest.kt",
+    "sha256": "db09c2f3d7ee21743fc9caeddae1d4a35e5a5aece27cfe106935e4103a5764bc"
+  },
+  {
+    "path": "app/src\\androidTest\\java\\com\\aistudy\\myapplication\\AndroidTransportTest.kt",
+    "sha256": "e6693aeeb413e3f0e857b9ab604df6e4ff06219925ed23cfa98b96b12f79902e"
+  },
+  {
+    "path": "app/src\\androidTest\\java\\com\\aistudy\\myapplication\\ApkSignatureTest.kt",
+    "sha256": "d4e3dc60cc1f01f19405c528abfdb07ed9f513d4914690b41c081b941833d5a4"
+  },
+  {
+    "path": "app/src\\androidTest\\java\\com\\aistudy\\myapplication\\CadenceTest.kt",
+    "sha256": "9d886391c4c85833f8fdec487aa4ac50ef8d2913559f3b1fad262dd4e9ddff43"
+  },
+  {
+    "path": "app/src\\androidTest\\java\\com\\aistudy\\myapplication\\ControllerUiTest.kt",
+    "sha256": "d7da684027f015e81e979f1cfa819fc6ea3812223bd2d8974873f6164c9b96af"
+  },
+  {
+    "path": "app/src\\androidTest\\java\\com\\aistudy\\myapplication\\ExampleInstrumentedTest.kt",
+    "sha256": "2c1991201a364c0b5267e2e7ac16e00417682a73d5ccb22f8b2554f872db9e0d"
+  },
+  {
+    "path": "app/src\\androidTest\\java\\com\\aistudy\\myapplication\\InstallerPlatformTest.kt",
+    "sha256": "a33cb3869cd23725ade989342c9222ea79a846821fea056abe9258ffe8ad1f11"
+  },
+  {
+    "path": "app/src\\androidTest\\java\\com\\aistudy\\myapplication\\SettingsUpdateTest.kt",
+    "sha256": "94d59ba36c8df550144363547103d12a271c3a6b17b7f6778de2ceca6a685647"
+  },
+  {
+    "path": "app/src\\androidTest\\java\\com\\aistudy\\myapplication\\StopLatencyTest.kt",
+    "sha256": "a10921a3423eb236d530ae0d24b4c82838979af3cb2668ef8fe233f4a64b59b3"
+  },
+  {
+    "path": "app/src\\androidTest\\java\\com\\aistudy\\myapplication\\TrackingProfileTest.kt",
+    "sha256": "9d8ddb31a5291765f273b1721b82a149c9f96e5440b150eb33e5833918ce599d"
+  },
+  {
+    "path": "app/src\\main\\AndroidManifest.xml",
+    "sha256": "733289ef3537ec045d7fef8f6f7463108fab818b39e221c2141fe3aaa93a0210"
+  },
+  {
+    "path": "app/src\\main\\java\\com\\aistudy\\myapplication\\connection\\RobotTransport.kt",
+    "sha256": "d2ac9d84ed80719f67cda00933f8a646f7f84965a5531f09746e8fbc8c6d58da"
+  },
+  {
+    "path": "app/src\\main\\java\\com\\aistudy\\myapplication\\connection\\UdpRobotTransport.kt",
+    "sha256": "df409197e65e2b9eed14e388b2cd1058d507a24357492296c4ed37e28211207e"
+  },
+  {
+    "path": "app/src\\main\\java\\com\\aistudy\\myapplication\\control\\ControlEvent.kt",
+    "sha256": "b7f2b8207caab5571d2e7b8ed91904f583f2a840cfae67583ecebc16c399c4e8"
+  },
+  {
+    "path": "app/src\\main\\java\\com\\aistudy\\myapplication\\control\\ControlReducer.kt",
+    "sha256": "b72515b340805aea40ba6fbf68e15ffba56ad380a667b0159d217af38fe56223"
+  },
+  {
+    "path": "app/src\\main\\java\\com\\aistudy\\myapplication\\control\\ControlRuntime.kt",
+    "sha256": "7abe825130ea94c109fdd8a2861098d728f4ad5877813691e69562febb55b369"
+  },
+  {
+    "path": "app/src\\main\\java\\com\\aistudy\\myapplication\\control\\ControlSession.kt",
+    "sha256": "c7cd4726d88fba6795a7b6eb26e4cd489095aacc6368daff06b8f590ad042abe"
+  },
+  {
+    "path": "app/src\\main\\java\\com\\aistudy\\myapplication\\control\\ControlState.kt",
+    "sha256": "09272ae0b1edd9819fd2812edcfe528a8a075e5ad88bf4b84319032245d431cf"
+  },
+  {
+    "path": "app/src\\main\\java\\com\\aistudy\\myapplication\\control\\ControlTrace.kt",
+    "sha256": "036b5b5432925fb2d1d3f9a1495ccd3220a654f0810033be7d4521f96d20a37b"
+  },
+  {
+    "path": "app/src\\main\\java\\com\\aistudy\\myapplication\\control\\DriveMixer.kt",
+    "sha256": "be77fb52e1d8d93fdc7e2852223328bb11f8e9749d01ad0d9a49956d32af66cb"
+  },
+  {
+    "path": "app/src\\main\\java\\com\\aistudy\\myapplication\\MainActivity.kt",
+    "sha256": "77c802c40f36cc7b3aa3ac8cb4a20c79f7635e2b0e6d0c6843cfb78188231160"
+  },
+  {
+    "path": "app/src\\main\\java\\com\\aistudy\\myapplication\\protocol\\CommandCodec.kt",
+    "sha256": "b50f7ced5a7e25f0c6729e41825c208574f02db4760fe19cc664c788b26325f3"
+  },
+  {
+    "path": "app/src\\main\\java\\com\\aistudy\\myapplication\\protocol\\ReplyTracker.kt",
+    "sha256": "3cc0c8802f24c3261344bd76aeba6aa2ad8daf1c70ffcf7fa8534d21befe49c7"
+  },
+  {
+    "path": "app/src\\main\\java\\com\\aistudy\\myapplication\\settings\\ControllerSettings.kt",
+    "sha256": "682eabbf3d62182559144316fba783200901869e535e4548ff542a80658f5867"
+  },
+  {
+    "path": "app/src\\main\\java\\com\\aistudy\\myapplication\\settings\\ControllerSettingsStore.kt",
+    "sha256": "a2d0d5b35e1bb6bf741aa70893e1b8bd2daf4b10bbbf35a88e97acf88eb2a215"
+  },
+  {
+    "path": "app/src\\main\\java\\com\\aistudy\\myapplication\\settings\\SettingsDocument.kt",
+    "sha256": "5b78452f08fb274c201224f4da7946481a6c73ea96fa6a0fb944e5c4e584b171"
+  },
+  {
+    "path": "app/src\\main\\java\\com\\aistudy\\myapplication\\ui\\AppUpdateDialog.kt",
+    "sha256": "3dbd535a4049f0c90f9565516b8117bc22b5a552ba52c2350f26d807783b90e5"
+  },
+  {
+    "path": "app/src\\main\\java\\com\\aistudy\\myapplication\\ui\\ControllerScreen.kt",
+    "sha256": "3394694eb8022477c480917ffb3f18c5fc8921a7c77d6ebd7af68dbcf341049a"
+  },
+  {
+    "path": "app/src\\main\\java\\com\\aistudy\\myapplication\\ui\\SettingsDialog.kt",
+    "sha256": "e992bab33789f5070c251173ba0e1c2f5bcc15b5abcb02856956e33a0349377c"
+  },
+  {
+    "path": "app/src\\main\\java\\com\\aistudy\\myapplication\\ui\\theme\\Color.kt",
+    "sha256": "c6d91b6755bcceab6c8a697285a65c13bf6902c10f927858d7f2379f0e810ba7"
+  },
+  {
+    "path": "app/src\\main\\java\\com\\aistudy\\myapplication\\ui\\theme\\Theme.kt",
+    "sha256": "e4e6075164bcded992d0d1d2e84dc1df3bc7bb9d5a621c865b110e145eae6d67"
+  },
+  {
+    "path": "app/src\\main\\java\\com\\aistudy\\myapplication\\ui\\theme\\Type.kt",
+    "sha256": "170bccbb5542122a3a40e374db8c605480c42240952f571418d32ae958bfa7bd"
+  },
+  {
+    "path": "app/src\\main\\java\\com\\aistudy\\myapplication\\updates\\AppUpdateManager.kt",
+    "sha256": "4b2794a035eed3994a7b63ddba07cd6c1d732ddd4f255d547a39a6fa75878479"
+  },
+  {
+    "path": "app/src\\main\\java\\com\\aistudy\\myapplication\\updates\\HttpsTransfer.kt",
+    "sha256": "629f70c07c7d6f1f521eeebe30041c041d23de513b420cd6c543bfed0669ba14"
+  },
+  {
+    "path": "app/src\\main\\java\\com\\aistudy\\myapplication\\updates\\InstallResultReceiver.kt",
+    "sha256": "b7be351a073c818228eb1fa755cc8846d15824204257f08cb8ade4feeb3689bf"
+  },
+  {
+    "path": "app/src\\main\\java\\com\\aistudy\\myapplication\\updates\\UpdateInfo.kt",
+    "sha256": "e84bd9a5748e94f7f45d573878340467bd5de8cb01e155d4aacac1d1c5bc7687"
+  },
+  {
+    "path": "app/src\\main\\keepRules\\rules.keep",
+    "sha256": "cd9f36ade2d8604e1b7cf24eff5b171f9c0816c0aa013ba7eb55be4fe2e1dac7"
+  },
+  {
+    "path": "app/src\\main\\res\\drawable\\ic_launcher_background.xml",
+    "sha256": "ed423c73a6f40a4d2909f0901e60527b3a807cd59e1b5593bcaae1808b1c6321"
+  },
+  {
+    "path": "app/src\\main\\res\\drawable\\ic_launcher_foreground.xml",
+    "sha256": "01d1a6a6c1234eb7fe270d097eb283d72b9c95ae5118886f1b6573aad280f1f7"
+  },
+  {
+    "path": "app/src\\main\\res\\mipmap-anydpi\\ic_launcher_round.xml",
+    "sha256": "88f7653499ef524126ea5018a99baf9cc3269e7e584d6205dfdd76db39f39cc0"
+  },
+  {
+    "path": "app/src\\main\\res\\mipmap-anydpi\\ic_launcher.xml",
+    "sha256": "88f7653499ef524126ea5018a99baf9cc3269e7e584d6205dfdd76db39f39cc0"
+  },
+  {
+    "path": "app/src\\main\\res\\mipmap-hdpi\\ic_launcher_round.webp",
+    "sha256": "1ed73f5341a69d3b41c7e02e126803f50cc8c3284adf4bbb737f0c93577aef07"
+  },
+  {
+    "path": "app/src\\main\\res\\mipmap-hdpi\\ic_launcher.webp",
+    "sha256": "dd00996198640ed28fbc09cdcd7a3807cf8707f3eb255b659634da3ca6a6ff01"
+  },
+  {
+    "path": "app/src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp",
+    "sha256": "4e2c58b91de01130e6479e00cbbaaf6e77cd961dd2c8e303cf13cd077fa92632"
+  },
+  {
+    "path": "app/src\\main\\res\\mipmap-mdpi\\ic_launcher.webp",
+    "sha256": "846219e6f72fe9a6c104ca8919cbee36a101e7d2ff8da9da67b689a5888f060d"
+  },
+  {
+    "path": "app/src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.webp",
+    "sha256": "91b490aef86574901137f0a252272e1f1add99c1ad709e0696ed68929b88d261"
+  },
+  {
+    "path": "app/src\\main\\res\\mipmap-xhdpi\\ic_launcher.webp",
+    "sha256": "398340dad816fc9a6338cb151a8cf1e45b926f9bfb70628b24c4bd2523cc94d4"
+  },
+  {
+    "path": "app/src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.webp",
+    "sha256": "3009fad079f5772f30ecd767f98924367fbe0f81c30048d672d4fda2d5ca7d12"
+  },
+  {
+    "path": "app/src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp",
+    "sha256": "58ae87fa0c5b5d1562d27fd648d2c061553fe20e3ed570bde588162d01ea7a27"
+  },
+  {
+    "path": "app/src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.webp",
+    "sha256": "5faf033745c8c882c43bb1b372d4e4a5890caec63d9892a2e756c954108b85dc"
+  },
+  {
+    "path": "app/src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.webp",
+    "sha256": "f98fef5bc3bfe5b65692c40ad1cbae2bec4faf9f1b249c397626740db71b62d8"
+  },
+  {
+    "path": "app/src\\main\\res\\values\\colors.xml",
+    "sha256": "b5626527d503417f0d8e5b1e08f338de7b31173bf0e122815f03e64932adbd88"
+  },
+  {
+    "path": "app/src\\main\\res\\values\\strings.xml",
+    "sha256": "7a9298900247aefd8691d7cfaf0b9fc28bca6519174354af75054eec3bf0b053"
+  },
+  {
+    "path": "app/src\\main\\res\\values\\themes.xml",
+    "sha256": "e7da25bef4929044796beabbc86093f0f7687867f935066a6b5972daa3889603"
+  },
+  {
+    "path": "app/src\\main\\res\\xml\\backup_rules.xml",
+    "sha256": "6cf1a27e6807b1d24e41d3fbe7ddc1bfe1f42226027964f6eaf477d71b43b283"
+  },
+  {
+    "path": "app/src\\main\\res\\xml\\data_extraction_rules.xml",
+    "sha256": "cb1fc47ab4a984530ed60e0e6ee638929c3038290e7e7e0b4b03a3a30fbe7381"
+  },
+  {
+    "path": "app/src\\test\\java\\com\\aistudy\\myapplication\\connection\\UdpRobotTransportTest.kt",
+    "sha256": "05ee6f64ccbf7d66db0d72b7ddbd41c7b166e1c1a6ee352e2ad0d6cc084c4494"
+  },
+  {
+    "path": "app/src\\test\\java\\com\\aistudy\\myapplication\\control\\ControlReducerTest.kt",
+    "sha256": "83cf6338499ca7619684dc0a415d2ecdd94815eec8dad69303383057c4f874b8"
+  },
+  {
+    "path": "app/src\\test\\java\\com\\aistudy\\myapplication\\control\\ControlRuntimeTest.kt",
+    "sha256": "2f290fe2332526582dd2040fb4d333fa88b32da1c2fdb06bef2d2befa130a3a6"
+  },
+  {
+    "path": "app/src\\test\\java\\com\\aistudy\\myapplication\\control\\ControlSchedulingTest.kt",
+    "sha256": "2906eb9aa32c3cc14c8d900a2739f3d1a0b8fa3f615a28ec030dddbfee616082"
+  },
+  {
+    "path": "app/src\\test\\java\\com\\aistudy\\myapplication\\control\\ControlSessionTest.kt",
+    "sha256": "85d0a4906f94279c99cdf49abf8798867dcd894bc02774d2d13bc5c568cdd30b"
+  },
+  {
+    "path": "app/src\\test\\java\\com\\aistudy\\myapplication\\control\\ControlTraceTest.kt",
+    "sha256": "47145b237c6e1c31469458de1f3a246d20f064e06756054b2bf755ae83a68e74"
+  },
+  {
+    "path": "app/src\\test\\java\\com\\aistudy\\myapplication\\control\\DriveMixerTest.kt",
+    "sha256": "2b772c7dd18a688a5d4337013e676e742094d9f1dfea76332d1d14ea75bcd04e"
+  },
+  {
+    "path": "app/src\\test\\java\\com\\aistudy\\myapplication\\control\\SessionSimulatorInteropTest.kt",
+    "sha256": "240d21927a11b4baa893cd995f13044d8282de3354a5ecfb6c0a2b631c10f068"
+  },
+  {
+    "path": "app/src\\test\\java\\com\\aistudy\\myapplication\\ExampleUnitTest.kt",
+    "sha256": "57d4631759caafccb4a48b3f4577de8b41d4924223e7daa91fae44379ab06434"
+  },
+  {
+    "path": "app/src\\test\\java\\com\\aistudy\\myapplication\\protocol\\CommandCodecAllocationTest.kt",
+    "sha256": "0693fec7ae9e798e38f680eddf98a2d96dfa5b92929cca13594cdee21049485e"
+  },
+  {
+    "path": "app/src\\test\\java\\com\\aistudy\\myapplication\\protocol\\CommandCodecTest.kt",
+    "sha256": "16508243df8c1d4a3b5a2a006d812a8da748b48bd1c292113a0ab61f8010efa8"
+  },
+  {
+    "path": "app/src\\test\\java\\com\\aistudy\\myapplication\\protocol\\ReplyTrackerTest.kt",
+    "sha256": "4f4bf9d81ed5858d73b84df2a25d00594e08d2a1c8b8467021b517f3cc76e349"
+  },
+  {
+    "path": "app/src\\test\\java\\com\\aistudy\\myapplication\\protocol\\SimulatorInteropTest.kt",
+    "sha256": "9e370ed4dddc60208087d1e7f4fdea84bd835205271c32a46875e9c0a427b43b"
+  },
+  {
+    "path": "app/src\\test\\java\\com\\aistudy\\myapplication\\settings\\ControllerSettingsTest.kt",
+    "sha256": "9908748e12cf8171a6ee0ad44f4b0e4db2fac27b763b91fdb420b35a4756f04c"
+  },
+  {
+    "path": "app/src\\test\\java\\com\\aistudy\\myapplication\\settings\\SettingsDocumentTest.kt",
+    "sha256": "3b99e4d7bb88f7d35416076d6161882ea39cccca3b52a0348fb6c079b8cce2bb"
+  },
+  {
+    "path": "app/src\\test\\java\\com\\aistudy\\myapplication\\updates\\HttpsTransferTest.kt",
+    "sha256": "54ab1e914de01a6875b6545a0f57542e816c43bb7cd47f9498772c681de60666"
+  },
+  {
+    "path": "app/src\\test\\java\\com\\aistudy\\myapplication\\updates\\UpdateInfoTest.kt",
+    "sha256": "acc0397982b2ca3deec829dc41825b779c8bcb8a0be3ccc84990b2f69e020153"
+  },
+  {
+    "path": "build.gradle.kts",
+    "sha256": "be7dbfa1841b18b020f744e203b995d3dac5709c2a6b8e310fbcfaed0364919a"
+  },
+  {
+    "path": "gradle.properties",
+    "sha256": "cf774135f23cd1e6c054168ce772e24140800347f95b29819744c96f97e4ef26"
+  },
+  {
+    "path": "gradle/libs.versions.toml",
+    "sha256": "384d80edad2799cbf9495882613ec6329176b6ae424581a2ee143775b336de6c"
+  },
+  {
+    "path": "settings.gradle.kts",
+    "sha256": "90daff74eda09c73f2c54a912d61dc266858a39f33daf469675de1c8cd09aca7"
+  },
+  {
+    "path": "tools\\check_android_cadence.py",
+    "sha256": "4d5d278a35efa4dc050a60e837569ed3578092bc7648e9d770d5f2f4e51d9645"
+  },
+  {
+    "path": "tools\\check_android_permissions.py",
+    "sha256": "eda131d142dc686c9533eedacea30e3bbd5e232a03dd9629c76eb9b34a722aaa"
+  },
+  {
+    "path": "tools\\check_android_timing.py",
+    "sha256": "0c12c5e5e8284a8e8df5cc2d25a9ce890528c8c0f37093e55a1c8fb057c85499"
+  },
+  {
+    "path": "tools\\run_android_faults.py",
+    "sha256": "976e5e1596b14043946a3980bf8ccf7ca71109bbaa163af8f70a21970a64d3f0"
+  },
+  {
+    "path": "tools\\sumo_simulator.py",
+    "sha256": "6b0ecfabe042d5d6d0ac9b6be17aa88288829ae54779faac30ee2a18db432b5b"
+  },
+  {
+    "path": "tools\\test_sumo_simulator.py",
+    "sha256": "ac2fce632b03f740108a3b6f58e12f3fbe43e9e83d8e953f970709612f753132"
+  }
+]

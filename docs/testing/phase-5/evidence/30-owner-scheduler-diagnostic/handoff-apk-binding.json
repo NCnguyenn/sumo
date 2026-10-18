@@ -1,0 +1,8 @@
+{
+  "path": "docs/testing/phase-5/apk/sumo-phase5-avd-debug-v1-g5-check.apk",
+  "sha256": "92abb62d00eb6f841eb8b9eb158d4b0be4b98bd39c6e05bd39b69de79613e5e3",
+  "matches_installed_before_diagnostic": true,
+  "new_apk_created": false,
+  "new_unit_execution": false,
+  "reason": "No application/test/tool source changes; reuse existing matched unit/lint/UDP/fault evidence"
+}

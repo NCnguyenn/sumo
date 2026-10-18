@@ -1,0 +1,25 @@
+COMMAND: py -3.13 -X utf8 tools/check_android_cadence.py --results docs/testing/phase-5/evidence/08-final-android --output-prefix docs/testing/phase-5/evidence/16-g5-avd-approval/05-legacy-g0 --targets 50
+[
+  {
+    "configured_ms": 50,
+    "n": 1283,
+    "minimum": 36.2196,
+    "p50": 49.9588,
+    "p95": 51.6869,
+    "p99": 52.4027,
+    "maximum": 58.4052,
+    "below_20": 0,
+    "above_50": 626,
+    "upper_limit_ms": 50,
+    "above_limit": 626
+  }
+]
+Traceback (most recent call last):
+  File "C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\tools\check_android_cadence.py", line 53, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\tools\check_android_cadence.py", line 50, in main
+    assert all(row['n']>=1000 and row['below_20']==row['above_limit']==0 for row in summary),f'{policy} cadence failed/incomplete; do not discard jitter'
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: G0_STRICT cadence failed/incomplete; do not discard jitter
+EXIT_CODE: 1 (expected 1)

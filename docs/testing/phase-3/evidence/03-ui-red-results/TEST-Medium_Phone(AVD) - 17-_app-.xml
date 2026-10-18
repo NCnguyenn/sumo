@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="4" failures="4" errors="0" skipped="0" time="7.792" timestamp="2026-10-17T02:44:30" hostname="localhost">
+  <testsuite name="com.aistudy.myapplication.ControllerUiTest" tests="4" failures="4" errors="0" skipped="0" time="6.985" timestamp="2026-10-17T02:44:30" hostname="localhost">
+    <properties>
+      <property name="device" value="Medium_Phone(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="U01_U10_landscapeSafetyLabelsAndNeutralStart" classname="com.aistudy.myapplication.ControllerUiTest" time="2.281">
+      <failure>java.lang.AssertionError: expected:&lt;6&gt; but was:&lt;-1&gt;
+at org.junit.Assert.fail(Assert.java:89)
+at org.junit.Assert.failNotEquals(Assert.java:835)
+at org.junit.Assert.assertEquals(Assert.java:120)
+at org.junit.Assert.assertEquals(Assert.java:146)
+at com.aistudy.myapplication.ControllerUiTest.U01_U10_landscapeSafetyLabelsAndNeutralStart(ControllerUiTest.kt:21)
+</failure>
+    </testcase>
+    <testcase name="U04_holdWeaponRemainsAfterDirectionUpAndCancelClearsAll" classname="com.aistudy.myapplication.ControllerUiTest" time="1.209">
+      <failure>java.lang.AssertionError: Failed: assertExists.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (TestTag = 'forward')
+
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode$default(SemanticsNodeInteraction.kt:83)
+at com.aistudy.myapplication.ControllerUiTest.point-tuRUvjQ(ControllerUiTest.kt:35)
+at com.aistudy.myapplication.ControllerUiTest.U04_holdWeaponRemainsAfterDirectionUpAndCancelClearsAll(ControllerUiTest.kt:51)
+</failure>
+    </testcase>
+    <testcase name="U03_directionAndBoostBothReleaseOrdersNeverResumeOldGesture" classname="com.aistudy.myapplication.ControllerUiTest" time="1.234">
+      <failure>java.lang.AssertionError: Failed: assertExists.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (TestTag = 'forward')
+
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode$default(SemanticsNodeInteraction.kt:83)
+at com.aistudy.myapplication.ControllerUiTest.point-tuRUvjQ(ControllerUiTest.kt:35)
+at com.aistudy.myapplication.ControllerUiTest.U03_directionAndBoostBothReleaseOrdersNeverResumeOldGesture(ControllerUiTest.kt:38)
+</failure>
+    </testcase>
+    <testcase name="U02_U06_joystickMovesButKillCannotBeClearedByHeldFingers" classname="com.aistudy.myapplication.ControllerUiTest" time="2.261">
+      <failure>java.lang.AssertionError: Failed: assertExists.
+Reason: Expected exactly '1' node but could not find any node that satisfies: (TestTag = 'joystick')
+
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode$default(SemanticsNodeInteraction.kt:83)
+at com.aistudy.myapplication.ControllerUiTest.point-tuRUvjQ(ControllerUiTest.kt:35)
+at com.aistudy.myapplication.ControllerUiTest.U02_U06_joystickMovesButKillCannotBeClearedByHeldFingers(ControllerUiTest.kt:58)
+</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

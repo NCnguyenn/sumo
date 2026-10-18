@@ -1,0 +1,20 @@
+COMMAND: adb -s emulator-5554 am start MainActivity; wm size; app permission and version; UDP listener audit
+Starting: Intent { cmp=com.aistudy.myapplication/.MainActivity }
+Status: ok
+LaunchState: COLD
+Activity: com.aistudy.myapplication/.MainActivity
+TotalTime: 3150
+WaitTime: 3154
+Complete
+START_EXIT_CODE: 0
+Physical size: 1080x2400
+
+    versionCode=1 minSdk=36 targetSdk=37
+    versionName=1.0
+        android.permission.ACCESS_LOCAL_NETWORK: granted=true, flags=[ USER_SET|USER_SENSITIVE_WHEN_GRANTED|USER_SENSITIVE_WHEN_DENIED]
+
+REQUEST_INSTALL_PACKAGES: deny; time=+5m22s774ms ago
+/sdcard/sumo-phase5-handoff.xml: 1 file pulled, 0 skipped. 4.2 MB/s (24110 bytes in 0.005s)
+COMMAND: Python source/XML/cohort/binary/handoff assertions
+{"baseline_files": 85, "baseline_changed": ["tools\\check_android_permissions.py"], "baseline_missing": [], "unchanged_app_and_test_manifest_files": 56, "installed_apk_sha256": "72861bd59626aff5975f688b42cac07a2ad1f3b1cc193f92f4485f6dd7be5833", "gates": "G3/G4 pending; G5 not sufficient; no Phase6/7/release"}
+AUDIT_EXIT_CODE: 0

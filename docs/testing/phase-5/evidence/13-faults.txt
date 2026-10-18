@@ -1,0 +1,10 @@
+COMMAND: py -3.13 -X utf8 tools/run_android_faults.py --serial emulator-5554 --evidence-dir docs/testing/phase-5/evidence/13-faults
+{"case": "drop-rx-150-rx", "passed": true, "error": null}
+{"case": "drop-reply-150-rx", "passed": true, "error": null}
+{"case": "delay-150-rx", "passed": true, "error": null}
+{"case": "delay-350-rx", "passed": true, "error": null}
+{"case": "delay-150-reply", "passed": true, "error": null}
+{"case": "duplicate-150-rx", "passed": true, "error": null}
+{"case": "reorder-150-rx", "passed": true, "error": null}
+{"case": "malformed-150-rx", "passed": true, "error": null}
+EXIT_CODE: 0

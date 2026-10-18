@@ -1,0 +1,16 @@
+{
+  "source": "docs\\testing\\phase-4\\evidence\\34-completion\\03-results\\logcat-StopLatencyTest-CadenceTest.txt",
+  "measurements": [
+    {
+      "configured_ms": 50,
+      "n": 1282,
+      "minimum": 23.1701,
+      "p50": 49.9979,
+      "p95": 52.5062,
+      "p99": 56.0456,
+      "maximum": 151.6225,
+      "below_20": 0,
+      "above_50": 641
+    }
+  ]
+}

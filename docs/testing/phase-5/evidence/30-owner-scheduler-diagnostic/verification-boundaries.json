@@ -1,0 +1,21 @@
+{
+  "binary_sha256": "92abb62d00eb6f841eb8b9eb158d4b0be4b98bd39c6e05bd39b69de79613e5e3",
+  "reused_evidence": {
+    "unit": "16-g5-avd-approval/23-final-unit-xml (110/110)",
+    "lint": "16-g5-avd-approval/20-lint.xml (0 errors/17 warnings)",
+    "udp": "20-g5-profiler-off-cohort (4 methods; 2 other methods collect timing)",
+    "faults": "22-g5-final-faults (8 scenarios, same APK)"
+  },
+  "prior_binary_only": {
+    "old_ui_settings_udp": "19-g5-related-functional (28/28)",
+    "old_soak": "08-final-android / 09-soak-summary.json"
+  },
+  "new_diagnostic_only": {
+    "stop": "31-owner-traced-stop",
+    "cadence50": "32-owner-traced-cadence50"
+  },
+  "active_new_gap_fill": {
+    "ui_settings_updater_and_soak": "33-final-functional-soak"
+  },
+  "gates": "G5 conditional; G3/G4 pending; vehicle and release blocked"
+}

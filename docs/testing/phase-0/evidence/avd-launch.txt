@@ -1,0 +1,34 @@
+**********************
+PowerShell transcript start
+Start time: 20261017080841
+Username: DESKTOP-OVC24VV\CHI NGUYEN
+RunAs User: DESKTOP-OVC24VV\CHI NGUYEN
+Configuration Name: 
+Machine: DESKTOP-OVC24VV (Microsoft Windows NT 10.0.26300.0)
+Host Application: C:\Users\CHI NGUYEN\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell\pwsh.dll -Command try { [Console]::OutputEncoding=[System.Text.Encoding]::UTF8 } catch {}
+$emulatorPath = 'C:\Users\CHI NGUYEN\AppData\Local\Android\Sdk\emulator\emulator.exe'
+$phaseEvidence = Join-Path (Get-Location) 'docs\testing\phase-0\evidence'
+Start-Transcript -LiteralPath (Join-Path $phaseEvidence 'avd-launch.txt') -Force | Out-Null
+Write-Output 'COMMAND: Start-Process emulator.exe -avd Medium_Phone -no-window -no-audio -no-snapshot-load -no-snapshot-save -no-boot-anim (WindowStyle Hidden)'
+$avdProcess = Start-Process -FilePath $emulatorPath -ArgumentList @('-avd','Medium_Phone','-no-window','-no-audio','-no-snapshot-load','-no-snapshot-save','-no-boot-anim') -WindowStyle Hidden -PassThru -RedirectStandardOutput (Join-Path $phaseEvidence 'emulator-stdout.txt') -RedirectStandardError (Join-Path $phaseEvidence 'emulator-stderr.txt')
+Write-Output ('emulator launcher PID=' + $avdProcess.Id)
+Write-Output ('started=' + [DateTimeOffset]::Now.ToString('o'))
+Stop-Transcript | Out-Null
+Process ID: 38452
+PSVersion: 7.6.5
+PSEdition: Core
+GitCommitId: 7.6.5
+OS: Microsoft Windows 10.0.26300
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+COMMAND: Start-Process emulator.exe -avd Medium_Phone -no-window -no-audio -no-snapshot-load -no-snapshot-save -no-boot-anim (WindowStyle Hidden)
+emulator launcher PID=1948
+started=2026-10-17T08:08:41.6051273+07:00
+**********************
+PowerShell transcript end
+End time: 20261017080841
+**********************

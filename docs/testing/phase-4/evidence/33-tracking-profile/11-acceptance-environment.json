@@ -1,0 +1,19 @@
+{
+  "at": "2026-10-17T16:49:58.0750862+07:00",
+  "devices": "List of devices attached\r\nemulator-5554          device product:sdk_gphone16k_x86_64 model:sdk_gphone16k_x86_64 device:emu64xa16k transport_id:1\r\n\r\n",
+  "sdk": "37",
+  "size": "Physical size: 1080x2400",
+  "density": "Physical density: 420",
+  "memory": {
+    "FreePhysicalMemory": 1255408,
+    "TotalVisibleMemorySize": 16450076
+  },
+  "cpu": {
+    "Name": "AMD Ryzen 9 7945HX with Radeon Graphics        ",
+    "LoadPercentage": 56
+  },
+  "emulator": {
+    "ProcessId": 10872,
+    "CommandLine": "\"C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\emulator\\emulator.exe\" -avd Medium_Phone -no-window -gpu software -no-snapshot-load -no-snapshot-save -no-boot-anim -no-audio"
+  }
+}

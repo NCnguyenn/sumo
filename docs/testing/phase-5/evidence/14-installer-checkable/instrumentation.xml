@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="Phase5-AVD" tests="1" failures="1" errors="0" skipped="0"><testcase classname="com.aistudy.myapplication.InstallerPlatformTest" name="A07_A09_preparedAvdFixtureUsesRealPackageInstallerUserAction"><failure message="Instrumentation status -2">java.lang.IllegalArgumentException: APK không đọc được
+	at com.aistudy.myapplication.updates.AppUpdateManager.verify(AppUpdateManager.kt:105)
+	at com.aistudy.myapplication.updates.AppUpdateManager.requestInstall(AppUpdateManager.kt:83)
+	at com.aistudy.myapplication.InstallerPlatformTest.A07_A09_preparedAvdFixtureUsesRealPackageInstallerUserAction(InstallerPlatformTest.kt:30)
+</failure></testcase></testsuite>

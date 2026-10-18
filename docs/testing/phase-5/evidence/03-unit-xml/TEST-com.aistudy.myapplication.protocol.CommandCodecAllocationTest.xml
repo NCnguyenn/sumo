@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.aistudy.myapplication.protocol.CommandCodecAllocationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-17T11:12:51.262Z" hostname="DESKTOP-OVC24VV" time="0.02">
+  <properties/>
+  <testcase name="repeatedDriveEncodingDoesNotAllocateParserObjectsForItsOwnOutput" classname="com.aistudy.myapplication.protocol.CommandCodecAllocationTest" time="0.02"/>
+  <system-out><![CDATA[drive_encode_allocated_bytes_per_frame=232 checksum=288000
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

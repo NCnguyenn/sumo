@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="1" failures="0" errors="0" skipped="0" time="1.617" timestamp="2026-10-17T03:28:01" hostname="localhost">
+  <testsuite name="com.aistudy.myapplication.ApkSignatureTest" tests="1" failures="0" errors="0" skipped="0" time="0.297" timestamp="2026-10-17T03:28:01" hostname="localhost">
+    <properties>
+      <property name="device" value="Medium_Phone(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="A05_modifiedDexWithOriginalCertificateMustFailCryptographicVerification" classname="com.aistudy.myapplication.ApkSignatureTest" time="0.297" />
+  </testsuite>
+</testsuites>

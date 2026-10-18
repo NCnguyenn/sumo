@@ -1,0 +1,7 @@
+{
+  "existing_auditor": "docs/testing/phase-5/evidence/analyze_soak.py",
+  "negative_self_check": "PASS; motion-after-STOP/Kill and reversed-seq are rejected",
+  "new_suite": "33-final-functional-soak",
+  "source_changed": false,
+  "permanent_test_added": false
+}

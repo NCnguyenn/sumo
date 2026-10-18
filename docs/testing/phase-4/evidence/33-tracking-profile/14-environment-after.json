@@ -1,0 +1,10 @@
+{
+  "at": "2026-10-17T16:55:02.0134447+07:00",
+  "memory": {
+    "FreePhysicalMemory": 946956,
+    "TotalVisibleMemorySize": 16450076
+  },
+  "cpu": {
+    "LoadPercentage": 49
+  }
+}

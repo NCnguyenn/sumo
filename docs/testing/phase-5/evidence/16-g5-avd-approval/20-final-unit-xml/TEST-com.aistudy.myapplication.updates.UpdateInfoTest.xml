@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.aistudy.myapplication.updates.UpdateInfoTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-17T13:11:28.996Z" hostname="DESKTOP-OVC24VV" time="0.003">
+  <properties/>
+  <testcase name="A08_redirectTargetsAlsoRequireHttpsWithoutUserInfoOrFragment" classname="com.aistudy.myapplication.updates.UpdateInfoTest" time="0.001"/>
+  <testcase name="A02_A06_rejectWrongIdentityOldVersionSchemaAndDevice" classname="com.aistudy.myapplication.updates.UpdateInfoTest" time="0.0"/>
+  <testcase name="A04_A05_A06_archiveCannotBorrowMetadataIdentitySignatureOrVersion" classname="com.aistudy.myapplication.updates.UpdateInfoTest" time="0.002"/>
+  <testcase name="A01_newMetadataAndActualMatchingArchiveAreAccepted" classname="com.aistudy.myapplication.updates.UpdateInfoTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

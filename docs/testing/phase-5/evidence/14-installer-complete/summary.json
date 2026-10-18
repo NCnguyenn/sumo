@@ -1,0 +1,8 @@
+{
+  "initially_allowed": false,
+  "granted_through_android_settings_ui": true,
+  "native_installer_prompt_and_cancel": true,
+  "version_code_after": 1,
+  "settings_byte_identical": true,
+  "limitation": "Local signed v2 fixture; no HTTPS download or successful A-to-B update"
+}

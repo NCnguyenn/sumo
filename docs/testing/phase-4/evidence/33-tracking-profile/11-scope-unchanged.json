@@ -1,0 +1,15 @@
+{
+  "reverse_documented_prepare_reuse_patch_matches_baseline": {
+    "app/src/main/java/com/aistudy/myapplication/control/ControlSession.kt": true,
+    "app/src/main/java/com/aistudy/myapplication/control/ControlRuntime.kt": true,
+    "app/src/main/java/com/aistudy/myapplication/protocol/ReplyTracker.kt": true
+  },
+  "critical_unchanged": [
+    "app/src/main/java/com/aistudy/myapplication/control/ControlReducer.kt",
+    "app/src/main/java/com/aistudy/myapplication/protocol/CommandCodec.kt",
+    "app/src/main/java/com/aistudy/myapplication/connection/UdpRobotTransport.kt",
+    "app/src/main/java/com/aistudy/myapplication/settings/ControllerSettings.kt"
+  ],
+  "rationale": "Session clock/deadline/period/urgent and Runtime owner/wait loops byte-identical after reversing only reuse/diagnostic rename. Cadence20/30 retained from32; acceptance only STOP500+50.",
+  "script_change": "check_android_cadence adds --targets only; default all20/30/50, same per-interval20..50/n>=1000"
+}

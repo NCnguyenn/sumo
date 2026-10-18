@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="1" failures="1" errors="0" skipped="0" time="10.213" timestamp="2026-10-17T06:44:50" hostname="localhost">
+  <testsuite name="com.aistudy.myapplication.ControllerUiTest" tests="1" failures="1" errors="0" skipped="0" time="8.454" timestamp="2026-10-17T06:44:50" hostname="localhost">
+    <properties>
+      <property name="device" value="Medium_Phone(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="U10_dPadIsBalancedCrossWithSquareDirectionKeys" classname="com.aistudy.myapplication.ControllerUiTest" time="8.454">
+      <failure>java.lang.AssertionError: Forward must be square expected:&lt;231.0&gt; but was:&lt;589.0&gt;
+at org.junit.Assert.fail(Assert.java:89)
+at org.junit.Assert.failNotEquals(Assert.java:835)
+at org.junit.Assert.assertEquals(Assert.java:577)
+at com.aistudy.myapplication.ControllerUiTest.U10_dPadIsBalancedCrossWithSquareDirectionKeys(ControllerUiTest.kt:111)
+</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

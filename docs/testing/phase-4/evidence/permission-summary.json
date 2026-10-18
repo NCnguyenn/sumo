@@ -1,0 +1,8 @@
+{
+  "denial_offline": true,
+  "grant_via_system_ui": true,
+  "motion_before_revoke": true,
+  "receiver_stopped_after_revoke": true,
+  "reopen_offline_neutral": true,
+  "automatic_reconnect": false
+}

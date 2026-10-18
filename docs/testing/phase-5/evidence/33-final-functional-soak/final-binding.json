@@ -1,0 +1,14 @@
+{
+  "binary_sha256": "92abb62d00eb6f841eb8b9eb158d4b0be4b98bd39c6e05bd39b69de79613e5e3",
+  "test_apk_sha256": "c52c73db0b65a2c816bd578ebfccb9acdb05cfaedcfdaa5fc6f9e89d79210d7d",
+  "source_manifest_matches_cohort21": true,
+  "source_files_checked": 63,
+  "all_product_config_files_unchanged": true,
+  "tests": 25,
+  "failures": 0,
+  "skipped": 0,
+  "old_binary_results_not_transferred": true,
+  "soak": "soak-summary.json",
+  "reused_unit_lint_udp_faults": "same source and binary; see 30/source-and-binary-binding.json",
+  "gate": "G5 conditional; STOP/cadence FAIL retained"
+}

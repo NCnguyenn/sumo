@@ -1,0 +1,11 @@
+          <idle>-0       (-------) [000] d.h3.   155.288458: sched_waking: comm=sumo-control pid=3459 prio=112 target_cpu=000
+          <idle>-0       (-------) [000] dNh4.   155.288471: sched_wakeup: comm=sumo-control pid=3459 prio=112 target_cpu=000
+          <idle>-0       (-------) [000] d..2.   155.288570: sched_switch: prev_comm=swapper/0 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=sumo-control next_pid=3459 next_prio=112
+    sumo-control-3459    (   3422) [000] d..2.   155.288766: sched_switch: prev_comm=sumo-control prev_pid=3459 prev_prio=112 prev_state=S ==> next_comm=swapper/0 next_pid=0 next_prio=120
+          <idle>-0       (-------) [000] d.h3.   155.292429: sched_waking: comm=sumo-control pid=3459 prio=112 target_cpu=000
+          <idle>-0       (-------) [000] dNh4.   155.292453: sched_wakeup: comm=sumo-control pid=3459 prio=112 target_cpu=000
+          <idle>-0       (-------) [000] d..2.   155.292593: sched_switch: prev_comm=swapper/0 prev_pid=0 prev_prio=120 prev_state=R ==> next_comm=sumo-control next_pid=3459 next_prio=112
+    sumo-control-3459    (   3422) [000] d..2.   155.293511: sched_waking: comm=sumo-trace pid=3518 prio=112 target_cpu=001
+    sumo-control-3459    (   3422) [000] d.h3.   155.293830: sched_waking: comm=kworker/0:2 pid=3437 prio=120 target_cpu=000
+    sumo-control-3459    (   3422) [000] d.h4.   155.293841: sched_wakeup: comm=kworker/0:2 pid=3437 prio=120 target_cpu=000
+    sumo-control-3459    (   3422) [000] d..2.   155.293971: sched_switch: prev_comm=sumo-control prev_pid=3459 prev_prio=112 prev_state=S ==> next_comm=kworker/0:2 next_pid=3437 next_prio=120

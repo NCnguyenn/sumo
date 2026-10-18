@@ -1,0 +1,41 @@
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.InstallerPlatformTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=
+com.aistudy.myapplication.InstallerPlatformTest:
+INSTRUMENTATION_STATUS: test=A07_A09_preparedAvdFixtureUsesRealPackageInstallerUserAction
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.InstallerPlatformTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stack=java.lang.IllegalArgumentException: APK không đọc được
+	at com.aistudy.myapplication.updates.AppUpdateManager.verify(AppUpdateManager.kt:105)
+	at com.aistudy.myapplication.updates.AppUpdateManager.requestInstall(AppUpdateManager.kt:83)
+	at com.aistudy.myapplication.InstallerPlatformTest.A07_A09_preparedAvdFixtureUsesRealPackageInstallerUserAction(InstallerPlatformTest.kt:30)
+
+INSTRUMENTATION_STATUS: stream=
+Error in A07_A09_preparedAvdFixtureUsesRealPackageInstallerUserAction(com.aistudy.myapplication.InstallerPlatformTest):
+java.lang.IllegalArgumentException: APK không đọc được
+	at com.aistudy.myapplication.updates.AppUpdateManager.verify(AppUpdateManager.kt:105)
+	at com.aistudy.myapplication.updates.AppUpdateManager.requestInstall(AppUpdateManager.kt:83)
+	at com.aistudy.myapplication.InstallerPlatformTest.A07_A09_preparedAvdFixtureUsesRealPackageInstallerUserAction(InstallerPlatformTest.kt:30)
+
+INSTRUMENTATION_STATUS: test=A07_A09_preparedAvdFixtureUsesRealPackageInstallerUserAction
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_RESULT: stream=
+
+Time: 6.209
+There was 1 failure:
+1) A07_A09_preparedAvdFixtureUsesRealPackageInstallerUserAction(com.aistudy.myapplication.InstallerPlatformTest)
+java.lang.IllegalArgumentException: APK không đọc được
+	at com.aistudy.myapplication.updates.AppUpdateManager.verify(AppUpdateManager.kt:105)
+	at com.aistudy.myapplication.updates.AppUpdateManager.requestInstall(AppUpdateManager.kt:83)
+	at com.aistudy.myapplication.InstallerPlatformTest.A07_A09_preparedAvdFixtureUsesRealPackageInstallerUserAction(InstallerPlatformTest.kt:30)
+
+FAILURES!!!
+Tests run: 1,  Failures: 1
+
+
+INSTRUMENTATION_CODE: -1

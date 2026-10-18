@@ -1,0 +1,74 @@
+TÀI LIỆU ĐẶC TẢ YÊU CẦU KỸ THUẬT (SRS)
+Ứng dụng Di động Điều khiển Robot Sumo Chiến đấu
+
+Mục đích tài liệu:
+Đặc tả thông số cho Kỹ sư IT / Lập trình viên Mobile App
+Yêu cầu cốt lõi:
+Độ trễ cực thấp (< 30ms), Hỗ trợ Đa điểm chạm (Multi-touch), Cơ chế Fail-safe
+1. Tổng quan Hệ thống & Giao thức Kết nối
+Để xe Sumo phản hồi tức thời trong trận đấu, yếu tố quan trọng nhất là độ trễ cực thấp (Low Latency - dưới 30ms) và khả năng xử lý đa điểm chạm (Multi-touch) để vừa di chuyển vừa kích hoạt cơ cấu tấn công.
+Nền tảng mục tiêu: Android (.apk) / iOS hoặc Web App cục bộ chạy trực tiếp trên trình duyệt điện thoại nếu phát Wi-Fi từ mạch.
+Hướng màn hình: Cố định nằm ngang (Landscape mode), ẩn toàn bộ thanh điều hướng và thanh trạng thái của điện thoại (Full-screen) để tránh bấm nhầm khi đang thi đấu.
+Phương án kết nối Wi-Fi (ESP32/ESP8266): Sử dụng giao thức UDP (ưu tiên số 1 vì tốc độ nhanh nhất, không bị nghẽn gói tin) hoặc WebSocket kết nối qua IP tĩnh (ví dụ: 192.168.4.1, Port 8888). Tuyệt đối không dùng HTTP GET/POST cho các nút di chuyển vì độ trễ cao.
+Phương án kết nối Bluetooth (HC-05/HC-06 hoặc BLE): Sử dụng Bluetooth Classic (SPP) hoặc BLE (Gatt Write Without Response).
+Tần suất gửi gói tin (Polling Rate): Gửi liên tục mỗi 20ms - 50ms (tương đương 20 - 50 Hz) khi người dùng giữ nút, hoặc gửi ngay lập tức khi có sự kiện nhấn/nhả (OnTouchDown / OnTouchUp).
+2. Thiết kế Giao diện (UI/UX) & Bố cục Điều khiển
+Bố cục chia theo chuẩn Dual-Thumb (điều khiển 2 ngón cái) như tay cầm chơi game chuyên nghiệp:
+2.1. Khu vực Trái: Điều hướng di chuyển (Chiếm 50% màn hình trái)
+Chế độ 1 - Cụm D-Pad 4 hướng / 8 hướng: Nút Tiến, Lùi, Xoay Trái tại chỗ, Xoay Phải tại chỗ (kèm thêm 2 nút Cua Trái/Phải mở rộng nếu cần).
+Chế độ 2 - Joystick ảo (Virtual Analog): Trả về tọa độ (X, Y) hoặc giá trị xung PWM trực tiếp cho 2 kênh động cơ trái/phải từ -255 đến 255.
+Cơ chế an toàn bắt buộc: Khi thả ngón tay khỏi vùng điều khiển (OnRelease), App phải lập tức gửi lệnh STOP (về 0) trong vòng 10ms.
+2.2. Khu vực Phải: Tấn công & Chiến thuật (Chiếm 40% màn hình phải)
+Nút HÚC / TĂNG TỐC (BOOST / DASH - Màu Đỏ, kích thước lớn nhất): Khi nhấn giữ, ép xung PWM của động cơ lên 100% (Max Speed) bất chấp thanh giới hạn tốc độ hiện tại, dùng khi đã khóa mục tiêu và lao vào đẩy đối thủ.
+Nút KÍCH HOẠT VŨ KHÍ / XÚC (FLIP / SCOOP - Màu Cam): Điều khiển cơ cấu chấp hành phụ (Servo hạ lưỡi xúc, xi-lanh khí nén hoặc động cơ nâng gầm đối thủ). Hỗ trợ chọn 2 chế độ: nhấn giữ để nâng / thả để hạ, hoặc nhấn 1 lần để đảo trạng thái (Toggle).
+Nút XOAY NHANH 180° (QUICK TURN - Màu Vàng): Gửi chuỗi lệnh tự động (Macro) cho 2 bánh quay ngược chiều nhau ở tốc độ tối đa trong một khoảng thời gian ngắn (ví dụ 200ms) để thoát thế bị khóa hoặc quay đầu phản công.
+Nút PHANH KHẨN CẤP (BRAKE / LOCK - Màu Xanh dương): Kích hoạt chế độ Hãm động cơ (Active Braking / Short Brake trên mạch cầu H) để ghì chặt xe xuống sàn khi bị đối thủ tông.
+2.3. Khu vực Trung tâm / Thanh công cụ trên cùng (Chiếm 10% màn hình)
+Trạng thái kết nối: Đèn báo Online/Offline (Xanh/Đỏ), hiển thị độ trễ (Ping ms), nút Reconnect nhanh.
+Thanh trượt giới hạn tốc độ (Speed Limiter Slider): Chỉnh mức tốc độ cơ bản từ 30% đến 100% (giúp xe di chuyển dò xét mượt mà không bị lố đà, chỉ bung 100% khi bấm nút Boost).
+Công tắc Chế độ (Mode Switch): Chuyển nhanh giữa MANUAL (Điều khiển tay) và AUTO (Tự hành bằng cảm biến nếu giải đấu có vòng tự động).
+Nút KHÓA KHẨN CẤP (KILL SWITCH): Ngắt toàn bộ lệnh điều khiển và dừng động cơ ngay lập tức.
+3. Cấu trúc Gói tin Dữ liệu (Data Payload)
+Đóng gói dữ liệu dạng chuỗi ngắn gọn (String) kết thúc bằng ký tự xuống dòng (\n) để vi điều khiển (STM32, Arduino, ESP32) dễ dàng tách chuỗi (parse) mà không làm trễ vòng lặp chính:
+Chức năng
+Sự kiện trên App
+Mã lệnh (String)
+Giải thích thông số gửi xuống mạch
+Đứng yên
+Nhả tay khỏi D-Pad
+M:0,0\n
+Tốc độ bánh Trái = 0, bánh Phải = 0
+Tiến / Lùi
+Giữ nút Tiến / Lùi
+M:200,200\nM:-200,-200\n
+Giá trị PWM từ -255 đến 255
+Xoay tại chỗ
+Giữ nút Trái / Phải
+M:-180,180\nM:180,-180\n
+Hai bánh quay ngược chiều nhau
+Tấn công (Boost)
+Nhấn giữ nút Boost
+B:1\n (Nhả: B:0\n)
+Mạch tự động ép PWM lên tối đa 255
+Vũ khí / Lưỡi xúc
+Nhấn nút Vũ khí
+W:1\n (Hạ: W:0\n)
+Điều khiển góc Servo hoặc kích Rơ-le
+Phanh ghì (Brake)
+Nhấn giữ nút Phanh
+K:1\n (Nhả: K:0\n)
+Kích hoạt chân phanh cứng trên Driver cầu H
+Xoay 180°
+Nhấn 1 lần nút 180°
+T:180\n
+Mạch tự thực thi hàm xoay nhanh theo timer
+Gói tin tổng hợp
+Gửi định kỳ mỗi 30ms
+S:L,R,B,W,K\n
+VD: S:200,200,1,0,0\n (Đồng bộ toàn trạng thái)
+Khuyến nghị kỹ thuật: Phương án tối ưu nhất cho xe Sumo là sử dụng Gói tin tổng hợp (S:L,R,B,W,K\n) gửi liên tục mỗi 30ms. Cách này giúp mạch điều khiển luôn cập nhật đồng thời cả hướng chạy lẫn nút tấn công mà không bị sót lệnh khi bấm nhiều nút cùng lúc.
+4. Yêu cầu An toàn & Xử lý Lỗi (Fail-safe)
+1. Cơ chế Heartbeat (Nhịp tim): App phải gửi gói tin định kỳ xuống xe. Nếu xe không nhận được gói tin nào sau 300ms (do mất sóng, văng app, hết pin điện thoại), code trên vi điều khiển sẽ tự động ngắt động cơ để tránh xe chạy loạn xạ khỏi sàn đấu (Dohyo).
+2. Xử lý Đa điểm chạm (Multi-touch): Bắt buộc xử lý độc lập sự kiện chạm của ngón cái trái và ngón cái phải. Việc nhấc ngón tay khỏi nút Tấn công không được làm ngắt sự kiện đang giữ nút Tiến của ngón tay bên kia.
+3. Phản hồi xúc giác (Haptic Feedback): Rung nhẹ điện thoại khi người dùng bấm trúng các nút Tấn công hoặc khi chuyển trạng thái kết nối, giúp người lái cảm nhận được nút bấm mà không cần nhìn màn hình (mắt tập trung nhìn xe trên sàn đấu).
+4. Màn hình Cấu hình (Settings Modal): Cho phép người dùng tự nhập lại địa chỉ IP, Port, chỉnh lại mã lệnh (Command String) và thời gian xoay 180° trực tiếp trên App mà không cần IT phải build lại file cài đặt (.apk).

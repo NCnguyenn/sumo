@@ -1,0 +1,39 @@
+{
+  "baseline_files": 81,
+  "missing": [],
+  "changed": [
+    "app/src/androidTest/java/com/aistudy/myapplication/CadenceTest.kt",
+    "app/src/main/java/com/aistudy/myapplication/control/ControlRuntime.kt",
+    "app/src/main/java/com/aistudy/myapplication/control/ControlSession.kt",
+    "app/src/main/java/com/aistudy/myapplication/protocol/ReplyTracker.kt",
+    "app/src/test/java/com/aistudy/myapplication/protocol/ReplyTrackerTest.kt",
+    "tools/check_android_cadence.py"
+  ],
+  "new": [
+    "app/src/androidTest/java/com/aistudy/myapplication/TrackingProfileTest.kt"
+  ],
+  "unit": {
+    "tests": 49,
+    "failures": 0,
+    "errors": 0
+  },
+  "android": {
+    "tests": 2,
+    "failures": 0,
+    "errors": 0
+  },
+  "one_acceptance_batch": {
+    "CADENCE50": 1,
+    "STOP500": 1
+  },
+  "full_stop_rows": 500,
+  "full_cadence50_rows": 1283,
+  "profile_rows_each_version": 1200,
+  "method_trace_limits": "64MB overflow; retained prefixes, not complete1200 method stacks",
+  "measured_build_hashes_still_match": true,
+  "scheduler_scope_verified": "11-scope-unchanged.json",
+  "stop": "PASS this cohort (max t2 8.8851ms)",
+  "cadence50": "CHUA DAT:420/1283 above50, max64.8975",
+  "cadence20_30": "Preserved32; not rerun",
+  "gate": "G3/G4 CHO DUYET CHUNG"
+}

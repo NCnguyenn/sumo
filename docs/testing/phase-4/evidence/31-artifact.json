@@ -1,0 +1,11 @@
+{
+  "path": "app/build/outputs/apk/debug/app-debug.apk",
+  "sha256": "4420293b9bf4c90eb8138de4e0fc10ef4f5c1577fe44b7a49a440f20221f9419",
+  "size": 30979942,
+  "applicationId": "com.aistudy.myapplication",
+  "versionCode": 1,
+  "versionName": "1.0",
+  "signerSha256": "d97c9cee077a242672a3d3b19276d6c9d76983ce862c59b0268b9a154c2915ba",
+  "distribution": false,
+  "scope": "Local AVD debug only; no upload or release"
+}

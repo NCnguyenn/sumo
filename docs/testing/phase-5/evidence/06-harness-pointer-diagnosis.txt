@@ -1,0 +1,2 @@
+COMMAND: abort incomplete instrumentation before STOP/cadence; Soak harness attempted pointer0 click while pointer0 held
+EXIT_CODE: 0

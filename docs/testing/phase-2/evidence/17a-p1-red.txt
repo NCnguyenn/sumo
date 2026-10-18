@@ -1,0 +1,56 @@
+COMMAND: ./gradlew.bat --offline :app:testDebugUnitTest --tests com.aistudy.myapplication.control.DriveMixerTest --tests com.aistudy.myapplication.control.ControlReducerTest --console=plain --rerun-tasks
+Picked up JAVA_TOOL_OPTIONS: "-Djdk.net.unixdomain.tmpdir=C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\.gradle"
+Calculating task graph as no cached configuration is available for tasks: :app:testDebugUnitTest --tests com.aistudy.myapplication.control.DriveMixerTest --tests com.aistudy.myapplication.control.ControlReducerTest
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:preDebugUnitTestBuild UP-TO-DATE
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:javaPreCompileDebug
+> Task :app:javaPreCompileDebugUnitTest
+> Task :app:mapDebugSourceSetPaths
+> Task :app:extractDeepLinksDebug
+> Task :app:processDebugNavigationResources
+> Task :app:generateDebugResources
+> Task :app:compileDebugNavigationResources
+> Task :app:checkDebugAarMetadata
+> Task :app:processDebugMainManifest
+> Task :app:processDebugManifest
+> Task :app:processDebugManifestForPackage
+> Task :app:packageDebugResources
+> Task :app:parseDebugLocalResources
+> Task :app:generateDebugRFile
+> Task :app:mergeDebugResources
+> Task :app:processDebugResources
+> Task :app:compileDebugKotlin
+> Task :app:compileDebugJavaWithJavac NO-SOURCE
+> Task :app:bundleDebugClassesToCompileJar
+> Task :app:bundleDebugClassesToRuntimeJar
+> Task :app:processDebugJavaRes
+> Task :app:compileDebugUnitTestKotlin
+> Task :app:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :app:processDebugUnitTestJavaRes
+Picked up JAVA_TOOL_OPTIONS: "-Djdk.net.unixdomain.tmpdir=C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\.gradle"
+
+
+> Task :app:testDebugUnitTest FAILED
+
+ControlReducerTest > F03_dpadForwardRightUsesFullAxesWithLowTurnCalibration FAILED
+    java.lang.AssertionError at ControlReducerTest.kt:204
+
+ControlReducerTest > F03_dpadForwardLeftUsesFullAxesWithLowTurnCalibration FAILED
+    java.lang.AssertionError at ControlReducerTest.kt:212
+36 tests completed, 2 failed
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:testDebugUnitTest'.
+> There were failing tests. See the report at: file:///C:/Users/CHI%20NGUYEN/AndroidStudioProjects/IoT/app/build/reports/tests/testDebugUnitTest/index.html
+
+* Try:
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+BUILD FAILED in 4s
+24 actionable tasks: 24 executed
+Configuration cache entry stored.
+EXIT_CODE: 1

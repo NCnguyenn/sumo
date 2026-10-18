@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="12" failures="0" errors="0" skipped="0" time="30.196" timestamp="2026-10-17T02:51:58" hostname="localhost">
+  <testsuite name="com.aistudy.myapplication.ControllerUiTest" tests="7" failures="0" errors="0" skipped="0" time="19.357" timestamp="2026-10-17T02:51:58" hostname="localhost">
+    <properties>
+      <property name="device" value="Medium_Phone(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="U04_U12_toggleBrakeAndLiveLimiterUseSameReducer" classname="com.aistudy.myapplication.ControllerUiTest" time="3.278" />
+    <testcase name="U03_releaseOneDirectionInvalidatesOldAndEarlyPointers" classname="com.aistudy.myapplication.ControllerUiTest" time="3.203" />
+    <testcase name="U01_U10_landscapeSafetyLabelsAndNeutralStart" classname="com.aistudy.myapplication.ControllerUiTest" time="1.772" />
+    <testcase name="U04_holdWeaponRemainsAfterDirectionUpAndCancelClearsAll" classname="com.aistudy.myapplication.ControllerUiTest" time="2.734" />
+    <testcase name="U06_killSurvivesActivityRecreateWithoutRestoringMotion" classname="com.aistudy.myapplication.ControllerUiTest" time="2.655" />
+    <testcase name="U03_directionAndBoostBothReleaseOrdersNeverResumeOldGesture" classname="com.aistudy.myapplication.ControllerUiTest" time="2.942" />
+    <testcase name="U02_U06_joystickMovesButKillCannotBeClearedByHeldFingers" classname="com.aistudy.myapplication.ControllerUiTest" time="2.773" />
+  </testsuite>
+  <testsuite name="com.aistudy.myapplication.ExampleInstrumentedTest" tests="1" failures="0" errors="0" skipped="0" time="0.003" timestamp="2026-10-17T02:51:58" hostname="localhost">
+    <properties>
+      <property name="device" value="Medium_Phone(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="useAppContext" classname="com.aistudy.myapplication.ExampleInstrumentedTest" time="0.003" />
+  </testsuite>
+  <testsuite name="com.aistudy.myapplication.SettingsUpdateTest" tests="4" failures="0" errors="0" skipped="0" time="9.779" timestamp="2026-10-17T02:51:58" hostname="localhost">
+    <properties>
+      <property name="device" value="Medium_Phone(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="A09_androidAbortAndFailureNeverClaimSuccessfulUpdate" classname="com.aistudy.myapplication.SettingsUpdateTest" time="2.462" />
+    <testcase name="F06_F10_storeMigrationAndCorruptionKeepOriginalRecord" classname="com.aistudy.myapplication.SettingsUpdateTest" time="2.353" />
+    <testcase name="U08_F05_invalidFieldCannotApplyPartialSettings" classname="com.aistudy.myapplication.SettingsUpdateTest" time="3.22" />
+    <testcase name="A01_A02_A08_jsonTypesAndActualInstalledIdentityAreChecked" classname="com.aistudy.myapplication.SettingsUpdateTest" time="1.744" />
+  </testsuite>
+</testsuites>

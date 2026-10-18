@@ -1,0 +1,13 @@
+COMMAND: py -3.13 -X utf8 docs/testing/phase-5/evidence/run_installer.py
+Traceback (most recent call last):
+  File "C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\docs\testing\phase-5\evidence\run_installer.py", line 78, in <module>
+    if __name__ == '__main__': main()
+                               ~~~~^^
+  File "C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\docs\testing\phase-5\evidence\run_installer.py", line 44, in main
+    originally_allowed = switch(current).get('checked') == 'true'
+                         ~~~~~~^^^^^^^^^
+  File "C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\docs\testing\phase-5\evidence\run_installer.py", line 33, in switch
+    return next(node for node in tree.iter('node') if node.get('checkable') == 'true' and
+                ('Switch' in node.get('class', '') or 'switch' in node.get('resource-id', '')))
+StopIteration
+EXIT_CODE: 1

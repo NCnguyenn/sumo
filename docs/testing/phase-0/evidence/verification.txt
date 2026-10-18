@@ -1,0 +1,11 @@
+Phase 0 evidence verification 2026-10-17T08:21:54.151540+07:00
+Baseline entries: 42; manifest SHA256 matches.
+Only two pre-existing documentation files changed: docs/MO_TA_DU_AN.md, docs/superpowers/plans/2026-10-16-sumo-controller-test-first.md
+Application sources, tests, resources, Gradle configuration/wrapper unchanged from baseline.
+Unit XML: 1 test, 0 failures/errors/skips; instrumentation XML: 1 test, 0 failures/errors/skips.
+Lint XML: 0 errors, 12 warnings.
+Baseline APK size/SHA256 match. Direct native signer/badging capture verifies baseline certificate/package/version.
+Local Markdown links verified: 19; R01-R23 and D01-D11 present.
+Draft protocol examples: 30; ASCII/LF/frame-size/field-count QA only. Codec/simulator not implemented or executed.
+Transcript native-output omissions documented; observed excerpts distinguished from full capture.
+G0 pending user approval. No Phase 1 implementation, release or upload.

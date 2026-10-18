@@ -1,0 +1,16 @@
+{
+  "baseline": "33-tracking-profile/15-source-after.sha256",
+  "files_checked": 82,
+  "missing": [],
+  "changed": [
+    "app/src/main/java/com/aistudy/myapplication/protocol/CommandCodec.kt"
+  ],
+  "new_test": "app/src/test/java/com/aistudy/myapplication/protocol/CommandCodecAllocationTest.kt",
+  "apk_sha256": "76d693f87432834da52fc676dfdbf2d8b914a546cb592e126a335a1c17ea151b",
+  "signing_configured": {
+    "SUMO_KEYSTORE": false,
+    "SUMO_STORE_PASSWORD": false,
+    "SUMO_KEY_ALIAS": false,
+    "SUMO_KEY_PASSWORD": false
+  }
+}

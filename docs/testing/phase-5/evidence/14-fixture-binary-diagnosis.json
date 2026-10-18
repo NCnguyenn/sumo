@@ -1,0 +1,12 @@
+{
+  "host_bytes": 30762914,
+  "device_bytes": 1773,
+  "host_sha256": "009a8da2d1c3dc67c22ccb19ddc612fc5617bd6aad4b6280aa7b19d128c8ca49",
+  "device_sha256": "b56c57417ea396b8bf5048704c1993294076568f9f8c99fe6348d3a59e2fc17b",
+  "first_host": "504b030400000000080021082102f703",
+  "first_device": "504b030400000000080021082102f703",
+  "same": false,
+  "host_zip_test": null,
+  "host_entries": 151,
+  "device_zip_error": "File is not a zip file"
+}

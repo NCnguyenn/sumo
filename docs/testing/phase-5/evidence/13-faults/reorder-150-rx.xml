@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="Phase5-AVD" tests="1" failures="0" errors="0" skipped="0"><testcase classname="com.aistudy.myapplication.AndroidFaultTest" name="I05_I07_I08_faultedAndroidSessionNeverRestoresHeldDirection" /></testsuite>

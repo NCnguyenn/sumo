@@ -1,0 +1,38 @@
+{
+  "source": "docs\\testing\\phase-4\\evidence\\26-android-results\\Medium_Phone(AVD) - 17\\logcat-com.aistudy.myapplication.CadenceTest-I01_F04_measure20_30_50msWithoutRebuilding.txt",
+  "measurements": [
+    {
+      "configured_ms": 20,
+      "n": 1324,
+      "minimum": 9.4501,
+      "p50": 21.0475,
+      "p95": 23.2249,
+      "p99": 27.9233,
+      "maximum": 89.4633,
+      "below_20": 214,
+      "above_50": 2
+    },
+    {
+      "configured_ms": 30,
+      "n": 1287,
+      "minimum": 17.988,
+      "p50": 31.0792,
+      "p95": 33.0078,
+      "p99": 35.7388,
+      "maximum": 45.0387,
+      "below_20": 1,
+      "above_50": 0
+    },
+    {
+      "configured_ms": 50,
+      "n": 1246,
+      "minimum": 39.976,
+      "p50": 51.1289,
+      "p95": 53.8879,
+      "p99": 60.3988,
+      "maximum": 101.4665,
+      "below_20": 0,
+      "above_50": 1049
+    }
+  ]
+}

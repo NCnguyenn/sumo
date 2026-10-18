@@ -1,0 +1,13 @@
+COMMAND: py -3.13 -X utf8 docs/testing/phase-5/evidence/run_lifecycle.py (hide IME before reading Save coordinates)
+Traceback (most recent call last):
+  File "C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\docs\testing\phase-5\evidence\run_lifecycle.py", line 203, in <module>
+    if __name__ == '__main__': main()
+                               ~~~~^^
+  File "C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\docs\testing\phase-5\evidence\run_lifecycle.py", line 183, in main
+    open_neutral('after-resize')
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\docs\testing\phase-5\evidence\run_lifecycle.py", line 59, in open_neutral
+    assert any('Offline' in node.get('text', '') for node in current.iter('node'))
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+EXIT_CODE: 1

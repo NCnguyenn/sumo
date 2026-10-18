@@ -1,0 +1,24 @@
+{
+  "at": "2026-10-17T16:09:35.2616962+07:00",
+  "os": {
+    "FreePhysicalMemory": 1914712,
+    "TotalVisibleMemorySize": 16450076
+  },
+  "cpu": {
+    "LoadPercentage": 29
+  },
+  "ownedSimulator": [
+    {
+      "ProcessId": 11988,
+      "ParentProcessId": 35088,
+      "Name": "py.exe",
+      "CommandLine": "\"C:\\WINDOWS\\py.exe\" -3.13 -X utf8 tools/sumo_simulator.py --host 127.0.0.1 --port 8888 --log docs/testing/phase-4/evidence/32-performance-fix/06-simulator.jsonl"
+    },
+    {
+      "ProcessId": 10744,
+      "ParentProcessId": 11988,
+      "Name": "python.exe",
+      "CommandLine": "\"C:\\Users\\CHI NGUYEN\\python.exe\" -X utf8 tools/sumo_simulator.py --host 127.0.0.1 --port 8888 --log docs/testing/phase-4/evidence/32-performance-fix/06-simulator.jsonl"
+    }
+  ]
+}

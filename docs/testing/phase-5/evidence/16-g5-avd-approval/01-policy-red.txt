@@ -1,0 +1,93 @@
+COMMAND: py -3.13 -X utf8 tools/test_android_cadence.py
+test_approved_50ms_exception_accepts_60ms_and_retains_strict_violations (__main__.CadencePolicyTests.test_approved_50ms_exception_accepts_60ms_and_retains_strict_violations) ... FAIL
+test_default_keeps_strict_50ms_upper_bound (__main__.CadencePolicyTests.test_default_keeps_strict_50ms_upper_bound) ... ok
+test_exception_does_not_change_20_or_30ms_gates (__main__.CadencePolicyTests.test_exception_does_not_change_20_or_30ms_gates) ... 
+  test_exception_does_not_change_20_or_30ms_gates (__main__.CadencePolicyTests.test_exception_does_not_change_20_or_30ms_gates) (target=20) ... FAIL
+  test_exception_does_not_change_20_or_30ms_gates (__main__.CadencePolicyTests.test_exception_does_not_change_20_or_30ms_gates) (target=30) ... FAIL
+test_exception_keeps_1000_sample_minimum (__main__.CadencePolicyTests.test_exception_keeps_1000_sample_minimum) ... FAIL
+test_exception_keeps_20ms_floor (__main__.CadencePolicyTests.test_exception_keeps_20ms_floor) ... FAIL
+test_exception_rejects_even_one_sample_above_60ms (__main__.CadencePolicyTests.test_exception_rejects_even_one_sample_above_60ms) ... FAIL
+
+======================================================================
+FAIL: test_approved_50ms_exception_accepts_60ms_and_retains_strict_violations (__main__.CadencePolicyTests.test_approved_50ms_exception_accepts_60ms_and_retains_strict_violations)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\tools\test_android_cadence.py", line 37, in test_approved_50ms_exception_accepts_60ms_and_retains_strict_violations
+    self.assertEqual(0, result.returncode, result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 2 : usage: check_android_cadence.py [-h] --results RESULTS
+                                --output-prefix OUTPUT_PREFIX
+                                [--targets {20,30,50} [{20,30,50} ...]]
+check_android_cadence.py: error: unrecognized arguments: --g5-avd-50-jitter
+
+
+======================================================================
+FAIL: test_exception_does_not_change_20_or_30ms_gates (__main__.CadencePolicyTests.test_exception_does_not_change_20_or_30ms_gates) (target=20)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\tools\test_android_cadence.py", line 57, in test_exception_does_not_change_20_or_30ms_gates
+    self.assertEqual(1, result.returncode, result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 2 : usage: check_android_cadence.py [-h] --results RESULTS
+                                --output-prefix OUTPUT_PREFIX
+                                [--targets {20,30,50} [{20,30,50} ...]]
+check_android_cadence.py: error: unrecognized arguments: --g5-avd-50-jitter
+
+
+======================================================================
+FAIL: test_exception_does_not_change_20_or_30ms_gates (__main__.CadencePolicyTests.test_exception_does_not_change_20_or_30ms_gates) (target=30)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\tools\test_android_cadence.py", line 57, in test_exception_does_not_change_20_or_30ms_gates
+    self.assertEqual(1, result.returncode, result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 2 : usage: check_android_cadence.py [-h] --results RESULTS
+                                --output-prefix OUTPUT_PREFIX
+                                [--targets {20,30,50} [{20,30,50} ...]]
+check_android_cadence.py: error: unrecognized arguments: --g5-avd-50-jitter
+
+
+======================================================================
+FAIL: test_exception_keeps_1000_sample_minimum (__main__.CadencePolicyTests.test_exception_keeps_1000_sample_minimum)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\tools\test_android_cadence.py", line 62, in test_exception_keeps_1000_sample_minimum
+    self.assertEqual(1, result.returncode, result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 2 : usage: check_android_cadence.py [-h] --results RESULTS
+                                --output-prefix OUTPUT_PREFIX
+                                [--targets {20,30,50} [{20,30,50} ...]]
+check_android_cadence.py: error: unrecognized arguments: --g5-avd-50-jitter
+
+
+======================================================================
+FAIL: test_exception_keeps_20ms_floor (__main__.CadencePolicyTests.test_exception_keeps_20ms_floor)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\tools\test_android_cadence.py", line 51, in test_exception_keeps_20ms_floor
+    self.assertEqual(1, result.returncode, result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 2 : usage: check_android_cadence.py [-h] --results RESULTS
+                                --output-prefix OUTPUT_PREFIX
+                                [--targets {20,30,50} [{20,30,50} ...]]
+check_android_cadence.py: error: unrecognized arguments: --g5-avd-50-jitter
+
+
+======================================================================
+FAIL: test_exception_rejects_even_one_sample_above_60ms (__main__.CadencePolicyTests.test_exception_rejects_even_one_sample_above_60ms)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\tools\test_android_cadence.py", line 47, in test_exception_rejects_even_one_sample_above_60ms
+    self.assertEqual(1, result.returncode, result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 2 : usage: check_android_cadence.py [-h] --results RESULTS
+                                --output-prefix OUTPUT_PREFIX
+                                [--targets {20,30,50} [{20,30,50} ...]]
+check_android_cadence.py: error: unrecognized arguments: --g5-avd-50-jitter
+
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.646s
+
+FAILED (failures=6)
+EXIT_CODE: 1

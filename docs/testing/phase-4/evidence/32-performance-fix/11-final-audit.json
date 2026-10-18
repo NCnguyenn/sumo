@@ -1,0 +1,49 @@
+{
+  "baseline_files": 80,
+  "missing": [],
+  "changed": [
+    "app/src/androidTest/java/com/aistudy/myapplication/CadenceTest.kt",
+    "app/src/androidTest/java/com/aistudy/myapplication/StopLatencyTest.kt",
+    "app/src/main/java/com/aistudy/myapplication/connection/UdpRobotTransport.kt",
+    "app/src/main/java/com/aistudy/myapplication/control/ControlRuntime.kt",
+    "app/src/main/java/com/aistudy/myapplication/control/ControlSession.kt",
+    "app/src/main/java/com/aistudy/myapplication/MainActivity.kt",
+    "app/src/test/java/com/aistudy/myapplication/connection/UdpRobotTransportTest.kt",
+    "app/src/test/java/com/aistudy/myapplication/control/ControlRuntimeTest.kt"
+  ],
+  "new": [
+    "app/src/test/java/com/aistudy/myapplication/control/ControlSchedulingTest.kt"
+  ],
+  "unit": {
+    "tests": 31,
+    "failures": 0,
+    "errors": 0
+  },
+  "android": {
+    "tests": 2,
+    "failures": 0,
+    "errors": 0
+  },
+  "cohorts": {
+    "CADENCE20": 1,
+    "CADENCE30": 1,
+    "CADENCE50": 1,
+    "STOP500": 1
+  },
+  "stop_rows_preserved": 500,
+  "cadence_rows_preserved": 3911,
+  "acceptance_scripts_unchanged": [
+    "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\tools\\check_android_timing.py",
+    "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\tools\\check_android_cadence.py"
+  ],
+  "apk": {
+    "path": "app\\build\\outputs\\apk\\debug\\app-debug.apk",
+    "bytes": 30979942,
+    "sha256": "5091c0db61b2e1f262ff1e7c4938d4f4a120b0dc7f7a2d906d21248e8e0fb17f"
+  },
+  "gate": "G3/G4 CHO DUYET CHUNG",
+  "stop": "PASS this cohort",
+  "cadence20": "PASS this cohort",
+  "cadence30": "PASS this cohort",
+  "cadence50": "CHUA DAT"
+}

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="1" failures="1" errors="0" skipped="0" time="4.579" timestamp="2026-10-17T02:54:08" hostname="localhost">
+  <testsuite name="com.aistudy.myapplication.ControllerUiTest" tests="1" failures="1" errors="0" skipped="0" time="3.372" timestamp="2026-10-17T02:54:08" hostname="localhost">
+    <properties>
+      <property name="device" value="Medium_Phone(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="U10_touchTargetsHave48DpMinimumAtCurrentWindowSize" classname="com.aistudy.myapplication.ControllerUiTest" time="3.372">
+      <failure>java.lang.AssertionError: right too narrow: 13.333333 dp
+at org.junit.Assert.fail(Assert.java:89)
+at org.junit.Assert.assertTrue(Assert.java:42)
+at com.aistudy.myapplication.ControllerUiTest.U10_touchTargetsHave48DpMinimumAtCurrentWindowSize(ControllerUiTest.kt:103)
+</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

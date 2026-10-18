@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="6" failures="0" errors="0" skipped="0" time="17.83" timestamp="2026-10-17T07:08:45" hostname="localhost">
+  <testsuite name="com.aistudy.myapplication.SettingsUpdateTest" tests="6" failures="0" errors="0" skipped="0" time="16.72" timestamp="2026-10-17T07:08:45" hostname="localhost">
+    <properties>
+      <property name="device" value="Medium_Phone(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="A09_androidAbortAndFailureNeverClaimSuccessfulUpdate" classname="com.aistudy.myapplication.SettingsUpdateTest" time="3.668" />
+    <testcase name="A09_failureResultSurvivesProcessStateLossAndActivityRecreate" classname="com.aistudy.myapplication.SettingsUpdateTest" time="2.418" />
+    <testcase name="F06_F10_storeMigrationAndCorruptionKeepOriginalRecord" classname="com.aistudy.myapplication.SettingsUpdateTest" time="1.536" />
+    <testcase name="F01_F08_liveLimiterPersists30_60_100AcrossActivityRecreation" classname="com.aistudy.myapplication.SettingsUpdateTest" time="2.061" />
+    <testcase name="U08_F05_invalidFieldCannotApplyPartialSettings" classname="com.aistudy.myapplication.SettingsUpdateTest" time="5.242" />
+    <testcase name="A01_A02_A08_jsonTypesAndActualInstalledIdentityAreChecked" classname="com.aistudy.myapplication.SettingsUpdateTest" time="1.795" />
+  </testsuite>
+</testsuites>

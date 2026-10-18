@@ -1,0 +1,7 @@
+COMMAND: adb -s emulator-5554 pull /sdcard/Android/data/com.aistudy.myapplication/files/tracking-before.{trace,csv,json} docs/testing/phase-4/evidence/33-tracking-profile/
+adb: error: failed to stat remote object '/sdcard/Android/data/com.aistudy.myapplication/files/tracking-before.trace': No such file or directory
+EXIT_CODE=1
+adb: error: failed to stat remote object '/sdcard/Android/data/com.aistudy.myapplication/files/tracking-before.csv': No such file or directory
+EXIT_CODE=1
+adb: error: failed to stat remote object '/sdcard/Android/data/com.aistudy.myapplication/files/tracking-before.json': No such file or directory
+EXIT_CODE=1

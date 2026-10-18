@@ -1,0 +1,38 @@
+COMMAND: py -3.13 tools/check_android_timing.py --results docs/testing/phase-4/evidence/18-android-results --output-prefix docs/testing/phase-4/evidence/19-timing-check
+{
+  "source": "docs\\testing\\phase-4\\evidence\\18-android-results\\Medium_Phone(AVD) - 17\\logcat-com.aistudy.myapplication.StopLatencyTest-I02_stop500RealTouchCallbacksAndReceiverAcknowledgements.txt",
+  "samples": 500,
+  "t1_minus_t0_ms": {
+    "n": 500,
+    "p50": 0.9818,
+    "p95": 4.3829,
+    "p99": 30.8898,
+    "maximum": 33.8693
+  },
+  "t2_minus_t0_ms": {
+    "n": 500,
+    "p50": 1.7716,
+    "p95": 5.1839,
+    "p99": 31.6871,
+    "maximum": 34.4531
+  },
+  "before_over_10": 11,
+  "return_over_10": 11,
+  "periodic30_adjacent_without_intervening_event": {
+    "n": 656,
+    "p50": 32.0656,
+    "p95": 35.5926,
+    "p99": 37.3921,
+    "maximum": 48.6314
+  },
+  "periodic_outside_20_50": 0
+}
+Traceback (most recent call last):
+  File "C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\tools\check_android_timing.py", line 43, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\tools\check_android_timing.py", line 39, in main
+    assert not summary['before_over_10'] and not summary['return_over_10'],'G0 STOP <=10 ms failed; retain every slow sample'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: G0 STOP <=10 ms failed; retain every slow sample
+exit=1

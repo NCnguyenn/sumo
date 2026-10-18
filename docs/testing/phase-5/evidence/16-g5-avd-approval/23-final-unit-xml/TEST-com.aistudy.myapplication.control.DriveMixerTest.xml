@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.aistudy.myapplication.control.DriveMixerTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-17T13:18:46.845Z" hostname="DESKTOP-OVC24VV" time="0.001">
+  <properties/>
+  <testcase name="F03_deadZoneIsRadialAndRescaled" classname="com.aistudy.myapplication.control.DriveMixerTest" time="0.0"/>
+  <testcase name="L02_pivotsHaveCorrectSigns" classname="com.aistudy.myapplication.control.DriveMixerTest" time="0.0"/>
+  <testcase name="L04_L05_boostPreservesRatioAndNeverCreatesDirection" classname="com.aistudy.myapplication.control.DriveMixerTest" time="0.0"/>
+  <testcase name="L10_nonFiniteInputIsNeutralEvenWithBoost" classname="com.aistudy.myapplication.control.DriveMixerTest" time="0.0"/>
+  <testcase name="L01_L03_F01_limitsAndSymmetricRounding" classname="com.aistudy.myapplication.control.DriveMixerTest" time="0.0"/>
+  <testcase name="F03_sensitivityGainsTurnAndBoostUseCalibration" classname="com.aistudy.myapplication.control.DriveMixerTest" time="0.0"/>
+  <testcase name="L09_L10_allQuadrantsFiniteClampedAndBounded" classname="com.aistudy.myapplication.control.DriveMixerTest" time="0.001"/>
+  <testcase name="invalidLimitsAndPwmAreRejected" classname="com.aistudy.myapplication.control.DriveMixerTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

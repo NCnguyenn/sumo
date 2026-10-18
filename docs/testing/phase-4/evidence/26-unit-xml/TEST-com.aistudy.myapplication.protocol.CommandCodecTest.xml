@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.aistudy.myapplication.protocol.CommandCodecTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-17T06:49:42.383Z" hostname="DESKTOP-OVC24VV" time="0.021">
+  <properties/>
+  <testcase name="C10_templatesAreWhitelistedAndAffectWireBytes" classname="com.aistudy.myapplication.protocol.CommandCodecTest" time="0.001"/>
+  <testcase name="C01_C02_exactFrozenKotlinVectorsForIndependentPythonReceiver" classname="com.aistudy.myapplication.protocol.CommandCodecTest" time="0.014"/>
+  <testcase name="C02_decodeEveryReplyTypeAndPendingState" classname="com.aistudy.myapplication.protocol.CommandCodecTest" time="0.001"/>
+  <testcase name="C03_C04_rejectMalformedLfAsciiBoundsAndCounts" classname="com.aistudy.myapplication.protocol.CommandCodecTest" time="0.002"/>
+  <testcase name="C03_outgoingFrameSemanticValidationCannotBeBypassed" classname="com.aistudy.myapplication.protocol.CommandCodecTest" time="0.001"/>
+  <testcase name="C01_legacyCompositeAndSrsSamplesAreExactLfBytes" classname="com.aistudy.myapplication.protocol.CommandCodecTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

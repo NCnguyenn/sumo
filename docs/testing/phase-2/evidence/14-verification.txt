@@ -1,0 +1,51 @@
+COMMAND: PowerShell here-string | py -3.13 - (read-only assertions, evidence manifest output)
+TIME: 2026-10-17T09:21:25.088078+07:00
+WORKSPACE: C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT
+PROTECTED_ORIGINALS: 35 unchanged SHA-256; MainActivity/Manifest/Gradle/test sample preserved
+JUNIT: TEST-com.aistudy.myapplication.control.ControlReducerTest.xml 25 failure/error/skip 0 0 0
+JUNIT: TEST-com.aistudy.myapplication.control.DriveMixerTest.xml 8 failure/error/skip 0 0 0
+JUNIT: TEST-com.aistudy.myapplication.ExampleUnitTest.xml 1 failure/error/skip 0 0 0
+JUNIT: TEST-com.aistudy.myapplication.protocol.CommandCodecTest.xml 6 failure/error/skip 0 0 0
+JUNIT: TEST-com.aistudy.myapplication.protocol.ReplyTrackerTest.xml 10 failure/error/skip 0 0 0
+JUNIT: TEST-com.aistudy.myapplication.protocol.SimulatorInteropTest.xml 1 failure/error/skip 0 0 0
+JUNIT: TEST-com.aistudy.myapplication.settings.ControllerSettingsTest.xml 3 failure/error/skip 0 0 0
+FINAL_JVM_TOTAL: {'tests': 54, 'failures': 0, 'errors': 0, 'skipped': 0} functional=53 sample=1
+JUNIT: TEST-com.aistudy.myapplication.control.ControlReducerTest.xml 25 failure/error/skip 0 0 0
+JUNIT: TEST-com.aistudy.myapplication.control.DriveMixerTest.xml 8 failure/error/skip 0 0 0
+JUNIT: TEST-com.aistudy.myapplication.ExampleUnitTest.xml 1 failure/error/skip 0 0 0
+JUNIT: TEST-com.aistudy.myapplication.settings.ControllerSettingsTest.xml 3 failure/error/skip 0 0 0
+G1_METHODS_PRESERVED_IN_FINAL: 37
+PYTHON_SELF_TEST: {'name': 'sumo_simulator', 'tests': '31', 'failures': '0', 'errors': '0', 'skipped': '0'}
+LINT: zero errors; all 12 warning identities/messages unchanged from G0
+EXACT_BYTE_FIXTURES: Kotlin export equals 25 frozen contract vectors
+APPLIED_TRACE: udp-kotlin-python.jsonl records= 26 events= {'offer': 2, 'accept': 18, 'reject': 4, 'macro-start': 1, 'retire': 1}
+APPLIED_TRACE: crosscheck-applied.jsonl records= 30 events= {'offer': 2, 'accept': 20, 'reject': 3, 'macro-start': 1, 'macro-complete': 1, 'retire': 1, 'config-applied': 2}
+APPLIED_TRACE: scenarios-applied.jsonl records= 229 events= {'offer': 36, 'accept': 82, 'reject': 63, 'watchdog': 10, 'retire': 12, 'macro-start': 8, 'macro-complete': 2, 'config-applied': 2, 'scenario': 11, 'scenario-reply': 3}
+RECORDED_EXIT: phase-1/01-mixer-settings-red.txt 1
+RECORDED_EXIT: phase-1/02-mixer-settings-green.txt 0
+RECORDED_EXIT: phase-1/03-reducer-red.txt 1
+RECORDED_EXIT: phase-1/04-core-green.txt 0
+RECORDED_EXIT: phase-1/05-turn-session-red.txt 1
+RECORDED_EXIT: phase-1/06-g1-final.txt 0
+RECORDED_EXIT: phase-2/01-codec-red.txt 1
+RECORDED_EXIT: phase-2/02-codec-green.txt 0
+RECORDED_EXIT: phase-2/03-reply-tracker-red.txt 1
+RECORDED_EXIT: phase-2/04-reply-tracker-green.txt 0
+RECORDED_EXIT: phase-2/05-simulator-red.txt 1
+RECORDED_EXIT: phase-2/05b-simulator-red.txt 1
+RECORDED_EXIT: phase-2/06-simulator-green.txt 0
+RECORDED_EXIT: phase-2/07-udp-cli-red.txt 1
+RECORDED_EXIT: phase-2/08-udp-cli-green.txt 0
+RECORDED_EXIT: phase-2/09-crosscheck-vectors.txt 0
+RECORDED_EXIT: phase-2/10-ack-semantics-red.txt 1
+RECORDED_EXIT: phase-2/11-ack-semantics-green.txt 0
+RECORDED_EXIT: phase-2/12-simulator-final.txt 1
+RECORDED_EXIT: phase-2/12b-simulator-final.txt 0
+RECORDED_EXIT: phase-2/13-module-final.txt 0
+CORE_BOUNDARIES: 6 Kotlin production files; no stub, Android or socket imports
+GATE_STATUS: G0 approved; G1/G2 pending common user review; Phase 3 not started
+SOURCE_MANIFEST: docs\testing\phase-2\evidence\source-final.sha256 files= 51 sha256= 6a968f5322a18ee997904caba69aa69fb9d04ef3322b84363b88b00cb1ad9b5c
+VERIFICATION PASSED; implementation tests are the separate runs above; no Android/firmware timing claim.
+exit=0
+FINAL_DOCUMENT_QA: all 51 source/fixture hashes current; checked 47 local Markdown links; Phase 3 unchanged/not started; checkpoint final.
+document-check-exit=0

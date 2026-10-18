@@ -1,0 +1,18 @@
+{
+  "unit": {
+    "tests": 110,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "lint": {
+    "Error": 0,
+    "Fatal": 0,
+    "Warning": 17
+  },
+  "apks": {
+    "app/build/outputs/apk/debug/app-debug.apk": "b3a6e065c524e0b878f96be548c11ecd32744384f71f84d843b937fd948074ae",
+    "app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk": "c52c73db0b65a2c816bd578ebfccb9acdb05cfaedcfdaa5fc6f9e89d79210d7d"
+  },
+  "change": "ControlSession revision + ControlRuntime cached snapshot; no sender/timing/codec/ACK logic change"
+}

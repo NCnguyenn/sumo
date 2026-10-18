@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="19" failures="0" errors="0" skipped="0" time="62.579" timestamp="2026-10-17T06:57:12" hostname="localhost">
+  <testsuite name="com.aistudy.myapplication.ControllerUiTest" tests="10" failures="0" errors="0" skipped="0" time="22.077" timestamp="2026-10-17T06:57:12" hostname="localhost">
+    <properties>
+      <property name="device" value="Medium_Phone(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="U04_U12_toggleBrakeAndLiveLimiterUseSameReducer" classname="com.aistudy.myapplication.ControllerUiTest" time="4.984" />
+    <testcase name="U06_U07_unlockRequiresFreshTouchAfterEveryOtherFingerIsUp" classname="com.aistudy.myapplication.ControllerUiTest" time="2.006" />
+    <testcase name="U03_releaseOneDirectionInvalidatesOldAndEarlyPointers" classname="com.aistudy.myapplication.ControllerUiTest" time="2.189" />
+    <testcase name="U10_touchTargetsHave48DpMinimumAtCurrentWindowSize" classname="com.aistudy.myapplication.ControllerUiTest" time="1.902" />
+    <testcase name="U01_U10_landscapeSafetyLabelsAndNeutralStart" classname="com.aistudy.myapplication.ControllerUiTest" time="1.633" />
+    <testcase name="U04_holdWeaponRemainsAfterDirectionUpAndCancelClearsAll" classname="com.aistudy.myapplication.ControllerUiTest" time="1.827" />
+    <testcase name="U10_dPadIsBalancedCrossWithSquareDirectionKeys" classname="com.aistudy.myapplication.ControllerUiTest" time="1.616" />
+    <testcase name="U06_killSurvivesActivityRecreateWithoutRestoringMotion" classname="com.aistudy.myapplication.ControllerUiTest" time="1.803" />
+    <testcase name="U03_directionAndBoostBothReleaseOrdersNeverResumeOldGesture" classname="com.aistudy.myapplication.ControllerUiTest" time="2.059" />
+    <testcase name="U02_U06_joystickMovesButKillCannotBeClearedByHeldFingers" classname="com.aistudy.myapplication.ControllerUiTest" time="2.058" />
+  </testsuite>
+  <testsuite name="com.aistudy.myapplication.SettingsUpdateTest" tests="5" failures="0" errors="0" skipped="0" time="12.319" timestamp="2026-10-17T06:57:12" hostname="localhost">
+    <properties>
+      <property name="device" value="Medium_Phone(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="A09_androidAbortAndFailureNeverClaimSuccessfulUpdate" classname="com.aistudy.myapplication.SettingsUpdateTest" time="1.495" />
+    <testcase name="A09_failureResultSurvivesProcessStateLossAndActivityRecreate" classname="com.aistudy.myapplication.SettingsUpdateTest" time="2.266" />
+    <testcase name="F06_F10_storeMigrationAndCorruptionKeepOriginalRecord" classname="com.aistudy.myapplication.SettingsUpdateTest" time="1.495" />
+    <testcase name="U08_F05_invalidFieldCannotApplyPartialSettings" classname="com.aistudy.myapplication.SettingsUpdateTest" time="5.243" />
+    <testcase name="A01_A02_A08_jsonTypesAndActualInstalledIdentityAreChecked" classname="com.aistudy.myapplication.SettingsUpdateTest" time="1.82" />
+  </testsuite>
+  <testsuite name="com.aistudy.myapplication.AndroidSimulatorTest" tests="4" failures="0" errors="0" skipped="0" time="26.325" timestamp="2026-10-17T06:57:12" hostname="localhost">
+    <properties>
+      <property name="device" value="Medium_Phone(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="I09_F02_F04_F07_settingsStopsOldEndpointAndAppliesAliasJoystickMacro" classname="com.aistudy.myapplication.AndroidSimulatorTest" time="12.703" />
+    <testcase name="I08_U05_lifecycleClosesAndResumesOfflineWithoutHeldGestureReplay" classname="com.aistudy.myapplication.AndroidSimulatorTest" time="4.33" />
+    <testcase name="I02_U04_U06_U07_weaponBrakeKillAndHeldUnlockUseReceiverAck" classname="com.aistudy.myapplication.AndroidSimulatorTest" time="4.709" />
+    <testcase name="I01_I02_U03_androidUdpToIndependentPythonHasRealAckAndSafeRelease" classname="com.aistudy.myapplication.AndroidSimulatorTest" time="4.583" />
+  </testsuite>
+</testsuites>

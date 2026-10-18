@@ -1,0 +1,10 @@
+COMMAND: py -3.13 -X utf8 docs/testing/phase-5/evidence/run_no_internet.py
+Traceback (most recent call last):
+  File "C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\docs\testing\phase-5\evidence\run_no_internet.py", line 80, in <module>
+    if __name__ == '__main__': main()
+                               ~~~~^^
+  File "C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\docs\testing\phase-5\evidence\run_no_internet.py", line 33, in main
+    assert 'uid=0(' in adb('shell', 'id').stdout, 'No root-capable AVD: I11 fixture blocked'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: No root-capable AVD: I11 fixture blocked
+EXIT_CODE: 1

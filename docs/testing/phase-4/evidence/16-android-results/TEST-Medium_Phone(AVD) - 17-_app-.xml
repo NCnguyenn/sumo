@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="7" failures="0" errors="0" skipped="0" time="44.58" timestamp="2026-10-17T03:31:53" hostname="localhost">
+  <testsuite name="com.aistudy.myapplication.SettingsUpdateTest" tests="5" failures="0" errors="0" skipped="0" time="27.905" timestamp="2026-10-17T03:31:53" hostname="localhost">
+    <properties>
+      <property name="device" value="Medium_Phone(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="A09_androidAbortAndFailureNeverClaimSuccessfulUpdate" classname="com.aistudy.myapplication.SettingsUpdateTest" time="4.974" />
+    <testcase name="A09_failureResultSurvivesProcessStateLossAndActivityRecreate" classname="com.aistudy.myapplication.SettingsUpdateTest" time="4.203" />
+    <testcase name="F06_F10_storeMigrationAndCorruptionKeepOriginalRecord" classname="com.aistudy.myapplication.SettingsUpdateTest" time="4.579" />
+    <testcase name="U08_F05_invalidFieldCannotApplyPartialSettings" classname="com.aistudy.myapplication.SettingsUpdateTest" time="7.783" />
+    <testcase name="A01_A02_A08_jsonTypesAndActualInstalledIdentityAreChecked" classname="com.aistudy.myapplication.SettingsUpdateTest" time="6.366" />
+  </testsuite>
+  <testsuite name="com.aistudy.myapplication.ApkSignatureTest" tests="1" failures="0" errors="0" skipped="0" time="0.156" timestamp="2026-10-17T03:31:53" hostname="localhost">
+    <properties>
+      <property name="device" value="Medium_Phone(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="A05_modifiedDexWithOriginalCertificateMustFailCryptographicVerification" classname="com.aistudy.myapplication.ApkSignatureTest" time="0.156" />
+  </testsuite>
+  <testsuite name="com.aistudy.myapplication.AndroidSimulatorTest" tests="1" failures="0" errors="0" skipped="0" time="14.356" timestamp="2026-10-17T03:31:53" hostname="localhost">
+    <properties>
+      <property name="device" value="Medium_Phone(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="I09_F02_F04_F07_settingsStopsOldEndpointAndAppliesAliasJoystickMacro" classname="com.aistudy.myapplication.AndroidSimulatorTest" time="14.356" />
+  </testsuite>
+</testsuites>

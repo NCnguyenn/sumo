@@ -1,0 +1,87 @@
+Time: 2026-10-17T08:51:27.0284941+07:00
+COMMAND: ./gradlew.bat --offline :app:testDebugUnitTest --tests *.DriveMixerTest --tests *.ControllerSettingsTest --rerun-tasks --console=plain
+Picked up JAVA_TOOL_OPTIONS: "-Djdk.net.unixdomain.tmpdir=C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\.gradle"
+Calculating task graph as no cached configuration is available for tasks: :app:testDebugUnitTest --tests *.DriveMixerTest --tests *.ControllerSettingsTest
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:preDebugUnitTestBuild UP-TO-DATE
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:mapDebugSourceSetPaths
+> Task :app:javaPreCompileDebug
+> Task :app:javaPreCompileDebugUnitTest
+> Task :app:extractDeepLinksDebug
+> Task :app:generateDebugResources
+> Task :app:processDebugNavigationResources
+> Task :app:compileDebugNavigationResources
+> Task :app:checkDebugAarMetadata
+> Task :app:processDebugMainManifest
+> Task :app:processDebugManifest
+> Task :app:processDebugManifestForPackage
+> Task :app:packageDebugResources
+> Task :app:parseDebugLocalResources
+> Task :app:generateDebugRFile
+> Task :app:mergeDebugResources
+> Task :app:processDebugResources
+> Task :app:compileDebugKotlin
+> Task :app:compileDebugJavaWithJavac NO-SOURCE
+> Task :app:bundleDebugClassesToRuntimeJar
+> Task :app:bundleDebugClassesToCompileJar
+> Task :app:processDebugJavaRes
+> Task :app:compileDebugUnitTestKotlin
+> Task :app:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :app:processDebugUnitTestJavaRes
+
+> Task :app:testDebugUnitTest FAILED
+
+Picked up JAVA_TOOL_OPTIONS: "-Djdk.net.unixdomain.tmpdir=C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\.gradle"
+DriveMixerTest > F03_deadZoneIsRadialAndRescaled FAILED
+    kotlin.NotImplementedError at DriveMixerTest.kt:45
+
+DriveMixerTest > L02_pivotsHaveCorrectSigns FAILED
+    kotlin.NotImplementedError at DriveMixerTest.kt:15
+
+DriveMixerTest > L04_L05_boostPreservesRatioAndNeverCreatesDirection FAILED
+    kotlin.NotImplementedError at DriveMixerTest.kt:19
+
+DriveMixerTest > L10_nonFiniteInputIsNeutralEvenWithBoost FAILED
+    kotlin.NotImplementedError at DriveMixerTest.kt:39
+
+DriveMixerTest > L01_L03_F01_limitsAndSymmetricRounding FAILED
+    kotlin.NotImplementedError at DriveMixerTest.kt:10
+
+DriveMixerTest > F03_sensitivityGainsTurnAndBoostUseCalibration FAILED
+    kotlin.NotImplementedError at DriveMixerTest.kt:50
+
+DriveMixerTest > L09_L10_allQuadrantsFiniteClampedAndBounded FAILED
+    kotlin.NotImplementedError at DriveMixerTest.kt:28
+
+DriveMixerTest > invalidLimitsAndPwmAreRejected FAILED
+    java.lang.AssertionError at DriveMixerTest.kt:56
+        Caused by: kotlin.NotImplementedError at DriveMixerTest.kt:56
+
+ControllerSettingsTest > defaultsAndApprovedBoundaryValuesAreValid FAILED
+    kotlin.NotImplementedError at ControllerSettingsTest.kt:8
+
+ControllerSettingsTest > invalidSettingsAreRejectedAsAWhole FAILED
+    java.lang.AssertionError at ControllerSettingsTest.kt:33
+        Caused by: kotlin.NotImplementedError at ControllerSettingsTest.kt:33
+
+ControllerSettingsTest > F03_invalidCalibrationCannotBeApplied FAILED
+    java.lang.AssertionError at ControllerSettingsTest.kt:23
+        Caused by: kotlin.NotImplementedError at ControllerSettingsTest.kt:23
+
+11 tests completed, 11 failed
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:testDebugUnitTest'.
+> There were failing tests. See the report at: file:///C:/Users/CHI%20NGUYEN/AndroidStudioProjects/IoT/app/build/reports/tests/testDebugUnitTest/index.html
+
+* Try:
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+BUILD FAILED in 5s
+24 actionable tasks: 24 executed
+Configuration cache entry stored.
+exit=1

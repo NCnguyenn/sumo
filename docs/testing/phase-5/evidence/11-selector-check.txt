@@ -1,0 +1,3 @@
+COMMAND: Python selector assertions against captured API37 XML (red at11-permissions.txt before change)
+Real API37 fixture: old reconnect-only selector=0; current Connect/Reconnect selector=1. App label correctly Kết nối while Offline.
+EXIT_CODE: 0

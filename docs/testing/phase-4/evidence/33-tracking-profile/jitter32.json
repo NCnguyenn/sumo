@@ -1,0 +1,190 @@
+{
+  "source": "docs\\testing\\phase-4\\evidence\\32-performance-fix\\07-android-results\\Medium_Phone(AVD) - 17\\logcat-com.aistudy.myapplication.CadenceTest-I01_F04_measure20_30_50msWithoutRebuilding.txt",
+  "stage_schema": "encode_end_ns",
+  "samples": 1281,
+  "below20": 0,
+  "above50": 637,
+  "stats": {
+    "interval_ms": {
+      "n": 1281,
+      "minimum": 32.6513,
+      "p50": 49.994,
+      "p95": 51.6336,
+      "p99": 52.1065,
+      "maximum": 60.1096
+    },
+    "deadline_step_ms": {
+      "n": 1281,
+      "minimum": 32.8488,
+      "p50": 50.0,
+      "p95": 50.0,
+      "p99": 50.0,
+      "maximum": 50.0
+    },
+    "wake_lateness_ms": {
+      "n": 1281,
+      "minimum": -0.0624,
+      "p50": 0.8256,
+      "p95": 2.1249,
+      "p99": 2.3653,
+      "maximum": 2.7807
+    },
+    "processing_ms": {
+      "n": 1281,
+      "minimum": 0.1327,
+      "p50": 0.2232,
+      "p95": 0.3833,
+      "p99": 0.4688,
+      "maximum": 9.9471
+    },
+    "delta_wake_ms": {
+      "n": 1281,
+      "minimum": -2.2422,
+      "p50": -0.0126,
+      "p95": 1.5477999999999998,
+      "p99": 2.004,
+      "maximum": 2.6301
+    },
+    "delta_processing_ms": {
+      "n": 1281,
+      "minimum": -9.5652,
+      "p50": 0.00020000000000000573,
+      "p95": 0.1799,
+      "p99": 0.23329999999999998,
+      "maximum": 9.744800000000001
+    },
+    "after_stage_ms": {
+      "n": 1281,
+      "minimum": 0.035,
+      "p50": 0.0527,
+      "p95": 0.1061,
+      "p99": 0.139,
+      "maximum": 9.832
+    },
+    "pre_send_cpu_ms": {
+      "n": 1281,
+      "minimum": 0.122861,
+      "p50": 0.211419,
+      "p95": 0.357994,
+      "p99": 0.427716,
+      "maximum": 9.90889
+    },
+    "previous_after_stage_ms": {
+      "n": 1281,
+      "minimum": 0.035,
+      "p50": 0.0527,
+      "p95": 0.1061,
+      "p99": 0.139,
+      "maximum": 9.832
+    },
+    "stage_ms": {
+      "n": 1281,
+      "minimum": 0.051,
+      "p50": 0.1091,
+      "p95": 0.17,
+      "p99": 0.2024,
+      "maximum": 0.2723
+    },
+    "before_stage_ms": {
+      "n": 1281,
+      "minimum": 0.0287,
+      "p50": 0.0616,
+      "p95": 0.1224,
+      "p99": 0.152,
+      "maximum": 0.3901
+    },
+    "send_ms": {
+      "n": 1281,
+      "minimum": 0.0894,
+      "p50": 0.2643,
+      "p95": 0.6245,
+      "p99": 0.7783,
+      "maximum": 0.9365
+    },
+    "wait_requested_ms": {
+      "n": 1281,
+      "minimum": 0.0,
+      "p50": 1.482,
+      "p95": 2.0,
+      "p99": 2.0,
+      "maximum": 2.0
+    },
+    "wait_actual_ms": {
+      "n": 1281,
+      "minimum": 0.0088,
+      "p50": 2.6557,
+      "p95": 4.0795,
+      "p99": 4.364,
+      "maximum": 4.8048
+    }
+  },
+  "exact50_deadline_steps": 1280,
+  "positive_wake_change_larger_than_positive_processing_change": 599,
+  "positive_processing_change_at_least_as_large": 38,
+  "all_over55_diagnostic_only": [
+    {
+      "sample": 1201,
+      "interval_ms": 60.1096,
+      "deadline_step_ms": 50.0,
+      "wake_lateness_ms": 1.7754,
+      "processing_ms": 9.9471,
+      "delta_wake_ms": 0.3648,
+      "delta_processing_ms": 9.744800000000001,
+      "after_stage_ms": 9.832,
+      "pre_send_cpu_ms": 9.90889,
+      "previous_after_stage_ms": 0.0466,
+      "t1_ns": 1564557574700,
+      "seq": 1205,
+      "deadline_ns": 1564545852200,
+      "wake_ns": 1564547627600,
+      "stage_ms": 0.0685,
+      "before_stage_ms": 0.0466,
+      "send_ms": 0.1057,
+      "wait_requested_ms": 1.0956,
+      "wait_actual_ms": 2.8622
+    }
+  ],
+  "worst_interval": {
+    "sample": 1201,
+    "interval_ms": 60.1096,
+    "deadline_step_ms": 50.0,
+    "wake_lateness_ms": 1.7754,
+    "processing_ms": 9.9471,
+    "delta_wake_ms": 0.3648,
+    "delta_processing_ms": 9.744800000000001,
+    "after_stage_ms": 9.832,
+    "pre_send_cpu_ms": 9.90889,
+    "previous_after_stage_ms": 0.0466,
+    "t1_ns": 1564557574700,
+    "seq": 1205,
+    "deadline_ns": 1564545852200,
+    "wake_ns": 1564547627600,
+    "stage_ms": 0.0685,
+    "before_stage_ms": 0.0466,
+    "send_ms": 0.1057,
+    "wait_requested_ms": 1.0956,
+    "wait_actual_ms": 2.8622
+  },
+  "latest_wake": {
+    "sample": 954,
+    "interval_ms": 51.786,
+    "deadline_step_ms": 50.0,
+    "wake_lateness_ms": 2.7807,
+    "processing_ms": 0.2444,
+    "delta_wake_ms": 1.8639000000000001,
+    "delta_processing_ms": -0.07789999999999997,
+    "after_stage_ms": 0.055,
+    "pre_send_cpu_ms": 0.231557,
+    "previous_after_stage_ms": 0.0978,
+    "t1_ns": 1552198877300,
+    "seq": 958,
+    "deadline_ns": 1552195852200,
+    "wake_ns": 1552198632900,
+    "stage_ms": 0.1188,
+    "before_stage_ms": 0.0706,
+    "send_ms": 0.1591,
+    "wait_requested_ms": 0.3525,
+    "wait_actual_ms": 3.1135
+  },
+  "note": "Every interval retained. processing is wake..send; stage is encode-only in32 or encode+recordSent in33. Additive wall decomposition is not stack-level attribution; CPU clock approximate in VM. >55 lists diagnostics only; acceptance remains every interval20..50."
+}

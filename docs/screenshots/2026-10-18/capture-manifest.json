@@ -1,0 +1,137 @@
+{
+  "date": "2026-10-18",
+  "avd": "Medium_Phone",
+  "android_api": 37,
+  "apk_sha256": "92abb62d00eb6f841eb8b9eb158d4b0be4b98bd39c6e05bd39b69de79613e5e3",
+  "count": 14,
+  "screens": [
+    {
+      "name": "01-dpad-offline",
+      "title": "D-Pad — chưa kết nối",
+      "png": "01-dpad-offline.png",
+      "xml": "01-dpad-offline.xml",
+      "width": 2400,
+      "height": 1080,
+      "sha256": "b1264617528c508665dfab60c36bb1a7c72ecd0f7187734ae47962378393852c"
+    },
+    {
+      "name": "02-dpad-online",
+      "title": "D-Pad — Online với simulator",
+      "png": "02-dpad-online.png",
+      "xml": "02-dpad-online.xml",
+      "width": 2400,
+      "height": 1080,
+      "sha256": "96d24dce0c47d9140d233059f11342a76640e2e10934cd3d7bcf131f2959c80d"
+    },
+    {
+      "name": "03-joystick-offline",
+      "title": "Joystick — chưa kết nối",
+      "png": "03-joystick-offline.png",
+      "xml": "03-joystick-offline.xml",
+      "width": 2400,
+      "height": 1080,
+      "sha256": "5ba53caeff4372180ce57c0282f10d3a58e700051c78817e2e0dbc164f3a678e"
+    },
+    {
+      "name": "03b-joystick-online",
+      "title": "Joystick — Online với simulator",
+      "png": "03b-joystick-online.png",
+      "xml": "03b-joystick-online.xml",
+      "width": 2400,
+      "height": 1080,
+      "sha256": "bbcb66f73db3096213ac6040ed5b6fd5ce883c84b890230202b022b5b7a749a6"
+    },
+    {
+      "name": "04-kill-locked",
+      "title": "Kill — đã khóa và giữ mở khóa",
+      "png": "04-kill-locked.png",
+      "xml": "04-kill-locked.xml",
+      "width": 2400,
+      "height": 1080,
+      "sha256": "731d2411b9a4ba1b902382b23784a892258440252fa50830bb1584b7c93b602e"
+    },
+    {
+      "name": "05-settings-connection",
+      "title": "Cấu hình — chế độ và kết nối",
+      "png": "05-settings-connection.png",
+      "xml": "05-settings-connection.xml",
+      "width": 2400,
+      "height": 1080,
+      "sha256": "af656fa7b6413e6e215d2b955c8fce1b9c897d97fd2ab91afe3a37d722afb4a7"
+    },
+    {
+      "name": "06-settings-driving",
+      "title": "Cấu hình — lái và hiệu chỉnh",
+      "png": "06-settings-driving.png",
+      "xml": "06-settings-driving.xml",
+      "width": 2400,
+      "height": 1080,
+      "sha256": "a44da931185345b219911d42594e467705194041693a3d0ef0ebae4e236d7ea6"
+    },
+    {
+      "name": "07-settings-calibration-update",
+      "title": "Cấu hình — thời gian quay và nguồn cập nhật",
+      "png": "07-settings-calibration-update.png",
+      "xml": "07-settings-calibration-update.xml",
+      "width": 2400,
+      "height": 1080,
+      "sha256": "52e4889e514442ad02cf050eb78a2a90e851dc5c6e2af266972f6646e8b68550"
+    },
+    {
+      "name": "08-reset-confirmation",
+      "title": "Xác nhận khôi phục mặc định",
+      "png": "08-reset-confirmation.png",
+      "xml": "08-reset-confirmation.xml",
+      "width": 2400,
+      "height": 1080,
+      "sha256": "ee9dd3834e5c2992fa11b4c95c2618d90b1262a489b694cb53560e39e813f3b6"
+    },
+    {
+      "name": "09-updater-no-feed",
+      "title": "Cập nhật APK test — chưa cấu hình nguồn",
+      "png": "09-updater-no-feed.png",
+      "xml": "09-updater-no-feed.xml",
+      "width": 2400,
+      "height": 1080,
+      "sha256": "979fafe24612b235bb65bf56a927bb27335ea09a00d75e3884a01a6d48cedda1"
+    },
+    {
+      "name": "10-settings-joystick-toggle",
+      "title": "Cấu hình — chọn joystick và TOGGLE",
+      "png": "10-settings-joystick-toggle.png",
+      "xml": "10-settings-joystick-toggle.xml",
+      "width": 2400,
+      "height": 1080,
+      "sha256": "d4e8c8e1461b963a31e860a29783595442617267e722c2f02b4d038dd11e76cf"
+    },
+    {
+      "name": "11-weapon-toggle-active",
+      "title": "Vũ khí TOGGLE — đang bật",
+      "png": "11-weapon-toggle-active.png",
+      "xml": "11-weapon-toggle-active.xml",
+      "width": 2400,
+      "height": 1080,
+      "sha256": "1ec39b213d6673e50bfd7567aa21616d12fbae9938e6bc54008c5300e94a6fbf"
+    },
+    {
+      "name": "12-settings-validation-error",
+      "title": "Cấu hình — báo lỗi thông số",
+      "png": "12-settings-validation-error.png",
+      "xml": "12-settings-validation-error.xml",
+      "width": 2400,
+      "height": 1080,
+      "sha256": "f71a9d9eedda3c6f76186e31f80d9cda68119ef2f83a888043be4c872cb67a02"
+    },
+    {
+      "name": "13-update-source-confirmation",
+      "title": "Xác nhận đổi nguồn cập nhật",
+      "png": "13-update-source-confirmation.png",
+      "xml": "13-update-source-confirmation.xml",
+      "width": 2400,
+      "height": 1080,
+      "sha256": "1e7e26c13edafa84b3662073974769729541d46f0cf48d8a7f45dd0c5c27386e"
+    }
+  ],
+  "preferences_restored": true,
+  "final_app_state": "Offline; PWM 0/0; Boost/weapon/brake off"
+}

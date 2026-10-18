@@ -1,0 +1,58 @@
+{
+  "start": [
+    "C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe",
+    "-s",
+    "emulator-5554",
+    "shell",
+    "atrace",
+    "--async_start",
+    "-b",
+    "131072",
+    "-a",
+    "com.aistudy.myapplication",
+    "sched",
+    "binder_driver",
+    "dalvik"
+  ],
+  "stop": [
+    "C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe",
+    "-s",
+    "emulator-5554",
+    "shell",
+    "atrace",
+    "--async_stop"
+  ],
+  "stop_exit": 0,
+  "instrumentation_exit": 0,
+  "simulators": [
+    [
+      "C:\\Users\\CHI NGUYEN\\python.exe",
+      "-u",
+      "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\tools\\sumo_simulator.py",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "8888",
+      "--scenario",
+      "normal",
+      "--log",
+      "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\docs\\testing\\phase-5\\evidence\\32-owner-traced-cadence50\\simulator-8888.jsonl"
+    ],
+    [
+      "C:\\Users\\CHI NGUYEN\\python.exe",
+      "-u",
+      "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\tools\\sumo_simulator.py",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "8889",
+      "--scenario",
+      "normal",
+      "--log",
+      "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\docs\\testing\\phase-5\\evidence\\32-owner-traced-cadence50\\simulator-8889.jsonl"
+    ]
+  ],
+  "trace_disabled_after_collection": true,
+  "priority_and_power_changed": false,
+  "purpose": "DIAGNOSTIC; do not promote gates"
+}

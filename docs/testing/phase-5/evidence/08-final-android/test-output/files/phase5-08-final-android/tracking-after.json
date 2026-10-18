@@ -1,0 +1,11 @@
+{
+  "label": "after",
+  "samples_each": 400,
+  "allocation_supported": true,
+  "probe_before_bytes": 0,
+  "probe_after_bytes": 81920,
+  "trace_bytes": 65949104,
+  "thread": "sumo-tracking-profile",
+  "clock": "protocol fixed0; method trace dual; wall System.nanoTime",
+  "purpose": "diagnostic, no acceptance; includes tracing\/probe overhead; every sample retained"
+}

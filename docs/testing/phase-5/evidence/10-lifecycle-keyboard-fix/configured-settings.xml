@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <string name="record">#Sat Oct 17 19:01:19 GMT+07:00 2026&#10;schema=1&#10;template=S\:{L},{R},{B},{W},{K}\n&#10;leftGain=1.0&#10;turnPercent=100&#10;rightGain=1.0&#10;deadZone=0.0&#10;duration=200&#10;weapon=HOLD&#10;input=D_PAD&#10;feed=&#10;port=8889&#10;limit=60&#10;host=10.0.2.2&#10;interval=30&#10;sensitivity=1.0&#10;    </string>
+</map>

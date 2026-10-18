@@ -1,0 +1,15 @@
+{
+  "ProcessId": 18996,
+  "Original": {
+    "Version": 1,
+    "ControlMask": 0,
+    "StateMask": 0
+  },
+  "Applied": {
+    "Version": 1,
+    "ControlMask": 5,
+    "StateMask": 0
+  },
+  "Restored": true,
+  "Scope": "Only QEMU power throttling; priority stays Normal; no system-wide timer or power-plan changes"
+}

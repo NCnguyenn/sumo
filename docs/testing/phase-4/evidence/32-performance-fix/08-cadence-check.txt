@@ -1,0 +1,45 @@
+COMMAND: py -3.13 -X utf8 tools/check_android_cadence.py --results docs/testing/phase-4/evidence/32-performance-fix/07-android-results --output-prefix docs/testing/phase-4/evidence/32-performance-fix/08-cadence
+[
+  {
+    "configured_ms": 20,
+    "n": 1293,
+    "minimum": 20.4793,
+    "p50": 21.6666,
+    "p95": 22.9286,
+    "p99": 23.4023,
+    "maximum": 25.8384,
+    "below_20": 0,
+    "above_50": 0
+  },
+  {
+    "configured_ms": 30,
+    "n": 1337,
+    "minimum": 21.7866,
+    "p50": 29.9861,
+    "p95": 31.3657,
+    "p99": 31.9416,
+    "maximum": 34.0212,
+    "below_20": 0,
+    "above_50": 0
+  },
+  {
+    "configured_ms": 50,
+    "n": 1281,
+    "minimum": 32.6513,
+    "p50": 49.994,
+    "p95": 51.6336,
+    "p99": 52.1065,
+    "maximum": 60.1096,
+    "below_20": 0,
+    "above_50": 637
+  }
+]
+Traceback (most recent call last):
+  File "C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\tools\check_android_cadence.py", line 47, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\tools\check_android_cadence.py", line 44, in main
+    assert all(row['n']>=1000 and row['below_20']==row['above_50']==0 for row in summary),'G0 cadence failed/incomplete; do not discard jitter'
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: G0 cadence failed/incomplete; do not discard jitter
+EXIT_CODE=1

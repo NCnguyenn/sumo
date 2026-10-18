@@ -1,0 +1,42 @@
+**********************
+PowerShell transcript start
+Start time: 20261017081814
+Username: DESKTOP-OVC24VV\CHI NGUYEN
+RunAs User: DESKTOP-OVC24VV\CHI NGUYEN
+Configuration Name: 
+Machine: DESKTOP-OVC24VV (Microsoft Windows NT 10.0.26300.0)
+Host Application: C:\Users\CHI NGUYEN\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell\pwsh.dll -Command try { [Console]::OutputEncoding=[System.Text.Encoding]::UTF8 } catch {}
+$adbPath = 'C:\Users\CHI NGUYEN\AppData\Local\Android\Sdk\platform-tools\adb.exe'
+$phaseSerial = (Get-Content -Raw 'docs\testing\phase-0\evidence\selected-avd.txt').Trim()
+Start-Transcript -LiteralPath 'docs\testing\phase-0\evidence\avd-shutdown.txt' -Force | Out-Null
+Write-Output 'COMMAND: adb.exe -s <selected> emu avd name'
+$phaseAvdName = (& $adbPath -s $phaseSerial emu avd name | Out-String).Trim()
+Write-Output $phaseAvdName
+if ($phaseAvdName -match '^Medium_Phone\s') {
+Write-Output ('COMMAND: adb.exe -s ' + $phaseSerial + ' emu kill')
+& $adbPath -s $phaseSerial emu kill
+Write-Output ('exit=' + $LASTEXITCODE)
+} else { throw 'AVD identity did not match; no shutdown performed' }
+Stop-Transcript | Out-Null
+Process ID: 14228
+PSVersion: 7.6.5
+PSEdition: Core
+GitCommitId: 7.6.5
+OS: Microsoft Windows 10.0.26300
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+COMMAND: adb.exe -s <selected> emu avd name
+Medium_Phone
+
+OK
+COMMAND: adb.exe -s emulator-5554 emu kill
+
+exit=0
+**********************
+PowerShell transcript end
+End time: 20261017081814
+**********************

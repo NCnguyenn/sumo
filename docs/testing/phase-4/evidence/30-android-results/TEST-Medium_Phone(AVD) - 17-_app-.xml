@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="4" failures="0" errors="0" skipped="0" time="24.807" timestamp="2026-10-17T08:47:56" hostname="localhost">
+  <testsuite name="com.aistudy.myapplication.AndroidSimulatorTest" tests="4" failures="0" errors="0" skipped="0" time="23.911" timestamp="2026-10-17T08:47:56" hostname="localhost">
+    <properties>
+      <property name="device" value="Medium_Phone(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="I09_F02_F04_F07_settingsStopsOldEndpointAndAppliesAliasJoystickMacro" classname="com.aistudy.myapplication.AndroidSimulatorTest" time="14.348" />
+    <testcase name="I08_U05_lifecycleClosesAndResumesOfflineWithoutHeldGestureReplay" classname="com.aistudy.myapplication.AndroidSimulatorTest" time="3.156" />
+    <testcase name="I02_U04_U06_U07_weaponBrakeKillAndHeldUnlockUseReceiverAck" classname="com.aistudy.myapplication.AndroidSimulatorTest" time="3.633" />
+    <testcase name="I01_I02_U03_androidUdpToIndependentPythonHasRealAckAndSafeRelease" classname="com.aistudy.myapplication.AndroidSimulatorTest" time="2.774" />
+  </testsuite>
+</testsuites>

@@ -1,0 +1,13 @@
+{
+  "adb_devices": "List of devices attached\n\n",
+  "host": {
+    "Qemu": [],
+    "Udp": []
+  },
+  "session_avd_closed": true,
+  "simulator_children_stopped": true,
+  "tracing_disabled_before_close": true,
+  "system_power_policy_modified": false,
+  "priority_modified": false,
+  "app_last_observed": "Offline; PWM0/0; AUTO locked; final-offline.png and final-window.xml"
+}

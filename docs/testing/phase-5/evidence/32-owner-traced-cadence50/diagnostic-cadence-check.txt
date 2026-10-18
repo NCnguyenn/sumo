@@ -1,0 +1,19 @@
+COMMAND: ["C:\\Users\\CHI NGUYEN\\python.exe", "tools/check_android_cadence.py", "--results", "docs/testing/phase-5/evidence/32-owner-traced-cadence50", "--output-prefix", "docs/testing/phase-5/evidence/32-owner-traced-cadence50/diagnostic-cadence", "--targets", "50", "--g5-avd-50-jitter"]
+[
+  {
+    "configured_ms": 50,
+    "n": 1285,
+    "minimum": 35.4534,
+    "p50": 50.006,
+    "p95": 51.2958,
+    "p99": 51.9915,
+    "maximum": 52.4731,
+    "below_20": 0,
+    "above_50": 646,
+    "upper_limit_ms": 60,
+    "above_limit": 0
+  }
+]
+
+EXIT_CODE: 0
+DIAGNOSTIC_ONLY: tracing enabled; does not close earlier failures

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="8" failures="0" errors="0" skipped="0" time="21.677" timestamp="2026-10-17T08:46:52" hostname="localhost">
+  <testsuite name="com.aistudy.myapplication.SettingsUpdateTest" tests="8" failures="0" errors="0" skipped="0" time="20.709" timestamp="2026-10-17T08:46:52" hostname="localhost">
+    <properties>
+      <property name="device" value="Medium_Phone(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="A09_androidAbortAndFailureNeverClaimSuccessfulUpdate" classname="com.aistudy.myapplication.SettingsUpdateTest" time="5.267" />
+    <testcase name="A09_failureResultSurvivesProcessStateLossAndActivityRecreate" classname="com.aistudy.myapplication.SettingsUpdateTest" time="2.622" />
+    <testcase name="F06_F10_storeMigrationAndCorruptionKeepOriginalRecord" classname="com.aistudy.myapplication.SettingsUpdateTest" time="1.592" />
+    <testcase name="A05_changedFeedRejectsPreviouslyPreparedInstallerMetadata" classname="com.aistudy.myapplication.SettingsUpdateTest" time="1.48" />
+    <testcase name="F01_F08_liveLimiterPersists30_60_100AcrossActivityRecreation" classname="com.aistudy.myapplication.SettingsUpdateTest" time="2.1" />
+    <testcase name="U10_settingsShowsConnectionFieldsSideBySideAndVisibleSave" classname="com.aistudy.myapplication.SettingsUpdateTest" time="2.073" />
+    <testcase name="U08_F05_invalidFieldCannotApplyPartialSettings" classname="com.aistudy.myapplication.SettingsUpdateTest" time="4.192" />
+    <testcase name="A01_A02_A08_jsonTypesAndActualInstalledIdentityAreChecked" classname="com.aistudy.myapplication.SettingsUpdateTest" time="1.383" />
+  </testsuite>
+</testsuites>

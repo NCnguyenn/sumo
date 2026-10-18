@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.aistudy.myapplication.control.SessionSimulatorInteropTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-17T13:11:23.159Z" hostname="DESKTOP-OVC24VV" time="5.261">
+  <properties/>
+  <testcase name="I01_I07_I08_pythonNormalAndDeterministicNetworkFaults" classname="com.aistudy.myapplication.control.SessionSimulatorInteropTest" time="4.477"/>
+  <testcase name="I06_receiverRestartRequiresExplicitFreshHandshakeWithoutMotionReplay" classname="com.aistudy.myapplication.control.SessionSimulatorInteropTest" time="0.784"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

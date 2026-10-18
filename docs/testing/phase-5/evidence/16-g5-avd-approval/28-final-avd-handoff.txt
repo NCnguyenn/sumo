@@ -1,0 +1,12 @@
+COMMAND: adb -s emulator-5554 shell am start -W -n com.aistudy.myapplication/.MainActivity
+Starting: Intent { cmp=com.aistudy.myapplication/.MainActivity }
+Status: ok
+LaunchState: COLD
+Activity: com.aistudy.myapplication/.MainActivity
+TotalTime: 2319
+WaitTime: 2322
+Complete
+EXIT_CODE: 0
+COMMAND: adb -s emulator-5554 shell sha256sum /data/app/~~M8gZ38WL0XN4bfWZFbh6Sg==/com.aistudy.myapplication-ePt9grWMtxA_RxTFtxZZrg==/base.apk
+92abb62d00eb6f841eb8b9eb158d4b0be4b98bd39c6e05bd39b69de79613e5e3  /data/app/~~M8gZ38WL0XN4bfWZFbh6Sg==/com.aistudy.myapplication-ePt9grWMtxA_RxTFtxZZrg==/base.apk
+EXIT_CODE: 0

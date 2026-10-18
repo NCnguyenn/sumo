@@ -1,0 +1,36 @@
+COMMAND: py -3.13 tools/sumo_simulator.py --self-test --junit docs/testing/phase-2/evidence/06-simulator-green.xml
+test_C01_C02_frozen_vectors_from_contract (test_sumo_simulator.SimulatorTests.test_C01_C02_frozen_vectors_from_contract) ... ok
+test_C01_state_flags_alias_and_no_double_boost (test_sumo_simulator.SimulatorTests.test_C01_state_flags_alias_and_no_double_boost) ... ok
+test_C03_C04_malformed_frames_never_refresh_watchdog (test_sumo_simulator.SimulatorTests.test_C03_C04_malformed_frames_never_refresh_watchdog) ... ok
+test_C03_handshake_requires_neutral_seq_one (test_sumo_simulator.SimulatorTests.test_C03_handshake_requires_neutral_seq_one) ... ok
+test_C03_number_boundary_and_exhausted_sequence_cannot_wrap (test_sumo_simulator.SimulatorTests.test_C03_number_boundary_and_exhausted_sequence_cannot_wrap) ... ok
+test_C03_raw_legacy_commands_are_fixture_only (test_sumo_simulator.SimulatorTests.test_C03_raw_legacy_commands_are_fixture_only) ... ok
+test_C03_wrong_peer_sid_and_pre_handshake_frames_do_not_apply (test_sumo_simulator.SimulatorTests.test_C03_wrong_peer_sid_and_pre_handshake_frames_do_not_apply) ... ok
+test_C06_duplicate_has_cached_ack_but_does_not_extend_lease (test_sumo_simulator.SimulatorTests.test_C06_duplicate_has_cached_ack_but_does_not_extend_lease) ... ok
+test_C06_payload_rejection_consumes_seq_without_extending_watchdog (test_sumo_simulator.SimulatorTests.test_C06_payload_rejection_consumes_seq_without_extending_watchdog) ... ok
+test_C07_hello_during_active_session_does_not_keep_it_alive (test_sumo_simulator.SimulatorTests.test_C07_hello_during_active_session_does_not_keep_it_alive) ... ok
+test_C07_watchdog_299_300_301_and_retired_sid (test_sumo_simulator.SimulatorTests.test_C07_watchdog_299_300_301_and_retired_sid) ... ok
+test_C07_watchdog_overrides_long_macro (test_sumo_simulator.SimulatorTests.test_C07_watchdog_overrides_long_macro) ... ok
+test_C08_C09_stop_brake_kill_cancel_without_macro_restart (test_sumo_simulator.SimulatorTests.test_C08_C09_stop_brake_kill_cancel_without_macro_restart) ... ok
+test_C08_macro_id_duration_conflicts_and_new_id_while_busy (test_sumo_simulator.SimulatorTests.test_C08_macro_id_duration_conflicts_and_new_id_while_busy) ... ok
+test_C08_macro_repeats_once_does_not_reset_timer (test_sumo_simulator.SimulatorTests.test_C08_macro_repeats_once_does_not_reset_timer) ... ok
+test_C09_old_motion_after_stop_and_kill_never_applies (test_sumo_simulator.SimulatorTests.test_C09_old_motion_after_stop_and_kill_never_applies) ... ok
+test_C09_receiver_restart_does_not_accept_old_boot_sid (test_sumo_simulator.SimulatorTests.test_C09_receiver_restart_does_not_accept_old_boot_sid) ... ok
+test_auto_guard_and_manual_inputs_do_not_override_auto (test_sumo_simulator.SimulatorTests.test_auto_guard_and_manual_inputs_do_not_override_auto) ... ok
+test_config_is_atomic_idempotent_and_does_not_refresh_watchdog (test_sumo_simulator.SimulatorTests.test_config_is_atomic_idempotent_and_does_not_refresh_watchdog) ... ok
+test_config_unsupported_or_busy_keeps_previous_pair (test_sumo_simulator.SimulatorTests.test_config_unsupported_or_busy_keeps_previous_pair) ... ok
+test_kill_persists_across_timeout_and_new_handshake_until_unlock (test_sumo_simulator.SimulatorTests.test_kill_persists_across_timeout_and_new_handshake_until_unlock) ... ok
+test_offer_duplicate_does_not_extend_1000ms_deadline (test_sumo_simulator.SimulatorTests.test_offer_duplicate_does_not_extend_1000ms_deadline) ... ok
+test_scenario_delay_rx_150_and_350_cannot_revive_expired_sid (test_sumo_simulator.SimulatorTests.test_scenario_delay_rx_150_and_350_cannot_revive_expired_sid) ... ok
+test_scenario_delayed_reply_is_returned_at_exact_due_time (test_sumo_simulator.SimulatorTests.test_scenario_delayed_reply_is_returned_at_exact_due_time) ... ok
+test_scenario_drop_reply_applies_but_does_not_send_ack (test_sumo_simulator.SimulatorTests.test_scenario_drop_reply_applies_but_does_not_send_ack) ... ok
+test_scenario_drop_rx_does_not_refresh_watchdog (test_sumo_simulator.SimulatorTests.test_scenario_drop_rx_does_not_refresh_watchdog) ... ok
+test_scenario_duplicate_macro_and_reorder_after_stop (test_sumo_simulator.SimulatorTests.test_scenario_duplicate_macro_and_reorder_after_stop) ... ok
+test_scenario_malformed_replies_are_deterministic (test_sumo_simulator.SimulatorTests.test_scenario_malformed_replies_are_deterministic) ... ok
+test_unlock_and_close_are_safe_explicit_commands (test_sumo_simulator.SimulatorTests.test_unlock_and_close_are_safe_explicit_commands) ... ok
+
+----------------------------------------------------------------------
+Ran 29 tests in 0.004s
+
+OK
+exit=0

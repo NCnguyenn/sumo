@@ -1,0 +1,22 @@
+COMMAND: py -3.13 -X utf8 docs/testing/phase-5/evidence/analyze_soak.py
+{
+  "duration_ms": 1801232,
+  "cycles": 600,
+  "reconnects": 20,
+  "kills": 10,
+  "resource_checkpoints": 20,
+  "worker_max": 1,
+  "trace_max": 1,
+  "sockets_begin": 14,
+  "sockets_max": 14,
+  "sockets_after_close": 10,
+  "issued_frames": 61097,
+  "applied_frames_checked": 61097,
+  "sessions": 21,
+  "neutral_periodic_frames_after_stop": 57925,
+  "unwanted_motion": 0,
+  "weapon_haptic_calls_for_one_hold": 1,
+  "app_crash_anr_in_captured_log": false,
+  "limitation": "All socket FDs of the app process (including Unix sockets); 20 stabilized resource checkpoints. No hardware/phone claim."
+}
+EXIT_CODE: 0

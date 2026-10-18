@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.aistudy.myapplication.protocol.SimulatorInteropTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-17T03:13:35.311Z" hostname="DESKTOP-OVC24VV" time="0.523">
+  <properties/>
+  <testcase name="C01_C02_C05_C08_C09_kotlinDatagramsToIndependentPythonProcess" classname="com.aistudy.myapplication.protocol.SimulatorInteropTest" time="0.522"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

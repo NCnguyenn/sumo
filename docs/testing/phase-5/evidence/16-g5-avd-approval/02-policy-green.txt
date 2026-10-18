@@ -1,0 +1,13 @@
+COMMAND: py -3.13 -X utf8 tools/test_android_cadence.py
+test_approved_50ms_exception_accepts_60ms_and_retains_strict_violations (__main__.CadencePolicyTests.test_approved_50ms_exception_accepts_60ms_and_retains_strict_violations) ... ok
+test_default_keeps_strict_50ms_upper_bound (__main__.CadencePolicyTests.test_default_keeps_strict_50ms_upper_bound) ... ok
+test_exception_does_not_change_20_or_30ms_gates (__main__.CadencePolicyTests.test_exception_does_not_change_20_or_30ms_gates) ... ok
+test_exception_keeps_1000_sample_minimum (__main__.CadencePolicyTests.test_exception_keeps_1000_sample_minimum) ... ok
+test_exception_keeps_20ms_floor (__main__.CadencePolicyTests.test_exception_keeps_20ms_floor) ... ok
+test_exception_rejects_even_one_sample_above_60ms (__main__.CadencePolicyTests.test_exception_rejects_even_one_sample_above_60ms) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.885s
+
+OK
+EXIT_CODE: 0

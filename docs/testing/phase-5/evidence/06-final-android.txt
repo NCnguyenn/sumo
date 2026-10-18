@@ -1,0 +1,3 @@
+COMMAND: py -3.13 -X utf8 docs/testing/phase-5/evidence/run_android.py --output docs/testing/phase-5/evidence/06-final-android --classes SoakTest,Phase5RegressionTest,ControllerUiTest,SettingsUpdateTest,AndroidSimulatorTest,AndroidTransportTest,AndroidFaultTest,ApkSignatureTest,InstallerPlatformTest,TrackingProfileTest,ExampleInstrumentedTest,StopLatencyTest,CadenceTest
+{"tests": 22, "failures": 1, "skipped": 0, "successful": 21, "exit_code": 0, "elapsed_seconds": 143.51729660000092}
+EXIT_CODE: 1

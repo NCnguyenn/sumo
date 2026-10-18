@@ -1,0 +1,19 @@
+{
+  "markdown_local_links_valid": true,
+  "R_rows": 23,
+  "E_rows": 8,
+  "F_rows": 10,
+  "A_rows": 14,
+  "stop_csv_rows": 500,
+  "cadence_csv_rows": 3881,
+  "cadence_counts": {
+    "20": 1261,
+    "30": 1337,
+    "50": 1283
+  },
+  "installer_config_unchanged": true,
+  "no_test_udp_listener": true,
+  "release_apk_created": false,
+  "apk_sha256": "72861bd59626aff5975f688b42cac07a2ad1f3b1cc193f92f4485f6dd7be5833",
+  "g5": "not sufficient: cadence50 FAIL; I11/API36/phone/HTTPS/signing backup missing"
+}
