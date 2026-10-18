@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\.gradle\group-test-handoff.py", line 59, in <module>
+    assert changed == ['AndroidManifest.xml'], changed
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ['classes6.dex', 'classes7.dex', 'classes8.dex', 'classes9.dex', 'AndroidManifest.xml', 'classes10.dex', 'classes4.dex', 'classes5.dex']
+EXIT_CODE: 1

@@ -1,0 +1,405 @@
+[
+  {
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": "032f260b198f26e3d064ca76385fc5db6f9a6228\n"
+  },
+  {
+    "command": [
+      "C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\build-tools\\36.0.0\\apksigner.bat",
+      "verify",
+      "--verbose",
+      "--print-certs",
+      "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\docs\\testing\\group-test-2026-10-18\\apk\\sumo-controller-ui-test-1.0-v2.apk"
+    ],
+    "exit_code": 0,
+    "stderr": "WARNING: A restricted method in java.lang.System has been called\nWARNING: java.lang.System::loadLibrary has been called by org.conscrypt.NativeLibraryUtil in an unnamed module (file:/C:/Users/CHI%20NGUYEN/AppData/Local/Android/Sdk/build-tools/36.0.0/lib/apksigner.jar)\nWARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module\nWARNING: Restricted methods will be blocked in a future release unless native access is enabled\n\r\n",
+    "stdout": "Verifies\r\nVerified using v1 scheme (JAR signing): false\r\nVerified using v2 scheme (APK Signature Scheme v2): true\r\nVerified using v3 scheme (APK Signature Scheme v3): false\r\nVerified using v3.1 scheme (APK Signature Scheme v3.1): false\r\nVerified using v4 scheme (APK Signature Scheme v4): false\r\nVerified for SourceStamp: false\r\nNumber of signers: 1\r\nSigner #1 certificate DN: C=US, O=Android, CN=Android Debug\r\nSigner #1 certificate SHA-256 digest: d97c9cee077a242672a3d3b19276d6c9d76983ce862c59b0268b9a154c2915ba\r\nSigner #1 certificate SHA-1 digest: 108858d7d57f5040b98a236fa150bc5440c2496f\r\nSigner #1 certificate MD5 digest: ab68e35cf7fa46ed3b230fc1a1ac3b17\r\nSigner #1 key algorithm: RSA\r\nSigner #1 key size (bits): 2048\r\nSigner #1 public key SHA-256 digest: 4f879dbabd722fe19958056b63a44570137e9fbd094119c35e1945ef6a7c3314\r\nSigner #1 public key SHA-1 digest: 5de8c9f4fab45f1c9f6385d083e2ef9fe9e1a137\r\nSigner #1 public key MD5 digest: ff734c11879f210beb5e490a7d97282a\r\n"
+  },
+  {
+    "command": [
+      "C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\build-tools\\36.0.0\\aapt.exe",
+      "dump",
+      "badging",
+      "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\docs\\testing\\group-test-2026-10-18\\apk\\sumo-controller-ui-test-1.0-v2.apk"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": "package: name='com.aistudy.myapplication' versionCode='2' versionName='1.0' platformBuildVersionName='17' platformBuildVersionCode='37' compileSdkVersion='37' compileSdkVersionCodename='17'\r\nsdkVersion:'36'\r\ntargetSdkVersion:'37'\r\nuses-permission: name='android.permission.INTERNET'\r\nuses-permission: name='android.permission.ACCESS_LOCAL_NETWORK'\r\nuses-permission: name='android.permission.REQUEST_INSTALL_PACKAGES'\r\nuses-permission: name='com.aistudy.myapplication.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION'\r\napplication-label:'Sumo Controller \u00b7 Test'\r\napplication-label-af:'Sumo Controller \u00b7 Test'\r\napplication-label-am:'Sumo Controller \u00b7 Test'\r\napplication-label-ar:'Sumo Controller \u00b7 Test'\r\napplication-label-as:'Sumo Controller \u00b7 Test'\r\napplication-label-az:'Sumo Controller \u00b7 Test'\r\napplication-label-be:'Sumo Controller \u00b7 Test'\r\napplication-label-bg:'Sumo Controller \u00b7 Test'\r\napplication-label-bn:'Sumo Controller \u00b7 Test'\r\napplication-label-bs:'Sumo Controller \u00b7 Test'\r\napplication-label-ca:'Sumo Controller \u00b7 Test'\r\napplication-label-cs:'Sumo Controller \u00b7 Test'\r\napplication-label-da:'Sumo Controller \u00b7 Test'\r\napplication-label-de:'Sumo Controller \u00b7 Test'\r\napplication-label-el:'Sumo Controller \u00b7 Test'\r\napplication-label-en-AU:'Sumo Controller \u00b7 Test'\r\napplication-label-en-CA:'Sumo Controller \u00b7 Test'\r\napplication-label-en-GB:'Sumo Controller \u00b7 Test'\r\napplication-label-en-IN:'Sumo Controller \u00b7 Test'\r\napplication-label-en-XC:'Sumo Controller \u00b7 Test'\r\napplication-label-es:'Sumo Controller \u00b7 Test'\r\napplication-label-es-US:'Sumo Controller \u00b7 Test'\r\napplication-label-et:'Sumo Controller \u00b7 Test'\r\napplication-label-eu:'Sumo Controller \u00b7 Test'\r\napplication-label-fa:'Sumo Controller \u00b7 Test'\r\napplication-label-fi:'Sumo Controller \u00b7 Test'\r\napplication-label-fr:'Sumo Controller \u00b7 Test'\r\napplication-label-fr-CA:'Sumo Controller \u00b7 Test'\r\napplication-label-gl:'Sumo Controller \u00b7 Test'\r\napplication-label-gu:'Sumo Controller \u00b7 Test'\r\napplication-label-hi:'Sumo Controller \u00b7 Test'\r\napplication-label-hr:'Sumo Controller \u00b7 Test'\r\napplication-label-hu:'Sumo Controller \u00b7 Test'\r\napplication-label-hy:'Sumo Controller \u00b7 Test'\r\napplication-label-in:'Sumo Controller \u00b7 Test'\r\napplication-label-is:'Sumo Controller \u00b7 Test'\r\napplication-label-it:'Sumo Controller \u00b7 Test'\r\napplication-label-iw:'Sumo Controller \u00b7 Test'\r\napplication-label-ja:'Sumo Controller \u00b7 Test'\r\napplication-label-ka:'Sumo Controller \u00b7 Test'\r\napplication-label-kk:'Sumo Controller \u00b7 Test'\r\napplication-label-km:'Sumo Controller \u00b7 Test'\r\napplication-label-kn:'Sumo Controller \u00b7 Test'\r\napplication-label-ko:'Sumo Controller \u00b7 Test'\r\napplication-label-ky:'Sumo Controller \u00b7 Test'\r\napplication-label-lo:'Sumo Controller \u00b7 Test'\r\napplication-label-lt:'Sumo Controller \u00b7 Test'\r\napplication-label-lv:'Sumo Controller \u00b7 Test'\r\napplication-label-mk:'Sumo Controller \u00b7 Test'\r\napplication-label-ml:'Sumo Controller \u00b7 Test'\r\napplication-label-mn:'Sumo Controller \u00b7 Test'\r\napplication-label-mr:'Sumo Controller \u00b7 Test'\r\napplication-label-ms:'Sumo Controller \u00b7 Test'\r\napplication-label-my:'Sumo Controller \u00b7 Test'\r\napplication-label-nb:'Sumo Controller \u00b7 Test'\r\napplication-label-ne:'Sumo Controller \u00b7 Test'\r\napplication-label-nl:'Sumo Controller \u00b7 Test'\r\napplication-label-or:'Sumo Controller \u00b7 Test'\r\napplication-label-pa:'Sumo Controller \u00b7 Test'\r\napplication-label-pl:'Sumo Controller \u00b7 Test'\r\napplication-label-pt:'Sumo Controller \u00b7 Test'\r\napplication-label-pt-BR:'Sumo Controller \u00b7 Test'\r\napplication-label-pt-PT:'Sumo Controller \u00b7 Test'\r\napplication-label-ro:'Sumo Controller \u00b7 Test'\r\napplication-label-ru:'Sumo Controller \u00b7 Test'\r\napplication-label-si:'Sumo Controller \u00b7 Test'\r\napplication-label-sk:'Sumo Controller \u00b7 Test'\r\napplication-label-sl:'Sumo Controller \u00b7 Test'\r\napplication-label-sq:'Sumo Controller \u00b7 Test'\r\napplication-label-sr:'Sumo Controller \u00b7 Test'\r\napplication-label-sr-Latn:'Sumo Controller \u00b7 Test'\r\napplication-label-sv:'Sumo Controller \u00b7 Test'\r\napplication-label-sw:'Sumo Controller \u00b7 Test'\r\napplication-label-ta:'Sumo Controller \u00b7 Test'\r\napplication-label-te:'Sumo Controller \u00b7 Test'\r\napplication-label-th:'Sumo Controller \u00b7 Test'\r\napplication-label-tl:'Sumo Controller \u00b7 Test'\r\napplication-label-tr:'Sumo Controller \u00b7 Test'\r\napplication-label-uk:'Sumo Controller \u00b7 Test'\r\napplication-label-ur:'Sumo Controller \u00b7 Test'\r\napplication-label-uz:'Sumo Controller \u00b7 Test'\r\napplication-label-vi:'Sumo Controller \u00b7 Test'\r\napplication-label-zh-CN:'Sumo Controller \u00b7 Test'\r\napplication-label-zh-HK:'Sumo Controller \u00b7 Test'\r\napplication-label-zh-TW:'Sumo Controller \u00b7 Test'\r\napplication-label-zu:'Sumo Controller \u00b7 Test'\r\napplication-icon-160:'res/mipmap-anydpi-v21/ic_launcher.xml'\r\napplication-icon-240:'res/mipmap-anydpi-v21/ic_launcher.xml'\r\napplication-icon-320:'res/mipmap-anydpi-v21/ic_launcher.xml'\r\napplication-icon-480:'res/mipmap-anydpi-v21/ic_launcher.xml'\r\napplication-icon-640:'res/mipmap-anydpi-v21/ic_launcher.xml'\r\napplication-icon-65534:'res/mipmap-anydpi-v21/ic_launcher.xml'\r\napplication: label='Sumo Controller \u00b7 Test' icon='res/mipmap-anydpi-v21/ic_launcher.xml'\r\napplication-debuggable\r\nlaunchable-activity: name='com.aistudy.myapplication.MainActivity'  label='Sumo Controller \u00b7 Test' icon=''\r\nuses-library-not-required:'androidx.window.extensions'\r\nuses-library-not-required:'androidx.window.sidecar'\r\nfeature-group: label=''\r\n  uses-feature: name='android.hardware.faketouch'\r\n  uses-implied-feature: name='android.hardware.faketouch' reason='default feature for all apps'\r\n  uses-feature: name='android.hardware.screen.landscape'\r\n  uses-implied-feature: name='android.hardware.screen.landscape' reason='one or more activities have specified a landscape orientation'\r\nmain\r\nother-activities\r\nother-receivers\r\nsupports-screens: 'small' 'normal' 'large' 'xlarge'\r\nsupports-any-density: 'true'\r\nlocales: '--_--' 'af' 'am' 'ar' 'as' 'az' 'be' 'bg' 'bn' 'bs' 'ca' 'cs' 'da' 'de' 'el' 'en-AU' 'en-CA' 'en-GB' 'en-IN' 'en-XC' 'es' 'es-US' 'et' 'eu' 'fa' 'fi' 'fr' 'fr-CA' 'gl' 'gu' 'hi' 'hr' 'hu' 'hy' 'in' 'is' 'it' 'iw' 'ja' 'ka' 'kk' 'km' 'kn' 'ko' 'ky' 'lo' 'lt' 'lv' 'mk' 'ml' 'mn' 'mr' 'ms' 'my' 'nb' 'ne' 'nl' 'or' 'pa' 'pl' 'pt' 'pt-BR' 'pt-PT' 'ro' 'ru' 'si' 'sk' 'sl' 'sq' 'sr' 'sr-Latn' 'sv' 'sw' 'ta' 'te' 'th' 'tl' 'tr' 'uk' 'ur' 'uz' 'vi' 'zh-CN' 'zh-HK' 'zh-TW' 'zu'\r\ndensities: '160' '240' '320' '480' '640' '65534'\r\nnative-code: 'arm64-v8a' 'armeabi-v7a' 'x86' 'x86_64'\r\n"
+  },
+  {
+    "command": [
+      "C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\build-tools\\36.0.0\\zipalign.exe",
+      "-c",
+      "-P",
+      "16",
+      "4",
+      "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\docs\\testing\\group-test-2026-10-18\\apk\\sumo-controller-ui-test-1.0-v2.apk"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  {
+    "command": [
+      "C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe",
+      "-s",
+      "emulator-5554",
+      "shell",
+      "getprop",
+      "ro.kernel.qemu"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": "1\r\n"
+  },
+  {
+    "command": [
+      "C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe",
+      "-s",
+      "emulator-5554",
+      "shell",
+      "am",
+      "force-stop",
+      "com.aistudy.myapplication"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  {
+    "command": [
+      "C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe",
+      "-s",
+      "emulator-5554",
+      "shell",
+      "run-as",
+      "com.aistudy.myapplication",
+      "ls",
+      "shared_prefs"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": "sumo_install_result.xml\r\nsumo_safety.xml\r\nsumo_settings.xml\r\n"
+  },
+  {
+    "command": [
+      "C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe",
+      "-s",
+      "emulator-5554",
+      "exec-out",
+      "run-as",
+      "com.aistudy.myapplication",
+      "cat",
+      "shared_prefs/sumo_install_result.xml"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": null
+  },
+  {
+    "command": [
+      "C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe",
+      "-s",
+      "emulator-5554",
+      "exec-out",
+      "run-as",
+      "com.aistudy.myapplication",
+      "cat",
+      "shared_prefs/sumo_safety.xml"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": null
+  },
+  {
+    "command": [
+      "C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe",
+      "-s",
+      "emulator-5554",
+      "exec-out",
+      "run-as",
+      "com.aistudy.myapplication",
+      "cat",
+      "shared_prefs/sumo_settings.xml"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": null
+  },
+  {
+    "command": [
+      "C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe",
+      "-s",
+      "emulator-5554",
+      "shell",
+      "pm",
+      "path",
+      "com.aistudy.myapplication"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": "package:/data/app/~~0VlBkWy16Ivfs6ctJFe98g==/com.aistudy.myapplication-eUpi9t2Vi2uH702IJbQ9yg==/base.apk\r\n"
+  },
+  {
+    "command": [
+      "C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe",
+      "-s",
+      "emulator-5554",
+      "shell",
+      "sha256sum",
+      "/data/app/~~0VlBkWy16Ivfs6ctJFe98g==/com.aistudy.myapplication-eUpi9t2Vi2uH702IJbQ9yg==/base.apk"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": "40b22dbee250894bae9d7a0f9b3f0beb0fdac7dbd3af9aed259267af9c777078  /data/app/~~0VlBkWy16Ivfs6ctJFe98g==/com.aistudy.myapplication-eUpi9t2Vi2uH702IJbQ9yg==/base.apk\r\n"
+  },
+  {
+    "command": [
+      "C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe",
+      "-s",
+      "emulator-5554",
+      "install",
+      "-r",
+      "C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\docs\\testing\\group-test-2026-10-18\\apk\\sumo-controller-ui-test-1.0-v2.apk"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": "Performing Streamed Install\r\nSuccess\r\n"
+  },
+  {
+    "command": [
+      "C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe",
+      "-s",
+      "emulator-5554",
+      "shell",
+      "run-as",
+      "com.aistudy.myapplication",
+      "ls",
+      "shared_prefs"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": "sumo_install_result.xml\r\nsumo_safety.xml\r\nsumo_settings.xml\r\n"
+  },
+  {
+    "command": [
+      "C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe",
+      "-s",
+      "emulator-5554",
+      "exec-out",
+      "run-as",
+      "com.aistudy.myapplication",
+      "cat",
+      "shared_prefs/sumo_install_result.xml"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": null
+  },
+  {
+    "command": [
+      "C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe",
+      "-s",
+      "emulator-5554",
+      "exec-out",
+      "run-as",
+      "com.aistudy.myapplication",
+      "cat",
+      "shared_prefs/sumo_safety.xml"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": null
+  },
+  {
+    "command": [
+      "C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe",
+      "-s",
+      "emulator-5554",
+      "exec-out",
+      "run-as",
+      "com.aistudy.myapplication",
+      "cat",
+      "shared_prefs/sumo_settings.xml"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": null
+  },
+  {
+    "command": [
+      "C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe",
+      "-s",
+      "emulator-5554",
+      "shell",
+      "pm",
+      "path",
+      "com.aistudy.myapplication"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": "package:/data/app/~~2jmlsXxufiN8MdFnSfcMIw==/com.aistudy.myapplication-yEX7rtYoYjE3wu4biobzug==/base.apk\r\n"
+  },
+  {
+    "command": [
+      "C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe",
+      "-s",
+      "emulator-5554",
+      "shell",
+      "sha256sum",
+      "/data/app/~~2jmlsXxufiN8MdFnSfcMIw==/com.aistudy.myapplication-yEX7rtYoYjE3wu4biobzug==/base.apk"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": "40b22dbee250894bae9d7a0f9b3f0beb0fdac7dbd3af9aed259267af9c777078  /data/app/~~2jmlsXxufiN8MdFnSfcMIw==/com.aistudy.myapplication-yEX7rtYoYjE3wu4biobzug==/base.apk\r\n"
+  },
+  {
+    "command": [
+      "C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe",
+      "-s",
+      "emulator-5554",
+      "shell",
+      "am",
+      "start",
+      "-n",
+      "com.aistudy.myapplication/.MainActivity"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": "Starting: Intent { cmp=com.aistudy.myapplication/.MainActivity }\r\n"
+  },
+  {
+    "command": [
+      "C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe",
+      "-s",
+      "emulator-5554",
+      "shell",
+      "uiautomator",
+      "dump",
+      "--compressed",
+      "/sdcard/sumo-group-14358795485400.xml"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": "UI hierchary dumped to: /sdcard/sumo-group-14358795485400.xml\r\n"
+  },
+  {
+    "command": [
+      "C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe",
+      "-s",
+      "emulator-5554",
+      "exec-out",
+      "cat",
+      "/sdcard/sumo-group-14358795485400.xml"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": null
+  },
+  {
+    "command": [
+      "C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe",
+      "-s",
+      "emulator-5554",
+      "shell",
+      "rm",
+      "/sdcard/sumo-group-14358795485400.xml"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  {
+    "command": [
+      "C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe",
+      "-s",
+      "emulator-5554",
+      "exec-out",
+      "screencap",
+      "-p"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": null
+  },
+  {
+    "command": [
+      "C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe",
+      "-s",
+      "emulator-5554",
+      "shell",
+      "am",
+      "force-stop",
+      "com.aistudy.myapplication"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  {
+    "command": [
+      "C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe",
+      "-s",
+      "emulator-5554",
+      "shell",
+      "run-as",
+      "com.aistudy.myapplication",
+      "ls",
+      "shared_prefs"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": "sumo_install_result.xml\r\nsumo_safety.xml\r\nsumo_settings.xml\r\n"
+  },
+  {
+    "command": [
+      "C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe",
+      "-s",
+      "emulator-5554",
+      "exec-out",
+      "run-as",
+      "com.aistudy.myapplication",
+      "cat",
+      "shared_prefs/sumo_install_result.xml"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": null
+  },
+  {
+    "command": [
+      "C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe",
+      "-s",
+      "emulator-5554",
+      "exec-out",
+      "run-as",
+      "com.aistudy.myapplication",
+      "cat",
+      "shared_prefs/sumo_safety.xml"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": null
+  },
+  {
+    "command": [
+      "C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe",
+      "-s",
+      "emulator-5554",
+      "exec-out",
+      "run-as",
+      "com.aistudy.myapplication",
+      "cat",
+      "shared_prefs/sumo_settings.xml"
+    ],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout": null
+  }
+]

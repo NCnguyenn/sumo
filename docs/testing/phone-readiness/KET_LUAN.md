@@ -2,6 +2,8 @@
 
 **Ngày kiểm tra: 18/10/2026.** Nhánh `codex/ui-compact-diagnostics`; giữ công việc chưa commit sẵn có. Không upload, tạo release, đổi khóa ký hoặc cài/gỡ điện thoại thật. Không mở lại thiết kế, duyệt G3/G4 hoặc chuyển Phase6/7.
 
+> Bổ sung sau đợt bàn giao18/10: người dùng cho phép commit/merge/push và đóng gói debug gửi nhóm. Unit mới120/120 và10/10Android liên quan đạt sau sửa đồng bộ test; cả hai FAILAndroid bên dưới đã có lượt kiểm lại trong cohort42 trên cùng APKb31…. Không xóa kết quả lịch sử. APK nhóm code2, checksum/cài đè/giới hạn xem [bàn giao nhóm](../group-test-2026-10-18/BAN_GIAO_NHOM.md). STOP/cadence/soak và ranh giới xe/release giữ nguyên.
+
 ## 1. Quyết định
 
 | Phạm vi | Kết luận | Căn cứ và điều kiện |

@@ -1,0 +1,85 @@
+{
+  "source_commit": "032f260b198f26e3d064ca76385fc5db6f9a6228",
+  "apk": "sumo-controller-ui-test-1.0-v2.apk",
+  "sha256": "40b22dbee250894bae9d7a0f9b3f0beb0fdac7dbd3af9aed259267af9c777078",
+  "bytes": 30943197,
+  "version_name": "1.0",
+  "version_code": 2,
+  "application_id": "com.aistudy.myapplication",
+  "min_sdk": 36,
+  "target_sdk": 37,
+  "debug": true,
+  "production_release": false,
+  "certificate_sha256": "d97c9cee077a242672a3d3b19276d6c9d76983ce862c59b0268b9a154c2915ba",
+  "binary_comparison": {
+    "previous_sha256": "b31ac740afa3515c8cc5a2a344061e170c63a5972ca4beef2058c3ac7c5c736f",
+    "changed_zip_entries": [
+      "classes6.dex",
+      "classes7.dex",
+      "classes8.dex",
+      "classes9.dex",
+      "AndroidManifest.xml",
+      "classes10.dex",
+      "classes4.dex",
+      "classes5.dex"
+    ],
+    "dex_resources_native_identical": true,
+    "dex_byte_mapping": {
+      "classes.dex": [
+        "classes.dex"
+      ],
+      "classes10.dex": [
+        "classes9.dex"
+      ],
+      "classes2.dex": [
+        "classes2.dex"
+      ],
+      "classes3.dex": [
+        "classes3.dex"
+      ],
+      "classes4.dex": [
+        "classes10.dex"
+      ],
+      "classes5.dex": [
+        "classes4.dex"
+      ],
+      "classes6.dex": [
+        "classes5.dex"
+      ],
+      "classes7.dex": [
+        "classes6.dex"
+      ],
+      "classes8.dex": [
+        "classes7.dex"
+      ],
+      "classes9.dex": [
+        "classes8.dex"
+      ]
+    }
+  },
+  "native_abis": [
+    "arm64-v8a",
+    "armeabi-v7a",
+    "x86",
+    "x86_64"
+  ],
+  "preferences_before": {
+    "sumo_install_result.xml": "731ca1223573badeb722ed73d190e822a1a9978c0393b50debaf41598e20396a",
+    "sumo_safety.xml": "d4df5cdc24abc7ff0f481061fc77f109f3fdac00bf925fb7b5e10ca48dcc744e",
+    "sumo_settings.xml": "3325d2a819fdd8062c2cdc48a09b995c9b012915bcdf88b1cf9742a7f057c793"
+  },
+  "before_installed_apk_sha256": "40b22dbee250894bae9d7a0f9b3f0beb0fdac7dbd3af9aed259267af9c777078",
+  "install": "Performing Streamed Install\r\nSuccess",
+  "preferences_after_install": {
+    "sumo_install_result.xml": "731ca1223573badeb722ed73d190e822a1a9978c0393b50debaf41598e20396a",
+    "sumo_safety.xml": "d4df5cdc24abc7ff0f481061fc77f109f3fdac00bf925fb7b5e10ca48dcc744e",
+    "sumo_settings.xml": "3325d2a819fdd8062c2cdc48a09b995c9b012915bcdf88b1cf9742a7f057c793"
+  },
+  "installed_apk_sha256": "40b22dbee250894bae9d7a0f9b3f0beb0fdac7dbd3af9aed259267af9c777078",
+  "offline_neutral_auto_locked": true,
+  "preferences_after_launch": {
+    "sumo_install_result.xml": "731ca1223573badeb722ed73d190e822a1a9978c0393b50debaf41598e20396a",
+    "sumo_safety.xml": "d4df5cdc24abc7ff0f481061fc77f109f3fdac00bf925fb7b5e10ca48dcc744e",
+    "sumo_settings.xml": "3325d2a819fdd8062c2cdc48a09b995c9b012915bcdf88b1cf9742a7f057c793"
+  }
+}

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\.gradle\group-test-handoff.py", line 84, in <module>
+    tree = dump('05-v2-offline')
+  File "C:\Users\CHI NGUYEN\AndroidStudioProjects\IoT\.gradle\group-test-handoff.py", line 36, in dump
+    assert 'dumped to:' in adb('shell', 'uiautomator', 'dump', '--compressed', target)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+EXIT_CODE: 1
