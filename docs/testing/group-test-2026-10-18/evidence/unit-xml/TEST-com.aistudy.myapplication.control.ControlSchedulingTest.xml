@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.aistudy.myapplication.control.ControlSchedulingTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-18T12:15:55.513Z" hostname="DESKTOP-OVC24VV" time="0.007">
+  <properties/>
+  <testcase name="I01_F04_lateWakeKeepsOriginalDeadlineInsteadOfAccumulatingDrift" classname="com.aistudy.myapplication.control.ControlSchedulingTest" time="0.004"/>
+  <testcase name="I02_I03_urgentStopKillBrakeBypassPeriodicFloorAndKeepSequence" classname="com.aistudy.myapplication.control.ControlSchedulingTest" time="0.001"/>
+  <testcase name="I01_F04_late20msSlotDoesNotGenerateSub20msCatchupInterval" classname="com.aistudy.myapplication.control.ControlSchedulingTest" time="0.001"/>
+  <testcase name="I01_F04_sendCrossingSlotsSkipsThemWithoutCatchupOnNextPump" classname="com.aistudy.myapplication.control.ControlSchedulingTest" time="0.0"/>
+  <testcase name="I01_workerWaitUsesRemainingMonotonicNanoseconds" classname="com.aistudy.myapplication.control.ControlSchedulingTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,8 @@
+{
+  "connecting": "Đang bắt tay · chưa Online",
+  "old_contains": true,
+  "new_startswith": false,
+  "online_startswith": true,
+  "soak_repeated": false,
+  "verification": "Assert-based string boundary check and Android reconnect case38; no 30min claim."
+}

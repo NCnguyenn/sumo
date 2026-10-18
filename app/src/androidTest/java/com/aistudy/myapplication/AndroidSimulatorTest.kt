@@ -17,6 +17,24 @@ import com.aistudy.myapplication.settings.*
 
 @RunWith(AndroidJUnit4::class)
 class AndroidSimulatorTest {
+    @Test fun diagnosticsWhileHoldingClosesSessionAndCopiesRealReport() {
+        online()
+        val root=rule.onNodeWithTag("controller");val forward=point("forward");val details=point("diagnostics")
+        root.performTouchInput{down(0,forward)};waitText("receiver","PWM 153 / 153")
+        root.performTouchInput{down(1,details);up(1);up(0)}
+        rule.onNodeWithTag("diagnostics-screen").assertIsDisplayed()
+        rule.onNodeWithTag("diagnostics-iot").performClick()
+        rule.waitUntil(3000){rule.onAllNodesWithTag("diagnostics-log").fetchSemanticsNodes().isNotEmpty()}
+        rule.onNodeWithTag("copy-diagnostics").performClick()
+        rule.runOnIdle {
+            val clip=rule.activity.getSystemService(android.content.ClipboardManager::class.java).primaryClip!!.getItemAt(0).text.toString()
+            assertTrue(clip.contains("SUMO diagnostic"));assertTrue(clip.contains("endpoint=10.0.2.2:8888"))
+            assertTrue(clip.contains("ACK seq="));assertTrue(clip.contains("App yêu cầu PWM 0 / 0"))
+        }
+        rule.onNodeWithTag("close-diagnostics").performClick()
+        waitText("connection","Offline");waitText("output","PWM 0 / 0 · B0 W0")
+        online();waitText("receiver","PWM 0 / 0")
+    }
     @get:Rule val rule=createAndroidComposeRule<MainActivity>()
     private var original:String?=null
     private var originalKill=false
@@ -35,11 +53,11 @@ class AndroidSimulatorTest {
         online()
         val root=rule.onNodeWithTag("controller");val f=point("forward");val b=point("boost")
         root.performTouchInput{down(0,f);down(1,b)}
-        rule.onNodeWithTag("output").assertTextContains("PWM 255 / 255",substring=true)
+        waitText("output","PWM 255 / 255");waitText("receiver","PWM 255 / 255")
         root.performTouchInput{up(1)}
-        rule.onNodeWithTag("output").assertTextContains("PWM 153 / 153",substring=true)
+        waitText("output","PWM 153 / 153");waitText("receiver","PWM 153 / 153")
         root.performTouchInput{down(2,b);up(0)}
-        rule.onNodeWithTag("output").assertTextContains("PWM 0 / 0",substring=true)
+        waitText("output","PWM 0 / 0");waitText("receiver","PWM 0 / 0")
         root.performTouchInput{up(2)}
         rule.onNodeWithTag("settings").performClick()
         rule.onNodeWithTag("save-settings").assertExists()
@@ -74,8 +92,10 @@ class AndroidSimulatorTest {
         rule.onNodeWithTag("input-mode").performScrollTo().performClick()
         rule.onNodeWithTag("weapon-mode").performScrollTo().performClick()
         for((key,value) in listOf("duration" to "350","interval" to "50","port" to "8889","sensitivity" to "1.5","deadZone" to "0.2",
-            "leftGain" to "0.7","rightGain" to "0.8","turnPercent" to "40","template" to "D:{L},{R},{B},{W},{K}\\n"))
+            "leftGain" to "0.7","rightGain" to "0.8","turnPercent" to "40","template" to "D:{L},{R},{B},{W},{K}\\n")) {
+            rule.onNodeWithTag(if(key in listOf("sensitivity","deadZone","leftGain","rightGain","turnPercent"))"settings-calibration" else "settings-general").performClick()
             rule.onNodeWithTag("field-$key").performScrollTo().performTextReplacement(value)
+        }
         rule.onNodeWithTag("save-settings").performClick()
         rule.waitUntil(3000){rule.onAllNodesWithTag("save-settings").fetchSemanticsNodes().isEmpty()}
         online();waitText("connection","8889")

@@ -1,0 +1,499 @@
+{
+  "schema_version": 1,
+  "audit_kind": "Read-only APK inspection and updater source/test review; no installation or runtime test",
+  "captured_at": "2026-10-18T10:43:35.570233+00:00",
+  "artifact": {
+    "path": "docs/testing/ui-compact-2026-10-18/apk/sumo-ui-compact-debug.apk",
+    "size_bytes": 31103233,
+    "sha256": "c8f88cbcb3dd5fb2abdcd1bb7eb0608b2d2c1b27b9bd3ffa7b7d9aafbfcd9f55",
+    "matches_assignment_hash": true,
+    "evidence": [
+      "command:apk_hash",
+      "command:apk_file_sizes"
+    ]
+  },
+  "scope": {
+    "written_files": [
+      "docs/testing/phone-readiness/evidence/apk-audit.json"
+    ],
+    "not_performed": [
+      "build",
+      "lint",
+      "unit tests",
+      "instrumentation tests",
+      "AVD start/stop/change",
+      "AVD data access/change",
+      "phone connection/installation",
+      "SDK installation/update",
+      "private key/keystore/password/environment secret access",
+      "APK signing",
+      "upload",
+      "release"
+    ],
+    "gate_effect": "None: G5 conditional and G3/G4 pending remain unchanged. Historical FAIL evidence is not superseded."
+  },
+  "tools": {
+    "sdk_root": "C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk",
+    "build_tools": "36.0.0",
+    "jbr_bin": "C:\\Program Files\\Android\\Android Studio\\jbr\\bin",
+    "note": "Build-tools version 36.0.0 does not mean an API36 platform or runtime is installed. apksigner reads public APK certificates only.",
+    "evidence": [
+      "command:jbr_version",
+      "command:sdk_api36_inventory"
+    ]
+  },
+  "packaged_manifest": {
+    "application_id": "com.aistudy.myapplication",
+    "version_code": 1,
+    "version_name": "1.0",
+    "min_sdk": 36,
+    "target_sdk": 37,
+    "compile_sdk": 37,
+    "label": "Sumo Controller · Test",
+    "debuggable": true,
+    "allow_backup": true,
+    "extract_native_libs": false,
+    "main_activity": "com.aistudy.myapplication.MainActivity",
+    "screen_orientation": "sensorLandscape (0x6)",
+    "installer_receiver_exported": false,
+    "requested_permissions": [
+      "android.permission.INTERNET",
+      "android.permission.ACCESS_LOCAL_NETWORK",
+      "android.permission.REQUEST_INSTALL_PACKAGES",
+      "com.aistudy.myapplication.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+    ],
+    "declared_permissions": [
+      {
+        "name": "com.aistudy.myapplication.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+        "protection_level": "signature (0x2)"
+      }
+    ],
+    "debug_only_surface_note": "Packaged manifest includes exported androidx.compose.ui.tooling.PreviewActivity and androidx.activity.ComponentActivity. This is a debuggable test artifact, not a production-hardened release.",
+    "evidence": [
+      "command:apk_badging",
+      "command:apk_permissions",
+      "command:apk_manifest"
+    ]
+  },
+  "public_signing_identity": {
+    "verification_exit_code": 0,
+    "signer_count": 1,
+    "certificate_dn": "C=US, O=Android, CN=Android Debug",
+    "certificate_sha256": "d97c9cee077a242672a3d3b19276d6c9d76983ce862c59b0268b9a154c2915ba",
+    "public_key_sha256": "4f879dbabd722fe19958056b63a44570137e9fbd094119c35e1945ef6a7c3314",
+    "key_algorithm": "RSA",
+    "key_bits": 2048,
+    "verified_schemes": {
+      "v1": false,
+      "v2": true,
+      "v3": false,
+      "v3_1": false,
+      "v4": false,
+      "source_stamp": false
+    },
+    "classification": "Android Debug certificate; not evidence of a project-owned stable distribution key or backup. No private key was opened.",
+    "evidence": [
+      "command:apk_certificate"
+    ]
+  },
+  "native_abi_inventory": {
+    "source": "Actual APK entries from installed JBR jar tf, corroborated by installed aapt badging; ELF metadata and per-entry SHA256 read directly from this ZIP using Python stdlib.",
+    "abis": [
+      "arm64-v8a",
+      "armeabi-v7a",
+      "x86",
+      "x86_64"
+    ],
+    "entries": [
+      {
+        "entry": "lib/arm64-v8a/libandroidx.graphics.path.so",
+        "abi": "arm64-v8a",
+        "size_bytes": 10096,
+        "sha256": "41e9a793c43a0f4fddb19e33f346bace464f30f888ba7b9eaf96294ea115bfb6",
+        "elf_magic": "7f454c46",
+        "elf_class": 2,
+        "elf_machine": 183
+      },
+      {
+        "entry": "lib/armeabi-v7a/libandroidx.graphics.path.so",
+        "abi": "armeabi-v7a",
+        "size_bytes": 7252,
+        "sha256": "41399eba6fc2a60f6f14642375c1824f3cf25eb8fec7397d753730a3ceda3e2b",
+        "elf_magic": "7f454c46",
+        "elf_class": 1,
+        "elf_machine": 40
+      },
+      {
+        "entry": "lib/x86/libandroidx.graphics.path.so",
+        "abi": "x86",
+        "size_bytes": 9284,
+        "sha256": "eb0570b41fd3bff25d8204a967c03bd7550719e768b791f680cc40cbe35f29af",
+        "elf_magic": "7f454c46",
+        "elf_class": 1,
+        "elf_machine": 3
+      },
+      {
+        "entry": "lib/x86_64/libandroidx.graphics.path.so",
+        "abi": "x86_64",
+        "size_bytes": 10760,
+        "sha256": "4e56c996f13670e70082658de7880c4020eabf4f25e43387f88ed78a713fc9f0",
+        "elf_magic": "7f454c46",
+        "elf_class": 2,
+        "elf_machine": 62
+      }
+    ],
+    "interpretation": "ARM native payload presence is directly observed, NOT inferred from x86_64 AVD execution. Presence of ARM libraries does not establish phone startup, API36 behavior, 16 KB page compatibility, or physical-device functionality.",
+    "evidence": [
+      "command:apk_native_entries",
+      "command:apk_badging"
+    ]
+  },
+  "cache_binding": {
+    "path": "app/build/outputs/apk/debug/app-debug.apk",
+    "size_bytes": 31103233,
+    "sha256": "c8f88cbcb3dd5fb2abdcd1bb7eb0608b2d2c1b27b9bd3ffa7b7d9aafbfcd9f55",
+    "matches_audited_apk": true,
+    "limit": "This binds the current build-output/cache APK to the audited file, not to a phone, installed AVD app, or every current source file. No rebuild occurred.",
+    "evidence": [
+      "command:cache_apk_hash",
+      "command:apk_file_sizes"
+    ]
+  },
+  "api36_availability": {
+    "platform_installed": false,
+    "system_image_installed": false,
+    "sdkmanager_installed": false,
+    "installed_platforms": [
+      "android-37.0"
+    ],
+    "installed_system_image": "android-37.1/google_apis_playstore_ps16k/x86_64",
+    "status": "API36 runtime testing unavailable from the inspected installed SDK. No SDK/AVD change made. Remote package availability was not queried and is not claimed.",
+    "declared_support_only": "minSdk36 permits Android API36 at the manifest level; no API36 execution was performed. targetSdk37 is not a minimum-OS requirement.",
+    "evidence": [
+      "command:sdk_api36_inventory",
+      "command:sdk_runtime_details",
+      "command:apk_badging"
+    ]
+  },
+  "source_citations": {
+    "metadata": "app/src/main/java/com/aistudy/myapplication/updates/UpdateInfo.kt:5-29",
+    "network": "app/src/main/java/com/aistudy/myapplication/updates/HttpsTransfer.kt:8-44",
+    "manager": "app/src/main/java/com/aistudy/myapplication/updates/AppUpdateManager.kt:18-129",
+    "receiver": "app/src/main/java/com/aistudy/myapplication/updates/InstallResultReceiver.kt:9-25",
+    "activity": "app/src/main/java/com/aistudy/myapplication/MainActivity.kt:86-87,118-132,161-167",
+    "build_configuration": "app/build.gradle.kts:6-42",
+    "unit_metadata": "app/src/test/java/com/aistudy/myapplication/updates/UpdateInfoTest.kt:6-31",
+    "unit_transfer": "app/src/test/java/com/aistudy/myapplication/updates/HttpsTransferTest.kt:9-46",
+    "instrumented_settings": "app/src/androidTest/java/com/aistudy/myapplication/SettingsUpdateTest.kt:22-41,92-127",
+    "instrumented_signature": "app/src/androidTest/java/com/aistudy/myapplication/ApkSignatureTest.kt:11-28",
+    "instrumented_installer": "app/src/androidTest/java/com/aistudy/myapplication/InstallerPlatformTest.kt:13-46",
+    "backup_rules": "app/src/main/res/xml/backup_rules.xml:8-13;app/src/main/res/xml/data_extraction_rules.xml:6-19",
+    "settings_store": "app/src/main/java/com/aistudy/myapplication/settings/ControllerSettingsStore.kt:5-17",
+    "prior_readiness_limits": "docs/testing/TIEN_DO_AI.md:24-30,57-67;docs/testing/ui-compact-2026-10-18/KET_QUA.md:42-52",
+    "hosting_state": "docs/screenshots/ui-compact-2026-10-18/README.md:43-45"
+  },
+  "updater_review": [
+    {
+      "area": "HTTPS and redirects",
+      "observed": "Both feed and APK URLs must use exact lowercase https, have a host, no userinfo or fragment. Standard platform HTTPS trust is used (no custom trust bypass in this flow). Redirect following is manual; at most 4 requests / 3 redirects, HTTPS and same original host enforced. Only HTTP200 body accepted. Connect/read timeouts are 10/30 seconds; cancellation checked and connections disconnected. Same-host comparison is host-only, not same-origin: ports are not required to match.",
+      "citations": [
+        "source:metadata",
+        "source:network"
+      ]
+    },
+    {
+      "area": "Metadata",
+      "observed": "Feed limited to 65536 bytes. JSONObject parser requires strings for string fields and integer-form Number values for numeric fields, with Int bounds where applicable. Required fields: schemaVersion,applicationId,versionCode,versionName,minSdk,apkUrl,sizeBytes,sha256,releaseNotes,channel. Only schemaVersion1/channel test supported. versionName nonblank <=100 chars; releaseNotes <=10000 chars; APK 1..100 MiB; SHA256 exactly64 lowercase hex. APK host must match checked feed host. Unknown fields are not rejected; metadata has no independent signed-document validation. APK authenticity remains bound to the installed signer, not merely a metadata hash.",
+      "citations": [
+        "source:metadata",
+        "app/src/main/java/com/aistudy/myapplication/updates/AppUpdateManager.kt:44-51,118-128"
+      ]
+    },
+    {
+      "area": "Installed version and minSdk",
+      "observed": "PackageManager supplies actual installed package, longVersionCode, current SDK and signer hashes. Candidate versionCode must be strictly greater than installed and positive; metadata minSdk must be 1..device SDK. APK archive package/versionCode/minSdk must exactly equal metadata, and archive versionName must match metadata.",
+      "citations": [
+        "source:metadata",
+        "app/src/main/java/com/aistudy/myapplication/updates/AppUpdateManager.kt:36-42,102-109"
+      ]
+    },
+    {
+      "area": "Bytes, SHA256 and signature",
+      "observed": "Download streamed into private cache sumo-update.apk with byte limit; exact actual length and SHA256 required. PackageManager parses APK with GET_SIGNING_CERTIFICATES; archive and installed nonempty signer SHA256 sets must exactly match. Archive is verified after download and again immediately before session creation. Android PackageInstaller performs its own package/signature checks. This audit separately verified the actual packaged APK cryptographically using SDK apksigner. Exact current signer equality does not implement signing-lineage/key-rotation migration.",
+      "citations": [
+        "source:metadata",
+        "app/src/main/java/com/aistudy/myapplication/updates/AppUpdateManager.kt:54-67,81-117",
+        "command:apk_certificate"
+      ]
+    },
+    {
+      "area": "Feed binding and cancellation",
+      "observed": "Download/install reject a feed different from the feed checked for current metadata. State is in memory; a process restart requires check/download again. Cancellation flag is checked in transfer and before installer commit. execute catches errors, deletes cache APK, and clears busy/ready.",
+      "citations": [
+        "app/src/main/java/com/aistudy/myapplication/updates/AppUpdateManager.kt:25-35,54-78,90-100"
+      ]
+    },
+    {
+      "area": "Installer and safety caller",
+      "observed": "MainActivity opens updater only after stopControl gate. Install requires Android canRequestPackageInstalls or opens per-app unknown-sources settings; requestInstall rechecks permission and file. MODE_FULL_INSTALL session specifies package/size, USER_ACTION_REQUIRED and downloaded-file source; bytes are written+fsync then committed to explicit nonexported receiver via mutable broadcast PendingIntent. Session abandoned on synchronous exception. Pending Android confirmation intent is launched by Activity. No silent update, uninstall, key migration or settings clear exists in this path.",
+      "citations": [
+        "source:activity",
+        "app/src/main/java/com/aistudy/myapplication/updates/AppUpdateManager.kt:80-100",
+        "command:apk_manifest"
+      ]
+    },
+    {
+      "area": "Installer history",
+      "observed": "Receiver stores only the last message in SharedPreferences sumo_install_result and updates Compose state. Pending confirmation Intent is in memory only. Startup reloads last message; success text explicitly asks user to reopen and verify actual version. Abort/failure do not claim success. No durable session ID, candidate version/hash, timestamp or multi-entry installation ledger is stored. A historic fixture error/status is not evidence that a hosted update succeeded.",
+      "citations": [
+        "source:receiver",
+        "app/src/main/java/com/aistudy/myapplication/MainActivity.kt:86-87",
+        "source:hosting_state"
+      ]
+    }
+  ],
+  "reviewed_test_coverage": {
+    "execution": "Source review only; none of these tests was run by this audit. Existing results are not relabeled as fresh passes.",
+    "tests": [
+      {
+        "file": "app/src/test/java/com/aistudy/myapplication/updates/UpdateInfoTest.kt",
+        "coverage": [
+          "matching metadata/archive accepted",
+          "wrong package/schema/channel/version/minSdk/size/hash and HTTP rejected",
+          "wrong archive package/version/minSdk/signers, empty signers and size/hash mismatch rejected",
+          "userinfo/fragment/non-HTTPS rejected"
+        ]
+      },
+      {
+        "file": "app/src/test/java/com/aistudy/myapplication/updates/HttpsTransferTest.kt",
+        "coverage": [
+          "exact byte streaming/progress/disconnect",
+          "cancel/oversize/404 fail",
+          "HTTPS downgrade rejected",
+          "cross-host redirect rejected",
+          "4-request redirect bound",
+          "10s/30s timeout properties"
+        ],
+        "limits": "Connection is injected fake HttpURLConnection; not real HTTPS/TLS/hosting coverage."
+      },
+      {
+        "file": "app/src/androidTest/java/com/aistudy/myapplication/SettingsUpdateTest.kt",
+        "coverage": [
+          "changed feed rejected before touching installer",
+          "actual installed identity/signers read",
+          "JSON string version rejected and malformed JSON fails",
+          "current installed APK cannot be passed as metadata version2",
+          "abort/storage failures do not claim success",
+          "failure message restored across Activity recreation"
+        ],
+        "limits": "The process-state test clears static state and recreates Activity; it is not an actual process-kill/reboot test."
+      },
+      {
+        "file": "app/src/androidTest/java/com/aistudy/myapplication/ApkSignatureTest.kt",
+        "coverage": [
+          "original APK signer set matches installed",
+          "mutated classes.dex APK must fail PackageManager signer parsing"
+        ],
+        "limits": "Runtime/platform behavior not executed in this audit, especially not API36/ARM."
+      },
+      {
+        "file": "app/src/androidTest/java/com/aistudy/myapplication/InstallerPlatformTest.kt",
+        "coverage": [
+          "optional externally prepared v2 fixture requests actual Android confirmation",
+          "Cancel result",
+          "installed version remains1 and UI PWM0/0"
+        ],
+        "limits": "Assumes candidate instrumentation argument; otherwise skips. Direct local requestInstall bypasses HTTPS; deliberately cancels, so this is not a successful upgrade or A-to-B-to-C test."
+      }
+    ],
+    "unproven": [
+      "real HTTPS metadata/APK fetch with production TLS/redirect behavior",
+      "stable-signed A->B->C successful overwrite",
+      "settings/safety state preservation after successful upgrade on phone",
+      "API36 execution",
+      "ARM phone startup/native behavior",
+      "unknown-source permission flow on target OEM",
+      "installer confirmation recovery after real process death",
+      "stable signing key ownership/backup/recoverability"
+    ]
+  },
+  "installation_and_distribution_limits": [
+    {
+      "scenario": "Fresh install",
+      "assessment": "[INFERENCE] Manifest allows API36+ devices with a supported ABI; actual APK includes ARM and x86 variants. No fresh phone install was attempted. Android source-install approval/OEM policy, storage, compatibility, TLS reachability and actual device details remain prerequisites. API<36 is excluded. Existing OS backup/restore can make a nominal fresh install restore prior data because allowBackup=true; no blank-data guarantee.",
+      "citations": [
+        "command:apk_badging",
+        "command:apk_native_entries",
+        "command:apk_manifest",
+        "source:backup_rules"
+      ]
+    },
+    {
+      "scenario": "Overwrite and data",
+      "assessment": "[INFERENCE] In-place update requires the same package and compatible signing identity; this app further requires strictly increasing versionCode and exactly equal signer sets. The updater does not clear app data, but successful overwrite/data preservation has not been demonstrated. Uninstall/clear-data to bypass a signature conflict can destroy settings, calibration, saved feed, kill state, diagnostics and installer message. Do not use uninstall as an upgrade workaround. Default backup XML is not a verified recovery plan.",
+      "citations": [
+        "source:metadata",
+        "source:manager",
+        "source:settings_store",
+        "source:backup_rules"
+      ]
+    },
+    {
+      "scenario": "Version1 artifact",
+      "assessment": "This APK is versionCode1. A device already on1 or higher cannot receive this same artifact through the in-app updater (strict > check). It can only be a first-install/baseline candidate or an external installation, not evidence of an in-app upgrade. Rebuilding different bits while keeping versionCode1 does not solve this. External same-version reinstall behavior was not exercised.",
+      "citations": [
+        "command:apk_badging",
+        "app/src/main/java/com/aistudy/myapplication/updates/UpdateInfo.kt:12"
+      ]
+    },
+    {
+      "scenario": "Debug versus stable signing",
+      "assessment": "Actual artifact is debuggable and Android Debug-signed. Build config has opt-in sumoDistribution stableTest signing and requires version>=2 plus external owner-provided key configuration, but those keys/variables/backup were not accessed or verified. It still configures the debug build signing; stable signing alone would not make it a production release. A differently signed stable candidate cannot overwrite this debug install through the current updater, even with a higher version. No signing-lineage migration exists here. Start any authorized stable phone test chain with a stable-signed baseline; do not promise migration or preserve-data uninstall.",
+      "citations": [
+        "command:apk_certificate",
+        "command:apk_manifest",
+        "source:build_configuration",
+        "source:metadata"
+      ]
+    },
+    {
+      "scenario": "Key continuity",
+      "assessment": "Public certificate proves who signed these bytes, not private-key ownership, key availability, long-term custody or backup. A future build must maintain the intended signer identity; neither an Android Debug subject name nor a build task proves a stable chain. No key material or secret environment configuration was opened.",
+      "citations": [
+        "command:apk_certificate",
+        "source:build_configuration"
+      ]
+    }
+  ],
+  "updater_blockers": [
+    {
+      "id": "U1",
+      "status": "BLOCKED_FOR_PHONE_UPDATE_CHAIN",
+      "item": "No validated stable-signed baseline and two strictly newer same-signer update artifacts were supplied or inspected. Current debug v1 cannot demonstrate A->B->C.",
+      "citations": [
+        "command:apk_badging",
+        "command:apk_certificate",
+        "source:build_configuration",
+        "source:metadata"
+      ]
+    },
+    {
+      "id": "U2",
+      "status": "BLOCKED_FOR_END_TO_END_VERIFICATION",
+      "item": "Project records report no configured hosting/feed. No authorized real HTTPS feed/APK pair was supplied or fetched in this audit; .invalid/example fixture URLs and last installer message are not hosting evidence.",
+      "citations": [
+        "source:hosting_state",
+        "source:instrumented_installer",
+        "source:prior_readiness_limits"
+      ]
+    },
+    {
+      "id": "U3",
+      "status": "BLOCKED_FOR_API36_VERIFICATION",
+      "item": "Inspected SDK has neither API36 platform nor API36 image/sdkmanager. No API36 environment was installed or changed.",
+      "citations": [
+        "command:sdk_api36_inventory",
+        "command:sdk_runtime_details"
+      ]
+    },
+    {
+      "id": "U4",
+      "status": "BLOCKED_FOR_DEVICE_READINESS_CLAIM",
+      "item": "No phone or stable-key custody/backup was inspected. ABI payload presence and an x86_64 AVD do not prove ARM/API36 installation, permission UX, successful upgrades or preserved data.",
+      "citations": [
+        "command:apk_native_entries",
+        "source:prior_readiness_limits"
+      ]
+    },
+    {
+      "id": "U5",
+      "status": "LIMITATION_NOT_A_NEWLY_REPRODUCED_FAILURE",
+      "item": "Last-message-only installer history cannot attribute an old success/failure to a particular version/hash/session; pending confirmation is not durable across process loss. Treat actual installed version and a recorded upgrade transaction as acceptance evidence, not a stale message.",
+      "citations": [
+        "source:receiver",
+        "app/src/main/java/com/aistudy/myapplication/MainActivity.kt:86-87,128-132"
+      ]
+    }
+  ],
+  "conclusion": "Packaged identity, hash, public signature, native ABI payloads and cache hash are directly inspected. Updater has explicit HTTPS/metadata/size/hash/package/version/minSdk/signer/install-consent checks with source tests, but phone readiness and successful stable HTTPS upgrades remain unverified and blocked by the listed prerequisites. This audit does not close existing STOP/cadence FAIL history or authorize physical hardware/release.",
+  "commands": [
+    {
+      "id": "apk_hash",
+      "command": "powershell.exe -NoProfile -Command \"Get-FileHash -Algorithm SHA256 -LiteralPath 'C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\docs\\testing\\ui-compact-2026-10-18\\apk\\sumo-ui-compact-debug.apk' | Format-List Algorithm,Hash,Path\"",
+      "exit_code": 0,
+      "stdout": "\n\nAlgorithm : SHA256\nHash      : C8F88CBCB3DD5FB2ABDCD1BB7EB0608B2D2C1B27B9BD3FFA7B7D9AAFBFCD9F55\nPath      : C:\\Users\\CHI \n            NGUYEN\\AndroidStudioProjects\\IoT\\docs\\testing\\ui-compact-2026-10-18\\apk\\sumo-ui-compact-debug.apk\n\n\n\n",
+      "stderr": ""
+    },
+    {
+      "id": "apk_badging",
+      "command": "\"C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\build-tools\\36.0.0\\aapt.exe\" dump badging \"C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\docs\\testing\\ui-compact-2026-10-18\\apk\\sumo-ui-compact-debug.apk\"",
+      "exit_code": 0,
+      "stdout": "package: name='com.aistudy.myapplication' versionCode='1' versionName='1.0' platformBuildVersionName='17' platformBuildVersionCode='37' compileSdkVersion='37' compileSdkVersionCodename='17'\nsdkVersion:'36'\ntargetSdkVersion:'37'\nuses-permission: name='android.permission.INTERNET'\nuses-permission: name='android.permission.ACCESS_LOCAL_NETWORK'\nuses-permission: name='android.permission.REQUEST_INSTALL_PACKAGES'\nuses-permission: name='com.aistudy.myapplication.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION'\napplication-label:'Sumo Controller · Test'\napplication-label-af:'Sumo Controller · Test'\napplication-label-am:'Sumo Controller · Test'\napplication-label-ar:'Sumo Controller · Test'\napplication-label-as:'Sumo Controller · Test'\napplication-label-az:'Sumo Controller · Test'\napplication-label-be:'Sumo Controller · Test'\napplication-label-bg:'Sumo Controller · Test'\napplication-label-bn:'Sumo Controller · Test'\napplication-label-bs:'Sumo Controller · Test'\napplication-label-ca:'Sumo Controller · Test'\napplication-label-cs:'Sumo Controller · Test'\napplication-label-da:'Sumo Controller · Test'\napplication-label-de:'Sumo Controller · Test'\napplication-label-el:'Sumo Controller · Test'\napplication-label-en-AU:'Sumo Controller · Test'\napplication-label-en-CA:'Sumo Controller · Test'\napplication-label-en-GB:'Sumo Controller · Test'\napplication-label-en-IN:'Sumo Controller · Test'\napplication-label-en-XC:'Sumo Controller · Test'\napplication-label-es:'Sumo Controller · Test'\napplication-label-es-US:'Sumo Controller · Test'\napplication-label-et:'Sumo Controller · Test'\napplication-label-eu:'Sumo Controller · Test'\napplication-label-fa:'Sumo Controller · Test'\napplication-label-fi:'Sumo Controller · Test'\napplication-label-fr:'Sumo Controller · Test'\napplication-label-fr-CA:'Sumo Controller · Test'\napplication-label-gl:'Sumo Controller · Test'\napplication-label-gu:'Sumo Controller · Test'\napplication-label-hi:'Sumo Controller · Test'\napplication-label-hr:'Sumo Controller · Test'\napplication-label-hu:'Sumo Controller · Test'\napplication-label-hy:'Sumo Controller · Test'\napplication-label-in:'Sumo Controller · Test'\napplication-label-is:'Sumo Controller · Test'\napplication-label-it:'Sumo Controller · Test'\napplication-label-iw:'Sumo Controller · Test'\napplication-label-ja:'Sumo Controller · Test'\napplication-label-ka:'Sumo Controller · Test'\napplication-label-kk:'Sumo Controller · Test'\napplication-label-km:'Sumo Controller · Test'\napplication-label-kn:'Sumo Controller · Test'\napplication-label-ko:'Sumo Controller · Test'\napplication-label-ky:'Sumo Controller · Test'\napplication-label-lo:'Sumo Controller · Test'\napplication-label-lt:'Sumo Controller · Test'\napplication-label-lv:'Sumo Controller · Test'\napplication-label-mk:'Sumo Controller · Test'\napplication-label-ml:'Sumo Controller · Test'\napplication-label-mn:'Sumo Controller · Test'\napplication-label-mr:'Sumo Controller · Test'\napplication-label-ms:'Sumo Controller · Test'\napplication-label-my:'Sumo Controller · Test'\napplication-label-nb:'Sumo Controller · Test'\napplication-label-ne:'Sumo Controller · Test'\napplication-label-nl:'Sumo Controller · Test'\napplication-label-or:'Sumo Controller · Test'\napplication-label-pa:'Sumo Controller · Test'\napplication-label-pl:'Sumo Controller · Test'\napplication-label-pt:'Sumo Controller · Test'\napplication-label-pt-BR:'Sumo Controller · Test'\napplication-label-pt-PT:'Sumo Controller · Test'\napplication-label-ro:'Sumo Controller · Test'\napplication-label-ru:'Sumo Controller · Test'\napplication-label-si:'Sumo Controller · Test'\napplication-label-sk:'Sumo Controller · Test'\napplication-label-sl:'Sumo Controller · Test'\napplication-label-sq:'Sumo Controller · Test'\napplication-label-sr:'Sumo Controller · Test'\napplication-label-sr-Latn:'Sumo Controller · Test'\napplication-label-sv:'Sumo Controller · Test'\napplication-label-sw:'Sumo Controller · Test'\napplication-label-ta:'Sumo Controller · Test'\napplication-label-te:'Sumo Controller · Test'\napplication-label-th:'Sumo Controller · Test'\napplication-label-tl:'Sumo Controller · Test'\napplication-label-tr:'Sumo Controller · Test'\napplication-label-uk:'Sumo Controller · Test'\napplication-label-ur:'Sumo Controller · Test'\napplication-label-uz:'Sumo Controller · Test'\napplication-label-vi:'Sumo Controller · Test'\napplication-label-zh-CN:'Sumo Controller · Test'\napplication-label-zh-HK:'Sumo Controller · Test'\napplication-label-zh-TW:'Sumo Controller · Test'\napplication-label-zu:'Sumo Controller · Test'\napplication-icon-160:'res/mipmap-anydpi-v21/ic_launcher.xml'\napplication-icon-240:'res/mipmap-anydpi-v21/ic_launcher.xml'\napplication-icon-320:'res/mipmap-anydpi-v21/ic_launcher.xml'\napplication-icon-480:'res/mipmap-anydpi-v21/ic_launcher.xml'\napplication-icon-640:'res/mipmap-anydpi-v21/ic_launcher.xml'\napplication-icon-65534:'res/mipmap-anydpi-v21/ic_launcher.xml'\napplication: label='Sumo Controller · Test' icon='res/mipmap-anydpi-v21/ic_launcher.xml'\napplication-debuggable\nlaunchable-activity: name='com.aistudy.myapplication.MainActivity'  label='Sumo Controller · Test' icon=''\nuses-library-not-required:'androidx.window.extensions'\nuses-library-not-required:'androidx.window.sidecar'\nfeature-group: label=''\n  uses-feature: name='android.hardware.faketouch'\n  uses-implied-feature: name='android.hardware.faketouch' reason='default feature for all apps'\n  uses-feature: name='android.hardware.screen.landscape'\n  uses-implied-feature: name='android.hardware.screen.landscape' reason='one or more activities have specified a landscape orientation'\nmain\nother-activities\nother-receivers\nsupports-screens: 'small' 'normal' 'large' 'xlarge'\nsupports-any-density: 'true'\nlocales: '--_--' 'af' 'am' 'ar' 'as' 'az' 'be' 'bg' 'bn' 'bs' 'ca' 'cs' 'da' 'de' 'el' 'en-AU' 'en-CA' 'en-GB' 'en-IN' 'en-XC' 'es' 'es-US' 'et' 'eu' 'fa' 'fi' 'fr' 'fr-CA' 'gl' 'gu' 'hi' 'hr' 'hu' 'hy' 'in' 'is' 'it' 'iw' 'ja' 'ka' 'kk' 'km' 'kn' 'ko' 'ky' 'lo' 'lt' 'lv' 'mk' 'ml' 'mn' 'mr' 'ms' 'my' 'nb' 'ne' 'nl' 'or' 'pa' 'pl' 'pt' 'pt-BR' 'pt-PT' 'ro' 'ru' 'si' 'sk' 'sl' 'sq' 'sr' 'sr-Latn' 'sv' 'sw' 'ta' 'te' 'th' 'tl' 'tr' 'uk' 'ur' 'uz' 'vi' 'zh-CN' 'zh-HK' 'zh-TW' 'zu'\ndensities: '160' '240' '320' '480' '640' '65534'\nnative-code: 'arm64-v8a' 'armeabi-v7a' 'x86' 'x86_64'\n",
+      "stderr": ""
+    },
+    {
+      "id": "apk_permissions",
+      "command": "\"C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\build-tools\\36.0.0\\aapt.exe\" dump permissions \"C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\docs\\testing\\ui-compact-2026-10-18\\apk\\sumo-ui-compact-debug.apk\"",
+      "exit_code": 0,
+      "stdout": "package: com.aistudy.myapplication\nuses-permission: name='android.permission.INTERNET'\nuses-permission: name='android.permission.ACCESS_LOCAL_NETWORK'\nuses-permission: name='android.permission.REQUEST_INSTALL_PACKAGES'\npermission: com.aistudy.myapplication.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION\nuses-permission: name='com.aistudy.myapplication.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION'\n",
+      "stderr": ""
+    },
+    {
+      "id": "apk_certificate",
+      "command": "\"C:\\Program Files\\Android\\Android Studio\\jbr\\bin\\java.exe\" -jar \"C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\build-tools\\36.0.0\\lib\\apksigner.jar\" verify --verbose --print-certs \"C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\docs\\testing\\ui-compact-2026-10-18\\apk\\sumo-ui-compact-debug.apk\"",
+      "exit_code": 0,
+      "stdout": "Verifies\nVerified using v1 scheme (JAR signing): false\nVerified using v2 scheme (APK Signature Scheme v2): true\nVerified using v3 scheme (APK Signature Scheme v3): false\nVerified using v3.1 scheme (APK Signature Scheme v3.1): false\nVerified using v4 scheme (APK Signature Scheme v4): false\nVerified for SourceStamp: false\nNumber of signers: 1\nSigner #1 certificate DN: C=US, O=Android, CN=Android Debug\nSigner #1 certificate SHA-256 digest: d97c9cee077a242672a3d3b19276d6c9d76983ce862c59b0268b9a154c2915ba\nSigner #1 certificate SHA-1 digest: 108858d7d57f5040b98a236fa150bc5440c2496f\nSigner #1 certificate MD5 digest: ab68e35cf7fa46ed3b230fc1a1ac3b17\nSigner #1 key algorithm: RSA\nSigner #1 key size (bits): 2048\nSigner #1 public key SHA-256 digest: 4f879dbabd722fe19958056b63a44570137e9fbd094119c35e1945ef6a7c3314\nSigner #1 public key SHA-1 digest: 5de8c9f4fab45f1c9f6385d083e2ef9fe9e1a137\nSigner #1 public key MD5 digest: ff734c11879f210beb5e490a7d97282a\n",
+      "stderr": "WARNING: A restricted method in java.lang.System has been called\nWARNING: java.lang.System::loadLibrary has been called by org.conscrypt.NativeLibraryUtil in an unnamed module (file:/C:/Users/CHI%20NGUYEN/AppData/Local/Android/Sdk/build-tools/36.0.0/lib/apksigner.jar)\nWARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module\nWARNING: Restricted methods will be blocked in a future release unless native access is enabled\n\n"
+    },
+    {
+      "id": "jbr_version",
+      "command": "\"C:\\Program Files\\Android\\Android Studio\\jbr\\bin\\java.exe\" -version",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "openjdk version \"25.0.2\" 2026-01-20\nOpenJDK Runtime Environment (build 25.0.2+-15348964-b329.117)\nOpenJDK 64-Bit Server VM (build 25.0.2+-15348964-b329.117, mixed mode)\n"
+    },
+    {
+      "id": "apk_manifest",
+      "command": "\"C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\build-tools\\36.0.0\\aapt.exe\" dump xmltree \"C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\docs\\testing\\ui-compact-2026-10-18\\apk\\sumo-ui-compact-debug.apk\" AndroidManifest.xml",
+      "exit_code": 0,
+      "stdout": "N: android=http://schemas.android.com/apk/res/android\n  E: manifest (line=2)\n    A: android:versionCode(0x0101021b)=(type 0x10)0x1\n    A: android:versionName(0x0101021c)=\"1.0\" (Raw: \"1.0\")\n    A: android:compileSdkVersion(0x01010572)=(type 0x10)0x25\n    A: android:compileSdkVersionCodename(0x01010573)=\"17\" (Raw: \"17\")\n    A: package=\"com.aistudy.myapplication\" (Raw: \"com.aistudy.myapplication\")\n    A: platformBuildVersionCode=(type 0x10)0x25\n    A: platformBuildVersionName=(type 0x10)0x11\n    E: uses-sdk (line=7)\n      A: android:minSdkVersion(0x0101020c)=(type 0x10)0x24\n      A: android:targetSdkVersion(0x01010270)=(type 0x10)0x25\n    E: uses-permission (line=11)\n      A: android:name(0x01010003)=\"android.permission.INTERNET\" (Raw: \"android.permission.INTERNET\")\n    E: uses-permission (line=12)\n      A: android:name(0x01010003)=\"android.permission.ACCESS_LOCAL_NETWORK\" (Raw: \"android.permission.ACCESS_LOCAL_NETWORK\")\n    E: uses-permission (line=13)\n      A: android:name(0x01010003)=\"android.permission.REQUEST_INSTALL_PACKAGES\" (Raw: \"android.permission.REQUEST_INSTALL_PACKAGES\")\n    E: permission (line=15)\n      A: android:name(0x01010003)=\"com.aistudy.myapplication.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION\" (Raw: \"com.aistudy.myapplication.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION\")\n      A: android:protectionLevel(0x01010009)=(type 0x11)0x2\n    E: uses-permission (line=19)\n      A: android:name(0x01010003)=\"com.aistudy.myapplication.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION\" (Raw: \"com.aistudy.myapplication.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION\")\n    E: application (line=21)\n      A: android:theme(0x01010000)=@0x7f0a0009\n      A: android:label(0x01010001)=@0x7f090003\n      A: android:icon(0x01010002)=@0x7f080000\n      A: android:debuggable(0x0101000f)=(type 0x12)0xffffffff\n      A: android:allowBackup(0x01010280)=(type 0x12)0xffffffff\n      A: android:supportsRtl(0x010103af)=(type 0x12)0xffffffff\n      A: android:extractNativeLibs(0x010104ea)=(type 0x12)0x0\n      A: android:fullBackupContent(0x010104eb)=@0x7f0c0000\n      A: android:roundIcon(0x0101052c)=@0x7f080001\n      A: android:appComponentFactory(0x0101057a)=\"androidx.core.app.CoreComponentFactory\" (Raw: \"androidx.core.app.CoreComponentFactory\")\n      A: android:dataExtractionRules(0x0101063e)=@0x7f0c0001\n      E: receiver (line=33)\n        A: android:name(0x01010003)=\"com.aistudy.myapplication.updates.InstallResultReceiver\" (Raw: \"com.aistudy.myapplication.updates.InstallResultReceiver\")\n        A: android:exported(0x01010010)=(type 0x12)0x0\n      E: activity (line=37)\n        A: android:theme(0x01010000)=@0x7f0a0009\n        A: android:label(0x01010001)=@0x7f090003\n        A: android:name(0x01010003)=\"com.aistudy.myapplication.MainActivity\" (Raw: \"com.aistudy.myapplication.MainActivity\")\n        A: android:exported(0x01010010)=(type 0x12)0xffffffff\n        A: android:screenOrientation(0x0101001e)=(type 0x10)0x6\n        A: android:windowSoftInputMode(0x0101022b)=(type 0x11)0x10\n        E: intent-filter (line=44)\n          E: action (line=45)\n            A: android:name(0x01010003)=\"android.intent.action.MAIN\" (Raw: \"android.intent.action.MAIN\")\n          E: category (line=47)\n            A: android:name(0x01010003)=\"android.intent.category.LAUNCHER\" (Raw: \"android.intent.category.LAUNCHER\")\n      E: activity (line=50)\n        A: android:name(0x01010003)=\"androidx.compose.ui.tooling.PreviewActivity\" (Raw: \"androidx.compose.ui.tooling.PreviewActivity\")\n        A: android:exported(0x01010010)=(type 0x12)0xffffffff\n      E: provider (line=54)\n        A: android:name(0x01010003)=\"androidx.startup.InitializationProvider\" (Raw: \"androidx.startup.InitializationProvider\")\n        A: android:exported(0x01010010)=(type 0x12)0x0\n        A: android:authorities(0x01010018)=\"com.aistudy.myapplication.androidx-startup\" (Raw: \"com.aistudy.myapplication.androidx-startup\")\n        E: meta-data (line=58)\n          A: android:name(0x01010003)=\"androidx.emoji2.text.EmojiCompatInitializer\" (Raw: \"androidx.emoji2.text.EmojiCompatInitializer\")\n          A: android:value(0x01010024)=\"androidx.startup\" (Raw: \"androidx.startup\")\n        E: meta-data (line=61)\n          A: android:name(0x01010003)=\"androidx.lifecycle.ProcessLifecycleInitializer\" (Raw: \"androidx.lifecycle.ProcessLifecycleInitializer\")\n          A: android:value(0x01010024)=\"androidx.startup\" (Raw: \"androidx.startup\")\n        E: meta-data (line=64)\n          A: android:name(0x01010003)=\"androidx.profileinstaller.ProfileInstallerInitializer\" (Raw: \"androidx.profileinstaller.ProfileInstallerInitializer\")\n          A: android:value(0x01010024)=\"androidx.startup\" (Raw: \"androidx.startup\")\n      E: uses-library (line=69)\n        A: android:name(0x01010003)=\"androidx.window.extensions\" (Raw: \"androidx.window.extensions\")\n        A: android:required(0x0101028e)=(type 0x12)0x0\n      E: uses-library (line=72)\n        A: android:name(0x01010003)=\"androidx.window.sidecar\" (Raw: \"androidx.window.sidecar\")\n        A: android:required(0x0101028e)=(type 0x12)0x0\n      E: activity (line=76)\n        A: android:theme(0x01010000)=@0x01030241\n        A: android:name(0x01010003)=\"androidx.activity.ComponentActivity\" (Raw: \"androidx.activity.ComponentActivity\")\n        A: android:exported(0x01010010)=(type 0x12)0xffffffff\n      E: receiver (line=81)\n        A: android:name(0x01010003)=\"androidx.profileinstaller.ProfileInstallReceiver\" (Raw: \"androidx.profileinstaller.ProfileInstallReceiver\")\n        A: android:permission(0x01010006)=\"android.permission.DUMP\" (Raw: \"android.permission.DUMP\")\n        A: android:enabled(0x0101000e)=(type 0x12)0xffffffff\n        A: android:exported(0x01010010)=(type 0x12)0xffffffff\n        A: android:directBootAware(0x01010505)=(type 0x12)0x0\n        E: intent-filter (line=87)\n          E: action (line=88)\n            A: android:name(0x01010003)=\"androidx.profileinstaller.action.INSTALL_PROFILE\" (Raw: \"androidx.profileinstaller.action.INSTALL_PROFILE\")\n        E: intent-filter (line=90)\n          E: action (line=91)\n            A: android:name(0x01010003)=\"androidx.profileinstaller.action.SKIP_FILE\" (Raw: \"androidx.profileinstaller.action.SKIP_FILE\")\n        E: intent-filter (line=93)\n          E: action (line=94)\n            A: android:name(0x01010003)=\"androidx.profileinstaller.action.SAVE_PROFILE\" (Raw: \"androidx.profileinstaller.action.SAVE_PROFILE\")\n        E: intent-filter (line=96)\n          E: action (line=97)\n            A: android:name(0x01010003)=\"androidx.profileinstaller.action.BENCHMARK_OPERATION\" (Raw: \"androidx.profileinstaller.action.BENCHMARK_OPERATION\")\n",
+      "stderr": ""
+    },
+    {
+      "id": "cache_apk_hash",
+      "command": "powershell.exe -NoProfile -Command \"Get-FileHash -Algorithm SHA256 -LiteralPath 'C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\apk\\debug\\app-debug.apk' | Format-List Algorithm,Hash,Path\"",
+      "exit_code": 0,
+      "stdout": "\n\nAlgorithm : SHA256\nHash      : C8F88CBCB3DD5FB2ABDCD1BB7EB0608B2D2C1B27B9BD3FFA7B7D9AAFBFCD9F55\nPath      : C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\apk\\debug\\app-debug.apk\n\n\n\n",
+      "stderr": ""
+    },
+    {
+      "id": "sdk_api36_inventory",
+      "command": "powershell.exe -NoProfile -Command \"$sdk='C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk'; Get-ChildItem -LiteralPath ($sdk + '/platforms'),($sdk + '/system-images'),($sdk + '/build-tools') -Directory | Select-Object FullName; 'API36 platform installed: ' + (Test-Path -LiteralPath ($sdk + '/platforms/android-36/android.jar')); 'API36 system images installed: ' + (Test-Path -LiteralPath ($sdk + '/system-images/android-36')); 'cmdline-tools installed: ' + (Test-Path -LiteralPath ($sdk + '/cmdline-tools')); 'legacy tools installed: ' + (Test-Path -LiteralPath ($sdk + '/tools'))\"",
+      "exit_code": 0,
+      "stdout": "\nFullName                                                                \n--------                                                                \nC:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\platforms\\android-37.0    \nC:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\system-images\\android-37.1\nC:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\build-tools\\36.0.0        \nAPI36 platform installed: False\nAPI36 system images installed: False\ncmdline-tools installed: False\nlegacy tools installed: False\n\n\n",
+      "stderr": ""
+    },
+    {
+      "id": "sdk_runtime_details",
+      "command": "powershell.exe -NoProfile -Command \"$sdk='C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk'; Get-ChildItem -LiteralPath ($sdk + '/system-images') -Directory -Recurse | Select-Object -ExpandProperty FullName; Get-ChildItem -LiteralPath ($sdk + '/platforms') -Directory | Select-Object -ExpandProperty FullName\"",
+      "exit_code": 0,
+      "stdout": "C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\system-images\\android-37.1\nC:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\system-images\\android-37.1\\google_apis_playstore_ps16k\nC:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\system-images\\android-37.1\\google_apis_playstore_ps16k\\x86_64\nC:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\system-images\\android-37.1\\google_apis_playstore_ps16k\\x86_64\\data\nC:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\system-images\\android-37.1\\google_apis_playstore_ps16k\\x86_64\\data\\misc\nC:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\system-images\\android-37.1\\google_apis_playstore_ps16k\\x86_64\\data\\misc\\emulator\nC:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\system-images\\android-37.1\\google_apis_playstore_ps16k\\x86_64\\data\\misc\\modem_simulator\nC:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\system-images\\android-37.1\\google_apis_playstore_ps16k\\x86_64\\data\\misc\\pixel_10_pro_fold\nC:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\system-images\\android-37.1\\google_apis_playstore_ps16k\\x86_64\\data\\misc\\pixel_9_pro_fold\nC:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\system-images\\android-37.1\\google_apis_playstore_ps16k\\x86_64\\data\\misc\\pixel_fold\nC:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\system-images\\android-37.1\\google_apis_playstore_ps16k\\x86_64\\data\\misc\\emulator\\config\nC:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\system-images\\android-37.1\\google_apis_playstore_ps16k\\x86_64\\data\\misc\\modem_simulator\\etc\nC:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\system-images\\android-37.1\\google_apis_playstore_ps16k\\x86_64\\data\\misc\\modem_simulator\\etc\\modem_simulator\nC:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\system-images\\android-37.1\\google_apis_playstore_ps16k\\x86_64\\data\\misc\\modem_simulator\\etc\\modem_simulator\\files\nC:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\system-images\\android-37.1\\google_apis_playstore_ps16k\\x86_64\\data\\misc\\pixel_10_pro_fold\\devicestate\nC:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\system-images\\android-37.1\\google_apis_playstore_ps16k\\x86_64\\data\\misc\\pixel_10_pro_fold\\displayconfig\nC:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\system-images\\android-37.1\\google_apis_playstore_ps16k\\x86_64\\data\\misc\\pixel_9_pro_fold\\devicestate\nC:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\system-images\\android-37.1\\google_apis_playstore_ps16k\\x86_64\\data\\misc\\pixel_9_pro_fold\\displayconfig\nC:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\system-images\\android-37.1\\google_apis_playstore_ps16k\\x86_64\\data\\misc\\pixel_fold\\devicestate\nC:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\system-images\\android-37.1\\google_apis_playstore_ps16k\\x86_64\\data\\misc\\pixel_fold\\displayconfig\nC:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\platforms\\android-37.0\n",
+      "stderr": ""
+    },
+    {
+      "id": "apk_native_entries",
+      "command": "powershell.exe -NoProfile -Command \"& 'C:\\Program Files\\Android\\Android Studio\\jbr\\bin\\jar.exe' tf 'C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\docs\\testing\\ui-compact-2026-10-18\\apk\\sumo-ui-compact-debug.apk' | Where-Object { $_ -like 'lib/*' }\"",
+      "exit_code": 0,
+      "stdout": "lib/arm64-v8a/libandroidx.graphics.path.so\nlib/armeabi-v7a/libandroidx.graphics.path.so\nlib/x86/libandroidx.graphics.path.so\nlib/x86_64/libandroidx.graphics.path.so\n",
+      "stderr": ""
+    },
+    {
+      "id": "apk_file_sizes",
+      "command": "powershell.exe -NoProfile -Command \"Get-Item -LiteralPath 'C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\docs\\testing\\ui-compact-2026-10-18\\apk\\sumo-ui-compact-debug.apk','C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\apk\\debug\\app-debug.apk' | Select-Object FullName,Length | Format-List\"",
+      "exit_code": 0,
+      "stdout": "\n\nFullName : C:\\Users\\CHI \n           NGUYEN\\AndroidStudioProjects\\IoT\\docs\\testing\\ui-compact-2026-10-18\\apk\\sumo-ui-compact-debug.apk\nLength   : 31103233\n\nFullName : C:\\Users\\CHI NGUYEN\\AndroidStudioProjects\\IoT\\app\\build\\outputs\\apk\\debug\\app-debug.apk\nLength   : 31103233\n\n\n\n",
+      "stderr": ""
+    }
+  ],
+  "citation_format": "command:<id> resolves to exact captured command/exit/stdout/stderr in commands; source:<key> resolves to source_citations; other citations are repository-relative path:line ranges. [INFERENCE] marks unexecuted platform expectations, not observed installations."
+}

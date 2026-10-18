@@ -73,6 +73,20 @@ Kết quả lịch sử đợt độc lập Phase5 ở hồ sơ08–15 (ngoại 
 
 Sau đó người dùng duyệt ngoại lệ G5AVD cho cấu hình50ms có jitter+10ms,STOP vẫn≤10ms. Bản mới sửa cache snapshot/giảm cấp phát poll rỗng và bỏ CPU sampler chẩn đoán mặc định;110unit,6Android (4tích hợp+2thu timing) và8fault đạt phần chức năng. Cohort21 cadence50 max54,4796ms đạt cận60 nhưng STOP2/500>10ms,max11,4174ms;cohort Normal20 còn cadence50>60ms. Sau khi nhận kết quả, người dùng chốt **G5 CÓ ĐIỀU KIỆN cho chức năng AVD**, giữ STOP/cadence là lỗi mở, chặn dùng xe và release. Ngày18/10 giữ nguyên nguồn/APK, chạy25/25AndroidUI/Settings/updater+soak/probe; soak33 riêng trênbinarycuối đạt30phút0,668giây/600chu kỳ/20reconnect,audit60.557framekhôngrevival. Trace chẩn đoán không tái hiện vi phạm và không đóngFAILcũ; không tự duyệtG3/G4 hoặc chuyểnPhase6/7. Xem [quyết định và kết quả bổ sung](testing/phase-5/KET_QUA_BO_SUNG_G5.md).
 
+### 3.5. Giao diện compact và Chẩn đoán ngày18/10/2026
+
+Theo mockup v3 người dùng duyệt, đã áp dụng bố cục gọn hơn, Kill/chế độ trên thanh đầu, cảnh báo giữ vị trí cố định, ping/tuổi ACK và App PWM/ACK PWM tách riêng. Có4giao diện: Điều khiển (D-Pad/joystick), Chẩn đoán, modal Cấu hình (3tab) và modal Cập nhật. Mở công cụ dừng/đóng phiên; quay lại không tự phát lại chuyển động.
+
+Chẩn đoán dùng dữ liệu thật, nhóm App/Mạng/Giao thức/IoT, bộ đếm TX/RX/bị loại, lý do ACK/rejection, clipboard, xuất file bằng Android và lưu phiên lỗi trước. Ghi log qua trace worker, đọc summary immutable; UI cập nhật250ms, ring240dòng và giới hạn báo cáo. Giữ Chưa xác định khi thiếu dữ liệu; ACK không chứng minh trạng thái cơ học. Các thông số lái/kết nối vẫn chỉnh và lưu được không build lại.
+
+118unit,33case Android chức năng phân biệt và8kịch bản fault có bằng chứng trên APK mới;33case được đối chiếu từ đợt35và5case kiểm lại36, không cộng trùng. Một batch STOP500/cadence mới đạt cận đã duyệt nhưng không đóng FAIL lịch sử hoặc thay G5 có điều kiện. APK G5 cũ và bằng chứng soak cũ giữ nguyên; chưa thử máy thật/release. [13ảnh thật](screenshots/ui-compact-2026-10-18/README.md) · [Báo cáo/binary/giới hạn](testing/ui-compact-2026-10-18/KET_QUA.md).
+
+### 3.6. Kiểm tra cài thử điện thoại ngày18/10/2026
+
+Đã sửa lỗi cắt chữ/bố cục ở800×360dp/font150% trong Controller/Chẩn đoán/updater và lỗi nhả nút mở khóa sau khi gửiU nhưng trướcACK làm Kill bật lại. Regression phiên red→green;66/66unit liên quan đạt,smokeUDPthật xác nhận nhả trướcACK vẫn mở khóa trung tính. APK debug cục bộ cuối SHA256 `b31ac740afa3515c8cc5a2a344061e170c63a5972ca4beef2058c3ac7c5c736f`,min36/target37,version1.0/code1; kiểm chữ ký/libABIthực và cài đèAVDgiữdata,khôngđổikhóa/minSdk/SDK.
+
+Kết luận **CÓ ĐIỀU KIỆN cài thử UI/cấu hình/nhật ký trên điện thoại, không nối xe**. Fullunit thực chạy117/118còn1FAILsampling;Androidcuối40+41có34/36ca chức năng phân biệt đạt,2FAILđược giữ,8/8faultmớiđạt. Chỉ1batchtimingtrênbinarytrunggian:STOP6/500>10ms,max25,3868msFAIL;cadenceđạtcậnđãduyệt. Chỉ1lượtthửsoak bịtestchạmsớm trướcACK,khônghoàntất30phút/khôngchạylượt2. API36/điệnthoạiARM/UDPLAN/HTTPS A→B→C/khóaphânphốiổnđịnh/firmwarevẫnchưakiểmchứng. G5cóđiềukiện/G3G4chờduyệt/chặnxe-releasegiữnguyên. [Kết luận,APK/hướng dẫn/evidence](testing/phone-readiness/KET_LUAN.md) · [16ảnhthậtAPKcuối](testing/phone-readiness/screenshots/INDEX.md).
+
 ## 4. Người sử dụng và quy trình chính
 
 Người sử dụng chính là người lái robot. Người cấu hình hoặc kiểm thử cần thiết lập kết nối, kiểm tra trạng thái xe, chạy kịch bản và đọc kết quả.

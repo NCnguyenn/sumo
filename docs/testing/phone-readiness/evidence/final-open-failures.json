@@ -1,0 +1,21 @@
+{
+  "apk_sha256": "b31ac740afa3515c8cc5a2a344061e170c63a5972ca4beef2058c3ac7c5c736f",
+  "android_unique_passed": 34,
+  "android_unique_failed": 2,
+  "failures": [
+    {
+      "case": "AndroidSimulatorTest.I01_I02_U03_androidUdpToIndependentPythonHasRealAckAndSafeRelease",
+      "observed": "Assertion expected AppPWM255 but saw0; wire/ACK reached255 for several frames, then session closed before assertion. No stale-pointer revival observed.",
+      "reason": "Captured close is preceded by InstrumentationActivityInvoker$EmptyActivity START and MainActivity PAUSED, then stop-gate. It is compatible with test teardown/focus loss, not proof of spontaneous product closure; root cause of the earlier stale0 assertion remains unproven. KeptFAIL, no rerun.",
+      "evidence": "I01_I02_U03_androidUdpToIndependentPythonHasRealAckAndSafeRelease-context.txt; unexpected-close-lifecycle-context.txt:53-76"
+    },
+    {
+      "case": "Phase5RegressionTest.E03_A13_updateEntryWhileHoldingAndDuringMacroClosesSession",
+      "observed": "Macro receiver ACK-255/255 rồi0 trong200ms; testcase did not observe transient Xoay# and timed out. First update-entry portion closed session safely.",
+      "reason": "[INFERENCE] UI/host scheduling may miss200ms transient; no trace proof to assign sole cause, test remainsFAIL.",
+      "evidence": "E03_A13_updateEntryWhileHoldingAndDuringMacroClosesSession-context.txt"
+    }
+  ],
+  "no_functional_rerun": true,
+  "consumer_scope": "Keep vehicle/release blocked; phone UI/settings/log trial only."
+}

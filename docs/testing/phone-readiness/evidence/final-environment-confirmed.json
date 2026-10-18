@@ -1,0 +1,11 @@
+{
+  "adb_devices": "List of devices attached\r\n\r\n",
+  "host_observation": {
+    "qemu": [],
+    "udp": []
+  },
+  "adb_emu_kill_acknowledged": true,
+  "service_reported_exit_code": 127,
+  "all_audit_runtime_closed": true,
+  "emulator_exit_does_not_imply_app_crash": true
+}

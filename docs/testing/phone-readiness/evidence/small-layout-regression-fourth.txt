@@ -1,0 +1,41 @@
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.CompactDiagnosticsTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=
+com.aistudy.myapplication.CompactDiagnosticsTest:
+INSTRUMENTATION_STATUS: test=smallLandscapeWithLargeFontKeepsControlsAndTextInsideTheirBounds
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.CompactDiagnosticsTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Clipped text: [GIỮ · HOLD: line=0 width=162.5 bottom=36.0 / 164 x 33, 200 ms: line=0 width=106.5 bottom=36.0 / 108 x 33]
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.aistudy.myapplication.CompactDiagnosticsTest.smallLandscapeWithLargeFontKeepsControlsAndTextInsideTheirBounds(CompactDiagnosticsTest.kt:63)
+
+INSTRUMENTATION_STATUS: stream=
+Error in smallLandscapeWithLargeFontKeepsControlsAndTextInsideTheirBounds(com.aistudy.myapplication.CompactDiagnosticsTest):
+java.lang.AssertionError: Clipped text: [GIỮ · HOLD: line=0 width=162.5 bottom=36.0 / 164 x 33, 200 ms: line=0 width=106.5 bottom=36.0 / 108 x 33]
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.aistudy.myapplication.CompactDiagnosticsTest.smallLandscapeWithLargeFontKeepsControlsAndTextInsideTheirBounds(CompactDiagnosticsTest.kt:63)
+
+INSTRUMENTATION_STATUS: test=smallLandscapeWithLargeFontKeepsControlsAndTextInsideTheirBounds
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_RESULT: stream=
+
+Time: 3.414
+There was 1 failure:
+1) smallLandscapeWithLargeFontKeepsControlsAndTextInsideTheirBounds(com.aistudy.myapplication.CompactDiagnosticsTest)
+java.lang.AssertionError: Clipped text: [GIỮ · HOLD: line=0 width=162.5 bottom=36.0 / 164 x 33, 200 ms: line=0 width=106.5 bottom=36.0 / 108 x 33]
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.aistudy.myapplication.CompactDiagnosticsTest.smallLandscapeWithLargeFontKeepsControlsAndTextInsideTheirBounds(CompactDiagnosticsTest.kt:63)
+
+FAILURES!!!
+Tests run: 1,  Failures: 1
+
+
+INSTRUMENTATION_CODE: -1

@@ -12,6 +12,7 @@ sealed interface ControlEvent {
     data object Turn:ControlEvent
     data object BeginUnlock:ControlEvent
     data object EndUnlock:ControlEvent
+    data object CancelUnlock:ControlEvent
 }
 fun ControlReducer.handle(event:ControlEvent):Boolean {
     val directionStop=when(event){is ControlEvent.Release->isDirectionPointerValid(event.id);is ControlEvent.Leave->isDirectionPointerValid(event.id);else->false}
@@ -27,7 +28,8 @@ fun ControlReducer.handle(event:ControlEvent):Boolean {
         ControlEvent.Cancel->cancelAll()
         ControlEvent.Turn->quickTurn()
         ControlEvent.BeginUnlock->beginUnlock()
-        ControlEvent.EndUnlock->cancelAll()
+        ControlEvent.EndUnlock->endUnlockHold()
+        ControlEvent.CancelUnlock->cancelAll()
     }
     return directionStop || event==ControlEvent.Kill || event==ControlEvent.Cancel || wasBrake!=state.brake
 }

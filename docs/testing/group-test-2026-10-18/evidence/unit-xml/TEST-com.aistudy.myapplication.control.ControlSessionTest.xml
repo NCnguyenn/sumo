@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.aistudy.myapplication.control.ControlSessionTest" tests="21" skipped="0" failures="0" errors="0" timestamp="2026-10-18T12:15:55.523Z" hostname="DESKTOP-OVC24VV" time="0.027">
+  <properties/>
+  <testcase name="I02_L17_L22_oldAndEarlyDirectionMovesStayZeroAtPeriodicTicks" classname="com.aistudy.myapplication.control.ControlSessionTest" time="0.005"/>
+  <testcase name="I05_I08_ackTimeoutAttemptsFinalStopCloseBeforeRetiringSocket" classname="com.aistudy.myapplication.control.ControlSessionTest" time="0.001"/>
+  <testcase name="F09_lostConfigAckLocksDrivingUntilSamePairIsReconciled" classname="com.aistudy.myapplication.control.ControlSessionTest" time="0.001"/>
+  <testcase name="diagnosticsLogsAcceptedAckAndRejectedPeerWithoutChangingAcceptance" classname="com.aistudy.myapplication.control.ControlSessionTest" time="0.003"/>
+  <testcase name="I06_I12_reconnectRetiresOldSocketBeforeOneNewNonceSession" classname="com.aistudy.myapplication.control.ControlSessionTest" time="0.001"/>
+  <testcase name="F09_configOnlyCommitsMatchedAckAndUnsupportedKeepsOld" classname="com.aistudy.myapplication.control.ControlSessionTest" time="0.001"/>
+  <testcase name="U07_releasingCompletedUnlockHoldKeepsRequestUntilMatchingAck" classname="com.aistudy.myapplication.control.ControlSessionTest" time="0.002"/>
+  <testcase name="I02_I03_latestStateOnlyAndImmediateStopKillWithoutTick" classname="com.aistudy.myapplication.control.ControlSessionTest" time="0.001"/>
+  <testcase name="I02_brakeTapInSameBatchCannotBeCoalescedAway" classname="com.aistudy.myapplication.control.ControlSessionTest" time="0.0"/>
+  <testcase name="I09_A13_stopClosesSessionAndWaitsDeadlineBeforeSettingsOrUpdate" classname="com.aistudy.myapplication.control.ControlSessionTest" time="0.001"/>
+  <testcase name="F02_I07_macroDurationAndIdStayUntilFreshCompletionAck" classname="com.aistudy.myapplication.control.ControlSessionTest" time="0.001"/>
+  <testcase name="I04_handshakeNeedsAckAndDeadlineCannotExtendForever" classname="com.aistudy.myapplication.control.ControlSessionTest" time="0.0"/>
+  <testcase name="U07_unlockRequiresHoldAndMatchingAckNotOnlyLocalTimer" classname="com.aistudy.myapplication.control.ControlSessionTest" time="0.002"/>
+  <testcase name="I09_closeAckAllowsEarlierGateButNeverMeansPhysicalBrake" classname="com.aistudy.myapplication.control.ControlSessionTest" time="0.0"/>
+  <testcase name="diagnosticMetadataExistsEvenWhenOpenFailsAndStopIntentIsExplicit" classname="com.aistudy.myapplication.control.ControlSessionTest" time="0.003"/>
+  <testcase name="I05_I07_timeoutBadReplyAndLateOldSidCannotReviveInput" classname="com.aistudy.myapplication.control.ControlSessionTest" time="0.001"/>
+  <testcase name="I10_I12_permissionAndIoErrorsAreImmediateSafeOffline" classname="com.aistudy.myapplication.control.ControlSessionTest" time="0.001"/>
+  <testcase name="I01_F04_periodUsesConfigured20_30_50WithoutCatchupBurst" classname="com.aistudy.myapplication.control.ControlSessionTest" time="0.001"/>
+  <testcase name="I07_rejectedDriveAckStopsAndClosesInsteadOfKeepingOldIntent" classname="com.aistudy.myapplication.control.ControlSessionTest" time="0.0"/>
+  <testcase name="I02_releaseThenFreshDownInSameBatchStillSendsStopBeforeNewMotion" classname="com.aistudy.myapplication.control.ControlSessionTest" time="0.001"/>
+  <testcase name="C10_F05_aliasStillUsesRequiredSNeutralHandshakeThenDForDriving" classname="com.aistudy.myapplication.control.ControlSessionTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

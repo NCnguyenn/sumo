@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.aistudy.myapplication.connection.UdpRobotTransportTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-18T10:49:20.969Z" hostname="DESKTOP-OVC24VV" time="0.043">
+  <properties/>
+  <testcase name="I11_I12_realLoopbackPreservesDatagramAndFreshPortOnReopen" classname="com.aistudy.myapplication.connection.UdpRobotTransportTest" time="0.025"/>
+  <testcase name="I12_sendBufferKeepsExactLengthAndRejectsOversizeWithoutTruncating" classname="com.aistudy.myapplication.connection.UdpRobotTransportTest" time="0.01"/>
+  <testcase name="C03_I12_reusedReceiveBufferPreservesNextLongerPacketAndRejectsOversize" classname="com.aistudy.myapplication.connection.UdpRobotTransportTest" time="0.007"/>
+  <testcase name="I12_closeDoesNotWaitForReceiverAndSendAfterCloseFails" classname="com.aistudy.myapplication.connection.UdpRobotTransportTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

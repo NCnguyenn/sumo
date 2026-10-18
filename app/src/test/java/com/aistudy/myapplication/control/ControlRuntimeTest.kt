@@ -82,7 +82,9 @@ class ControlRuntimeTest {
         val runtime=ControlRuntime(ControllerSettings(),changed={if(it.control.connected)online.countDown()},transport=wire)
         try {
             runtime.connect();assertTrue(online.await(2,TimeUnit.SECONDS))
-            assertTrue("Measure 1000 idle receive polls with heartbeat ACKs still active",measured.await(30,TimeUnit.SECONDS))
+            val complete=measured.await(30,TimeUnit.SECONDS)
+            println("runtime_idle_sampling polls=$polls gaps=$gaps sent=${wire.sent.size} complete=$complete")
+            assertTrue("Measure 1000 idle receive polls with heartbeat ACKs still active; polls=$polls gaps=$gaps sent=${wire.sent.size}",complete)
             println("runtime_idle_bytes_per_1000_empty_poll_gaps=$allocated")
             assertTrue("Idle polling must not repeatedly allocate control/UI snapshots; actual=$allocated bytes",allocated<=256_000)
         } finally {runtime.close()}

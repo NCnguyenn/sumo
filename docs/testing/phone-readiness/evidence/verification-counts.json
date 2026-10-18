@@ -1,0 +1,28 @@
+{
+  "unit_actual": {
+    "tests": 118,
+    "failures": 1,
+    "errors": 0,
+    "skipped": 0
+  },
+  "lint_warnings": 17,
+  "lint_errors": 0,
+  "compact_before_final_timestamp": {
+    "tests": 8,
+    "passed": 8
+  },
+  "single_soak_cohort": {
+    "tests": 40,
+    "passed": 39,
+    "failed": 1,
+    "unique_functional_passed": 36,
+    "timing_collection": 2,
+    "probe": 1,
+    "soak_failed": 1
+  },
+  "wait_fix_cohort": {
+    "tests": 1,
+    "passed": 1,
+    "not_add_unique": true
+  }
+}

@@ -1,0 +1,415 @@
+COMMAND: ["C:\\Users\\CHI NGUYEN\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe", "-s", "emulator-5554", "shell", "am", "instrument", "-w", "-r", "-e", "class", "com.aistudy.myapplication.AndroidSimulatorTest#I01_I02_U03_androidUdpToIndependentPythonHasRealAckAndSafeRelease,com.aistudy.myapplication.AndroidSimulatorTest#I02_U04_U06_U07_weaponBrakeKillAndHeldUnlockUseReceiverAck,com.aistudy.myapplication.AndroidSimulatorTest#I08_U05_lifecycleClosesAndResumesOfflineWithoutHeldGestureReplay,com.aistudy.myapplication.AndroidSimulatorTest#I09_F02_F04_F07_settingsStopsOldEndpointAndAppliesAliasJoystickMacro,com.aistudy.myapplication.AndroidSimulatorTest#diagnosticsWhileHoldingClosesSessionAndCopiesRealReport,com.aistudy.myapplication.ControllerUiTest#U01_U10_landscapeSafetyLabelsAndNeutralStart,com.aistudy.myapplication.ControllerUiTest#U02_U06_joystickMovesButKillCannotBeClearedByHeldFingers,com.aistudy.myapplication.ControllerUiTest#U03_directionAndBoostBothReleaseOrdersNeverResumeOldGesture,com.aistudy.myapplication.ControllerUiTest#U04_holdWeaponRemainsAfterDirectionUpAndCancelClearsAll,com.aistudy.myapplication.ControllerUiTest#U06_killSurvivesActivityRecreateWithoutRestoringMotion,com.aistudy.myapplication.ControllerUiTest#U10_dPadIsBalancedCrossWithSquareDirectionKeys,com.aistudy.myapplication.Phase5RegressionTest#E01_E02_dPadFourDirectionsToggleAndThirdFingerKillReachReceiver,com.aistudy.myapplication.Phase5RegressionTest#E01_joystickDeadZoneBoostAndMacroBrakeUseReceiver,com.aistudy.myapplication.Phase5RegressionTest#E02_reconnectWithHeldPointersNeedsFreshDirection,com.aistudy.myapplication.Phase5RegressionTest#E03_A13_updateEntryWhileHoldingAndDuringMacroClosesSession,com.aistudy.myapplication.Phase5RegressionTest#F08_cancelAndResetConfirmationPreserveOrReplaceWholeRecord,com.aistudy.myapplication.SettingsUpdateTest#A01_A02_A08_jsonTypesAndActualInstalledIdentityAreChecked,com.aistudy.myapplication.SettingsUpdateTest#A05_changedFeedRejectsPreviouslyPreparedInstallerMetadata,com.aistudy.myapplication.SettingsUpdateTest#A09_androidAbortAndFailureNeverClaimSuccessfulUpdate,com.aistudy.myapplication.SettingsUpdateTest#A09_failureResultSurvivesProcessStateLossAndActivityRecreate,com.aistudy.myapplication.SettingsUpdateTest#F01_F08_liveLimiterPersists30_60_100AcrossActivityRecreation,com.aistudy.myapplication.SettingsUpdateTest#F06_F10_storeMigrationAndCorruptionKeepOriginalRecord,com.aistudy.myapplication.SettingsUpdateTest#U08_F05_invalidFieldCannotApplyPartialSettings,com.aistudy.myapplication.SettingsUpdateTest#U10_settingsShowsConnectionFieldsSideBySideAndVisibleSave", "-e", "candidate", "/data/user/0/com.aistudy.myapplication/files/test-b.apk", "-e", "trackingProfileLabel", "after", "-e", "additionalTestOutputDir", "/data/user/0/com.aistudy.myapplication/files/phase5-41-phone-readiness-resume", "com.aistudy.myapplication.test/androidx.test.runner.AndroidJUnitRunner"]
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.AndroidSimulatorTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stream=
+com.aistudy.myapplication.AndroidSimulatorTest:
+INSTRUMENTATION_STATUS: test=I09_F02_F04_F07_settingsStopsOldEndpointAndAppliesAliasJoystickMacro
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.AndroidSimulatorTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=I09_F02_F04_F07_settingsStopsOldEndpointAndAppliesAliasJoystickMacro
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.AndroidSimulatorTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=I08_U05_lifecycleClosesAndResumesOfflineWithoutHeldGestureReplay
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.AndroidSimulatorTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=I08_U05_lifecycleClosesAndResumesOfflineWithoutHeldGestureReplay
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.AndroidSimulatorTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=I02_U04_U06_U07_weaponBrakeKillAndHeldUnlockUseReceiverAck
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.AndroidSimulatorTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=I02_U04_U06_U07_weaponBrakeKillAndHeldUnlockUseReceiverAck
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.AndroidSimulatorTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=diagnosticsWhileHoldingClosesSessionAndCopiesRealReport
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.AndroidSimulatorTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=diagnosticsWhileHoldingClosesSessionAndCopiesRealReport
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.AndroidSimulatorTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=I01_I02_U03_androidUdpToIndependentPythonHasRealAckAndSafeRelease
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.AndroidSimulatorTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Failed to assert the following: (Text + InputText + EditableText contains 'PWM 255 / 255' (ignoreCase: false) as substring)
+Semantics of the node:
+Node #981 at (l=1249.0, t=987.0, r=1595.0, b=1022.0)px, Tag: 'output'
+Text = '[PWM 0 / 0 · B0 W0 K0]'
+Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+Has 11 siblings
+Selector used: (TestTag = 'output')
+
+	at androidx.compose.ui.test.AssertionsKt.assert(Assertions.kt:264)
+	at androidx.compose.ui.test.AssertionsKt.assert$default(Assertions.kt:254)
+	at androidx.compose.ui.test.AssertionsKt.assertTextContains(Assertions.kt:208)
+	at androidx.compose.ui.test.AssertionsKt.assertTextContains$default(Assertions.kt:204)
+	at com.aistudy.myapplication.AndroidSimulatorTest.I01_I02_U03_androidUdpToIndependentPythonHasRealAckAndSafeRelease(AndroidSimulatorTest.kt:56)
+
+INSTRUMENTATION_STATUS: stream=
+Error in I01_I02_U03_androidUdpToIndependentPythonHasRealAckAndSafeRelease(com.aistudy.myapplication.AndroidSimulatorTest):
+java.lang.AssertionError: Failed to assert the following: (Text + InputText + EditableText contains 'PWM 255 / 255' (ignoreCase: false) as substring)
+Semantics of the node:
+Node #981 at (l=1249.0, t=987.0, r=1595.0, b=1022.0)px, Tag: 'output'
+Text = '[PWM 0 / 0 · B0 W0 K0]'
+Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+Has 11 siblings
+Selector used: (TestTag = 'output')
+
+	at androidx.compose.ui.test.AssertionsKt.assert(Assertions.kt:264)
+	at androidx.compose.ui.test.AssertionsKt.assert$default(Assertions.kt:254)
+	at androidx.compose.ui.test.AssertionsKt.assertTextContains(Assertions.kt:208)
+	at androidx.compose.ui.test.AssertionsKt.assertTextContains$default(Assertions.kt:204)
+	at com.aistudy.myapplication.AndroidSimulatorTest.I01_I02_U03_androidUdpToIndependentPythonHasRealAckAndSafeRelease(AndroidSimulatorTest.kt:56)
+
+INSTRUMENTATION_STATUS: test=I01_I02_U03_androidUdpToIndependentPythonHasRealAckAndSafeRelease
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.ControllerUiTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stream=
+com.aistudy.myapplication.ControllerUiTest:
+INSTRUMENTATION_STATUS: test=U01_U10_landscapeSafetyLabelsAndNeutralStart
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.ControllerUiTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=U01_U10_landscapeSafetyLabelsAndNeutralStart
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.ControllerUiTest
+INSTRUMENTATION_STATUS: current=7
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=U04_holdWeaponRemainsAfterDirectionUpAndCancelClearsAll
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.ControllerUiTest
+INSTRUMENTATION_STATUS: current=7
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=U04_holdWeaponRemainsAfterDirectionUpAndCancelClearsAll
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.ControllerUiTest
+INSTRUMENTATION_STATUS: current=8
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=U10_dPadIsBalancedCrossWithSquareDirectionKeys
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.ControllerUiTest
+INSTRUMENTATION_STATUS: current=8
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=U10_dPadIsBalancedCrossWithSquareDirectionKeys
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.ControllerUiTest
+INSTRUMENTATION_STATUS: current=9
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=U06_killSurvivesActivityRecreateWithoutRestoringMotion
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.ControllerUiTest
+INSTRUMENTATION_STATUS: current=9
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=U06_killSurvivesActivityRecreateWithoutRestoringMotion
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.ControllerUiTest
+INSTRUMENTATION_STATUS: current=10
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=U03_directionAndBoostBothReleaseOrdersNeverResumeOldGesture
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.ControllerUiTest
+INSTRUMENTATION_STATUS: current=10
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=U03_directionAndBoostBothReleaseOrdersNeverResumeOldGesture
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.ControllerUiTest
+INSTRUMENTATION_STATUS: current=11
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=U02_U06_joystickMovesButKillCannotBeClearedByHeldFingers
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.ControllerUiTest
+INSTRUMENTATION_STATUS: current=11
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=U02_U06_joystickMovesButKillCannotBeClearedByHeldFingers
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.Phase5RegressionTest
+INSTRUMENTATION_STATUS: current=12
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stream=
+com.aistudy.myapplication.Phase5RegressionTest:
+INSTRUMENTATION_STATUS: test=F08_cancelAndResetConfirmationPreserveOrReplaceWholeRecord
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.Phase5RegressionTest
+INSTRUMENTATION_STATUS: current=12
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=F08_cancelAndResetConfirmationPreserveOrReplaceWholeRecord
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.Phase5RegressionTest
+INSTRUMENTATION_STATUS: current=13
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=E03_A13_updateEntryWhileHoldingAndDuringMacroClosesSession
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.Phase5RegressionTest
+INSTRUMENTATION_STATUS: current=13
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stack=androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 5000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:809)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:378)
+	at com.aistudy.myapplication.Phase5RegressionTest.waitText(Phase5RegressionTest.kt:41)
+	at com.aistudy.myapplication.Phase5RegressionTest.E03_A13_updateEntryWhileHoldingAndDuringMacroClosesSession(Phase5RegressionTest.kt:104)
+
+INSTRUMENTATION_STATUS: stream=
+Error in E03_A13_updateEntryWhileHoldingAndDuringMacroClosesSession(com.aistudy.myapplication.Phase5RegressionTest):
+androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 5000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:809)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:378)
+	at com.aistudy.myapplication.Phase5RegressionTest.waitText(Phase5RegressionTest.kt:41)
+	at com.aistudy.myapplication.Phase5RegressionTest.E03_A13_updateEntryWhileHoldingAndDuringMacroClosesSession(Phase5RegressionTest.kt:104)
+
+INSTRUMENTATION_STATUS: test=E03_A13_updateEntryWhileHoldingAndDuringMacroClosesSession
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.Phase5RegressionTest
+INSTRUMENTATION_STATUS: current=14
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=E01_joystickDeadZoneBoostAndMacroBrakeUseReceiver
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.Phase5RegressionTest
+INSTRUMENTATION_STATUS: current=14
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=E01_joystickDeadZoneBoostAndMacroBrakeUseReceiver
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.Phase5RegressionTest
+INSTRUMENTATION_STATUS: current=15
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=E02_reconnectWithHeldPointersNeedsFreshDirection
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.Phase5RegressionTest
+INSTRUMENTATION_STATUS: current=15
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=E02_reconnectWithHeldPointersNeedsFreshDirection
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.Phase5RegressionTest
+INSTRUMENTATION_STATUS: current=16
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=E01_E02_dPadFourDirectionsToggleAndThirdFingerKillReachReceiver
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.Phase5RegressionTest
+INSTRUMENTATION_STATUS: current=16
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=E01_E02_dPadFourDirectionsToggleAndThirdFingerKillReachReceiver
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.SettingsUpdateTest
+INSTRUMENTATION_STATUS: current=17
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stream=
+com.aistudy.myapplication.SettingsUpdateTest:
+INSTRUMENTATION_STATUS: test=A09_androidAbortAndFailureNeverClaimSuccessfulUpdate
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.SettingsUpdateTest
+INSTRUMENTATION_STATUS: current=17
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=A09_androidAbortAndFailureNeverClaimSuccessfulUpdate
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.SettingsUpdateTest
+INSTRUMENTATION_STATUS: current=18
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=A09_failureResultSurvivesProcessStateLossAndActivityRecreate
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.SettingsUpdateTest
+INSTRUMENTATION_STATUS: current=18
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=A09_failureResultSurvivesProcessStateLossAndActivityRecreate
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.SettingsUpdateTest
+INSTRUMENTATION_STATUS: current=19
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=F06_F10_storeMigrationAndCorruptionKeepOriginalRecord
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.SettingsUpdateTest
+INSTRUMENTATION_STATUS: current=19
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=F06_F10_storeMigrationAndCorruptionKeepOriginalRecord
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.SettingsUpdateTest
+INSTRUMENTATION_STATUS: current=20
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=A05_changedFeedRejectsPreviouslyPreparedInstallerMetadata
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.SettingsUpdateTest
+INSTRUMENTATION_STATUS: current=20
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=A05_changedFeedRejectsPreviouslyPreparedInstallerMetadata
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.SettingsUpdateTest
+INSTRUMENTATION_STATUS: current=21
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=F01_F08_liveLimiterPersists30_60_100AcrossActivityRecreation
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.SettingsUpdateTest
+INSTRUMENTATION_STATUS: current=21
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=F01_F08_liveLimiterPersists30_60_100AcrossActivityRecreation
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.SettingsUpdateTest
+INSTRUMENTATION_STATUS: current=22
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=U10_settingsShowsConnectionFieldsSideBySideAndVisibleSave
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.SettingsUpdateTest
+INSTRUMENTATION_STATUS: current=22
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=U10_settingsShowsConnectionFieldsSideBySideAndVisibleSave
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.SettingsUpdateTest
+INSTRUMENTATION_STATUS: current=23
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=U08_F05_invalidFieldCannotApplyPartialSettings
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.SettingsUpdateTest
+INSTRUMENTATION_STATUS: current=23
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=U08_F05_invalidFieldCannotApplyPartialSettings
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.SettingsUpdateTest
+INSTRUMENTATION_STATUS: current=24
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=A01_A02_A08_jsonTypesAndActualInstalledIdentityAreChecked
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.SettingsUpdateTest
+INSTRUMENTATION_STATUS: current=24
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=24
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=A01_A02_A08_jsonTypesAndActualInstalledIdentityAreChecked
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_RESULT: stream=
+
+Time: 134.524
+There were 2 failures:
+1) I01_I02_U03_androidUdpToIndependentPythonHasRealAckAndSafeRelease(com.aistudy.myapplication.AndroidSimulatorTest)
+java.lang.AssertionError: Failed to assert the following: (Text + InputText + EditableText contains 'PWM 255 / 255' (ignoreCase: false) as substring)
+Semantics of the node:
+Node #981 at (l=1249.0, t=987.0, r=1595.0, b=1022.0)px, Tag: 'output'
+Text = '[PWM 0 / 0 · B0 W0 K0]'
+Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+Has 11 siblings
+Selector used: (TestTag = 'output')
+
+	at androidx.compose.ui.test.AssertionsKt.assert(Assertions.kt:264)
+	at androidx.compose.ui.test.AssertionsKt.assert$default(Assertions.kt:254)
+	at androidx.compose.ui.test.AssertionsKt.assertTextContains(Assertions.kt:208)
+	at androidx.compose.ui.test.AssertionsKt.assertTextContains$default(Assertions.kt:204)
+	at com.aistudy.myapplication.AndroidSimulatorTest.I01_I02_U03_androidUdpToIndependentPythonHasRealAckAndSafeRelease(AndroidSimulatorTest.kt:56)
+2) E03_A13_updateEntryWhileHoldingAndDuringMacroClosesSession(com.aistudy.myapplication.Phase5RegressionTest)
+androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 5000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:809)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:378)
+	at com.aistudy.myapplication.Phase5RegressionTest.waitText(Phase5RegressionTest.kt:41)
+	at com.aistudy.myapplication.Phase5RegressionTest.E03_A13_updateEntryWhileHoldingAndDuringMacroClosesSession(Phase5RegressionTest.kt:104)
+
+FAILURES!!!
+Tests run: 24,  Failures: 2
+
+
+INSTRUMENTATION_CODE: -1
+
+EXIT_CODE: 0

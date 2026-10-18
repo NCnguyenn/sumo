@@ -1,0 +1,6 @@
+{
+  "package_present": false,
+  "backup_valid": false,
+  "reason": "run-as: unknown package: com.aistudy.myapplication\n",
+  "note": "No app installed on resumed AVD; this is a fresh install and no current data to preserve."
+}

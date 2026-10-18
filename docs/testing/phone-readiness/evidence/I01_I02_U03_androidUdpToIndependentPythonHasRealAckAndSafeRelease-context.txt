@@ -1,0 +1,34 @@
+   121.977  2479  4883 I SumoSession: 121976 connecting endpoint=10.0.2.2:8888 interval=30ms limit=60% input=D_PAD weapon=HOLD turn=200ms calibration=DriveCalibration(sensitivity=1.0, deadZone=0.0, leftGain=1.0, rightGain=1.0, turnPercent=100)
+   122.003  2479  4883 I SumoSession: 122003 ack seq=1 result=OK pwm=0/0 rtt=9
+   122.046  2479  4883 I SumoSession: 122045 ack seq=2 result=OK pwm=0/0 rtt=11
+   122.075  2479  4883 I SumoSession: 122075 ack seq=3 result=OK pwm=0/0 rtt=8
+   122.099  2479  4883 I SumoSession: 122098 ack seq=4 result=OK pwm=0/0 rtt=5
+   122.139  2479  4883 I SumoSession: 122136 ack seq=5 result=OK pwm=0/0 rtt=11
+   122.158  2479  4883 I SumoSession: 122157 ack seq=6 result=OK pwm=0/0 rtt=4
+   122.193  2479  4883 I SumoSession: 122193 ack seq=7 result=OK pwm=0/0 rtt=8
+   122.222  2479  4883 I SumoSession: 122220 ack seq=8 result=OK pwm=0/0 rtt=4
+   122.257  2479  4883 I SumoSession: 122255 ack seq=9 result=OK pwm=0/0 rtt=9
+   122.279  2479  4883 I SumoSession: 122278 ack seq=10 result=OK pwm=0/0 rtt=3
+   122.311  2479  4883 I SumoSession: 122309 ack seq=11 result=OK pwm=0/0 rtt=6
+   122.352  2479  4883 I SumoSession: 122350 ack seq=12 result=OK pwm=0/0 rtt=15
+   122.389  2479  4883 I SumoSession: 122377 ack seq=13 result=OK pwm=0/0 rtt=12
+   122.420  2479  4883 I SumoSession: 122414 ack seq=14 result=OK pwm=0/0 rtt=8
+   122.445  2479  4883 I SumoSession: 122442 ack seq=15 result=OK pwm=0/0 rtt=13
+   122.478  2479  4883 I SumoSession: 122476 ack seq=16 result=OK pwm=0/0 rtt=4
+   122.502  2479  4883 I SumoSession: 122502 ack seq=17 result=OK pwm=0/0 rtt=5
+   122.508  2479  4883 I SumoSession: 122507 event Press(id=1, button=FORWARD)
+   122.508  2479  4883 I SumoSession: 122507 event Press(id=2, button=BOOST)
+   122.524  2479  4883 I SumoSession: 122515 ack seq=18 result=OK pwm=255/255 rtt=8
+   122.554  2479  4883 I SumoSession: 122554 ack seq=19 result=OK pwm=255/255 rtt=10
+   122.579  2479  4883 I SumoSession: 122579 ack seq=20 result=OK pwm=255/255 rtt=5
+   122.621  2479  4883 I SumoSession: 122615 ack seq=21 result=OK pwm=255/255 rtt=7
+   122.639  2479  4883 I SumoSession: 122639 ack seq=22 result=OK pwm=255/255 rtt=4
+   122.681  2479  4883 I SumoSession: 122679 ack seq=23 result=OK pwm=255/255 rtt=12
+   122.698  2479  4883 I SumoSession: 122697 ack seq=25 result=OK pwm=0/0 rtt=null
+   122.702  2479  4883 I SumoSession: 122700 closed confirmed=true requested=0/0 reason=Offline · đã ACK đóng phiên; chưa chứng minh dừng cơ học
+   122.824  2479  4883 I SumoSession: 122800 closed confirmed=false requested=0/0 reason=Offline · phiên đã đóng
+   123.471  2479  4883 I SumoSession: 123470 event Release(id=1)
+   123.471  2479  4883 I SumoSession: 123471 event Release(id=2)
+   123.490  2479  4883 I SumoSession: 123490 event Cancel
+   123.493  2479  4883 I SumoSession: 123493 closed confirmed=false requested=0/0 reason=Offline · phiên đã đóng
+   123.706  2479  4883 I SumoSession: 123705 closed confirmed=false requested=0/0 reason=Offline · phiên đã đóng

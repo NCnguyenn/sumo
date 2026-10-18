@@ -1,0 +1,26 @@
+{
+  "before": [
+    "List of devices attached",
+    "emulator-5554          device product:sdk_gphone16k_x86_64 model:sdk_gphone16k_x86_64 device:emu64xa16k transport_id:1",
+    ""
+  ],
+  "avd": [
+    "Medium_Phone",
+    "",
+    "OK",
+    ""
+  ],
+  "network_verified": true,
+  "remaining_sumo_udp_ports": [],
+  "shutdown": [
+    "OK: killing emulator, bye bye",
+    "",
+    "OK",
+    ""
+  ],
+  "after": [
+    "List of devices attached",
+    ""
+  ],
+  "app_before_shutdown": "Offline PWM0/0 B0W0K0, verified in restored-neutral.xml and screenshot manifest"
+}

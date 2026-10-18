@@ -1,0 +1,26 @@
+{
+  "suites": {
+    "com.aistudy.myapplication.control.ControlReducerTest": {
+      "tests": 29,
+      "failures": 0
+    },
+    "com.aistudy.myapplication.control.ControlSessionTest": {
+      "tests": 21,
+      "failures": 0
+    },
+    "com.aistudy.myapplication.protocol.ReplyTrackerTest": {
+      "tests": 16,
+      "failures": 0
+    }
+  },
+  "total": 66,
+  "failures": 0,
+  "red": "unlock-red.xml",
+  "excluded_idle_sampling_test": "Not re-run; previous full-unit failure remains open",
+  "checks": [
+    "completed hold fingerup before unlockACK -> unlockedneutral on matchingACK",
+    "early hold release/explicitCancel -> locked",
+    "Kill/disconnect invalidatesACK",
+    "old/early pointers cannot revive"
+  ]
+}

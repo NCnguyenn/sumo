@@ -1,0 +1,14 @@
+{
+  "report": "docs/testing/phone-readiness/KET_LUAN.md",
+  "local_links_missing": [],
+  "json_documents_parsed": 36,
+  "source_binding_matches": true,
+  "original_apk_unchanged": true,
+  "final_apk_sha256": "b31ac740afa3515c8cc5a2a344061e170c63a5972ca4beef2058c3ac7c5c736f",
+  "raw_screenshots_verified": 54,
+  "handoff_screenshots": 16,
+  "phone_touched": false,
+  "upload_release": false,
+  "build_test_jobs_complete": true,
+  "environment_closed": true
+}

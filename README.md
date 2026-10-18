@@ -2,9 +2,11 @@
 
 Ứng dụng Android điều khiển xe Sumo bằng Kotlin và Jetpack Compose, kiểm thử với UDP simulator `SUMO-SIM/1-draft1`.
 
-![Màn hình điều khiển](docs/screenshots/2026-10-18/01-dpad-offline.png)
+![Màn hình điều khiển trên AVD với simulator](docs/screenshots/ui-compact-2026-10-18/02-main-dpad-online.png)
 
-[Xem toàn bộ ảnh giao diện](docs/screenshots/README.md) · [Mô tả dự án](docs/MO_TA_DU_AN.md) · [Checkpoint](docs/testing/TIEN_DO_AI.md)
+[Giao diện mới:13ảnh thật](docs/screenshots/ui-compact-2026-10-18/README.md) · [Kết quả kiểm tra UI](docs/testing/ui-compact-2026-10-18/KET_QUA.md) · [Bộ ảnh cũ](docs/screenshots/README.md) · [Mô tả dự án](docs/MO_TA_DU_AN.md) · [Checkpoint](docs/testing/TIEN_DO_AI.md)
+
+[Hướng dẫn bản cài thử cho nhóm](docs/testing/group-test-2026-10-18/BAN_GIAO_NHOM.md) · [16 ảnh UI sau chỉnh](docs/testing/phone-readiness/screenshots/INDEX.md)
 
 ## Chức năng
 
@@ -13,6 +15,7 @@
 - Chỉnh và lưu IP/port, chu kỳ gửi, độ nhạy, vùng chết, hệ số bánh và thời gian quay ngay trong app.
 - Giao diện kiểm tra/tải/cài APK cập nhật; luồng HTTPS trên điện thoại vẫn chưa kiểm chứng.
 - UDP simulator Python độc lập và các test Kotlin/Android.
+- Chẩn đoán theo nhóm App/Mạng/Giao thức/IoT; TX/RX/ACK, lịch sử lỗi có giới hạn, sao chép/xuất nhật ký qua Android. Mở các màn công cụ dừng điều khiển.
 
 ## Chạy dự án
 
@@ -32,4 +35,6 @@ G5 đã chốt **có điều kiện cho chức năng AVD**. STOP/cadence vẫn l
 
 Xem [biên bản G5](docs/testing/phase-5/BIEN_BAN_DUYET.md) và [kết quả bổ sung](docs/testing/phase-5/KET_QUA_BO_SUNG_G5.md) để phân biệt các lượt test, binary và giới hạn. Điện thoại, cập nhật HTTPS, API 36, I11, firmware và xe thật còn chưa kiểm chứng.
 
-Repo chứa mã nguồn, tài liệu, tóm tắt kiểm chứng và ảnh giao diện. APK, khóa ký, cấu hình máy, thư mục build và các bản ghi thô dung lượng lớn giữ ngoài Git; hồ sơ đầy đủ vẫn giữ tại workspace gốc. Repo này chưa công bố APK hoặc bản release.
+Người dùng đã cho phép merge/push mã và đóng gói APK debug để nhóm cài thử **UI, cấu hình, nhật ký, không nối xe**. Bản nhóm dùng versionCode2, giữ chữ ký debug hiện tại; chưa phải kênh cập nhật HTTPS hoặc bản dùng thi đấu. Xem hướng dẫn bàn giao để biết checksum và giới hạn.
+
+Repo chứa mã nguồn, tài liệu, tóm tắt kiểm chứng và ảnh giao diện. APK, khóa ký, cấu hình máy, thư mục build và các bản ghi thô dung lượng lớn giữ ngoài Git; hồ sơ đầy đủ vẫn giữ tại workspace gốc. APK nhóm được bàn giao thành tệp riêng, không tạo GitHub Release.

@@ -1,0 +1,43 @@
+{
+  "original_binary": "c8f88cbcb3dd5fb2abdcd1bb7eb0608b2d2c1b27b9bd3ffa7b7d9aafbfcd9f55",
+  "final_binary": "c377cd1155aedf0fa65df714a5540504b56bad5643a35fece3274460d5667b1c",
+  "changed_source_files": {
+    "app/src/androidTest/java/com/aistudy/myapplication/CompactDiagnosticsTest.kt": {
+      "before": "3a3865eec5171921e370b7b238f6001d81520ed8eb43495fa5e3050479e419df",
+      "now": "204912308ec67c209949edfcd370a1ac3c1428250cbbfccc92c9bd1a8b8ca6d1"
+    },
+    "app/src/main/java/com/aistudy/myapplication/ui/AppUpdateDialog.kt": {
+      "before": "8222bdd0b6289146f3ea1804c381d9a02c54207d6171cb91431e772872bf9ba0",
+      "now": "e14439a904a38934c91f60836a2262597b7e5a49c7404befac9b447d4da358ea"
+    },
+    "app/src/main/java/com/aistudy/myapplication/ui/ControllerScreen.kt": {
+      "before": "6dd8ce57718d6f8cfb1c2369a5fae12c4b73572c9a4a8d6c56912a040c4d4cc4",
+      "now": "d3807cc32a021c02c419cd652160a015bbb9922713312007d81ae2dd2b82cdaf"
+    },
+    "app/src/main/java/com/aistudy/myapplication/ui/DiagnosticsScreen.kt": {
+      "before": "7ce8d9b225e3157e2312f588ac245ad53626f0f7acf632a18fa16ccd11b2c86b",
+      "now": "0153c404e428967c7886745b0ecfa0fae01f4538f8218b8175eb5b06a31ef51f"
+    }
+  },
+  "unchanged_sources": 55,
+  "historical_tests": {
+    "unit": "118/118 on original binary sources; current actual execution117/118, idle-poll sampling timed out",
+    "android": "33unique functional on original APK from cohorts35/36, not new test and not full regression of final UI",
+    "faults": "8/8 historical reused unchanged control/transport/protocol; not rerun on final hash yet",
+    "timing": "STOP/cadence35 reused historical for original; new one-batch measurement only because UI layout code changed",
+    "soak": "33 old hash92abb6, cannot bind to currentUI; one final soak started cohort37"
+  },
+  "not_changed": [
+    "MainActivity",
+    "ControlReducer",
+    "ControlEvent",
+    "ControlRuntime",
+    "ControlSession",
+    "ReplyTracker",
+    "DiagnosticLog",
+    "SettingsDialog",
+    "updates",
+    "manifest",
+    "Gradle/SDK/dependencies/version/key"
+  ]
+}

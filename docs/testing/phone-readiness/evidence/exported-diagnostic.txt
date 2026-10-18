@@ -1,0 +1,252 @@
+SUMO diagnostic
+App 1.0 (1) · API 37
+connecting endpoint=10.0.2.2:8888 interval=30ms limit=60% input=JOYSTICK weapon=TOGGLE turn=200ms calibration=DriveCalibration(sensitivity=1.0, deadZone=0.0, leftGain=1.0, rightGain=1.0, turnPercent=100)
+App 1.0 (1) · API 37
+Endpoint=10.0.2.2:8888 · SUMO-SIM/1-draft1
+Interval=30ms · limit=60% · input=JOYSTICK · weapon=TOGGLE
+Calibration=DriveCalibration(sensitivity=1.0, deadZone=0.0, leftGain=1.0, rightGain=1.0, turnPercent=100) · turn=200ms
+App yêu cầu PWM 0 / 0
+TX=113 RX=101 Loại=0
+TX cuối PWM 0 / 0; ACK cuối PWM 71 / 72
+Nguồn lỗi: Chưa xác định; Mất phản hồi quá 300 ms — đã dừng điều khiển
+ACK không chứng minh động cơ thực sự quay.
+18:16:39.156	IoT	ACK seq=27 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:39.181	App	Gửi V1:5c4c2599d0ad4aad,28,0,0,0,0|S:0,0,0,0,0
+18:16:39.184	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,28,OK,0,0,0,0,0,0,0,0,0
+18:16:39.184	IoT	ACK seq=28 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:39.211	App	Gửi V1:5c4c2599d0ad4aad,29,0,0,0,0|S:0,0,0,0,0
+18:16:39.214	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,29,OK,0,0,0,0,0,0,0,0,0
+18:16:39.214	IoT	ACK seq=29 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:39.241	App	Gửi V1:5c4c2599d0ad4aad,30,0,0,0,0|S:0,0,0,0,0
+18:16:39.246	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,30,OK,0,0,0,0,0,0,0,0,0
+18:16:39.246	IoT	ACK seq=30 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:39.272	App	Gửi V1:5c4c2599d0ad4aad,31,0,0,0,0|S:0,0,0,0,0
+18:16:39.272	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,31,OK,0,0,0,0,0,0,0,0,0
+18:16:39.272	IoT	ACK seq=31 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:39.301	App	Gửi V1:5c4c2599d0ad4aad,32,0,0,0,0|S:0,0,0,0,0
+18:16:39.304	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,32,OK,0,0,0,0,0,0,0,0,0
+18:16:39.304	IoT	ACK seq=32 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:39.331	App	Gửi V1:5c4c2599d0ad4aad,33,0,0,0,0|S:0,0,0,0,0
+18:16:39.335	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,33,OK,0,0,0,0,0,0,0,0,0
+18:16:39.335	IoT	ACK seq=33 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:39.361	App	Gửi V1:5c4c2599d0ad4aad,34,0,0,0,0|S:0,0,0,0,0
+18:16:39.364	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,34,OK,0,0,0,0,0,0,0,0,0
+18:16:39.364	IoT	ACK seq=34 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:39.392	App	Gửi V1:5c4c2599d0ad4aad,35,0,0,0,0|S:0,0,0,0,0
+18:16:39.396	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,35,OK,0,0,0,0,0,0,0,0,0
+18:16:39.396	IoT	ACK seq=35 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:39.422	App	Gửi V1:5c4c2599d0ad4aad,36,0,0,0,0|S:0,0,0,0,0
+18:16:39.427	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,36,OK,0,0,0,0,0,0,0,0,0
+18:16:39.427	IoT	ACK seq=36 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:39.451	App	Gửi V1:5c4c2599d0ad4aad,37,0,0,0,0|S:0,0,0,0,0
+18:16:39.455	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,37,OK,0,0,0,0,0,0,0,0,0
+18:16:39.455	IoT	ACK seq=37 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:39.481	App	Gửi V1:5c4c2599d0ad4aad,38,0,0,0,0|S:0,0,0,0,0
+18:16:39.484	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,38,OK,0,0,0,0,0,0,0,0,0
+18:16:39.485	IoT	ACK seq=38 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:39.511	App	Gửi V1:5c4c2599d0ad4aad,39,0,0,0,0|S:0,0,0,0,0
+18:16:39.515	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,39,OK,0,0,0,0,0,0,0,0,0
+18:16:39.515	IoT	ACK seq=39 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:39.542	App	Gửi V1:5c4c2599d0ad4aad,40,0,0,0,0|S:0,0,0,0,0
+18:16:39.546	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,40,OK,0,0,0,0,0,0,0,0,0
+18:16:39.546	IoT	ACK seq=40 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:39.571	App	Gửi V1:5c4c2599d0ad4aad,41,0,0,0,0|S:0,0,0,0,0
+18:16:39.575	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,41,OK,0,0,0,0,0,0,0,0,0
+18:16:39.575	IoT	ACK seq=41 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:39.603	App	Gửi V1:5c4c2599d0ad4aad,42,0,0,0,0|S:0,0,0,0,0
+18:16:39.608	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,42,OK,0,0,0,0,0,0,0,0,0
+18:16:39.608	IoT	ACK seq=42 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:39.632	App	Gửi V1:5c4c2599d0ad4aad,43,0,0,0,0|S:0,0,0,0,0
+18:16:39.636	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,43,OK,0,0,0,0,0,0,0,0,0
+18:16:39.636	IoT	ACK seq=43 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:39.661	App	Gửi V1:5c4c2599d0ad4aad,44,0,0,0,0|S:0,0,0,0,0
+18:16:39.667	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,44,OK,0,0,0,0,0,0,0,0,0
+18:16:39.667	IoT	ACK seq=44 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:39.691	App	Gửi V1:5c4c2599d0ad4aad,45,0,0,0,0|S:0,0,0,0,0
+18:16:39.694	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,45,OK,0,0,0,0,0,0,0,0,0
+18:16:39.694	IoT	ACK seq=45 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:39.721	App	Gửi V1:5c4c2599d0ad4aad,46,0,0,0,0|S:0,0,0,0,0
+18:16:39.725	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,46,OK,0,0,0,0,0,0,0,0,0
+18:16:39.725	IoT	ACK seq=46 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:39.760	App	Gửi V1:5c4c2599d0ad4aad,47,0,0,0,0|S:0,0,0,0,0
+18:16:39.767	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,47,OK,0,0,0,0,0,0,0,0,0
+18:16:39.767	IoT	ACK seq=47 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:39.782	App	Gửi V1:5c4c2599d0ad4aad,48,0,0,0,0|S:0,0,0,0,0
+18:16:39.785	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,48,OK,0,0,0,0,0,0,0,0,0
+18:16:39.786	IoT	ACK seq=48 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:39.810	App	Gửi V1:5c4c2599d0ad4aad,49,0,0,0,0|S:0,0,0,0,0
+18:16:39.814	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,49,OK,0,0,0,0,0,0,0,0,0
+18:16:39.814	IoT	ACK seq=49 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:39.842	App	Gửi V1:5c4c2599d0ad4aad,50,0,0,0,0|S:0,0,0,0,0
+18:16:39.846	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,50,OK,0,0,0,0,0,0,0,0,0
+18:16:39.846	IoT	ACK seq=50 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:39.872	App	Gửi V1:5c4c2599d0ad4aad,51,0,0,0,0|S:0,0,0,0,0
+18:16:39.876	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,51,OK,0,0,0,0,0,0,0,0,0
+18:16:39.876	IoT	ACK seq=51 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:39.901	App	Gửi V1:5c4c2599d0ad4aad,52,0,0,0,0|S:0,0,0,0,0
+18:16:39.907	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,52,OK,0,0,0,0,0,0,0,0,0
+18:16:39.907	IoT	ACK seq=52 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:39.931	App	Gửi V1:5c4c2599d0ad4aad,53,0,0,0,0|S:0,0,0,0,0
+18:16:39.935	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,53,OK,0,0,0,0,0,0,0,0,0
+18:16:39.935	IoT	ACK seq=53 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:39.961	App	Gửi V1:5c4c2599d0ad4aad,54,0,0,0,0|S:0,0,0,0,0
+18:16:39.965	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,54,OK,0,0,0,0,0,0,0,0,0
+18:16:39.965	IoT	ACK seq=54 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:39.990	App	Gửi V1:5c4c2599d0ad4aad,55,0,0,0,0|S:0,0,0,0,0
+18:16:39.994	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,55,OK,0,0,0,0,0,0,0,0,0
+18:16:39.994	IoT	ACK seq=55 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:40.021	App	Gửi V1:5c4c2599d0ad4aad,56,0,0,0,0|S:0,0,0,0,0
+18:16:40.024	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,56,OK,0,0,0,0,0,0,0,0,0
+18:16:40.025	IoT	ACK seq=56 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:40.051	App	Gửi V1:5c4c2599d0ad4aad,57,0,0,0,0|S:0,0,0,0,0
+18:16:40.055	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,57,OK,0,0,0,0,0,0,0,0,0
+18:16:40.055	IoT	ACK seq=57 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:40.080	App	Gửi V1:5c4c2599d0ad4aad,58,0,0,0,0|S:0,0,0,0,0
+18:16:40.083	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,58,OK,0,0,0,0,0,0,0,0,0
+18:16:40.084	IoT	ACK seq=58 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:40.111	App	Gửi V1:5c4c2599d0ad4aad,59,0,0,0,0|S:0,0,0,0,0
+18:16:40.115	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,59,OK,0,0,0,0,0,0,0,0,0
+18:16:40.115	IoT	ACK seq=59 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:40.141	App	Gửi V1:5c4c2599d0ad4aad,60,0,0,0,0|S:0,0,0,0,0
+18:16:40.145	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,60,OK,0,0,0,0,0,0,0,0,0
+18:16:40.145	IoT	ACK seq=60 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:40.170	App	Gửi V1:5c4c2599d0ad4aad,61,0,0,0,0|S:0,0,0,0,0
+18:16:40.172	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,61,OK,0,0,0,0,0,0,0,0,0
+18:16:40.172	IoT	ACK seq=61 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:40.202	App	Gửi V1:5c4c2599d0ad4aad,62,0,0,0,0|S:0,0,0,0,0
+18:16:40.221	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,62,OK,0,0,0,0,0,0,0,0,0
+18:16:40.222	IoT	ACK seq=62 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:40.232	App	Gửi V1:5c4c2599d0ad4aad,63,0,0,0,0|S:0,0,0,0,0
+18:16:40.237	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,63,OK,0,0,0,0,0,0,0,0,0
+18:16:40.238	IoT	ACK seq=63 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:40.261	App	Gửi V1:5c4c2599d0ad4aad,64,0,0,0,0|S:0,0,0,0,0
+18:16:40.265	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,64,OK,0,0,0,0,0,0,0,0,0
+18:16:40.265	IoT	ACK seq=64 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:40.291	App	Gửi V1:5c4c2599d0ad4aad,65,0,0,0,0|S:0,0,0,0,0
+18:16:40.294	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,65,OK,0,0,0,0,0,0,0,0,0
+18:16:40.295	IoT	ACK seq=65 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:40.321	App	Gửi V1:5c4c2599d0ad4aad,66,0,0,0,0|S:0,0,0,0,0
+18:16:40.325	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,66,OK,0,0,0,0,0,0,0,0,0
+18:16:40.325	IoT	ACK seq=66 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:40.351	App	Gửi V1:5c4c2599d0ad4aad,67,0,0,0,0|S:0,0,0,0,0
+18:16:40.355	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,67,OK,0,0,0,0,0,0,0,0,0
+18:16:40.355	IoT	ACK seq=67 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:40.381	App	Gửi V1:5c4c2599d0ad4aad,68,0,0,0,0|S:0,0,0,0,0
+18:16:40.385	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,68,OK,0,0,0,0,0,0,0,0,0
+18:16:40.385	IoT	ACK seq=68 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:40.410	App	Gửi V1:5c4c2599d0ad4aad,69,0,0,0,0|S:0,0,0,0,0
+18:16:40.414	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,69,OK,0,0,0,0,0,0,0,0,0
+18:16:40.414	IoT	ACK seq=69 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:40.441	App	Gửi V1:5c4c2599d0ad4aad,70,0,0,0,0|S:0,0,0,0,0
+18:16:40.445	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,70,OK,0,0,0,0,0,0,0,0,0
+18:16:40.445	IoT	ACK seq=70 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:40.471	App	Gửi V1:5c4c2599d0ad4aad,71,0,0,0,0|S:0,0,0,0,0
+18:16:40.475	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,71,OK,0,0,0,0,0,0,0,0,0
+18:16:40.475	IoT	ACK seq=71 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:40.501	App	Gửi V1:5c4c2599d0ad4aad,72,0,0,0,0|S:0,0,0,0,0
+18:16:40.505	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,72,OK,0,0,0,0,0,0,0,0,0
+18:16:40.505	IoT	ACK seq=72 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:40.532	App	Gửi V1:5c4c2599d0ad4aad,73,0,0,0,0|S:0,0,0,0,0
+18:16:40.536	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,73,OK,0,0,0,0,0,0,0,0,0
+18:16:40.536	IoT	ACK seq=73 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:40.560	App	Gửi V1:5c4c2599d0ad4aad,74,0,0,0,0|S:0,0,0,0,0
+18:16:40.592	App	Gửi V1:5c4c2599d0ad4aad,75,0,0,0,0|S:0,0,0,0,0
+18:16:40.592	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,74,OK,0,0,0,0,0,0,0,0,0
+18:16:40.593	IoT	ACK seq=74 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:40.599	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,75,OK,0,0,0,0,0,0,0,0,0
+18:16:40.600	IoT	ACK seq=75 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:40.620	App	Gửi V1:5c4c2599d0ad4aad,76,0,0,0,0|S:0,0,0,0,0
+18:16:40.623	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,76,OK,0,0,0,0,0,0,0,0,0
+18:16:40.624	IoT	ACK seq=76 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:40.650	App	Gửi V1:5c4c2599d0ad4aad,77,0,0,0,0|S:0,0,0,0,0
+18:16:40.657	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,77,OK,0,0,0,0,0,0,0,0,0
+18:16:40.657	IoT	ACK seq=77 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:40.683	App	Gửi V1:5c4c2599d0ad4aad,78,0,0,0,0|S:0,0,0,0,0
+18:16:40.685	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,78,OK,0,0,0,0,0,0,0,0,0
+18:16:40.685	IoT	ACK seq=78 · PWM 0 / 0 · OK (đã xác nhận)
+18:16:40.706	App	event Press(id=10, button=JOYSTICK)
+18:16:40.707	App	Gửi V1:5c4c2599d0ad4aad,79,0,0,0,0|S:71,72,0,0,0
+18:16:40.712	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,79,OK,71,72,0,0,0,0,0,0,0
+18:16:40.713	IoT	ACK seq=79 · PWM 71 / 72 · OK (đã xác nhận)
+18:16:40.728	App	Gửi V1:5c4c2599d0ad4aad,80,0,0,0,0|S:71,72,0,0,0
+18:16:40.731	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,80,OK,71,72,0,0,0,0,0,0,0
+18:16:40.731	IoT	ACK seq=80 · PWM 71 / 72 · OK (đã xác nhận)
+18:16:40.753	App	Gửi V1:5c4c2599d0ad4aad,81,0,0,0,0|S:71,72,0,0,0
+18:16:40.756	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,81,OK,71,72,0,0,0,0,0,0,0
+18:16:40.756	IoT	ACK seq=81 · PWM 71 / 72 · OK (đã xác nhận)
+18:16:40.774	App	Gửi V1:5c4c2599d0ad4aad,82,0,0,0,0|S:71,72,0,0,0
+18:16:40.778	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,82,OK,71,72,0,0,0,0,0,0,0
+18:16:40.778	IoT	ACK seq=82 · PWM 71 / 72 · OK (đã xác nhận)
+18:16:40.802	App	Gửi V1:5c4c2599d0ad4aad,83,0,0,0,0|S:71,72,0,0,0
+18:16:40.804	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,83,OK,71,72,0,0,0,0,0,0,0
+18:16:40.804	IoT	ACK seq=83 · PWM 71 / 72 · OK (đã xác nhận)
+18:16:40.831	App	Gửi V1:5c4c2599d0ad4aad,84,0,0,0,0|S:71,72,0,0,0
+18:16:40.834	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,84,OK,71,72,0,0,0,0,0,0,0
+18:16:40.835	IoT	ACK seq=84 · PWM 71 / 72 · OK (đã xác nhận)
+18:16:40.863	App	Gửi V1:5c4c2599d0ad4aad,85,0,0,0,0|S:71,72,0,0,0
+18:16:40.867	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,85,OK,71,72,0,0,0,0,0,0,0
+18:16:40.867	IoT	ACK seq=85 · PWM 71 / 72 · OK (đã xác nhận)
+18:16:40.891	App	Gửi V1:5c4c2599d0ad4aad,86,0,0,0,0|S:71,72,0,0,0
+18:16:40.895	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,86,OK,71,72,0,0,0,0,0,0,0
+18:16:40.895	IoT	ACK seq=86 · PWM 71 / 72 · OK (đã xác nhận)
+18:16:40.921	App	Gửi V1:5c4c2599d0ad4aad,87,0,0,0,0|S:71,72,0,0,0
+18:16:40.925	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,87,OK,71,72,0,0,0,0,0,0,0
+18:16:40.925	IoT	ACK seq=87 · PWM 71 / 72 · OK (đã xác nhận)
+18:16:40.953	App	Gửi V1:5c4c2599d0ad4aad,88,0,0,0,0|S:71,72,0,0,0
+18:16:40.956	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,88,OK,71,72,0,0,0,0,0,0,0
+18:16:40.956	IoT	ACK seq=88 · PWM 71 / 72 · OK (đã xác nhận)
+18:16:40.980	App	Gửi V1:5c4c2599d0ad4aad,89,0,0,0,0|S:71,72,0,0,0
+18:16:40.982	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,89,OK,71,72,0,0,0,0,0,0,0
+18:16:40.982	IoT	ACK seq=89 · PWM 71 / 72 · OK (đã xác nhận)
+18:16:41.011	App	Gửi V1:5c4c2599d0ad4aad,90,0,0,0,0|S:71,72,0,0,0
+18:16:41.017	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,90,OK,71,72,0,0,0,0,0,0,0
+18:16:41.017	IoT	ACK seq=90 · PWM 71 / 72 · OK (đã xác nhận)
+18:16:41.041	App	Gửi V1:5c4c2599d0ad4aad,91,0,0,0,0|S:71,72,0,0,0
+18:16:41.046	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,91,OK,71,72,0,0,0,0,0,0,0
+18:16:41.046	IoT	ACK seq=91 · PWM 71 / 72 · OK (đã xác nhận)
+18:16:41.072	App	Gửi V1:5c4c2599d0ad4aad,92,0,0,0,0|S:71,72,0,0,0
+18:16:41.076	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,92,OK,71,72,0,0,0,0,0,0,0
+18:16:41.076	IoT	ACK seq=92 · PWM 71 / 72 · OK (đã xác nhận)
+18:16:41.101	App	Gửi V1:5c4c2599d0ad4aad,93,0,0,0,0|S:71,72,0,0,0
+18:16:41.103	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,93,OK,71,72,0,0,0,0,0,0,0
+18:16:41.103	IoT	ACK seq=93 · PWM 71 / 72 · OK (đã xác nhận)
+18:16:41.130	App	Gửi V1:5c4c2599d0ad4aad,94,0,0,0,0|S:71,72,0,0,0
+18:16:41.131	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,94,OK,71,72,0,0,0,0,0,0,0
+18:16:41.132	IoT	ACK seq=94 · PWM 71 / 72 · OK (đã xác nhận)
+18:16:41.161	App	Gửi V1:5c4c2599d0ad4aad,95,0,0,0,0|S:71,72,0,0,0
+18:16:41.166	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,95,OK,71,72,0,0,0,0,0,0,0
+18:16:41.166	IoT	ACK seq=95 · PWM 71 / 72 · OK (đã xác nhận)
+18:16:41.191	App	Gửi V1:5c4c2599d0ad4aad,96,0,0,0,0|S:71,72,0,0,0
+18:16:41.194	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,96,OK,71,72,0,0,0,0,0,0,0
+18:16:41.195	IoT	ACK seq=96 · PWM 71 / 72 · OK (đã xác nhận)
+18:16:41.220	App	Gửi V1:5c4c2599d0ad4aad,97,0,0,0,0|S:71,72,0,0,0
+18:16:41.222	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,97,OK,71,72,0,0,0,0,0,0,0
+18:16:41.222	IoT	ACK seq=97 · PWM 71 / 72 · OK (đã xác nhận)
+18:16:41.252	App	Gửi V1:5c4c2599d0ad4aad,98,0,0,0,0|S:71,72,0,0,0
+18:16:41.257	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,98,OK,71,72,0,0,0,0,0,0,0
+18:16:41.257	IoT	ACK seq=98 · PWM 71 / 72 · OK (đã xác nhận)
+18:16:41.281	App	Gửi V1:5c4c2599d0ad4aad,99,0,0,0,0|S:71,72,0,0,0
+18:16:41.285	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,99,OK,71,72,0,0,0,0,0,0,0
+18:16:41.286	IoT	ACK seq=99 · PWM 71 / 72 · OK (đã xác nhận)
+18:16:41.311	App	Gửi V1:5c4c2599d0ad4aad,100,0,0,0,0|S:71,72,0,0,0
+18:16:41.315	Mạng	Nhận receive host=10.0.2.2:8888 · A1:5c4c2599d0ad4aad,100,OK,71,72,0,0,0,0,0,0,0
+18:16:41.315	IoT	ACK seq=100 · PWM 71 / 72 · OK (đã xác nhận)
+18:16:41.341	App	Gửi V1:5c4c2599d0ad4aad,101,0,0,0,0|S:71,72,0,0,0
+18:16:41.371	App	Gửi V1:5c4c2599d0ad4aad,102,0,0,0,0|S:71,72,0,0,0
+18:16:41.401	App	Gửi V1:5c4c2599d0ad4aad,103,0,0,0,0|S:71,72,0,0,0
+18:16:41.432	App	Gửi V1:5c4c2599d0ad4aad,104,0,0,0,0|S:71,72,0,0,0
+18:16:41.461	App	Gửi V1:5c4c2599d0ad4aad,105,0,0,0,0|S:71,72,0,0,0
+18:16:41.492	App	Gửi V1:5c4c2599d0ad4aad,106,0,0,0,0|S:71,72,0,0,0
+18:16:41.520	App	Gửi V1:5c4c2599d0ad4aad,107,0,0,0,0|S:71,72,0,0,0
+18:16:41.552	App	Gửi V1:5c4c2599d0ad4aad,108,0,0,0,0|S:71,72,0,0,0
+18:16:41.581	App	Gửi V1:5c4c2599d0ad4aad,109,0,0,0,0|S:71,72,0,0,0
+18:16:41.610	App	Gửi V1:5c4c2599d0ad4aad,110,0,0,0,0|S:71,72,0,0,0
+18:16:41.617	App	Gửi V1:5c4c2599d0ad4aad,111,0,0,0,0|S:0,0,0,0,0
+18:16:41.617	App	final-stop-attempt hex=56313a356334633235393964306164346161642c3131312c302c302c302c307c533a302c302c302c302c300a
+18:16:41.618	App	Gửi V1:5c4c2599d0ad4aad,112,0,0,0,0|C
+18:16:41.618	App	final-stop-attempt hex=56313a356334633235393964306164346161642c3131322c302c302c302c307c430a
+18:16:41.618	Mạng	closed confirmed=false requested=0/0 reason=Offline · Hết hạn ACK 300 ms
+18:16:45.223	App	event Release(id=10)
+18:16:47.608	App	closed confirmed=false requested=0/0 reason=Offline · phiên đã đóng
+18:16:47.735	App	event Cancel
+18:16:47.736	App	closed confirmed=false requested=0/0 reason=Offline · phiên đã đóng

@@ -1,0 +1,16 @@
+{
+  "apk_sha256": "b31ac740afa3515c8cc5a2a344061e170c63a5972ca4beef2058c3ac7c5c736f",
+  "delay_reply_ms": 200,
+  "hold_ms": 1050,
+  "u_seq": 262,
+  "u_send": "   441.249  7318  7379 I SumoSession: wire t0_ns=-1 t1_ns=441249169400 t2_ns=441249334200 cause=periodic hex=56313a663335326163393465643634323161332c3236322c302c302c302c307c550a enqueued_ns=440245026800 dequeued_ns=440245671500 work_ns=441248892500 prepare_start_ns=441249051800 prepare_end_ns=441249152500 pre_send_cpu_ns=0 send_cpu_ns=0 deadline_ns=441259786000 wait_start_ns=441245941000 wake_ns=441248892500 requested_wait_ns=2000000 prev_work_ns=131600 prev_trace_submit_ns=0 trace_pending=0",
+  "finger_up": "   441.302  7318  7379 I SumoSession: 441301 event EndUnlock",
+  "u_ack": "   441.463  7318  7379 I SumoSession: 441463 ack seq=262 result=OK pwm=0/0 rtt=213",
+  "release_before_ack": true,
+  "final_killed": false,
+  "final_pwm": [
+    0,
+    0
+  ],
+  "not_hardware": true
+}

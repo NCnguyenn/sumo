@@ -1,0 +1,10 @@
+{
+  "cohort": 40,
+  "completed_cases": 12,
+  "failures_in_completed": 0,
+  "runner_exit": 255,
+  "artifact_pull_error": "device offline",
+  "emulator_service_exit": 0,
+  "reason_unknown": true,
+  "scope": "No timing/soak retry; resume only unfinished Android functional cases."
+}

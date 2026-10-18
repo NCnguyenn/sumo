@@ -26,6 +26,7 @@ import com.aistudy.myapplication.updates.requireHttps
     var input by remember{mutableStateOf(s.inputMode)};var weapon by remember{mutableStateOf(s.weaponMode)}
     var errors by remember{mutableStateOf<Map<String,String>>(emptyMap())}
     var confirmReset by remember{mutableStateOf(false)};var confirmFeed by remember{mutableStateOf<StoredSettings?>(null)}
+    var tab by remember{mutableIntStateOf(0)}
     fun save() {
         val problems=mutableMapOf<String,String>()
         fun integer(key:String,range:IntRange):Int {
@@ -46,6 +47,7 @@ import com.aistudy.myapplication.updates.requireHttps
         if(candidate.controller.driveTemplate !in listOf(ControllerSettings.S_TEMPLATE,ControllerSettings.D_TEMPLATE)) problems["template"]="Chỉ S:{L},{R},{B},{W},{K}\\n hoặc alias D"
         if(candidate.updateFeed.isNotEmpty())try{requireHttps(candidate.updateFeed)}catch(_:IllegalArgumentException){problems["feed"]="URL HTTPS hợp lệ; để trống nếu chưa có hosting"}
         errors=problems
+        if(problems.isNotEmpty())tab=when(problems.keys.first()){ "feed"->2;"limit","sensitivity","deadZone","leftGain","rightGain","turnPercent"->1;else->0 }
         if(problems.isEmpty()) {
             if(candidate.updateFeed!=current.updateFeed)confirmFeed=candidate else onSave(candidate)
         }
@@ -55,40 +57,46 @@ import com.aistudy.myapplication.updates.requireHttps
         "duration" to "Thời gian quay (1–2000 ms)","host" to "IP receiver bản thử","port" to "UDP port (1–65535)","interval" to "Chu kỳ gửi (20–50 ms)",
         "template" to "Template (\\n là một LF)","feed" to "URL HTTPS metadata cập nhật (chưa có: để trống)")
     Dialog(onDismissRequest=onClose,properties=DialogProperties(usePlatformDefaultWidth=false)) {
-        Surface(Modifier.fillMaxWidth(.94f).padding(vertical=12.dp).heightIn(max=380.dp),
-            shape=RoundedCornerShape(20.dp),color=MaterialTheme.colorScheme.surface) {
-            Column(Modifier.padding(16.dp),verticalArrangement=Arrangement.spacedBy(8.dp)) {
-                Row(Modifier.fillMaxWidth(),verticalAlignment=Alignment.CenterVertically) {
-                    Text("Cấu hình",Modifier.weight(1f),fontSize=20.sp,fontWeight=FontWeight.Bold)
-                    Text("Điều khiển đã dừng",color=MaterialTheme.colorScheme.primary,fontSize=11.sp)
+        Surface(Modifier.fillMaxWidth(.88f).widthIn(max=820.dp).fillMaxHeight(.96f),
+            shape=RoundedCornerShape(16.dp),color=MaterialTheme.colorScheme.surface,border=androidx.compose.foundation.BorderStroke(1.dp,MaterialTheme.colorScheme.outline)) {
+            Column(Modifier.padding(horizontal=14.dp,vertical=10.dp),verticalArrangement=Arrangement.spacedBy(4.dp)) {
+                Row(Modifier.fillMaxWidth().height(48.dp),verticalAlignment=Alignment.CenterVertically,horizontalArrangement=Arrangement.spacedBy(10.dp)) {
+                    Text("Cấu hình",fontSize=22.sp,fontWeight=FontWeight.Bold)
+                    Text("Đã đóng phiên\nđiều khiển",Modifier.weight(1f),color=MaterialTheme.colorScheme.onSurfaceVariant,fontSize=10.sp,lineHeight=13.sp)
+                    for((index,title) in listOf("Chung","Hiệu chỉnh","Cập nhật").withIndex()) {
+                        val tag=listOf("settings-general","settings-calibration","settings-update")[index]
+                        OutlinedButton(onClick={tab=index},modifier=Modifier.height(48.dp).testTag(tag),shape=RoundedCornerShape(9.dp),
+                            colors=ButtonDefaults.outlinedButtonColors(containerColor=if(tab==index)MaterialTheme.colorScheme.primary.copy(alpha=.12f) else androidx.compose.ui.graphics.Color.Transparent),
+                            contentPadding=PaddingValues(horizontal=12.dp)){Text(title,fontSize=11.sp,color=if(tab==index)MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurface)}
+                    }
                 }
                 HorizontalDivider(color=MaterialTheme.colorScheme.outline.copy(alpha=.35f))
-                Column(Modifier.weight(1f).verticalScroll(rememberScrollState()),verticalArrangement=Arrangement.spacedBy(8.dp)) {
-                    Row(horizontalArrangement=Arrangement.spacedBy(8.dp)) {
-                        OutlinedButton(onClick={input=if(input==InputMode.D_PAD)InputMode.JOYSTICK else InputMode.D_PAD},
-                            modifier=Modifier.weight(1f).testTag("input-mode"),shape=RoundedCornerShape(10.dp)) {Text("Điều hướng: $input",fontSize=12.sp)}
-                        OutlinedButton(onClick={weapon=if(weapon==WeaponMode.HOLD)WeaponMode.TOGGLE else WeaponMode.HOLD},
-                            modifier=Modifier.weight(1f).testTag("weapon-mode"),shape=RoundedCornerShape(10.dp)) {Text("Vũ khí: $weapon",fontSize=12.sp)}
+                key(tab) {Column(Modifier.weight(1f).verticalScroll(rememberScrollState()),verticalArrangement=Arrangement.spacedBy(4.dp)) {
+                    val rows=when(tab) {
+                        0->listOf(listOf("host","port"),listOf("interval","duration"),listOf("template"))
+                        1->listOf(listOf("limit","turnPercent"),listOf("sensitivity","deadZone"),listOf("leftGain","rightGain"))
+                        else->listOf(listOf("feed"))
                     }
-                    val groups=listOf("KẾT NỐI" to listOf("host","port","interval","template"),
-                        "LÁI & HIỆU CHỈNH" to listOf("limit","sensitivity","deadZone","turnPercent","leftGain","rightGain","duration"),
-                        "CẬP NHẬT" to listOf("feed"))
-                    for((title,keys) in groups) {
-                        Text(title,Modifier.padding(top=4.dp),color=MaterialTheme.colorScheme.primary,fontSize=11.sp,
-                            fontWeight=FontWeight.SemiBold,letterSpacing=1.sp)
-                        for(pair in keys.chunked(2))Row(horizontalArrangement=Arrangement.spacedBy(12.dp)) {
+                    for(pair in rows)Row(horizontalArrangement=Arrangement.spacedBy(12.dp)) {
                             for(key in pair)Column(Modifier.weight(1f)) {
                                 OutlinedTextField(values.getValue(key),{values[key]=it},
                                     label={Text(labels.getValue(key),fontSize=11.sp)},
                                     modifier=Modifier.fillMaxWidth().testTag("field-$key"),isError=key in errors,singleLine=true,
+                                    textStyle=LocalTextStyle.current.copy(fontSize=14.sp),
                                     shape=RoundedCornerShape(10.dp))
                                 errors[key]?.let{Text(it,color=MaterialTheme.colorScheme.error,fontSize=11.sp)}
                             }
-                        }
                     }
-                    Text("AUTO khóa. Thông số cơ khí cần firmware xác nhận; chưa gửi góc servo.",
-                        color=MaterialTheme.colorScheme.onSurfaceVariant,fontSize=11.sp)
-                }
+                    if(tab==0)Row(horizontalArrangement=Arrangement.spacedBy(8.dp)) {
+                        OutlinedButton(onClick={input=if(input==InputMode.D_PAD)InputMode.JOYSTICK else InputMode.D_PAD},
+                            modifier=Modifier.weight(1f).height(48.dp).testTag("input-mode"),shape=RoundedCornerShape(10.dp)) {Text("Điều hướng: ${if(input==InputMode.D_PAD)"D-Pad" else "Joystick"}",fontSize=12.sp)}
+                        OutlinedButton(onClick={weapon=if(weapon==WeaponMode.HOLD)WeaponMode.TOGGLE else WeaponMode.HOLD},
+                            modifier=Modifier.weight(1f).height(48.dp).testTag("weapon-mode"),shape=RoundedCornerShape(10.dp)) {Text("Vũ khí: ${if(weapon==WeaponMode.HOLD)"Giữ · HOLD" else "Bật / tắt · TOGGLE"}",fontSize=12.sp)}
+                    }
+                    if(tab!=0)Text(when(tab){1->"Lưu để áp dụng độ nhạy và hiệu chỉnh; không cần build lại.";
+                        else->"Chỉ nhận HTTPS. Chưa có hosting: để trống. Nút Cập nhật trên màn chính dùng để kiểm tra và tải APK."},
+                        color=MaterialTheme.colorScheme.onSurfaceVariant,fontSize=10.sp)
+                }}
                 HorizontalDivider(color=MaterialTheme.colorScheme.outline.copy(alpha=.35f))
                 Row(Modifier.fillMaxWidth(),verticalAlignment=Alignment.CenterVertically,horizontalArrangement=Arrangement.spacedBy(8.dp)) {
                     TextButton(onClick={confirmReset=true},modifier=Modifier.testTag("reset-settings")){Text("Khôi phục mặc định",fontSize=12.sp)}

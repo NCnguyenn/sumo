@@ -1,0 +1,41 @@
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.CompactDiagnosticsTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=
+com.aistudy.myapplication.CompactDiagnosticsTest:
+INSTRUMENTATION_STATUS: test=smallLandscapeWithLargeFontKeepsControlsAndTextInsideTheirBounds
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.CompactDiagnosticsTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Clipped text: [■  KILL: line=0 bounds=127.0 x 42.0 / 111 x 42, TIẾN: line=0 bounds=69.0 x 32.0 / 64 x 23, TRÁI: line=0 bounds=70.0 x 32.0 / 65 x 23, PHẢI: line=0 bounds=71.0 x 32.0 / 67 x 23, LÙI: line=0 bounds=59.0 x 32.0 / 44 x 23, GIỮ PHANH: line=0 bounds=170.26562 x 35.0 / 172 x 29]
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.aistudy.myapplication.CompactDiagnosticsTest.smallLandscapeWithLargeFontKeepsControlsAndTextInsideTheirBounds(CompactDiagnosticsTest.kt:63)
+
+INSTRUMENTATION_STATUS: stream=
+Error in smallLandscapeWithLargeFontKeepsControlsAndTextInsideTheirBounds(com.aistudy.myapplication.CompactDiagnosticsTest):
+java.lang.AssertionError: Clipped text: [■  KILL: line=0 bounds=127.0 x 42.0 / 111 x 42, TIẾN: line=0 bounds=69.0 x 32.0 / 64 x 23, TRÁI: line=0 bounds=70.0 x 32.0 / 65 x 23, PHẢI: line=0 bounds=71.0 x 32.0 / 67 x 23, LÙI: line=0 bounds=59.0 x 32.0 / 44 x 23, GIỮ PHANH: line=0 bounds=170.26562 x 35.0 / 172 x 29]
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.aistudy.myapplication.CompactDiagnosticsTest.smallLandscapeWithLargeFontKeepsControlsAndTextInsideTheirBounds(CompactDiagnosticsTest.kt:63)
+
+INSTRUMENTATION_STATUS: test=smallLandscapeWithLargeFontKeepsControlsAndTextInsideTheirBounds
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_RESULT: stream=
+
+Time: 3.662
+There was 1 failure:
+1) smallLandscapeWithLargeFontKeepsControlsAndTextInsideTheirBounds(com.aistudy.myapplication.CompactDiagnosticsTest)
+java.lang.AssertionError: Clipped text: [■  KILL: line=0 bounds=127.0 x 42.0 / 111 x 42, TIẾN: line=0 bounds=69.0 x 32.0 / 64 x 23, TRÁI: line=0 bounds=70.0 x 32.0 / 65 x 23, PHẢI: line=0 bounds=71.0 x 32.0 / 67 x 23, LÙI: line=0 bounds=59.0 x 32.0 / 44 x 23, GIỮ PHANH: line=0 bounds=170.26562 x 35.0 / 172 x 29]
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.aistudy.myapplication.CompactDiagnosticsTest.smallLandscapeWithLargeFontKeepsControlsAndTextInsideTheirBounds(CompactDiagnosticsTest.kt:63)
+
+FAILURES!!!
+Tests run: 1,  Failures: 1
+
+
+INSTRUMENTATION_CODE: -1

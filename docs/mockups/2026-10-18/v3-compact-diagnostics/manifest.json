@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-18",
+  "version": "v3-compact-diagnostics",
+  "tool": "built-in imagegen",
+  "mockup_only": true,
+  "runtime_data_illustrative": true,
+  "physical_motor_state_not_inferred_from_ACK": true,
+  "pixel_ratios_and_touch_targets_not_verified": true,
+  "images": [
+    {
+      "file": "01-main-compact.png",
+      "width": 1881,
+      "height": 836,
+      "sha256": "49c3da7e7d43e4cba695ad2f9071e79c809c630d00938f0ca3791adbe1914cfa"
+    },
+    {
+      "file": "02-main-warning.png",
+      "width": 1882,
+      "height": 836,
+      "sha256": "7171010b58b915ec31c3043c4b5364c452481630298ecee3993031798e22cdf8"
+    },
+    {
+      "file": "03-diagnostics.png",
+      "width": 1881,
+      "height": 836,
+      "sha256": "df391b6f2937a81151fc935e33bea81bd2b799272cca242290cff9a84bdb69ad"
+    },
+    {
+      "file": "04-settings-compact.png",
+      "width": 1882,
+      "height": 836,
+      "sha256": "62f3d8d60b0afd04388ce501b68f032755cd8862943575fcddf292e7380b11af"
+    },
+    {
+      "file": "05-updater-compact.png",
+      "width": 1881,
+      "height": 836,
+      "sha256": "b91a825e507c2f5e14196bcd7273fa0afec433c248325117e3f63e319c9beb07"
+    }
+  ]
+}

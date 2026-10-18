@@ -1,0 +1,4 @@
+CAPTURE 12-diagnostics-error-detail
+CAPTURE 13-android-export-picker
+EXPORTED 20059 bytes
+RESTORED; 13 screenshots; APK c8f88cbcb3dd5fb2abdcd1bb7eb0608b2d2c1b27b9bd3ffa7b7d9aafbfcd9f55

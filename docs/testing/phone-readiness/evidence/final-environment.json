@@ -1,0 +1,18 @@
+{
+  "adb_devices": "List of devices attached\r\nemulator-5554          device product:sdk_gphone16k_x86_64 model:sdk_gphone16k_x86_64 device:emu64xa16k transport_id:3\r\n\r\n",
+  "host_udp_qemu_observation": "{\"Id\":44104,\"ProcessName\":\"qemu-system-x86_64-headless\"}\r\n",
+  "display_restored": {
+    "size": "1080x2400 physical, no override",
+    "density": 420,
+    "font_scale": 1.0
+  },
+  "app_before_close": "Offline PWM0/0 B0W0K0 AUTO locked, screenshot54",
+  "history_preserved": true,
+  "prefs_restored_sha256": {
+    "shared_prefs/sumo_safety.xml": "d4df5cdc24abc7ff0f481061fc77f109f3fdac00bf925fb7b5e10ca48dcc744e",
+    "shared_prefs/sumo_install_result.xml": "731ca1223573badeb722ed73d190e822a1a9978c0393b50debaf41598e20396a",
+    "shared_prefs/sumo_settings.xml": "3325d2a819fdd8062c2cdc48a09b995c9b012915bcdf88b1cf9742a7f057c793"
+  },
+  "services_started_by_audit_stopped": true,
+  "phone_install": false
+}

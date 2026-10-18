@@ -1,0 +1,655 @@
+{
+  "final_apk_sha256": "b31ac740afa3515c8cc5a2a344061e170c63a5972ca4beef2058c3ac7c5c736f",
+  "screenshots": [
+    {
+      "file": "01-initial-dpad-api37.png",
+      "apk_sha256": "c8f88cbcb3dd5fb2abdcd1bb7eb0608b2d2c1b27b9bd3ffa7b7d9aafbfcd9f55",
+      "sha256": "f37e514f1ea277a849dd3fe344e8b2eaa5c70887b3509c8de966cedb0703abfc",
+      "xml_sha256": "8f142a7a834c8ea1965ff0933e8ed44fa46d08625173116caf71da45426e7f90",
+      "pixels": [
+        2400,
+        1080
+      ],
+      "raw_device_capture": true,
+      "role": "historical_or_intermediate"
+    },
+    {
+      "file": "02-baseline-controller.png",
+      "apk_sha256": "c8f88cbcb3dd5fb2abdcd1bb7eb0608b2d2c1b27b9bd3ffa7b7d9aafbfcd9f55",
+      "sha256": "26b83b2bf5a1d3bc64ede84fffa1cb66e179c086c6486d478315c870c411edf8",
+      "xml_sha256": "d1ae8f007006f0f9bce517d90bc7ba3ec720424637cb1f4bc1b3dc65f2a865d2",
+      "pixels": [
+        2400,
+        1080
+      ],
+      "raw_device_capture": true,
+      "role": "historical_or_intermediate"
+    },
+    {
+      "file": "03-small-font130-dpad-before.png",
+      "apk_sha256": "c8f88cbcb3dd5fb2abdcd1bb7eb0608b2d2c1b27b9bd3ffa7b7d9aafbfcd9f55",
+      "sha256": "94ceec10787dd9497e1c1285812b049393efa887dc33b343f10fe32800a61764",
+      "xml_sha256": "b78427c08c3499cb4abb628e0ab781e161ccd8395d24299e4b08ed9fc835dbbc",
+      "pixels": [
+        1920,
+        960
+      ],
+      "raw_device_capture": true,
+      "role": "historical_or_intermediate"
+    },
+    {
+      "file": "04-small-font130-settings-general-before.png",
+      "apk_sha256": "c8f88cbcb3dd5fb2abdcd1bb7eb0608b2d2c1b27b9bd3ffa7b7d9aafbfcd9f55",
+      "sha256": "3cfa2b04f3b7d6dfd36812c63d0fa2064153aeffe822f5cc0138d0b28478d136",
+      "xml_sha256": "137cd3447e3aebaebb67ead8f331b2cbcddea916975793ea783b31203ea576cd",
+      "pixels": [
+        1920,
+        960
+      ],
+      "raw_device_capture": true,
+      "role": "historical_or_intermediate"
+    },
+    {
+      "file": "05-small-font130-settings-calibration-before.png",
+      "apk_sha256": "c8f88cbcb3dd5fb2abdcd1bb7eb0608b2d2c1b27b9bd3ffa7b7d9aafbfcd9f55",
+      "sha256": "513d25d8880bdc5c1458c3343679047bcf6621f27ffefa2580142dcab2e14613",
+      "xml_sha256": "b93af69f834a8436234916938393feb9a9e6f831f28f2b48e9e1fa000ba662d4",
+      "pixels": [
+        1920,
+        960
+      ],
+      "raw_device_capture": true,
+      "role": "historical_or_intermediate"
+    },
+    {
+      "file": "06-small-font130-settings-update-before.png",
+      "apk_sha256": "c8f88cbcb3dd5fb2abdcd1bb7eb0608b2d2c1b27b9bd3ffa7b7d9aafbfcd9f55",
+      "sha256": "173ee6e7e59f23bc01c0517028bec6287d2a70899fe2b2d1c326fb12bf228dfc",
+      "xml_sha256": "cec5afe500491c435c8addac12badd1746ce4a3752e59c72ddb75c27cbd6da0d",
+      "pixels": [
+        1920,
+        960
+      ],
+      "raw_device_capture": true,
+      "role": "historical_or_intermediate"
+    },
+    {
+      "file": "07-small800x360-font150-before.png",
+      "apk_sha256": "c8f88cbcb3dd5fb2abdcd1bb7eb0608b2d2c1b27b9bd3ffa7b7d9aafbfcd9f55",
+      "sha256": "1ef0cb07e2d052e12c3010091fa1ccab39e6e653c9e8b54ef82b7e199f6d3924",
+      "xml_sha256": "3675774c666d5e60284b96fb279f78fd2d0e2767e135eca3981821767b04502e",
+      "pixels": [
+        1600,
+        720
+      ],
+      "raw_device_capture": true,
+      "role": "historical_or_intermediate"
+    },
+    {
+      "file": "08-small800x360-font150-first-fix.png",
+      "apk_sha256": "intermediate-UI-fix-not-handoff",
+      "sha256": "8eef7b6d08a08cc2df7d73d72e43b3ea823678411622f1d626cacb5c3c22495f",
+      "xml_sha256": "30876c43eb43a8e9ee2f0bdbd091a243dcc05fed8daa2c11f5d5f6fb752709fe",
+      "pixels": [
+        1600,
+        720
+      ],
+      "raw_device_capture": true,
+      "role": "historical_or_intermediate"
+    },
+    {
+      "file": "09-small800x360-font150-final-candidate.png",
+      "apk_sha256": "intermediate-UI-fix-not-handoff",
+      "sha256": "f87d468de15a3b3be8896430602cd6728199e1dde6659ae6d3c1a822ac26bfdb",
+      "xml_sha256": "22a67909a9a6bc777ca6de85ba60701e051b3edf0f22d9dcb48ed2e6743b1f9b",
+      "pixels": [
+        1600,
+        720
+      ],
+      "raw_device_capture": true,
+      "role": "historical_or_intermediate"
+    },
+    {
+      "file": "10-small-font150-settings-general.png",
+      "apk_sha256": "intermediate-UI-fix-not-handoff",
+      "sha256": "2841d37d285f4d0a7531e6535beaf72771054e8b2a9c31eaf313e3458a363486",
+      "xml_sha256": "c5e9cf0b285367a9310f895fb1a21a45d562bbf69b912407897a4a91dfd3f4e5",
+      "pixels": [
+        1600,
+        720
+      ],
+      "raw_device_capture": true,
+      "role": "historical_or_intermediate"
+    },
+    {
+      "file": "11-small-font150-settings-calibration.png",
+      "apk_sha256": "intermediate-UI-fix-not-handoff",
+      "sha256": "a37257f2182517af36e59a9295af72287066293c79c538a51822bb6cc5df3c8f",
+      "xml_sha256": "bdea0fe5546bee2c447629e8e19d629ff5b245dbdda9620e506e7d19461693f0",
+      "pixels": [
+        1600,
+        720
+      ],
+      "raw_device_capture": true,
+      "role": "historical_or_intermediate"
+    },
+    {
+      "file": "12-small-font150-settings-update.png",
+      "apk_sha256": "intermediate-UI-fix-not-handoff",
+      "sha256": "2b7930f774b707c529c71db727d64fefeb8a784f96c469bc354e38240ad110ba",
+      "xml_sha256": "052cf50bd760c68c93b38e3337c827847941ffbbd7a567495c3fd450547a42ec",
+      "pixels": [
+        1600,
+        720
+      ],
+      "raw_device_capture": true,
+      "role": "historical_or_intermediate"
+    },
+    {
+      "file": "13-small-font150-updater.png",
+      "apk_sha256": "intermediate-UI-fix-not-handoff",
+      "sha256": "fb9d27df1c9d22b98c58040f4efd552e6ec345e59ea0ecc8d8347788f5a2ff63",
+      "xml_sha256": "4ecbcf459502dabff4bd48b6dccd933b0eaa4b595c8ae7725aefed02c77245d9",
+      "pixels": [
+        1600,
+        720
+      ],
+      "raw_device_capture": true,
+      "role": "historical_or_intermediate"
+    },
+    {
+      "file": "14-small-font150-diagnostics.png",
+      "apk_sha256": "intermediate-UI-fix-not-handoff",
+      "sha256": "ea96e4b520be2b61181ddc5e4f138330430cc6e750b8fb517095797767c562d5",
+      "xml_sha256": "087baf1d402f025bb6cb7b2ee1d356a4f3042e5d850f791c2a185854f11b7cb0",
+      "pixels": [
+        1600,
+        720
+      ],
+      "raw_device_capture": true,
+      "role": "historical_or_intermediate"
+    },
+    {
+      "file": "15-small-font150-diagnostics-fixed.png",
+      "apk_sha256": "intermediate-UI-fix-not-handoff",
+      "sha256": "4ee03859afe42fa9d4eb55b1e88d9a19b194dbf532e9de4db042765c7e8c9985",
+      "xml_sha256": "fb63ea20b07ece047893dc133b486dd953f3c2fd09533a14568d700d591e8961",
+      "pixels": [
+        1600,
+        720
+      ],
+      "raw_device_capture": true,
+      "role": "historical_or_intermediate"
+    },
+    {
+      "file": "16-final-baseline-controller.png",
+      "apk_sha256": "c377cd1155aedf0fa65df714a5540504b56bad5643a35fece3274460d5667b1c",
+      "sha256": "8524466229d4962888a24fd96d5dc23481197b82ca9968ff324df031aaea40e0",
+      "xml_sha256": "aef663588c2c7e64ee51b871fa7b5a3cf01630eaeb3c1a0220f3105d40a5a85c",
+      "pixels": [
+        2400,
+        1080
+      ],
+      "raw_device_capture": true,
+      "role": "historical_or_intermediate"
+    },
+    {
+      "file": "17-final-dpad-online.png",
+      "apk_sha256": "c377cd1155aedf0fa65df714a5540504b56bad5643a35fece3274460d5667b1c",
+      "sha256": "556210040621aa66e5b39b2e977647f7cbdc38d308fe79888e2dc7eb6a64ecc4",
+      "xml_sha256": "172546c885abae2526853a63acfdc7839c3d4cf891ad18df4f612197e4a2274a",
+      "pixels": [
+        2400,
+        1080
+      ],
+      "raw_device_capture": true,
+      "role": "historical_or_intermediate"
+    },
+    {
+      "file": "18-final-kill-locked.png",
+      "apk_sha256": "c377cd1155aedf0fa65df714a5540504b56bad5643a35fece3274460d5667b1c",
+      "sha256": "7cae9d84649888a7435d9c60dbfddf9aa528c355e986a5c5b5b829d2a95c04ff",
+      "xml_sha256": "ea567f89963f1d9ffccbbcbc1d71e5b6d9191648640138dd3c1567190bff0a68",
+      "pixels": [
+        2400,
+        1080
+      ],
+      "raw_device_capture": true,
+      "role": "historical_or_intermediate"
+    },
+    {
+      "file": "19-final-unlock-neutral.png",
+      "apk_sha256": "c377cd1155aedf0fa65df714a5540504b56bad5643a35fece3274460d5667b1c",
+      "sha256": "c5b93813f390951627d46f8474a8b6cbd25052e9eee9a70b214645d8f57b79ed",
+      "xml_sha256": "c8c8fec1f73ceaa85a9ab37a8e4493a06845a6da0ab7b026ae896e9146db826d",
+      "pixels": [
+        2400,
+        1080
+      ],
+      "raw_device_capture": true,
+      "role": "historical_or_intermediate"
+    },
+    {
+      "file": "20-final-joystick-toggle-online.png",
+      "apk_sha256": "c377cd1155aedf0fa65df714a5540504b56bad5643a35fece3274460d5667b1c",
+      "sha256": "8e18cac61688499d97eeb9ac62d4134b9204760bc29d73ddedcd827c51eb14ff",
+      "xml_sha256": "e46e034e239ad789575ef6bf721bea05de90bca75f609df29d6320e1029890e1",
+      "pixels": [
+        2400,
+        1080
+      ],
+      "raw_device_capture": true,
+      "role": "historical_or_intermediate"
+    },
+    {
+      "file": "21-final-joystick-released-neutral.png",
+      "apk_sha256": "c377cd1155aedf0fa65df714a5540504b56bad5643a35fece3274460d5667b1c",
+      "sha256": "afdfa15586147028b2abaed9d47a0300114440f9fd09cbf8c0e4a2a2160d8c7e",
+      "xml_sha256": "b79dcc55db7272a649fbc722163182896cbf255c70f385fc252bfbe28f32f0ec",
+      "pixels": [
+        2400,
+        1080
+      ],
+      "raw_device_capture": true,
+      "role": "historical_or_intermediate"
+    },
+    {
+      "file": "22-final-settings-general.png",
+      "apk_sha256": "c377cd1155aedf0fa65df714a5540504b56bad5643a35fece3274460d5667b1c",
+      "sha256": "fe8b72a8e8fc1ae9778a57a2fe13a16438843ebec08fd7e0ff109ca035462933",
+      "xml_sha256": "57b8faa1e749e02aba3e7145a51f39deeb58c807310ca2c7e4f5f1329f08202a",
+      "pixels": [
+        2400,
+        1080
+      ],
+      "raw_device_capture": true,
+      "role": "historical_or_intermediate"
+    },
+    {
+      "file": "23-final-settings-calibration.png",
+      "apk_sha256": "c377cd1155aedf0fa65df714a5540504b56bad5643a35fece3274460d5667b1c",
+      "sha256": "0c4cd54a404016b350036402d6ce149d352fd4e6ffd40f65706e4838eadd6f74",
+      "xml_sha256": "24cebde37058b2b8478039e448d86f6e372db7da9fb2a3f461483bc48cc4c144",
+      "pixels": [
+        2400,
+        1080
+      ],
+      "raw_device_capture": true,
+      "role": "historical_or_intermediate"
+    },
+    {
+      "file": "24-final-settings-update-source.png",
+      "apk_sha256": "c377cd1155aedf0fa65df714a5540504b56bad5643a35fece3274460d5667b1c",
+      "sha256": "95cca9c73fb1d66143282983bd88f6bcd5cd6d14add507613627f310d76802dc",
+      "xml_sha256": "88f3518105fb6c3e86bbf30de7a3c7a446f788805d0b57dcf72b6a08263f1da6",
+      "pixels": [
+        2400,
+        1080
+      ],
+      "raw_device_capture": true,
+      "role": "historical_or_intermediate"
+    },
+    {
+      "file": "25-final-updater-with-history.png",
+      "apk_sha256": "c377cd1155aedf0fa65df714a5540504b56bad5643a35fece3274460d5667b1c",
+      "sha256": "ec512e778a8c1946f4b16769f67b8080ccd38381ddb2b05a8fbc4f4016fc8656",
+      "xml_sha256": "3a549da9fb7d8c5ab63b931d8a8096e5088f573dca1367cfe0c751a76aa0747d",
+      "pixels": [
+        2400,
+        1080
+      ],
+      "raw_device_capture": true,
+      "role": "historical_or_intermediate"
+    },
+    {
+      "file": "26-final-stale-ack-warning.png",
+      "apk_sha256": "c377cd1155aedf0fa65df714a5540504b56bad5643a35fece3274460d5667b1c",
+      "sha256": "029da4c73186cfd83f0db0e146dcf249e5a317e26e4efd0bacfa86634eb1cdd6",
+      "xml_sha256": "f348c51d4cd0634315fb54d57ec2d4c6997c27a143bb4cf25a117376eee5b7a1",
+      "pixels": [
+        2400,
+        1080
+      ],
+      "raw_device_capture": true,
+      "role": "historical_or_intermediate"
+    },
+    {
+      "file": "27-final-diagnostics-live-error.png",
+      "apk_sha256": "c377cd1155aedf0fa65df714a5540504b56bad5643a35fece3274460d5667b1c",
+      "sha256": "24d0a50d60966ff074f58b584892f9b81cfdcc3908539e61f6b84aaceac1985b",
+      "xml_sha256": "3a83eb1fdbd37a303fda017bbbb45548fd5bb555ca1170d1505d887f240a8150",
+      "pixels": [
+        2400,
+        1080
+      ],
+      "raw_device_capture": true,
+      "role": "historical_or_intermediate"
+    },
+    {
+      "file": "28-final-diagnostics-copied.png",
+      "apk_sha256": "c377cd1155aedf0fa65df714a5540504b56bad5643a35fece3274460d5667b1c",
+      "sha256": "b398c8c094ec7fcefc4a47f80dc34b11ec76a82f3c5aa23847a39d1cb33cb3ab",
+      "xml_sha256": "6467ff141bb4859ce2798528a829704170d2103455c50c4e28c98ee1800899c0",
+      "pixels": [
+        2400,
+        1080
+      ],
+      "raw_device_capture": true,
+      "role": "historical_or_intermediate"
+    },
+    {
+      "file": "29-final-android-export-picker.png",
+      "apk_sha256": "c377cd1155aedf0fa65df714a5540504b56bad5643a35fece3274460d5667b1c",
+      "sha256": "2be8dc2ba66a10216ad43f90bb95efaaa06cbe35647fb31838d2e5beb826a3d9",
+      "xml_sha256": "27510a908199aed4297f151de74f93fab5bbc49503851ae481e5eae77f57b097",
+      "pixels": [
+        1080,
+        2400
+      ],
+      "raw_device_capture": true,
+      "role": "historical_or_intermediate"
+    },
+    {
+      "file": "30-final-android-export-ready.png",
+      "apk_sha256": "c377cd1155aedf0fa65df714a5540504b56bad5643a35fece3274460d5667b1c",
+      "sha256": "b876914ced6732273a88b35c0a16963d5acb462bb462e3c03f39e08f462da5ab",
+      "xml_sha256": "5acfadb15716d7878e23965349c0ceae8fd7c1864b864b1182155c4493c29b32",
+      "pixels": [
+        1080,
+        2400
+      ],
+      "raw_device_capture": true,
+      "role": "historical_or_intermediate"
+    },
+    {
+      "file": "31-final-previous-error-history.png",
+      "apk_sha256": "c377cd1155aedf0fa65df714a5540504b56bad5643a35fece3274460d5667b1c",
+      "sha256": "d1b36a5e809ddeabe005ae50c45a515dc5bd1477cbeed52fb95bbf85f4edc7d3",
+      "xml_sha256": "9119adf6ce910dc862eb2fe5b619cde5a8779eea963b188d66b73986bbe8eb38",
+      "pixels": [
+        2400,
+        1080
+      ],
+      "raw_device_capture": true,
+      "role": "historical_or_intermediate"
+    },
+    {
+      "file": "32-final-history-after-process-restart.png",
+      "apk_sha256": "c377cd1155aedf0fa65df714a5540504b56bad5643a35fece3274460d5667b1c",
+      "sha256": "d1b36a5e809ddeabe005ae50c45a515dc5bd1477cbeed52fb95bbf85f4edc7d3",
+      "xml_sha256": "9119adf6ce910dc862eb2fe5b619cde5a8779eea963b188d66b73986bbe8eb38",
+      "pixels": [
+        2400,
+        1080
+      ],
+      "raw_device_capture": true,
+      "role": "historical_or_intermediate"
+    },
+    {
+      "file": "33-after-overwrite-offline-keeps-joystick-toggle.png",
+      "apk_sha256": "c377cd1155aedf0fa65df714a5540504b56bad5643a35fece3274460d5667b1c",
+      "sha256": "c71a4f007862dc17d73aef1b4658d32440c4ff09bff5371f04f9716c5dde9cdf",
+      "xml_sha256": "dcf296ea21fc8f5bd0e33dbdec5560ab4b9206bbd4b9dffe0e3556f2ed848ae0",
+      "pixels": [
+        2400,
+        1080
+      ],
+      "raw_device_capture": true,
+      "role": "historical_or_intermediate"
+    },
+    {
+      "file": "34-final-small800x360-font150-dpad.png",
+      "apk_sha256": "c377cd1155aedf0fa65df714a5540504b56bad5643a35fece3274460d5667b1c",
+      "sha256": "f87d468de15a3b3be8896430602cd6728199e1dde6659ae6d3c1a822ac26bfdb",
+      "xml_sha256": "22a67909a9a6bc777ca6de85ba60701e051b3edf0f22d9dcb48ed2e6743b1f9b",
+      "pixels": [
+        1600,
+        720
+      ],
+      "raw_device_capture": true,
+      "role": "historical_or_intermediate"
+    },
+    {
+      "file": "35-final-small-font150-updater.png",
+      "apk_sha256": "c377cd1155aedf0fa65df714a5540504b56bad5643a35fece3274460d5667b1c",
+      "sha256": "8ee8dd4211378292d48585714d6690389e2723a53ab8d82ede744cf671bc1cec",
+      "xml_sha256": "b8bb269e96a4077b65468c0181a02b05328b391d22a1d52cb9b373efa78136c7",
+      "pixels": [
+        1600,
+        720
+      ],
+      "raw_device_capture": true,
+      "role": "historical_or_intermediate"
+    },
+    {
+      "file": "36-final-small-font150-diagnostics.png",
+      "apk_sha256": "c377cd1155aedf0fa65df714a5540504b56bad5643a35fece3274460d5667b1c",
+      "sha256": "bb5e4cfc1d3a8cd6c49b8c17a5e397875bb88a8729aaec1f9bbaa390d43bbe0a",
+      "xml_sha256": "f16a56320fa881f8592c82e6d9b0085fe6fab1cde606d7dca97de4b21ab17773",
+      "pixels": [
+        1600,
+        720
+      ],
+      "raw_device_capture": true,
+      "role": "historical_or_intermediate"
+    },
+    {
+      "file": "37-final-restored-offline.png",
+      "apk_sha256": "c377cd1155aedf0fa65df714a5540504b56bad5643a35fece3274460d5667b1c",
+      "sha256": "8524466229d4962888a24fd96d5dc23481197b82ca9968ff324df031aaea40e0",
+      "xml_sha256": "aef663588c2c7e64ee51b871fa7b5a3cf01630eaeb3c1a0220f3105d40a5a85c",
+      "pixels": [
+        2400,
+        1080
+      ],
+      "raw_device_capture": true,
+      "role": "historical_or_intermediate"
+    },
+    {
+      "file": "38-final-b31-after-resume.png",
+      "apk_sha256": "b31ac740afa3515c8cc5a2a344061e170c63a5972ca4beef2058c3ac7c5c736f",
+      "sha256": "0f9db92f30283177778efe4117d524272ee7890881df6e1685515abf975f8e06",
+      "xml_sha256": "aef663588c2c7e64ee51b871fa7b5a3cf01630eaeb3c1a0220f3105d40a5a85c",
+      "pixels": [
+        2400,
+        1080
+      ],
+      "raw_device_capture": true,
+      "role": "historical_or_intermediate"
+    },
+    {
+      "file": "39-final-b31-unlock-after-release-delayed-ack.png",
+      "apk_sha256": "b31ac740afa3515c8cc5a2a344061e170c63a5972ca4beef2058c3ac7c5c736f",
+      "sha256": "fc5b9efd555071490dca8bb1925962a458c2f92ae9ab981756b3db3e762c8d2d",
+      "xml_sha256": "2441f633870aa1bbfe8d228c9cf1b1ad25986e1347b1778d3ff377595c439c82",
+      "pixels": [
+        2400,
+        1080
+      ],
+      "raw_device_capture": true,
+      "role": "final_handoff"
+    },
+    {
+      "file": "40-b31-dpad-online.png",
+      "apk_sha256": "b31ac740afa3515c8cc5a2a344061e170c63a5972ca4beef2058c3ac7c5c736f",
+      "sha256": "bca077637400a6aa9cee402c341594abe89c17deaf68696170ac05395241c676",
+      "xml_sha256": "d41916b0f8a8379ad9f17561ba7103f2e95626ede1b876aa11f91ba1905fb4ca",
+      "pixels": [
+        2400,
+        1080
+      ],
+      "raw_device_capture": true,
+      "role": "final_handoff"
+    },
+    {
+      "file": "41-b31-kill-locked.png",
+      "apk_sha256": "b31ac740afa3515c8cc5a2a344061e170c63a5972ca4beef2058c3ac7c5c736f",
+      "sha256": "12c764d3e3b9b786d1e9c21dd964f62b3a7bc61f6ade19efb6640cdc545649b7",
+      "xml_sha256": "a0491e1e24e741e68c81552b6a260d7faa33288fdc163ad8d9bf9f882da7760a",
+      "pixels": [
+        2400,
+        1080
+      ],
+      "raw_device_capture": true,
+      "role": "final_handoff"
+    },
+    {
+      "file": "42-b31-settings-general.png",
+      "apk_sha256": "b31ac740afa3515c8cc5a2a344061e170c63a5972ca4beef2058c3ac7c5c736f",
+      "sha256": "2d996eb1f7022f979aba76242f08d91a6517680072566c5c58401c5e893d62eb",
+      "xml_sha256": "bc1454a6ceaf608abffc718c914eeb0d8965f6b6e398542a0c299da693291556",
+      "pixels": [
+        2400,
+        1080
+      ],
+      "raw_device_capture": true,
+      "role": "final_handoff"
+    },
+    {
+      "file": "43-b31-settings-calibration.png",
+      "apk_sha256": "b31ac740afa3515c8cc5a2a344061e170c63a5972ca4beef2058c3ac7c5c736f",
+      "sha256": "9c5370bc283b43c6e546c90ba2d892b3e0b0d85f41c3a410e9700e47dfb3fc35",
+      "xml_sha256": "24cebde37058b2b8478039e448d86f6e372db7da9fb2a3f461483bc48cc4c144",
+      "pixels": [
+        2400,
+        1080
+      ],
+      "raw_device_capture": true,
+      "role": "final_handoff"
+    },
+    {
+      "file": "44-b31-settings-update.png",
+      "apk_sha256": "b31ac740afa3515c8cc5a2a344061e170c63a5972ca4beef2058c3ac7c5c736f",
+      "sha256": "d8aa9cccc9e925057f23c34aea17b51d1110dd3fa5bc2cba7e12da3bcabfba6e",
+      "xml_sha256": "88f3518105fb6c3e86bbf30de7a3c7a446f788805d0b57dcf72b6a08263f1da6",
+      "pixels": [
+        2400,
+        1080
+      ],
+      "raw_device_capture": true,
+      "role": "final_handoff"
+    },
+    {
+      "file": "45-b31-updater-historical-install-error.png",
+      "apk_sha256": "b31ac740afa3515c8cc5a2a344061e170c63a5972ca4beef2058c3ac7c5c736f",
+      "sha256": "1a30e95e5f8bf44d643189f45f8bcf4c32947a774ec0f5350ae162e0dfcff47e",
+      "xml_sha256": "3a549da9fb7d8c5ab63b931d8a8096e5088f573dca1367cfe0c751a76aa0747d",
+      "pixels": [
+        2400,
+        1080
+      ],
+      "raw_device_capture": true,
+      "role": "final_handoff"
+    },
+    {
+      "file": "46-b31-joystick-online.png",
+      "apk_sha256": "b31ac740afa3515c8cc5a2a344061e170c63a5972ca4beef2058c3ac7c5c736f",
+      "sha256": "11b0dca98d8ded3b1a6157b7d707a6d745ab38e9c97fa9a9cf37209351af9011",
+      "xml_sha256": "9b20fb0f2ffdbe71be3326b960c1940ed872944f58948919152a811c482a7e3f",
+      "pixels": [
+        2400,
+        1080
+      ],
+      "raw_device_capture": true,
+      "role": "final_handoff"
+    },
+    {
+      "file": "47-b31-real-stale-ack.png",
+      "apk_sha256": "b31ac740afa3515c8cc5a2a344061e170c63a5972ca4beef2058c3ac7c5c736f",
+      "sha256": "a801ce096ea43817612aad207be5761427fe87417244d48503a026608e38c83b",
+      "xml_sha256": "fce6445e1ca8103026b711ed0ce4d3e4c588aa13660b8c8d5e6c59b819b84498",
+      "pixels": [
+        2400,
+        1080
+      ],
+      "raw_device_capture": true,
+      "role": "final_handoff"
+    },
+    {
+      "file": "48-b31-diagnostics-real-error.png",
+      "apk_sha256": "b31ac740afa3515c8cc5a2a344061e170c63a5972ca4beef2058c3ac7c5c736f",
+      "sha256": "888376dbfcfca2c9e6147b02b2c31ba33deef3196462c1cc0d6b4da5b81f902a",
+      "xml_sha256": "17c5335e5a7ad42360d07139299639ce847b09586b6b77febed90520aa187438",
+      "pixels": [
+        2400,
+        1080
+      ],
+      "raw_device_capture": true,
+      "role": "final_handoff"
+    },
+    {
+      "file": "49-b31-diagnostic-history.png",
+      "apk_sha256": "b31ac740afa3515c8cc5a2a344061e170c63a5972ca4beef2058c3ac7c5c736f",
+      "sha256": "af86ffecb63158a9048beb7ebb4cae7b109a861d50e1d2653e23c59fb99ca146",
+      "xml_sha256": "ac4b9a7428a393c9fa67704c6e7a632e37669ae51f422bd3f3dc09e87f83ce70",
+      "pixels": [
+        2400,
+        1080
+      ],
+      "raw_device_capture": true,
+      "role": "final_handoff"
+    },
+    {
+      "file": "50-b31-small-font150-controller.png",
+      "apk_sha256": "b31ac740afa3515c8cc5a2a344061e170c63a5972ca4beef2058c3ac7c5c736f",
+      "sha256": "76515a63dc2b85d0b09708015697b8802f3fcb1156689d7b2eadc6af2268800a",
+      "xml_sha256": "22a67909a9a6bc777ca6de85ba60701e051b3edf0f22d9dcb48ed2e6743b1f9b",
+      "pixels": [
+        1600,
+        720
+      ],
+      "raw_device_capture": true,
+      "role": "final_handoff"
+    },
+    {
+      "file": "51-b31-small-font150-diagnostics.png",
+      "apk_sha256": "b31ac740afa3515c8cc5a2a344061e170c63a5972ca4beef2058c3ac7c5c736f",
+      "sha256": "9c8c23e53a4e4c362434eebb244143dbb157ce7772f4198cdad420ca6d949f08",
+      "xml_sha256": "cc6cd9b23ef079c196e5bb7b02d84736e27343d0ba079f6213135304c06e8a9d",
+      "pixels": [
+        1600,
+        720
+      ],
+      "raw_device_capture": true,
+      "role": "final_handoff"
+    },
+    {
+      "file": "52-b31-small-font150-updater.png",
+      "apk_sha256": "b31ac740afa3515c8cc5a2a344061e170c63a5972ca4beef2058c3ac7c5c736f",
+      "sha256": "1d15de2963717961126785bcd3b473c9ce96b620ca99ca71daa7ea83e7307e75",
+      "xml_sha256": "b8bb269e96a4077b65468c0181a02b05328b391d22a1d52cb9b373efa78136c7",
+      "pixels": [
+        1600,
+        720
+      ],
+      "raw_device_capture": true,
+      "role": "final_handoff"
+    },
+    {
+      "file": "53-b31-android-export-picker.png",
+      "apk_sha256": "b31ac740afa3515c8cc5a2a344061e170c63a5972ca4beef2058c3ac7c5c736f",
+      "sha256": "b110a618bb0e1e840993f97e4ce7ecc69d8dc5a4cde811758b96b27e17d4d024",
+      "xml_sha256": "a44300198478d382cc7a735bc0261350bcb6407be46f9cd50e0f149ffb2e8436",
+      "pixels": [
+        1080,
+        2400
+      ],
+      "raw_device_capture": true,
+      "role": "final_handoff"
+    },
+    {
+      "file": "54-b31-final-offline-restored.png",
+      "apk_sha256": "b31ac740afa3515c8cc5a2a344061e170c63a5972ca4beef2058c3ac7c5c736f",
+      "sha256": "0f9db92f30283177778efe4117d524272ee7890881df6e1685515abf975f8e06",
+      "xml_sha256": "aef663588c2c7e64ee51b871fa7b5a3cf01630eaeb3c1a0220f3105d40a5a85c",
+      "pixels": [
+        2400,
+        1080
+      ],
+      "raw_device_capture": true,
+      "role": "final_handoff"
+    }
+  ],
+  "hand_off_image_count": 16,
+  "originals_unmodified": true
+}

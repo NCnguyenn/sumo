@@ -1,0 +1,9 @@
+{
+  "device_path": "/sdcard/Download/sumo-diagnostic-1792322231690.txt",
+  "bytes": 19397,
+  "sha256": "832d1e52e916d20c1a0c7665f1f6c73551b9e7e8e6a22d80e70332a997db790f",
+  "has_current_request": true,
+  "has_last_tx": true,
+  "has_warning": true,
+  "apk_sha256": "c377cd1155aedf0fa65df714a5540504b56bad5643a35fece3274460d5667b1c"
+}

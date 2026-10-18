@@ -1,0 +1,19 @@
+{
+  "versionCode": 1,
+  "method": "adb install -r exact same final APK, same debug signing certificate, same version",
+  "success": true,
+  "all_data_files_byte_identical": true,
+  "before": {
+    "shared_prefs/sumo_safety.xml": "d4df5cdc24abc7ff0f481061fc77f109f3fdac00bf925fb7b5e10ca48dcc744e",
+    "shared_prefs/sumo_install_result.xml": "731ca1223573badeb722ed73d190e822a1a9978c0393b50debaf41598e20396a",
+    "shared_prefs/sumo_settings.xml": "2c24c36c151a5c06672a98511d01e4559e636fa1a28c501709ddcb98c4dcafb7",
+    "files/diagnostics/previous-error.txt": "0e95be9dd48d0d0532487c5cba97ff2d4c63f9ae1c66724f3a1ddffe1cb59270"
+  },
+  "after": {
+    "shared_prefs/sumo_safety.xml": "d4df5cdc24abc7ff0f481061fc77f109f3fdac00bf925fb7b5e10ca48dcc744e",
+    "shared_prefs/sumo_install_result.xml": "731ca1223573badeb722ed73d190e822a1a9978c0393b50debaf41598e20396a",
+    "shared_prefs/sumo_settings.xml": "2c24c36c151a5c06672a98511d01e4559e636fa1a28c501709ddcb98c4dcafb7",
+    "files/diagnostics/previous-error.txt": "0e95be9dd48d0d0532487c5cba97ff2d4c63f9ae1c66724f3a1ddffe1cb59270"
+  },
+  "limit": "Same-version reinstall on API37 AVD only, not higher-version HTTPS/phone upgrade; initial API37 install was fresh."
+}

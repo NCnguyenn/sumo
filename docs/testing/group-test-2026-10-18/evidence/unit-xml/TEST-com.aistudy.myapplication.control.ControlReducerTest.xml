@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.aistudy.myapplication.control.ControlReducerTest" tests="29" skipped="0" failures="0" errors="0" timestamp="2026-10-18T12:15:51.472Z" hostname="DESKTOP-OVC24VV" time="0.029">
+  <properties/>
+  <testcase name="L14_reconnectNeverRestoresOldPointersOrUnlocksKill" classname="com.aistudy.myapplication.control.ControlReducerTest" time="0.007"/>
+  <testcase name="F03_joystickDiagonalsKeepRadialNormalizationWithLowTurnCalibration" classname="com.aistudy.myapplication.control.ControlReducerTest" time="0.002"/>
+  <testcase name="F03_dpadIgnoresJoystickSensitivityAndDeadZone" classname="com.aistudy.myapplication.control.ControlReducerTest" time="0.001"/>
+  <testcase name="L17_opposedReleaseInvalidatesOldForwardUntilAllUpAndFreshDown" classname="com.aistudy.myapplication.control.ControlReducerTest" time="0.0"/>
+  <testcase name="L13_killAgainOrDisconnectInvalidatesPendingUnlockAck" classname="com.aistudy.myapplication.control.ControlReducerTest" time="0.001"/>
+  <testcase name="L13_earlyUnlockReleaseAndExplicitCancellationCannotUnlockLater" classname="com.aistudy.myapplication.control.ControlReducerTest" time="0.003"/>
+  <testcase name="L15_autoIsLockedWithoutCapabilityApprovalOrNeutrality" classname="com.aistudy.myapplication.control.ControlReducerTest" time="0.0"/>
+  <testcase name="L16_killBrakeCancelDisconnectAndDirectionCancelMacro" classname="com.aistudy.myapplication.control.ControlReducerTest" time="0.003"/>
+  <testcase name="F03_advancedCalibrationRequiresStoppedSessionAndAffectsOutput" classname="com.aistudy.myapplication.control.ControlReducerTest" time="0.001"/>
+  <testcase name="L16_macroUsesNewIdAndNeedsAckButNeverResumesOldDirection" classname="com.aistudy.myapplication.control.ControlReducerTest" time="0.001"/>
+  <testcase name="L13_L14_killNeedsAllFingersUpHoldAndMatchingUnlockAck" classname="com.aistudy.myapplication.control.ControlReducerTest" time="0.0"/>
+  <testcase name="F03_dpadForwardRightUsesFullAxesWithLowTurnCalibration" classname="com.aistudy.myapplication.control.ControlReducerTest" time="0.0"/>
+  <testcase name="L18_adjacentReleaseStopsInsteadOfReturningToForward" classname="com.aistudy.myapplication.control.ControlReducerTest" time="0.001"/>
+  <testcase name="F01_liveLimiterUsesSameReducerAndKeepsGesture" classname="com.aistudy.myapplication.control.ControlReducerTest" time="0.001"/>
+  <testcase name="L22_earlyDownNeverBecomesValidByMoveAfterOldFingersLift" classname="com.aistudy.myapplication.control.ControlReducerTest" time="0.0"/>
+  <testcase name="L09_L22_joystickReleaseOrLostCaptureCannotReviveByOldMove" classname="com.aistudy.myapplication.control.ControlReducerTest" time="0.001"/>
+  <testcase name="L08_pointerIdsAndPressOrderAreIndependent" classname="com.aistudy.myapplication.control.ControlReducerTest" time="0.0"/>
+  <testcase name="L11_L21_toggleChangesOnlyOnNewDownNotUpOrRepeatedDown" classname="com.aistudy.myapplication.control.ControlReducerTest" time="0.0"/>
+  <testcase name="L16_macroRequiresNeutralityAndCapability" classname="com.aistudy.myapplication.control.ControlReducerTest" time="0.0"/>
+  <testcase name="offlineInputsCannotDriveAndConnectionAckStartsNeutral" classname="com.aistudy.myapplication.control.ControlReducerTest" time="0.001"/>
+  <testcase name="L15_cancelClearsToggleAndRequiresNewGesture" classname="com.aistudy.myapplication.control.ControlReducerTest" time="0.0"/>
+  <testcase name="L12_brakeOverridesBoostWeaponAndRequiresOldFingersUp" classname="com.aistudy.myapplication.control.ControlReducerTest" time="0.0"/>
+  <testcase name="L15_brakeExitsAutoAndStaleModeAckDoesNotReenableIt" classname="com.aistudy.myapplication.control.ControlReducerTest" time="0.0"/>
+  <testcase name="L11_L21_holdSurvivesDirectionReleaseAndEndsOnWeaponUp" classname="com.aistudy.myapplication.control.ControlReducerTest" time="0.001"/>
+  <testcase name="F03_dpadForwardLeftUsesFullAxesWithLowTurnCalibration" classname="com.aistudy.myapplication.control.ControlReducerTest" time="0.0"/>
+  <testcase name="L04_L07_L19_releasingOnlyBoostKeepsDirectionAcrossTicks" classname="com.aistudy.myapplication.control.ControlReducerTest" time="0.0"/>
+  <testcase name="L22_leavingDpadRequiresPhysicalUpAndFreshDown" classname="com.aistudy.myapplication.control.ControlReducerTest" time="0.0"/>
+  <testcase name="L05_L06_L20_boostCannotRestoreReleasedDirection" classname="com.aistudy.myapplication.control.ControlReducerTest" time="0.0"/>
+  <testcase name="newSessionResetsTurnIdSpaceAndKeepsConfiguredDuration" classname="com.aistudy.myapplication.control.ControlReducerTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

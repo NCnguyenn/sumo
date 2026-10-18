@@ -1,0 +1,44 @@
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.CompactDiagnosticsTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=
+com.aistudy.myapplication.CompactDiagnosticsTest:
+INSTRUMENTATION_STATUS: test=smallLandscapeWithLargeFontKeepsControlsAndTextInsideTheirBounds
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.aistudy.myapplication.CompactDiagnosticsTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Clipped text: SUMO
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at com.aistudy.myapplication.CompactDiagnosticsTest.smallLandscapeWithLargeFontKeepsControlsAndTextInsideTheirBounds(CompactDiagnosticsTest.kt:60)
+
+INSTRUMENTATION_STATUS: stream=
+Error in smallLandscapeWithLargeFontKeepsControlsAndTextInsideTheirBounds(com.aistudy.myapplication.CompactDiagnosticsTest):
+java.lang.AssertionError: Clipped text: SUMO
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at com.aistudy.myapplication.CompactDiagnosticsTest.smallLandscapeWithLargeFontKeepsControlsAndTextInsideTheirBounds(CompactDiagnosticsTest.kt:60)
+
+INSTRUMENTATION_STATUS: test=smallLandscapeWithLargeFontKeepsControlsAndTextInsideTheirBounds
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_RESULT: stream=
+
+Time: 3.43
+There was 1 failure:
+1) smallLandscapeWithLargeFontKeepsControlsAndTextInsideTheirBounds(com.aistudy.myapplication.CompactDiagnosticsTest)
+java.lang.AssertionError: Clipped text: SUMO
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at com.aistudy.myapplication.CompactDiagnosticsTest.smallLandscapeWithLargeFontKeepsControlsAndTextInsideTheirBounds(CompactDiagnosticsTest.kt:60)
+
+FAILURES!!!
+Tests run: 1,  Failures: 1
+
+
+INSTRUMENTATION_CODE: -1

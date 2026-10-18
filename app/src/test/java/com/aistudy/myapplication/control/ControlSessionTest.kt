@@ -7,12 +7,29 @@ import org.junit.Test
 import java.io.IOException
 
 class ControlSessionTest {
+    @Test fun diagnosticMetadataExistsEvenWhenOpenFailsAndStopIntentIsExplicit() {
+        val lines=mutableListOf<String>();fake.failOpen=true
+        val s=ControlSession(ControlReducer(ControllerSettings(port=8889),{now}),fake,{now},{"1111111111111111"},{true},lines::add)
+        s.connect()
+        assertTrue(lines.any{"connecting endpoint=10.0.2.2:8889" in it})
+        assertTrue(lines.any{"closed confirmed=false requested=0/0" in it})
+        assertEquals(WheelPwm(0,0),s.snapshot.control.pwm)
+    }
+    @Test fun diagnosticsLogsAcceptedAckAndRejectedPeerWithoutChangingAcceptance() {
+        val lines=mutableListOf<String>()
+        val s=ControlSession(ControlReducer(ControllerSettings(),{now}),fake,{now},{"1111111111111111"},{true},lines::add)
+        online(s)
+        reply("bad\n",port=9999);s.pump()
+        assertTrue("Accepted receiver state must be distinguishable from raw RX",lines.any{"ack seq=1 result=OK pwm=0/0" in it})
+        assertTrue("Rejected peer needs a reason",lines.any{"discard reason=PEER" in it})
+        assertTrue(s.snapshot.control.connected)
+    }
     private var now=0L
     private var allowed=true
     private val sid="0123456789abcdef"
     private class Fake:RobotTransport {
-        val sent=mutableListOf<String>();val incoming=ArrayDeque<RobotDatagram>();var opens=0;var closes=0;var fail=false
-        override fun open(host:String,port:Int){opens++}
+        val sent=mutableListOf<String>();val incoming=ArrayDeque<RobotDatagram>();var opens=0;var closes=0;var fail=false;var failOpen=false
+        override fun open(host:String,port:Int){if(failOpen)throw IOException("fixture open failure");opens++}
         override fun send(bytes:ByteArray){if(fail)throw IOException("fixture send failure");sent.add(String(bytes,Charsets.US_ASCII))}
         override fun receive()=incoming.removeFirstOrNull()
         override fun close(){closes++}
@@ -102,6 +119,19 @@ class ControlSessionTest {
         now=1000;s.pump();assertTrue(fake.sent.last().endsWith("|U\n"));assertTrue(s.snapshot.control.killed)
         val seq=fake.sent.last().substringAfter(',').substringBefore(',').toInt()
         ack(seq);s.pump();assertFalse(s.snapshot.control.killed);assertEquals(WheelPwm(0,0),s.snapshot.control.pwm)
+    }
+    @Test fun U07_releasingCompletedUnlockHoldKeepsRequestUntilMatchingAck() {
+        val s=session();online(s);s.event(ControlEvent.Kill);s.pump();ack(2,"0,0,0,0,0,1,0,0,0");s.pump()
+        s.event(ControlEvent.BeginUnlock)
+        for(i in 1..33){now=i*30L;s.pump();ack(i+2,"0,0,0,0,0,1,0,0,0");s.pump()}
+        now=1000;s.pump();val unlock=fake.sent.last();assertTrue(unlock.endsWith("|U\n"))
+        val seq=unlock.substringAfter(',').substringBefore(',').toInt()
+        s.event(ControlEvent.EndUnlock);s.pump()
+        assertTrue("Finger-up after U must not relatch Kill while its ACK is in flight",fake.sent.last().endsWith("|U\n"))
+        ack(seq);s.pump();assertFalse(s.snapshot.control.killed);assertEquals(WheelPwm(0,0),s.snapshot.control.pwm)
+        now=1030;s.pump();assertEquals(WheelPwm(0,0),s.snapshot.control.pwm)
+        s.event(ControlEvent.Press(9,ControlButton.FORWARD));s.pump()
+        assertEquals(WheelPwm(153,153),s.snapshot.control.pwm)
     }
     @Test fun F09_configOnlyCommitsMatchedAckAndUnsupportedKeepsOld() {
         val s=session();online(s,11);assertTrue(s.configure(1,0,100));s.pump();assertNull(s.snapshot.configuration)
